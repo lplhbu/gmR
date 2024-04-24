@@ -1,0 +1,12 @@
+# Ignore OS-generated files
+.DS_Store
+
+# Ignore dependencies
+node_modules/
+
+# Ignore data
+data/
+game/
+
+# Ignore vscode save
+*.save

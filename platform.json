@@ -1,0 +1,208 @@
+[
+  {
+    "name": "Nintendo Entertainment System",
+    "backloggd_name": "nes",
+    "myrient_name": "No-Intro/Nintendo%20-%20Nintendo%20Entertainment%20System%20%28Headered%29",
+    "file_type": ".nes"
+  },
+  {
+    "name": "Sega Master System",
+    "backloggd_name": "sms",
+    "myrient_name": "No-Intro/Sega%20-%20Master%20System%20-%20Mark%20III",
+    "file_type": ".sms"
+  },
+  {
+    "name": "Sega Genesis",
+    "backloggd_name": "smd",
+    "myrient_name": "No-Intro/Sega%20-%20Mega%20Drive%20-%20Genesis",
+    "file_type": ".md"
+  },
+  {
+    "name": "Game Boy",
+    "backloggd_name": "gb",
+    "myrient_name": "No-Intro/Nintendo%20-%20Game%20Boy",
+    "file_type": ".gb"
+  },
+  {
+    "name": "PC Engine",
+    "backloggd_name": "turbografx16--1",
+    "myrient_name": "No-Intro/NEC%20-%20PC%20Engine%20-%20TurboGrafx-16",
+    "file_type": ".pce"
+  },
+  {
+    "name": "Super Nintendo Entertainment System",
+    "backloggd_name": "snes--1",
+    "myrient_name": "No-Intro/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System",
+    "file_type": ".sfc"
+  },
+  {
+    "name": "Neo Geo",
+    "backloggd_name": "neogeoaes",
+    "myrient_name": "",
+    "file_type": ".neo"
+  },
+  {
+    "name": "Sega Game Gear",
+    "backloggd_name": "gamegear",
+    "myrient_name": "No-Intro/Sega%20-%20Game%20Gear",
+    "file_type": ".gg",
+    "file_type_alt": ".sms"
+  },
+  {
+    "name": "Neo Geo Pocket",
+    "backloggd_name": "neo-geo-pocket",
+    "myrient_name": "No-Intro/SNK%20-%20NeoGeo%20Pocket",
+    "file_type": ".ngp"
+  },
+  {
+    "name": "Neo Geo Pocket Color",
+    "backloggd_name": "neo-geo-pocket-color",
+    "myrient_name": "No-Intro/SNK%20-%20NeoGeo%20Pocket%20Color",
+    "file_type": ".ngc"
+  },
+  {
+    "name": "Sega CD",
+    "backloggd_name": "segacd",
+    "myrient_name": "Redump/Sega%20-%20Mega%20CD%20%26%20Sega%20CD",
+    "file_type": ".cue"
+  },
+  {
+    "name": "Sega 32X",
+    "backloggd_name": "sega32",
+    "myrient_name": "No-Intro/Sega%20-%2032X",
+    "file_type": ".32x"
+  },
+  {
+    "name": "PlayStation",
+    "backloggd_name": "ps",
+    "myrient_name": "Redump/Sony%20-%20PlayStation",
+    "file_type": ".cue"
+  },
+  {
+    "name": "Sega Saturn",
+    "backloggd_name": "saturn",
+    "myrient_name": "Redump/Sega%20-%20Saturn",
+    "file_type": ".cue"
+  },
+  {
+    "name": "Virtual Boy",
+    "backloggd_name": "virtualboy",
+    "myrient_name": "No-Intro/Nintendo%20-%20Virtual%20Boy",
+    "file_type": ".vb"
+  },
+  {
+    "name": "Nintendo 64",
+    "backloggd_name": "n64",
+    "myrient_name": "No-Intro/Nintendo%20-%20Nintendo%2064%20%28BigEndian%29",
+    "file_type": ".z64"
+  },
+  {
+    "name": "Sega Dreamcast",
+    "backloggd_name": "dc",
+    "myrient_name": "Redump/Sega%20-%20Dreamcast",
+    "file_type": ".cue"
+  },
+  {
+    "name": "Game Boy Color",
+    "backloggd_name": "gbc",
+    "myrient_name": "No-Intro/Nintendo%20-%20Game%20Boy%20Color",
+    "file_type": ".gbc"
+  },
+  {
+    "name": "PlatStation 2",
+    "backloggd_name": "ps2",
+    "myrient_name": "Redump/Sony%20-%20PlayStation%202",
+    "file_type": ".cue",
+    "file_type_alt": ".iso"
+  },
+  {
+    "name": "Xbox",
+    "backloggd_name": "xbox",
+    "myrient_name": "Redump/Microsoft%20-%20Xbox",
+    "file_type": ".iso"
+  },
+  {
+    "name": "Game Boy Advance",
+    "backloggd_name": "gba",
+    "myrient_name": "No-Intro/Nintendo%20-%20Game%20Boy%20Advance",
+    "file_type": ".gba"
+  },
+  {
+    "name": "Nintendo GameCube",
+    "backloggd_name": "ngc",
+    "myrient_name": "Redump/Nintendo%20-%20GameCube%20-%20NKit%20RVZ%20%5Bzstd-19-128k%5D",
+    "file_type": ".rvz"
+  },
+  {
+    "name": "Xbox 360",
+    "backloggd_name": "xbox360",
+    "myrient_name": "Redump/Microsoft%20-%20Xbox%20360",
+    "file_type": ".iso"
+  },
+  {
+    "name": "PlayStation Portable",
+    "backloggd_name": "psp",
+    "myrient_name": "Redump/Sony%20-%20PlayStation%20Portable",
+    "file_type": ".iso"
+  },
+  {
+    "name": "Nintendo DS",
+    "backloggd_name": "nds",
+    "myrient_name": "No-Intro/Nintendo%20-%20Nintendo%20DS%20%28Decrypted%29",
+    "file_type": ".nds"
+  },
+  {
+    "name": "PlayStation 3",
+    "backloggd_name": "ps3",
+    "myrient_name": "Redump/Sony%20-%20PlayStation%203",
+    "file_type": ".iso"
+  },
+  {
+    "name": "Nintendo Wii",
+    "backloggd_name": "wii",
+    "myrient_name": "Redump/Nintendo%20-%20Wii%20-%20NKit%20RVZ%20%5Bzstd-19-128k%5D",
+    "file_type": ".rvz"
+  },
+  {
+    "name": "PlayStation Vita",
+    "backloggd_name": "psvita",
+    "myrient_name": "No-Intro/Unofficial%20-%20Sony%20-%20PlayStation%20Vita%20%28VPK%29",
+    "file_type": ".vpk"
+  },
+  {
+    "name": "Nintendo 3DS",
+    "backloggd_name": "3ds",
+    "myrient_name": "No-Intro/Nintendo%20-%20Nintendo%203DS%20%28Decrypted%29",
+    "file_type": ".3ds"
+  },
+  {
+    "name": "New Nintendo 3DS",
+    "backloggd_name": "new-nintendo-3ds",
+    "myrient_name": "No-Intro/Nintendo%20-%20Nintendo%203DS%20%28Decrypted%29",
+    "file_type": ".3ds"
+  },
+  {
+    "name": "Nintendo Wii U",
+    "backloggd_name": "wiiu",
+    "myrient_name": "Redump/Nintendo%20-%20Wii%20U%20-%20WUX",
+    "file_type": ".wux"
+  },
+  {
+    "name": "PlayStation 4",
+    "backloggd_name": "ps4--1",
+    "myrient_name": "",
+    "file_type": ""
+  },
+  {
+    "name": "Xbox One",
+    "backloggd_name": "xboxone",
+    "myrient_name": "",
+    "file_type": ""
+  },
+  {
+    "name": "Nintendo Switch",
+    "backloggd_name": "nintendo-switch",
+    "myrient_name": "",
+    "file_type": ""
+  }
+]

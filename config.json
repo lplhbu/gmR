@@ -1,0 +1,33 @@
+{
+  "path": "game",
+  "relative": true,
+  "clean": true,
+
+  "difficulty": 4,
+  "platforms": [
+    "Nintendo Entertainment System",
+    "Sega Master System",
+    "Sega Genesis",
+    "Game Boy",
+    "PC Engine",
+    "Super Nintendo Entertainment System",
+    "Neo Geo",
+    "Sega Game Gear",
+    "Neo Geo Pocket",
+    "Neo Geo Pocket Color",
+    "Sega CD",
+    "Sega 32X",
+    "PlayStation",
+    "Sega Saturn",
+    "Virtual Boy",
+    "Nintendo 64",
+    "Sega Dreamcast",
+    "Game Boy Color",
+    "PlatStation 2",
+    "Game Boy Advance",
+    "Nintendo GameCube",
+    "PlayStation Portable",
+    "Nintendo DS",
+    "Nintendo Wii"
+  ]
+}
