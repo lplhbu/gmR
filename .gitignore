@@ -4,9 +4,14 @@
 # Ignore dependencies
 node_modules/
 
-# Ignore data
-data/
+# Ignore GAMES
 game/
+
+# Ignore Process Data
+data/process
 
 # Ignore vscode save
 *.save
+
+# Ignore files
+genre.json

@@ -1,0 +1,1084 @@
+[
+  {
+    "name": "Nintendo Entertainment System",
+    "release": "Jul 15, 1983",
+    "backloggd_url": "nes",
+    "myrient_url": "No-Intro/Nintendo%20-%20Nintendo%20Entertainment%20System%20%28Headered%29",
+    "cdromance_url": "nes-roms",
+    "cdromance_url_game": "nes-roms",
+    "file_types": [
+      ".nes"
+    ],
+    "games": [
+      {
+        "name": "Super Mario Bros. 3",
+        "rating": 4.06,
+        "release": "Oct 23, 1988",
+        "myrient_name": "Super Mario Bros. 3 (USA).zip",
+        "myrient_url": "Super%20Mario%20Bros.%203%20%28USA%29.zip"
+      },
+      {
+        "name": "Dragon Warrior IV",
+        "rating": 3.91,
+        "release": "Feb 11, 1990",
+        "myrient_name": "Dragon Warrior IV (USA).zip",
+        "myrient_url": "Dragon%20Warrior%20IV%20%28USA%29.zip"
+      }
+    ]
+  },
+  {
+    "name": "Sega Master System",
+    "release": "Oct 20, 1985",
+    "backloggd_url": "sms",
+    "myrient_url": "No-Intro/Sega%20-%20Master%20System%20-%20Mark%20III",
+    "cdromance_url": "",
+    "cdromance_url_game": "",
+    "file_types": [
+      ".sms"
+    ],
+    "games": [
+      {
+        "name": "Battle Mania Daiginjou",
+        "rating": 3.94,
+        "release": "Dec 24, 1993"
+      }
+    ]
+  },
+  {
+    "name": "PC Engine",
+    "release": "Oct 30, 1987",
+    "backloggd_url": "turbografx16--1",
+    "myrient_url": "No-Intro/NEC%20-%20PC%20Engine%20-%20TurboGrafx-16",
+    "cdromance_url": "turbografx-16",
+    "cdromance_url_game": "turbografx-16",
+    "file_types": [
+      ".pce"
+    ],
+    "games": [
+      {
+        "name": "Final Match Tennis",
+        "rating": 3.82,
+        "release": "Mar 01, 1991",
+        "cdromance_name": "Final Match Tennis",
+        "cdromance_url": "final-match-tennis"
+      }
+    ]
+  },
+  {
+    "name": "Sega Genesis",
+    "release": "Oct 29, 1988",
+    "backloggd_url": "smd",
+    "myrient_url": "No-Intro/Sega%20-%20Mega%20Drive%20-%20Genesis",
+    "cdromance_url": "sega_genesis_roms",
+    "cdromance_url_game": "sega_genesis_roms",
+    "file_types": [
+      ".md"
+    ],
+    "games": [
+      {
+        "name": "Contra: Hard Corps",
+        "rating": 4.03,
+        "release": "Aug 08, 1994",
+        "myrient_name": "Contra - Hard Corps (USA, Korea) (En).zip",
+        "myrient_url": "Contra%20-%20Hard%20Corps%20%28USA%2C%20Korea%29%20%28En%29.zip"
+      },
+      {
+        "name": "Alien Soldier",
+        "rating": 4.03,
+        "release": "Feb 24, 1995",
+        "myrient_name": "Alien Soldier (Europe).zip",
+        "myrient_url": "Alien%20Soldier%20%28Europe%29.zip"
+      },
+      {
+        "name": "Phantasy Star IV: The End of the Millennium",
+        "rating": 4,
+        "release": "Dec 17, 1993",
+        "myrient_name": "Phantasy Star IV (USA).zip",
+        "myrient_url": "Phantasy%20Star%20IV%20%28USA%29.zip"
+      }
+    ]
+  },
+  {
+    "name": "Game Boy",
+    "release": "Apr 21, 1989",
+    "backloggd_url": "gb",
+    "myrient_url": "No-Intro/Nintendo%20-%20Game%20Boy",
+    "cdromance_url": "gb_roms",
+    "cdromance_url_game": "gameboy-roms",
+    "file_types": [
+      ".gb"
+    ],
+    "games": [
+      {
+        "name": "The Machine",
+        "rating": 4.2,
+        "release": "Feb 16, 2022",
+        "myrient_name": "Machine, The (World) (Aftermarket) (Unl).zip",
+        "myrient_url": "Machine%2C%20The%20%28World%29%20%28Aftermarket%29%20%28Unl%29.zip"
+      },
+      {
+        "name": "The Legend of Zelda: Link's Awakening",
+        "rating": 4,
+        "release": "Jun 06, 1993",
+        "myrient_name": "Legend of Zelda, The - Link's Awakening (USA, Europe).zip",
+        "myrient_url": "Legend%20of%20Zelda%2C%20The%20-%20Link%27s%20Awakening%20%28USA%2C%20Europe%29.zip"
+      },
+      {
+        "name": "Kaeru no Tame ni Kane wa Naru",
+        "rating": 3.95,
+        "release": "Sep 14, 1992",
+        "cdromance_name": "Kaeru no Tame ni Kane wa Naru (English Patched)",
+        "cdromance_url": "kaeru-no-tame-ni-kane-wa-naru-english-patched"
+      }
+    ]
+  },
+  {
+    "name": "Sega Game Gear",
+    "release": "Oct 6, 1990",
+    "backloggd_url": "gamegear",
+    "myrient_url": "No-Intro/Sega%20-%20Game%20Gear",
+    "cdromance_url": "game-gear",
+    "cdromance_url_game": "game-gear",
+    "file_types": [
+      ".gg",
+      ".sms"
+    ],
+    "games": [
+      {
+        "name": "Super Space Invaders",
+        "rating": 3.86,
+        "release": "Dec 31, 1990",
+        "myrient_name": "Super Space Invaders (USA, Europe).zip",
+        "myrient_url": "Super%20Space%20Invaders%20%28USA%2C%20Europe%29.zip"
+      },
+      {
+        "name": "GG Aleste 3",
+        "rating": 3.86,
+        "release": "Dec 24, 2020",
+        "myrient_name": "GG Aleste 3 (Japan) (En) (Aleste Collection).zip",
+        "myrient_url": "GG%20Aleste%203%20%28Japan%29%20%28En%29%20%28Aleste%20Collection%29.zip"
+      }
+    ]
+  },
+  {
+    "name": "Super Nintendo Entertainment System",
+    "release": "Nov 21, 1990",
+    "backloggd_url": "snes--1",
+    "myrient_url": "No-Intro/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System",
+    "cdromance_url": "snes-rom",
+    "cdromance_url_game": "snes-rom",
+    "file_types": [
+      ".sfc"
+    ],
+    "games": [
+      {
+        "name": "Chrono Trigger",
+        "rating": 4.48,
+        "release": "Mar 11, 1995",
+        "myrient_name": "Chrono Trigger (USA).zip",
+        "myrient_url": "Chrono%20Trigger%20%28USA%29.zip"
+      },
+      {
+        "name": "Chrono Trigger",
+        "rating": 4.48,
+        "release": "Mar 11, 1995",
+        "myrient_name": "Chrono Trigger (USA).zip",
+        "myrient_url": "Chrono%20Trigger%20%28USA%29.zip"
+      },
+      {
+        "name": "Super Metroid",
+        "rating": 4.31,
+        "release": "Mar 19, 1994",
+        "myrient_name": "Super Metroid (Japan, USA) (En,Ja).zip",
+        "myrient_url": "Super%20Metroid%20%28Japan%2C%20USA%29%20%28En%2CJa%29.zip"
+      },
+      {
+        "name": "EarthBound",
+        "rating": 4.26,
+        "release": "Aug 27, 1994",
+        "myrient_name": "EarthBound (USA).zip",
+        "myrient_url": "EarthBound%20%28USA%29.zip"
+      },
+      {
+        "name": "Donkey Kong Country 2: Diddy's Kong Quest",
+        "rating": 4.26,
+        "release": "Nov 21, 1995",
+        "myrient_name": "Donkey Kong Country 2 - Diddy's Kong Quest (USA) (En,Fr).zip",
+        "myrient_url": "Donkey%20Kong%20Country%202%20-%20Diddy%27s%20Kong%20Quest%20%28USA%29%20%28En%2CFr%29.zip"
+      },
+      {
+        "name": "Super Mario World",
+        "rating": 4.23,
+        "release": "Nov 21, 1990",
+        "myrient_name": "Super Mario World (USA).zip",
+        "myrient_url": "Super%20Mario%20World%20%28USA%29.zip"
+      },
+      {
+        "name": "Terranigma",
+        "rating": 4.17,
+        "release": "Oct 11, 1995",
+        "myrient_name": "Terranigma (Europe).zip",
+        "myrient_url": "Terranigma%20%28Europe%29.zip"
+      },
+      {
+        "name": "Mega Man X",
+        "rating": 4.17,
+        "release": "Dec 17, 1993",
+        "myrient_name": "Mega Man X (USA).zip",
+        "myrient_url": "Mega%20Man%20X%20%28USA%29.zip"
+      },
+      {
+        "name": "Super Mario World 2: Yoshi's Island",
+        "rating": 4.1,
+        "release": "Aug 05, 1995",
+        "myrient_name": "Super Mario World 2 - Yoshi's Island (USA).zip",
+        "myrient_url": "Super%20Mario%20World%202%20-%20Yoshi%27s%20Island%20%28USA%29.zip"
+      },
+      {
+        "name": "The Legend of Zelda: A Link to the Past",
+        "rating": 4.09,
+        "release": "Nov 21, 1991",
+        "myrient_name": "Legend of Zelda, The - A Link to the Past (USA).zip",
+        "myrient_url": "Legend%20of%20Zelda%2C%20The%20-%20A%20Link%20to%20the%20Past%20%28USA%29.zip"
+      },
+      {
+        "name": "Super Mario RPG: Legend of the Seven Stars",
+        "rating": 4.05,
+        "release": "Mar 09, 1996",
+        "myrient_name": "Super Mario RPG - Legend of the Seven Stars (USA).zip",
+        "myrient_url": "Super%20Mario%20RPG%20-%20Legend%20of%20the%20Seven%20Stars%20%28USA%29.zip"
+      }
+    ]
+  },
+  {
+    "name": "Sega CD",
+    "release": "Dec 12, 1991",
+    "backloggd_url": "segacd",
+    "myrient_url": "Redump/Sega%20-%20Mega%20CD%20%26%20Sega%20CD",
+    "cdromance_url": "sega_cd_isos",
+    "cdromance_url_game": "sega_cd_isos",
+    "file_types": [
+      ".cue",
+      ".bin"
+    ],
+    "games": [
+      {
+        "name": "Dark Wizard",
+        "rating": 4.12,
+        "release": "Nov 12, 1993",
+        "myrient_name": "Dark Wizard (USA).zip",
+        "myrient_url": "Dark%20Wizard%20%28USA%29.zip"
+      }
+    ]
+  },
+  {
+    "name": "Sega 32X",
+    "release": "Nov 21, 1994",
+    "backloggd_url": "sega32",
+    "myrient_url": "No-Intro/Sega%20-%2032X",
+    "cdromance_url": "",
+    "cdromance_url_game": "",
+    "file_types": [
+      ".32x"
+    ],
+    "games": []
+  },
+  {
+    "name": "Sega Saturn",
+    "release": "Nov 22, 1994",
+    "backloggd_url": "saturn",
+    "myrient_url": "Redump/Sega%20-%20Saturn",
+    "cdromance_url": "sega_saturn_isos",
+    "cdromance_url_game": "sega_saturn_isos",
+    "file_types": [
+      ".cue",
+      ".bin"
+    ],
+    "games": [
+      {
+        "name": "Panzer Dragoon Saga",
+        "rating": 4.38,
+        "release": "Jan 29, 1998",
+        "myrient_name": "Panzer Dragoon Saga (USA) (Disc 1).zip",
+        "myrient_url": "Panzer%20Dragoon%20Saga%20%28USA%29%20%28Disc%201%29.zip"
+      },
+      {
+        "name": "Panzer Dragoon Saga",
+        "rating": 4.38,
+        "release": "Jan 29, 1998",
+        "myrient_name": "Panzer Dragoon Saga (USA) (Disc 2).zip",
+        "myrient_url": "Panzer%20Dragoon%20Saga%20%28USA%29%20%28Disc%202%29.zip"
+      },
+      {
+        "name": "Panzer Dragoon Saga",
+        "rating": 4.38,
+        "release": "Jan 29, 1998",
+        "myrient_name": "Panzer Dragoon Saga (USA) (Disc 3).zip",
+        "myrient_url": "Panzer%20Dragoon%20Saga%20%28USA%29%20%28Disc%203%29.zip"
+      },
+      {
+        "name": "Panzer Dragoon Saga",
+        "rating": 4.38,
+        "release": "Jan 29, 1998",
+        "myrient_name": "Panzer Dragoon Saga (USA) (Disc 4).zip",
+        "myrient_url": "Panzer%20Dragoon%20Saga%20%28USA%29%20%28Disc%204%29.zip"
+      },
+      {
+        "name": "Baroque",
+        "rating": 4.19,
+        "release": "May 21, 1998",
+        "cdromance_name": "Baroque",
+        "cdromance_url": "baroque-japan"
+      },
+      {
+        "name": "Radiant Silvergun",
+        "rating": 4.17,
+        "release": "May 28, 1998",
+        "myrient_name": "Radiant Silvergun (Japan).zip",
+        "myrient_url": "Radiant%20Silvergun%20%28Japan%29.zip"
+      },
+      {
+        "name": "Mega Man X4",
+        "rating": 4.17,
+        "release": "Aug 01, 1997",
+        "myrient_name": "Mega Man X4 (USA).zip",
+        "myrient_url": "Mega%20Man%20X4%20%28USA%29.zip"
+      },
+      {
+        "name": "Tactics Ogre: Let Us Cling Together",
+        "rating": 4.17,
+        "release": "Oct 06, 1995",
+        "cdromance_name": "Tactics Ogre: Let Us Cling Together",
+        "cdromance_url": "tactics-ogre-let-us-cling-together-english-patched"
+      }
+    ]
+  },
+  {
+    "name": "PlayStation",
+    "release": "Dec 3, 1994",
+    "backloggd_url": "ps",
+    "myrient_url": "Redump/Sony%20-%20PlayStation",
+    "cdromance_url": "psx-iso",
+    "cdromance_url_game": "psx-iso",
+    "file_types": [
+      ".cue",
+      ".bin"
+    ],
+    "games": [
+      {
+        "name": "Suikoden II",
+        "rating": 4.43,
+        "release": "Dec 17, 1998",
+        "myrient_name": "Suikoden II (USA).zip",
+        "myrient_url": "Suikoden%20II%20%28USA%29.zip"
+      },
+      {
+        "name": "Castlevania: Symphony of the Night",
+        "rating": 4.41,
+        "release": "Mar 20, 1997",
+        "myrient_name": "Castlevania - Symphony of the Night (USA).zip",
+        "myrient_url": "Castlevania%20-%20Symphony%20of%20the%20Night%20%28USA%29.zip"
+      },
+      {
+        "name": "Moon: Remix RPG Adventure",
+        "rating": 4.38,
+        "release": "Oct 16, 1997",
+        "cdromance_name": "Moon: Remix RPG Adventure",
+        "cdromance_url": "moon-remix-rpg-adventure-jpn"
+      },
+      {
+        "name": "Final Fantasy IX",
+        "rating": 4.33,
+        "release": "Jul 07, 2000",
+        "myrient_name": "Final Fantasy IX (USA) (Disc 1).zip",
+        "myrient_url": "Final%20Fantasy%20IX%20%28USA%29%20%28Disc%201%29.zip"
+      },
+      {
+        "name": "Final Fantasy IX",
+        "rating": 4.33,
+        "release": "Jul 07, 2000",
+        "myrient_name": "Final Fantasy IX (USA) (Disc 2).zip",
+        "myrient_url": "Final%20Fantasy%20IX%20%28USA%29%20%28Disc%202%29.zip"
+      },
+      {
+        "name": "Final Fantasy IX",
+        "rating": 4.33,
+        "release": "Jul 07, 2000",
+        "myrient_name": "Final Fantasy IX (USA) (Disc 3).zip",
+        "myrient_url": "Final%20Fantasy%20IX%20%28USA%29%20%28Disc%203%29.zip"
+      },
+      {
+        "name": "Final Fantasy IX",
+        "rating": 4.33,
+        "release": "Jul 07, 2000",
+        "myrient_name": "Final Fantasy IX (USA) (Disc 4).zip",
+        "myrient_url": "Final%20Fantasy%20IX%20%28USA%29%20%28Disc%204%29.zip"
+      },
+      {
+        "name": "Final Fantasy Tactics",
+        "rating": 4.3,
+        "release": "Jun 20, 1997",
+        "myrient_name": "Final Fantasy Tactics (USA).zip",
+        "myrient_url": "Final%20Fantasy%20Tactics%20%28USA%29.zip"
+      },
+      {
+        "name": "Xenogears",
+        "rating": 4.28,
+        "release": "Feb 11, 1998",
+        "myrient_name": "Xenogears (USA) (Disc 1).zip",
+        "myrient_url": "Xenogears%20%28USA%29%20%28Disc%201%29.zip"
+      },
+      {
+        "name": "Xenogears",
+        "rating": 4.28,
+        "release": "Feb 11, 1998",
+        "myrient_name": "Xenogears (USA) (Disc 2).zip",
+        "myrient_url": "Xenogears%20%28USA%29%20%28Disc%202%29.zip"
+      },
+      {
+        "name": "Metal Gear Solid",
+        "rating": 4.27,
+        "release": "Sep 03, 1998",
+        "myrient_name": "Metal Gear Solid (USA) (Disc 1).zip",
+        "myrient_url": "Metal%20Gear%20Solid%20%28USA%29%20%28Disc%201%29.zip"
+      },
+      {
+        "name": "Metal Gear Solid",
+        "rating": 4.27,
+        "release": "Sep 03, 1998",
+        "myrient_name": "Metal Gear Solid (USA) (Disc 2).zip",
+        "myrient_url": "Metal%20Gear%20Solid%20%28USA%29%20%28Disc%202%29.zip"
+      },
+      {
+        "name": "Final Fantasy VII",
+        "rating": 4.25,
+        "release": "Jan 31, 1997",
+        "myrient_name": "Final Fantasy VII (USA) (Disc 1).zip",
+        "myrient_url": "Final%20Fantasy%20VII%20%28USA%29%20%28Disc%201%29.zip"
+      },
+      {
+        "name": "Final Fantasy VII",
+        "rating": 4.25,
+        "release": "Jan 31, 1997",
+        "myrient_name": "Final Fantasy VII (USA) (Disc 2).zip",
+        "myrient_url": "Final%20Fantasy%20VII%20%28USA%29%20%28Disc%202%29.zip"
+      },
+      {
+        "name": "Final Fantasy VII",
+        "rating": 4.25,
+        "release": "Jan 31, 1997",
+        "myrient_name": "Final Fantasy VII (USA) (Disc 3).zip",
+        "myrient_url": "Final%20Fantasy%20VII%20%28USA%29%20%28Disc%203%29.zip"
+      },
+      {
+        "name": "Ridge Racer Type 4",
+        "rating": 4.22,
+        "release": "Dec 03, 1998",
+        "myrient_name": "R4 - Ridge Racer Type 4 (USA).zip",
+        "myrient_url": "R4%20-%20Ridge%20Racer%20Type%204%20%28USA%29.zip"
+      },
+      {
+        "name": "Resident Evil 2",
+        "rating": 4.21,
+        "release": "Jan 21, 1998",
+        "myrient_name": "Resident Evil 2 (USA) (Disc 1).zip",
+        "myrient_url": "Resident%20Evil%202%20%28USA%29%20%28Disc%201%29.zip"
+      },
+      {
+        "name": "Resident Evil 2",
+        "rating": 4.21,
+        "release": "Jan 21, 1998",
+        "myrient_name": "Resident Evil 2 (USA) (Disc 2).zip",
+        "myrient_url": "Resident%20Evil%202%20%28USA%29%20%28Disc%202%29.zip"
+      },
+      {
+        "name": "Persona 2: Eternal Punishment",
+        "rating": 4.18,
+        "release": "Jun 29, 2000",
+        "myrient_name": "Persona 2 - Eternal Punishment (USA).zip",
+        "myrient_url": "Persona%202%20-%20Eternal%20Punishment%20%28USA%29.zip"
+      }
+    ]
+  },
+  {
+    "name": "Virtual Boy",
+    "release": "Aug 14, 1995",
+    "backloggd_url": "virtualboy",
+    "myrient_url": "No-Intro/Nintendo%20-%20Virtual%20Boy",
+    "cdromance_url": "",
+    "cdromance_url_game": "",
+    "file_types": [
+      ".vb"
+    ],
+    "games": []
+  },
+  {
+    "name": "Nintendo 64",
+    "release": "Jun 23, 1996",
+    "backloggd_url": "n64",
+    "myrient_url": "No-Intro/Nintendo%20-%20Nintendo%2064%20%28BigEndian%29",
+    "cdromance_url": "n64-roms",
+    "cdromance_url_game": "n64-roms",
+    "file_types": [
+      ".z64"
+    ],
+    "games": [
+      {
+        "name": "The Legend of Zelda: Majora's Mask",
+        "rating": 4.44,
+        "release": "Apr 27, 2000",
+        "myrient_name": "Legend of Zelda, The - Majora's Mask (USA).zip",
+        "myrient_url": "Legend%20of%20Zelda%2C%20The%20-%20Majora%27s%20Mask%20%28USA%29.zip"
+      },
+      {
+        "name": "The Legend of Zelda: Ocarina of Time",
+        "rating": 4.33,
+        "release": "Nov 21, 1998",
+        "myrient_name": "Legend of Zelda, The - Ocarina of Time (USA).zip",
+        "myrient_url": "Legend%20of%20Zelda%2C%20The%20-%20Ocarina%20of%20Time%20%28USA%29.zip"
+      },
+      {
+        "name": "Paper Mario",
+        "rating": 4.12,
+        "release": "Aug 11, 2000",
+        "myrient_name": "Paper Mario (USA).zip",
+        "myrient_url": "Paper%20Mario%20%28USA%29.zip"
+      },
+      {
+        "name": "Super Mario 64",
+        "rating": 4.1,
+        "release": "Jun 23, 1996",
+        "myrient_name": "Super Mario 64 (USA).zip",
+        "myrient_url": "Super%20Mario%2064%20%28USA%29.zip"
+      }
+    ]
+  },
+  {
+    "name": "Neo Geo Pocket",
+    "release": "May 16, 1998",
+    "backloggd_url": "neo-geo-pocket",
+    "myrient_url": "No-Intro/SNK%20-%20NeoGeo%20Pocket",
+    "cdromance_url": "neo-geo-pocket",
+    "cdromance_url_game": "neo-geo-pocket",
+    "file_types": [
+      ".ngp"
+    ],
+    "games": []
+  },
+  {
+    "name": "Game Boy Color",
+    "release": "Oct 21, 1998",
+    "backloggd_url": "gbc",
+    "myrient_url": "No-Intro/Nintendo%20-%20Game%20Boy%20Color",
+    "cdromance_url": "gbc-roms",
+    "cdromance_url_game": "gameboy-color-roms",
+    "file_types": [
+      ".gbc"
+    ],
+    "games": [
+      {
+        "name": "Dragon Warrior Monsters 2: Tara's Adventure",
+        "rating": 4.09,
+        "release": "Mar 09, 2001",
+        "myrient_name": "Dragon Warrior Monsters 2 - Tara's Adventure (USA) (SGB Enhanced) (GB Compatible).zip",
+        "myrient_url": "Dragon%20Warrior%20Monsters%202%20-%20Tara%27s%20Adventure%20%28USA%29%20%28SGB%20Enhanced%29%20%28GB%20Compatible%29.zip"
+      }
+    ]
+  },
+  {
+    "name": "Sega Dreamcast",
+    "release": "Nov 27, 1998",
+    "backloggd_url": "dc",
+    "myrient_url": "Redump/Sega%20-%20Dreamcast",
+    "cdromance_url": "dc-iso",
+    "cdromance_url_game": "dc-iso",
+    "file_types": [
+      ".cue",
+      ".bin"
+    ],
+    "games": []
+  },
+  {
+    "name": "Neo Geo Pocket Color",
+    "release": "Mar 16, 1999",
+    "backloggd_url": "neo-geo-pocket-color",
+    "myrient_url": "No-Intro/SNK%20-%20NeoGeo%20Pocket%20Color",
+    "cdromance_url": "neo-geo-pocket",
+    "cdromance_url_game": "neo-geo-pocket",
+    "file_types": [
+      ".ngc"
+    ],
+    "games": [
+      {
+        "name": "SNK vs. Capcom: The Match of the Millenium - Best Collection",
+        "rating": 4,
+        "release": "Jan 01, 2001",
+        "myrient_name": "SNK vs. Capcom - The Match of the Millennium (World) (En,Ja).zip",
+        "myrient_url": "SNK%20vs.%20Capcom%20-%20The%20Match%20of%20the%20Millennium%20%28World%29%20%28En%2CJa%29.zip"
+      },
+      {
+        "name": "Gals Fighters",
+        "rating": 3.81,
+        "release": "Jan 01, 2000",
+        "myrient_name": "SNK Gals' Fighters (USA, Europe).zip",
+        "myrient_url": "SNK%20Gals%27%20Fighters%20%28USA%2C%20Europe%29.zip"
+      },
+      {
+        "name": "SNK vs. Capcom Card Fighters' Clash - SNK Card Fighter's Version",
+        "rating": 3.76,
+        "release": "Nov 21, 1999",
+        "myrient_name": "SNK vs. Capcom - Card Fighters' Clash - SNK Version (USA, Europe).zip",
+        "myrient_url": "SNK%20vs.%20Capcom%20-%20Card%20Fighters%27%20Clash%20-%20SNK%20Version%20%28USA%2C%20Europe%29.zip"
+      }
+    ]
+  },
+  {
+    "name": "PlayStation 2",
+    "release": "Mar 04, 2000",
+    "backloggd_url": "ps2",
+    "myrient_url": "Redump/Sony%20-%20PlayStation%202",
+    "cdromance_url": "ps2-iso",
+    "cdromance_url_game": "ps2-iso",
+    "file_types": [
+      ".cue",
+      ".bin",
+      ".iso"
+    ],
+    "games": [
+      {
+        "name": "Metal Gear Solid 3: Snake Eater",
+        "rating": 4.58,
+        "release": "Nov 17, 2004",
+        "myrient_name": "Metal Gear Solid 3 - Snake Eater (USA).zip",
+        "myrient_url": "Metal%20Gear%20Solid%203%20-%20Snake%20Eater%20%28USA%29.zip"
+      },
+      {
+        "name": "Silent Hill 2",
+        "rating": 4.58,
+        "release": "Sep 24, 2001",
+        "myrient_name": "Silent Hill 2 (Europe) (En,Ja,Fr,De,Es,It).zip",
+        "myrient_url": "Silent%20Hill%202%20%28Europe%29%20%28En%2CJa%2CFr%2CDe%2CEs%2CIt%29.zip"
+      },
+      {
+        "name": "Metal Gear Solid 2: Sons of Liberty",
+        "rating": 4.46,
+        "release": "Nov 13, 2001",
+        "myrient_name": "Metal Gear Solid 2 - Sons of Liberty (USA).zip",
+        "myrient_url": "Metal%20Gear%20Solid%202%20-%20Sons%20of%20Liberty%20%28USA%29.zip"
+      },
+      {
+        "name": "Shadow of the Colossus",
+        "rating": 4.4,
+        "release": "Oct 18, 2005",
+        "myrient_name": "Shadow of the Colossus (USA).zip",
+        "myrient_url": "Shadow%20of%20the%20Colossus%20%28USA%29.zip"
+      },
+      {
+        "name": "We Love Katamari",
+        "rating": 4.38,
+        "release": "Jul 06, 2005",
+        "myrient_name": "We Love Katamari (USA).zip",
+        "myrient_url": "We%20Love%20Katamari%20%28USA%29.zip"
+      },
+      {
+        "name": "Kingdom Hearts II",
+        "rating": 4.32,
+        "release": "Dec 22, 2005",
+        "myrient_name": "Kingdom Hearts II (USA).zip",
+        "myrient_url": "Kingdom%20Hearts%20II%20%28USA%29.zip"
+      },
+      {
+        "name": "Killer7",
+        "rating": 4.29,
+        "release": "Jun 09, 2005",
+        "myrient_name": "Killer7 (USA).zip",
+        "myrient_url": "Killer7%20%28USA%29.zip"
+      },
+      {
+        "name": "Devil May Cry 3: Dante's Awakening",
+        "rating": 4.28,
+        "release": "Feb 17, 2005",
+        "myrient_name": "Devil May Cry 3 - Dante's Awakening (USA) (En,Ja,Ko).zip",
+        "myrient_url": "Devil%20May%20Cry%203%20-%20Dante%27s%20Awakening%20%28USA%29%20%28En%2CJa%2CKo%29.zip"
+      },
+      {
+        "name": "Katamari Damacy",
+        "rating": 4.26,
+        "release": "Mar 18, 2004",
+        "myrient_name": "Katamari Damacy (USA).zip",
+        "myrient_url": "Katamari%20Damacy%20%28USA%29.zip"
+      },
+      {
+        "name": "God Hand",
+        "rating": 4.24,
+        "release": "Sep 14, 2006",
+        "myrient_name": "God Hand (USA).zip",
+        "myrient_url": "God%20Hand%20%28USA%29.zip"
+      },
+      {
+        "name": "Silent Hill 3",
+        "rating": 4.24,
+        "release": "May 23, 2003",
+        "myrient_name": "Silent Hill 3 (USA) (En,Ja,Fr,De,Es,It,Ko).zip",
+        "myrient_url": "Silent%20Hill%203%20%28USA%29%20%28En%2CJa%2CFr%2CDe%2CEs%2CIt%2CKo%29.zip"
+      },
+      {
+        "name": "Shin Megami Tensei: Digital Devil Saga 2",
+        "rating": 4.23,
+        "release": "Jan 27, 2005",
+        "myrient_name": "Shin Megami Tensei - Digital Devil Saga 2 (USA).zip",
+        "myrient_url": "Shin%20Megami%20Tensei%20-%20Digital%20Devil%20Saga%202%20%28USA%29.zip"
+      },
+      {
+        "name": "Dragon Quest VIII: Journey of the Cursed King",
+        "rating": 4.21,
+        "release": "Nov 27, 2004",
+        "myrient_name": "Dragon Quest VIII - Journey of the Cursed King (USA).zip",
+        "myrient_url": "Dragon%20Quest%20VIII%20-%20Journey%20of%20the%20Cursed%20King%20%28USA%29.zip"
+      },
+      {
+        "name": "Shin Megami Tensei: Nocturne",
+        "rating": 4.2,
+        "release": "Feb 20, 2003",
+        "myrient_name": "Shin Megami Tensei - Nocturne (USA).zip",
+        "myrient_url": "Shin%20Megami%20Tensei%20-%20Nocturne%20%28USA%29.zip"
+      },
+      {
+        "name": "Fatal Frame II: Crimson Butterfly",
+        "rating": 4.19,
+        "release": "Nov 27, 2003",
+        "myrient_name": "Fatal Frame II - Crimson Butterfly (USA).zip",
+        "myrient_url": "Fatal%20Frame%20II%20-%20Crimson%20Butterfly%20%28USA%29.zip"
+      }
+    ]
+  },
+  {
+    "name": "Game Boy Advance",
+    "release": "Mar 21, 2001",
+    "backloggd_url": "gba",
+    "myrient_url": "No-Intro/Nintendo%20-%20Game%20Boy%20Advance",
+    "cdromance_url": "gba-roms",
+    "cdromance_url_game": "gba-roms",
+    "file_types": [
+      ".gba"
+    ],
+    "games": [
+      {
+        "name": "Mother 3",
+        "rating": 4.54,
+        "release": "Apr 20, 2006",
+        "cdromance_name": "Mother 3",
+        "cdromance_url": "mother-3-english-patched-jpn"
+      },
+      {
+        "name": "Mega Man Zero 3",
+        "rating": 4.34,
+        "release": "Apr 23, 2004",
+        "myrient_name": "Megaman Zero 3 (USA).zip",
+        "myrient_url": "Megaman%20Zero%203%20%28USA%29.zip"
+      },
+      {
+        "name": "Mega Man Battle Network 6: Cybeast Falzar",
+        "rating": 4.29,
+        "release": "Nov 23, 2005",
+        "myrient_name": "Megaman - Battle Network 6 - Cybeast Falzar (USA).zip",
+        "myrient_url": "Megaman%20-%20Battle%20Network%206%20-%20Cybeast%20Falzar%20%28USA%29.zip"
+      },
+      {
+        "name": "Castlevania: Aria of Sorrow",
+        "rating": 4.25,
+        "release": "May 06, 2003",
+        "myrient_name": "Castlevania - Aria of Sorrow (USA).zip",
+        "myrient_url": "Castlevania%20-%20Aria%20of%20Sorrow%20%28USA%29.zip"
+      }
+    ]
+  },
+  {
+    "name": "Nintendo GameCube",
+    "release": "Nov 18, 2001",
+    "backloggd_url": "ngc",
+    "myrient_url": "Redump/Nintendo%20-%20GameCube%20-%20NKit%20RVZ%20%5Bzstd-19-128k%5D",
+    "cdromance_url": "gamecube",
+    "cdromance_url_game": "gamecube",
+    "file_types": [
+      ".rvz"
+    ],
+    "games": [
+      {
+        "name": "Paper Mario: The Thousand-Year Door",
+        "rating": 4.42,
+        "release": "Jul 22, 2004",
+        "myrient_name": "Paper Mario - The Thousand-Year Door (USA).zip",
+        "myrient_url": "Paper%20Mario%20-%20The%20Thousand-Year%20Door%20%28USA%29.zip"
+      },
+      {
+        "name": "Resident Evil 4",
+        "rating": 4.37,
+        "release": "Jan 11, 2005",
+        "myrient_name": "Resident Evil 4 (USA) (Disc 1).zip",
+        "myrient_url": "Resident%20Evil%204%20%28USA%29%20%28Disc%201%29.zip"
+      },
+      {
+        "name": "Resident Evil 4",
+        "rating": 4.37,
+        "release": "Jan 11, 2005",
+        "myrient_name": "Resident Evil 4 (USA) (Disc 2).zip",
+        "myrient_url": "Resident%20Evil%204%20%28USA%29%20%28Disc%202%29.zip"
+      },
+      {
+        "name": "The Legend of Zelda: The Wind Waker",
+        "rating": 4.28,
+        "release": "Dec 13, 2002",
+        "myrient_name": "Legend of Zelda, The - The Wind Waker (USA).zip",
+        "myrient_url": "Legend%20of%20Zelda%2C%20The%20-%20The%20Wind%20Waker%20%28USA%29.zip"
+      },
+      {
+        "name": "Metroid Prime",
+        "rating": 4.27,
+        "release": "Nov 17, 2002",
+        "myrient_name": "Metroid Prime (USA).zip",
+        "myrient_url": "Metroid%20Prime%20%28USA%29.zip"
+      },
+      {
+        "name": "F-Zero GX",
+        "rating": 4.2,
+        "release": "Jul 25, 2003",
+        "myrient_name": "F-Zero GX (USA).zip",
+        "myrient_url": "F-Zero%20GX%20%28USA%29.zip"
+      },
+      {
+        "name": "Fire Emblem: Path of Radiance",
+        "rating": 4.19,
+        "release": "Apr 20, 2005",
+        "myrient_name": "Fire Emblem - Path of Radiance (USA).zip",
+        "myrient_url": "Fire%20Emblem%20-%20Path%20of%20Radiance%20%28USA%29.zip"
+      },
+      {
+        "name": "Chibi-Robo!",
+        "rating": 4.13,
+        "release": "Jun 23, 2005",
+        "myrient_name": "Chibi-Robo! (USA).zip",
+        "myrient_url": "Chibi-Robo%21%20%28USA%29.zip"
+      },
+      {
+        "name": "NBA Street Vol. 2",
+        "rating": 4.11,
+        "release": "Apr 28, 2003",
+        "myrient_name": "NBA Street Vol. 2 (USA).zip",
+        "myrient_url": "NBA%20Street%20Vol.%202%20%28USA%29.zip"
+      },
+      {
+        "name": "Super Monkey Ball 2",
+        "rating": 4.1,
+        "release": "Aug 25, 2002",
+        "myrient_name": "Super Monkey Ball 2 (USA).zip",
+        "myrient_url": "Super%20Monkey%20Ball%202%20%28USA%29.zip"
+      },
+      {
+        "name": "The Legend of Zelda: Twilight Princess",
+        "rating": 4.09,
+        "release": "Nov 19, 2006",
+        "myrient_name": "Legend of Zelda, The - Twilight Princess (USA).zip",
+        "myrient_url": "Legend%20of%20Zelda%2C%20The%20-%20Twilight%20Princess%20%28USA%29.zip"
+      },
+      {
+        "name": "Pikmin 2",
+        "rating": 4.07,
+        "release": "Apr 29, 2004",
+        "myrient_name": "Pikmin 2 (USA).zip",
+        "myrient_url": "Pikmin%202%20%28USA%29.zip"
+      }
+    ]
+  },
+  {
+    "name": "Nintendo DS",
+    "release": "Nov 21, 2004",
+    "backloggd_url": "nds",
+    "myrient_url": "No-Intro/Nintendo%20-%20Nintendo%20DS%20%28Decrypted%29",
+    "cdromance_url": "nds-roms",
+    "cdromance_url_game": "nds-roms",
+    "file_types": [
+      ".nds"
+    ],
+    "games": [
+      {
+        "name": "Ghost Trick: Phantom Detective",
+        "rating": 4.47,
+        "release": "Jun 19, 2010",
+        "myrient_name": "Ghost Trick - Phantom Detective (USA) (En,Fr,De,Es,It).zip",
+        "myrient_url": "Ghost%20Trick%20-%20Phantom%20Detective%20%28USA%29%20%28En%2CFr%2CDe%2CEs%2CIt%29.zip"
+      },
+      {
+        "name": "Ace Attorney Investigations 2",
+        "rating": 4.43,
+        "release": "Feb 03, 2011"
+      },
+      {
+        "name": "Mega Man Star Force 3: Black Ace",
+        "rating": 4.38,
+        "release": "Nov 13, 2008",
+        "myrient_name": "Mega Man Star Force 3 - Black Ace (USA).zip",
+        "myrient_url": "Mega%20Man%20Star%20Force%203%20-%20Black%20Ace%20%28USA%29.zip"
+      },
+      {
+        "name": "Moero! Nekketsu Rhythm Damashii Osu! Tatakae! Ouendan 2",
+        "rating": 4.35,
+        "release": "May 17, 2007",
+        "myrient_name": "Moero! Nekketsu Rhythm Damashii - Osu! Tatakae! Ouendan 2 (Japan).zip",
+        "myrient_url": "Moero%21%20Nekketsu%20Rhythm%20Damashii%20-%20Osu%21%20Tatakae%21%20Ouendan%202%20%28Japan%29.zip"
+      },
+      {
+        "name": "Pokémon White Version 2",
+        "rating": 4.31,
+        "release": "Jun 23, 2012",
+        "myrient_name": "Pokemon - White Version 2 (USA, Europe) (NDSi Enhanced).zip",
+        "myrient_url": "Pokemon%20-%20White%20Version%202%20%28USA%2C%20Europe%29%20%28NDSi%20Enhanced%29.zip"
+      },
+      {
+        "name": "Professor Layton and the Unwound Future",
+        "rating": 4.29,
+        "release": "Nov 27, 2008",
+        "myrient_name": "Professor Layton and the Unwound Future (USA).zip",
+        "myrient_url": "Professor%20Layton%20and%20the%20Unwound%20Future%20%28USA%29.zip"
+      },
+      {
+        "name": "Pokémon Black Version 2",
+        "rating": 4.28,
+        "release": "Jun 23, 2012",
+        "myrient_name": "Pokemon - Black Version 2 (USA, Europe) (NDSi Enhanced).zip",
+        "myrient_url": "Pokemon%20-%20Black%20Version%202%20%28USA%2C%20Europe%29%20%28NDSi%20Enhanced%29.zip"
+      },
+      {
+        "name": "The World Ends with You",
+        "rating": 4.27,
+        "release": "Jul 26, 2007",
+        "myrient_name": "World Ends with You, The (USA).zip",
+        "myrient_url": "World%20Ends%20with%20You%2C%20The%20%28USA%29.zip"
+      },
+      {
+        "name": "Last Window: The Secret of Cape West",
+        "rating": 4.22,
+        "release": "Jan 14, 2010",
+        "myrient_name": "Last Window - The Secret of Cape West (Europe) (En,Fr,De,Es,It).zip",
+        "myrient_url": "Last%20Window%20-%20The%20Secret%20of%20Cape%20West%20%28Europe%29%20%28En%2CFr%2CDe%2CEs%2CIt%29.zip"
+      },
+      {
+        "name": "Mario & Luigi: Bowser's Inside Story",
+        "rating": 4.22,
+        "release": "Sep 14, 2009",
+        "myrient_name": "Mario & Luigi - Bowser's Inside Story (USA) (En,Fr,Es).zip",
+        "myrient_url": "Mario%20%26%20Luigi%20-%20Bowser%27s%20Inside%20Story%20%28USA%29%20%28En%2CFr%2CEs%29.zip"
+      },
+      {
+        "name": "Zero Escape: Nine Hours, Nine Persons, Nine Doors",
+        "rating": 4.21,
+        "release": "Dec 10, 2009",
+        "myrient_name": "Nine Hours, Nine Persons, Nine Doors (USA).zip",
+        "myrient_url": "Nine%20Hours%2C%20Nine%20Persons%2C%20Nine%20Doors%20%28USA%29.zip"
+      },
+      {
+        "name": "Inazuma Eleven 3: Team Ogre Attacks!",
+        "rating": 4.16,
+        "release": "Dec 16, 2010",
+        "cdromance_name": "Inazuma Eleven 3: Sekai Heno Chousen The Ogre!",
+        "cdromance_url": "inazuma-eleven-3-sekai-heno-chousen-the-ogre-japan"
+      },
+      {
+        "name": "Shin Megami Tensei: Strange Journey",
+        "rating": 4.13,
+        "release": "Oct 08, 2009",
+        "myrient_name": "Shin Megami Tensei - Strange Journey (USA).zip",
+        "myrient_url": "Shin%20Megami%20Tensei%20-%20Strange%20Journey%20%28USA%29.zip"
+      }
+    ]
+  },
+  {
+    "name": "PlayStation Portable",
+    "release": "Dec 12, 2004",
+    "backloggd_url": "psp",
+    "myrient_url": "Redump/Sony%20-%20PlayStation%20Portable",
+    "cdromance_url": "psp",
+    "cdromance_url_game": "psp",
+    "file_types": [
+      ".iso"
+    ],
+    "games": [
+      {
+        "name": "The Legend of Heroes: Trails in the Sky SC",
+        "rating": 4.41,
+        "release": "Mar 09, 2006",
+        "myrient_name": "Legend of Heroes, The - Trails in the Sky (USA).zip",
+        "myrient_url": "Legend%20of%20Heroes%2C%20The%20-%20Trails%20in%20the%20Sky%20%28USA%29.zip"
+      },
+      {
+        "name": "The Legend of Heroes: Trails in the Sky the 3rd",
+        "rating": 4.28,
+        "release": "Jun 28, 2007",
+        "myrient_name": "Legend of Heroes, The - Trails in the Sky (USA).zip",
+        "myrient_url": "Legend%20of%20Heroes%2C%20The%20-%20Trails%20in%20the%20Sky%20%28USA%29.zip"
+      },
+      {
+        "name": "Steins;Gate",
+        "rating": 4.25,
+        "release": "Oct 15, 2009",
+        "cdromance_name": "Steins;Gate (English Patched)",
+        "cdromance_url": "steinsgate-english-patched"
+      },
+      {
+        "name": "OutRun 2006: Coast 2 Coast",
+        "rating": 4.24,
+        "release": "Mar 17, 2006",
+        "myrient_name": "OutRun 2006 - Coast 2 Coast (USA).zip",
+        "myrient_url": "OutRun%202006%20-%20Coast%202%20Coast%20%28USA%29.zip"
+      },
+      {
+        "name": "428: Shibuya Scramble",
+        "rating": 4.18,
+        "release": "Dec 04, 2008",
+        "myrient_name": "428 - Fuusa Sareta Shibuya de (Japan).zip",
+        "myrient_url": "428%20-%20Fuusa%20Sareta%20Shibuya%20de%20%28Japan%29.zip"
+      }
+    ]
+  },
+  {
+    "name": "Nintendo Wii",
+    "release": "Nov 19, 2006",
+    "backloggd_url": "wii",
+    "myrient_url": "Redump/Nintendo%20-%20Wii%20-%20NKit%20RVZ%20%5Bzstd-19-128k%5D",
+    "cdromance_url": "",
+    "cdromance_url_game": "",
+    "file_types": [
+      ".rvz"
+    ],
+    "games": [
+      {
+        "name": "Super Mario Galaxy",
+        "rating": 4.36,
+        "release": "Nov 01, 2007",
+        "myrient_name": "Super Mario Galaxy (USA) (En,Fr,Es).zip",
+        "myrient_url": "Super%20Mario%20Galaxy%20%28USA%29%20%28En%2CFr%2CEs%29.zip"
+      },
+      {
+        "name": "Rhythm Heaven Fever",
+        "rating": 4.36,
+        "release": "Jul 21, 2011",
+        "myrient_name": "Rhythm Heaven Fever (USA).zip",
+        "myrient_url": "Rhythm%20Heaven%20Fever%20%28USA%29.zip"
+      },
+      {
+        "name": "Super Mario Galaxy 2",
+        "rating": 4.35,
+        "release": "May 23, 2010",
+        "myrient_name": "Super Mario Galaxy 2 (USA) (En,Fr,Es).zip",
+        "myrient_url": "Super%20Mario%20Galaxy%202%20%28USA%29%20%28En%2CFr%2CEs%29.zip"
+      },
+      {
+        "name": "Xenoblade Chronicles",
+        "rating": 4.23,
+        "release": "Jun 10, 2010",
+        "myrient_name": "Xenoblade Chronicles (USA, Asia) (En,Fr,Es).zip",
+        "myrient_url": "Xenoblade%20Chronicles%20%28USA%2C%20Asia%29%20%28En%2CFr%2CEs%29.zip"
+      }
+    ]
+  }
+]

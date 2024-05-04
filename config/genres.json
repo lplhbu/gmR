@@ -1,0 +1,94 @@
+[
+    {
+        "name": "Adventure",
+        "backloggd_url": ";genre:adventure"
+    },
+    {
+        "name": "Arcade",
+        "backloggd_url": ";genre:arcade"
+    },
+    {
+        "name": "Brawler",
+        "backloggd_url": ";genre:hack-and-slash-beat-em-up"
+    },
+    {
+        "name": "Card & Board Game",
+        "backloggd_url": ";genre:card-and-board-game"
+    },
+    {
+        "name": "Fighting",
+        "backloggd_url": ";genre:fighting"
+    },
+    {
+        "name": "Indie",
+        "backloggd_url": ";genre:indie"
+    },
+    {
+        "name": "MOBA",
+        "backloggd_url": ";genre:moba"
+    },
+    {
+        "name": "Music",
+        "backloggd_url": ";genre:music"
+    },
+    {
+        "name": "Pinball",
+        "backloggd_url": ";genre:pinball"
+    },
+    {
+        "name": "Platform",
+        "backloggd_url": ";genre:platform"
+    },
+    {
+        "name": "Point-and-Click",
+        "backloggd_url": ";genre:point-and-click"
+    },
+    {
+        "name": "Puzzle",
+        "backloggd_url": ";genre:puzzle"
+    },
+    {
+        "name": "Quiz/Trivia",
+        "backloggd_url": ";genre:quiz-trivia"
+    },
+    {
+        "name": "Racing",
+        "backloggd_url": ";genre:racing"
+    },
+    {
+        "name": "Real Time Strategy",
+        "backloggd_url": ";genre:real-time-strategy-rts"
+    },
+    {
+        "name": "RPG",
+        "backloggd_url": ";genre:role-playing-rpg"
+    },
+    {
+        "name": "Shooter",
+        "backloggd_url": ";genre:shooter"
+    },
+    {
+        "name": "Simulator",
+        "backloggd_url": ";genre:simulator"
+    },
+    {
+        "name": "Sport",
+        "backloggd_url": ";genre:sport"
+    },
+    {
+        "name": "Strategy",
+        "backloggd_url": ";genre:strategy"
+    },
+    {
+        "name": "Tactical",
+        "backloggd_url": ";genre:tactical"
+    },
+    {
+        "name": "Turn Based Strategy",
+        "backloggd_url": ";genre:turn-based-strategy-tbs"
+    },
+    {
+        "name": "Visual Novel",
+        "backloggd_url": ";genre:visual-novel"
+    }
+]

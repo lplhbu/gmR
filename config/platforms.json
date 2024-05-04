@@ -1,0 +1,290 @@
+[
+  {
+    "name": "Nintendo Entertainment System",
+    "release": "Jul 15, 1983",
+    "backloggd_url": "nes",
+    "myrient_url": "No-Intro/Nintendo%20-%20Nintendo%20Entertainment%20System%20%28Headered%29",
+    "cdromance_url": "nes-roms",
+    "cdromance_url_game": "nes-roms",
+    "file_types": [".nes"]
+  },
+  {
+    "name": "Sega Master System",
+    "release": "Oct 20, 1985",
+    "backloggd_url": "sms",
+    "myrient_url": "No-Intro/Sega%20-%20Master%20System%20-%20Mark%20III",
+    "cdromance_url": "",
+    "cdromance_url_game": "",
+    "file_types": [".sms"]
+  },
+  {
+    "name": "PC Engine",
+    "release": "Oct 30, 1987",
+    "backloggd_url": "turbografx16--1",
+    "myrient_url": "No-Intro/NEC%20-%20PC%20Engine%20-%20TurboGrafx-16",
+    "cdromance_url": "turbografx-16",
+    "cdromance_url_game": "turbografx-16",
+    "file_types": [".pce"]
+  },
+  {
+    "name": "Sega Genesis",
+    "release": "Oct 29, 1988",
+    "backloggd_url": "smd",
+    "myrient_url": "No-Intro/Sega%20-%20Mega%20Drive%20-%20Genesis",
+    "cdromance_url": "sega_genesis_roms",
+    "cdromance_url_game": "sega_genesis_roms",
+    "file_types": [".md"]
+  },
+  {
+    "name": "Game Boy",
+    "release": "Apr 21, 1989",
+    "backloggd_url": "gb",
+    "myrient_url": "No-Intro/Nintendo%20-%20Game%20Boy",
+    "cdromance_url": "gb_roms",
+    "cdromance_url_game": "gameboy-roms",
+    "file_types": [".gb"]
+  },
+  {
+    "name": "Sega Game Gear",
+    "release": "Oct 6, 1990",
+    "backloggd_url": "gamegear",
+    "myrient_url": "No-Intro/Sega%20-%20Game%20Gear",
+    "cdromance_url": "game-gear",
+    "cdromance_url_game": "game-gear",
+    "file_types": [".gg", ".sms"]
+  },
+  {
+    "name": "Super Nintendo Entertainment System",
+    "release": "Nov 21, 1990",
+    "backloggd_url": "snes--1",
+    "myrient_url": "No-Intro/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System",
+    "cdromance_url": "snes-rom",
+    "cdromance_url_game": "snes-rom",
+    "file_types": [".sfc"]
+  },
+  {
+    "name": "Sega CD",
+    "release": "Dec 12, 1991",
+    "backloggd_url": "segacd",
+    "myrient_url": "Redump/Sega%20-%20Mega%20CD%20%26%20Sega%20CD",
+    "cdromance_url": "sega_cd_isos",
+    "cdromance_url_game": "sega_cd_isos",
+    "file_types": [".cue", ".bin"]
+  },
+  {
+    "name": "Sega 32X",
+    "release": "Nov 21, 1994",
+    "backloggd_url": "sega32",
+    "myrient_url": "No-Intro/Sega%20-%2032X",
+    "cdromance_url": "",
+    "cdromance_url_game": "",
+    "file_types": [".32x"]
+  },
+  {
+    "name": "Sega Saturn",
+    "release": "Nov 22, 1994",
+    "backloggd_url": "saturn",
+    "myrient_url": "Redump/Sega%20-%20Saturn",
+    "cdromance_url": "sega_saturn_isos",
+    "cdromance_url_game": "sega_saturn_isos",
+    "file_types": [".cue", ".bin"]
+  },
+  {
+    "name": "PlayStation",
+    "release": "Dec 3, 1994",
+    "backloggd_url": "ps",
+    "myrient_url": "Redump/Sony%20-%20PlayStation",
+    "cdromance_url": "psx-iso",
+    "cdromance_url_game": "psx-iso",
+    "file_types": [".cue", ".bin"]
+  },
+  {
+    "name": "Virtual Boy",
+    "release": "Aug 14, 1995",
+    "backloggd_url": "virtualboy",
+    "myrient_url": "No-Intro/Nintendo%20-%20Virtual%20Boy",
+    "cdromance_url": "",
+    "cdromance_url_game": "",
+    "file_types": [".vb"]
+  },
+  {
+    "name": "Nintendo 64",
+    "release": "Jun 23, 1996",
+    "backloggd_url": "n64",
+    "myrient_url": "No-Intro/Nintendo%20-%20Nintendo%2064%20%28BigEndian%29",
+    "cdromance_url": "n64-roms",
+    "cdromance_url_game": "n64-roms",
+    "file_types": [".z64"]
+  },
+  {
+    "name": "Neo Geo Pocket",
+    "release": "May 16, 1998",
+    "backloggd_url": "neo-geo-pocket",
+    "myrient_url": "No-Intro/SNK%20-%20NeoGeo%20Pocket",
+    "cdromance_url": "neo-geo-pocket",
+    "cdromance_url_game": "neo-geo-pocket",
+    "file_types": [".ngp"]
+  },
+  {
+    "name": "Game Boy Color",
+    "release": "Oct 21, 1998",
+    "backloggd_url": "gbc",
+    "myrient_url": "No-Intro/Nintendo%20-%20Game%20Boy%20Color",
+    "cdromance_url": "gbc-roms",
+    "cdromance_url_game": "gameboy-color-roms",
+    "file_types": [".gbc"]
+  },
+  {
+    "name": "Sega Dreamcast",
+    "release": "Nov 27, 1998",
+    "backloggd_url": "dc",
+    "myrient_url": "Redump/Sega%20-%20Dreamcast",
+    "cdromance_url": "dc-iso",
+    "cdromance_url_game": "dc-iso",
+    "file_types": [".cue", ".bin"]
+  },
+  {
+    "name": "Neo Geo Pocket Color",
+    "release": "Mar 16, 1999",
+    "backloggd_url": "neo-geo-pocket-color",
+    "myrient_url": "No-Intro/SNK%20-%20NeoGeo%20Pocket%20Color",
+    "cdromance_url": "neo-geo-pocket",
+    "cdromance_url_game": "neo-geo-pocket",
+    "file_types": [".ngc"]
+  },
+  {
+    "name": "PlayStation 2",
+    "release": "Mar 04, 2000",
+    "backloggd_url": "ps2",
+    "myrient_url": "Redump/Sony%20-%20PlayStation%202",
+    "cdromance_url": "ps2-iso",
+    "cdromance_url_game": "ps2-iso",
+    "file_types": [".cue", ".bin", ".iso"]
+  },
+  {
+    "name": "Game Boy Advance",
+    "release": "Mar 21, 2001",
+    "backloggd_url": "gba",
+    "myrient_url": "No-Intro/Nintendo%20-%20Game%20Boy%20Advance",
+    "cdromance_url": "gba-roms",
+    "cdromance_url_game": "gba-roms",
+    "file_types": [".gba"]
+  },
+  {
+    "name": "Nintendo GameCube",
+    "release": "Nov 18, 2001",
+    "backloggd_url": "ngc",
+    "myrient_url": "Redump/Nintendo%20-%20GameCube%20-%20NKit%20RVZ%20%5Bzstd-19-128k%5D",
+    "cdromance_url": "gamecube",
+    "cdromance_url_game": "gamecube",
+    "file_types": [".rvz"]
+  },
+  {
+    "name": "Xbox",
+    "release": "Nov 15, 2001",
+    "backloggd_url": "xbox",
+    "myrient_url": "Redump/Microsoft%20-%20Xbox",
+    "cdromance_url": "",
+    "cdromance_url_game": "",
+    "file_types": [".iso"]
+  },
+  {
+    "name": "Nintendo DS",
+    "release": "Nov 21, 2004",
+    "backloggd_url": "nds",
+    "myrient_url": "No-Intro/Nintendo%20-%20Nintendo%20DS%20%28Decrypted%29",
+    "cdromance_url": "nds-roms",
+    "cdromance_url_game": "nds-roms",
+    "file_types": [".nds"]
+  },
+  {
+    "name": "PlayStation Portable",
+    "release": "Dec 12, 2004",
+    "backloggd_url": "psp",
+    "myrient_url": "Redump/Sony%20-%20PlayStation%20Portable",
+    "cdromance_url": "psp",
+    "cdromance_url_game": "psp",
+    "file_types": [".iso"]
+  },
+  {
+    "name": "Xbox 360",
+    "release": "Nov 22, 2005",
+    "backloggd_url": "xbox360",
+    "myrient_url": "Redump/Microsoft%20-%20Xbox%20360",
+    "cdromance_url": "",
+    "cdromance_url_game": "",
+    "file_types": [".iso"]
+  },
+  {
+    "name": "PlayStation 3",
+    "release": "Nov 11, 2006",
+    "backloggd_url": "ps3",
+    "myrient_url": "Redump/Sony%20-%20PlayStation%203",
+    "cdromance_url": "",
+    "cdromance_url_game": "",
+    "file_types": [".iso"]
+  },
+  {
+    "name": "Nintendo Wii",
+    "release": "Nov 19, 2006",
+    "backloggd_url": "wii",
+    "myrient_url": "Redump/Nintendo%20-%20Wii%20-%20NKit%20RVZ%20%5Bzstd-19-128k%5D",
+    "cdromance_url": "",
+    "cdromance_url_game": "",
+    "file_types": [".rvz"]
+  },
+  {
+    "name": "PlayStation Vita",
+    "release": "Feb 15, 2011",
+    "backloggd_url": "psvita",
+    "myrient_url": "No-Intro/Unofficial%20-%20Sony%20-%20PlayStation%20Vita%20%28VPK%29",
+    "cdromance_url": "",
+    "cdromance_url_game": "",
+    "file_types": [".vpk"]
+  },
+  {
+    "name": "Nintendo 3DS",
+    "release": "Feb 26, 2011",
+    "backloggd_url": "3ds",
+    "myrient_url": "No-Intro/Nintendo%20-%20Nintendo%203DS%20%28Decrypted%29",
+    "cdromance_url": "",
+    "cdromance_url_game": "",
+    "file_types": [".3ds"]
+  },
+  {
+    "name": "Nintendo Wii U",
+    "release": "Nov 18, 2012",
+    "backloggd_url": "wiiu",
+    "myrient_url": "Redump/Nintendo%20-%20Wii%20U%20-%20WUX",
+    "cdromance_url": "",
+    "cdromance_url_game": "",
+    "file_types": [".wux"]
+  },
+  {
+    "name": "PlayStation 4",
+    "release": "Nov 15, 2013",
+    "backloggd_url": "ps4--1",
+    "myrient_url": "",
+    "cdromance_url": "",
+    "cdromance_url_game": "",
+    "file_types": [""]
+  },
+  {
+    "name": "Xbox One",
+    "release": "Nov 22, 2013",
+    "backloggd_url": "xboxone",
+    "myrient_url": "",
+    "cdromance_url": "",
+    "cdromance_url_game": "",
+    "file_types": [""]
+  },
+  {
+    "name": "Nintendo Switch",
+    "release": "Mar 3, 2017",
+    "backloggd_url": "nintendo-switch",
+    "myrient_url": "",
+    "cdromance_url": "",
+    "cdromance_url_game": "",
+    "file_types": [""]
+  }
+]
