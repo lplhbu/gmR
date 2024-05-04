@@ -36,6 +36,15 @@
     "file_types": [".md"]
   },
   {
+    "name": "PC Engine CD",
+    "release": "Dec 4, 1988",
+    "backloggd_url": "turbografx-16-slash-pc-engine-cd",
+    "myrient_url": "Redump/NEC%20-%20PC%20Engine%20CD%20%26%20TurboGrafx%20CD",
+    "cdromance_url": "turbografx-cd",
+    "cdromance_url_game": "turbografx-cd",
+    "file_types": [".cue", ".bin"]
+  },
+  {
     "name": "Game Boy",
     "release": "Apr 21, 1989",
     "backloggd_url": "gb",
@@ -259,32 +268,5 @@
     "cdromance_url": "",
     "cdromance_url_game": "",
     "file_types": [".wux"]
-  },
-  {
-    "name": "PlayStation 4",
-    "release": "Nov 15, 2013",
-    "backloggd_url": "ps4--1",
-    "myrient_url": "",
-    "cdromance_url": "",
-    "cdromance_url_game": "",
-    "file_types": [""]
-  },
-  {
-    "name": "Xbox One",
-    "release": "Nov 22, 2013",
-    "backloggd_url": "xboxone",
-    "myrient_url": "",
-    "cdromance_url": "",
-    "cdromance_url_game": "",
-    "file_types": [""]
-  },
-  {
-    "name": "Nintendo Switch",
-    "release": "Mar 3, 2017",
-    "backloggd_url": "nintendo-switch",
-    "myrient_url": "",
-    "cdromance_url": "",
-    "cdromance_url_game": "",
-    "file_types": [""]
   }
 ]

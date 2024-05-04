@@ -24,14 +24,9 @@ async function main() {
 
     //SCRAPE 
 
-    if (configData.clean) backloggd.clean(data);
-    const backloggdData = await backloggd.scrape(data);
-
-    if (configData.clean) myrient.clean(data);
-    const myrientData = await myrient.scrape(data);
-    
-    if (configData.clean) cdromance.clean(data);
-    const cdromanceData = await cdromance.scrape(data);
+    const backloggdData = await backloggd.scrape(platformData);
+    const myrientData = await myrient.scrape(platformData);
+    const cdromanceData = await cdromance.scrape(platformData);
 
     // MANIPULATE
 

@@ -12,20 +12,6 @@ const urlParams = {
     'platform': 'none'
 };
 
-function clean(platforms) {
-    const data = JSON.parse(flR.read(dataPath) || '[]');
-    
-    for (let i = 0; i < data.length; i++) {
-        const platform = data[i];
-        const existingPlatform = platforms.find(p => p.name == platform.name);
-        if (existingPlatform) continue;
-        
-        data.splice(i--, 1);
-    }
-
-    flR.write(dataPath, JSON.stringify(data, null, 2));
-}
-
 async function scrapePage(pageUrl) {
     const scrapeData = {};
 
@@ -86,4 +72,4 @@ async function scrape(platforms) {
     return data
 }
 
-module.exports = { clean, scrape }
+module.exports = { scrape }

@@ -3,6 +3,10 @@
     "name": "Nintendo Entertainment System",
     "games": [
       {
+        "name": "Asmik-kun Land",
+        "url": "asmik-kun-land-english-patched"
+      },
+      {
         "name": "Ganbare Goemon Gaiden 2: Tenka no Zaihou",
         "url": "ganbare-goemon-gaiden-2-tenka-no-zaihou-english-patched"
       },
@@ -17,10 +21,6 @@
       {
         "name": "Dragon Quest",
         "url": "dragon-quest-english-patched"
-      },
-      {
-        "name": "Asmik-kun Land",
-        "url": "asmik-kun-land-english-patched"
       },
       {
         "name": "Majou Densetsu II: Daimashikyou Galious",
@@ -887,6 +887,79 @@
       {
         "name": "Bahamut Senki",
         "url": "bahamut-senki-english-patched"
+      }
+    ]
+  },
+  {
+    "name": "PC Engine CD",
+    "games": [
+      {
+        "name": "Valis IV",
+        "url": "valis-iv-japan"
+      },
+      {
+        "name": "Far East of Eden: Tengai Makyou - Ziria",
+        "url": "far-east-of-eden-tengai-makyou-ziria-japan"
+      },
+      {
+        "name": "Ginga Ojousama Densetsu Yuna",
+        "url": "ginga-ojousama-densetsu-yuna"
+      },
+      {
+        "name": "Dead of the Brain 1 & 2",
+        "url": "dead-of-the-brain-1-2-japan"
+      },
+      {
+        "name": "Might and Magic",
+        "url": "might-and-magic-japan-2"
+      },
+      {
+        "name": "Ginga Ojousama Densetsu Yuna 2: Eien no Princess",
+        "url": "ginga-ojousama-densetsu-yuna-2-eien-no-princess-japan"
+      },
+      {
+        "name": "Private Eye Dol",
+        "url": "private-eye-dol-english-patched"
+      },
+      {
+        "name": "Final Match Tennis Ladies",
+        "url": "final-match-tennis-ladies"
+      },
+      {
+        "name": "Startling Odyssey II: Maryuu Sensou",
+        "url": "startling-odyssey-ii"
+      },
+      {
+        "name": "Bazaru De Gozaru No Game De Gozaru",
+        "url": "bazar-de-gozarre-no-game-de-gozarre-japan"
+      },
+      {
+        "name": "Super Daisenryaku",
+        "url": "super-daisenryaku"
+      },
+      {
+        "name": "Motteke Tamago",
+        "url": "motteke-tamago"
+      },
+      {
+        "name": "Xak III: The Eternal Recurrence",
+        "url": "xak-iii-the-eternal-recurrence"
+      },
+      {
+        "name": "Bishoujo Senshi Sailor Moon",
+        "url": "bishoujo-senshi-sailor-moon"
+      },
+      {
+        "name": "Madou Monogatari I: Honoo no Sotsuenji",
+        "url": "madou-monogatari-i-honoo-no-sotsuenji"
+      },
+      {
+        "name": "Ys IV: The Dawn of Ys",
+        "url": "ys-iv-the-dawn-of-ys"
+      },
+      {
+        "name": "Castlevania: Rondo of Blood",
+        "url": "castlevania-rondo-of-blood"
       }
     ]
   },
@@ -3112,6 +3185,10 @@
     "name": "PlayStation 2",
     "games": [
       {
+        "name": "Monster Hunter",
+        "url": "monster-hunter-japan"
+      },
+      {
         "name": "Tales of Destiny: Director's Cut",
         "url": "tales-of-destiny-directors-cut"
       },
@@ -3266,10 +3343,6 @@
       {
         "name": "Mystic Nights",
         "url": "mystic-nights-english-patched"
-      },
-      {
-        "name": "Monster Hunter",
-        "url": "monster-hunter-japan"
       },
       {
         "name": "J. League Winning Eleven 10 + Europe League '06-'07",
@@ -3532,6 +3605,10 @@
   },
   {
     "name": "Nintendo GameCube",
+    "games": []
+  },
+  {
+    "name": "Xbox",
     "games": []
   },
   {
@@ -4333,7 +4410,27 @@
     ]
   },
   {
+    "name": "Xbox 360",
+    "games": []
+  },
+  {
+    "name": "PlayStation 3",
+    "games": []
+  },
+  {
     "name": "Nintendo Wii",
+    "games": []
+  },
+  {
+    "name": "PlayStation Vita",
+    "games": []
+  },
+  {
+    "name": "Nintendo 3DS",
+    "games": []
+  },
+  {
+    "name": "Nintendo Wii U",
     "games": []
   }
 ]
