@@ -52,7 +52,7 @@ async function main() {
 
     mtchR.choose(data);
 
-    flR.write('./data/final.json', JSON.stringify(data, null, 2));
+    flR.write('./data/process/final.json', JSON.stringify(data, null, 2));
     
     // DOWNLOAD
 
