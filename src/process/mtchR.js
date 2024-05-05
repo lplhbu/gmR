@@ -77,6 +77,17 @@ function scoreTag(tag) {
     // Revisions
     if (tag.includes('(Rev ')) return 0.9;
     if (tag.includes('(RE)')) return 0.9;
+    if (tag.includes('(v')) { 
+        var numberString = tag.match(/\([^)\d]*([\d.]*).*?\)/)[1];
+        const firstDotIndex = numberString.indexOf('.');
+        let number = Number(numberString.slice(0, firstDotIndex) + numberString.slice(firstDotIndex + 1).replace(/\./g, ''));
+        if (number < 10) number /= 10;
+        else if (number < 100) number /= 100;
+        else if (number < 1000) number /= 1000;
+        else if (number < 10000) number /= 10000;
+        console.log(1 - number);
+        return 1 - number;
+    }
 
     // Discs
     if (tag.includes('(Disc ')) return 1;
