@@ -48,6 +48,17 @@ async function main() {
     mtchR.choose(data);
 
     flR.write('./data/process/final.json', JSON.stringify(data, null, 2));
+
+    // let final = '';
+    // for (const platform of data) {
+    //     if (final) final += '\n';
+    //     final += platform.name + '\n';
+    //     for (const game of [...new Set(platform.games.map(game => game.name))]) {
+    //         final += game + '\n';
+    //     }
+    // }
+    // flR.write(`./data/lists/difficulty_${configData.difficulty}.txt`, final);
+    // return;
     
     // DOWNLOAD
 
