@@ -77,7 +77,6 @@ function scoreTag(tag) {
     // Revisions
     if (tag.includes('(Rev ')) return 0.9;
     if (tag.includes('(RE)')) return 0.9;
-    if (tag.includes('(v')) return 0.9;
 
     // Discs
     if (tag.includes('(Disc ')) return 1;
