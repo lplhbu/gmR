@@ -85,7 +85,6 @@ function scoreTag(tag) {
         else if (number < 100) number /= 100;
         else if (number < 1000) number /= 1000;
         else if (number < 10000) number /= 10000;
-        console.log(1 - number);
         return 1 - number;
     }
 
