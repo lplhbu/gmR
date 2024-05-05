@@ -63,23 +63,24 @@ function scoreNames(str1, str2, zeroChecks = [numberRegex, romanRegex]) {
 function scoreTag(tag) {
     // Regions
     if (tag.includes('(World)')) return 1;
-    else if (tag.includes('(USA)')) return 0.9;
-    else if (tag.includes('USA, ') || tag.includes(', USA')) return 0.8;
-    else if (tag.includes('(Europe)')) return 0.7;
-    else if (tag.includes(', Europe') || tag.includes('Europe, ')) return 0.6;
+    if (tag.includes('(USA)')) return 0.9;
+    if (tag.includes('USA, ') || tag.includes(', USA')) return 0.8;
+    if (tag.includes('(Europe)')) return 0.7;
+    if (tag.includes(', Europe') || tag.includes('Europe, ')) return 0.6;
 
-    else if (tag.includes('(NTSC)')) return 0.9;
-    else if (tag.includes('(PAL)')) return 0.8;
+    if (tag.includes('(NTSC)')) return 0.9;
+    if (tag.includes('(PAL)')) return 0.8;
 
-    else if (tag.includes('(En)')) return 0.9;
-    else if (tag.includes('En,') || tag.includes(',En')) return 0.8;
+    if (tag.includes('(En)')) return 0.9;
+    if (tag.includes('En,') || tag.includes(',En')) return 0.8;
 
     // Revisions
-    else if (tag.includes('(Rev ')) return 0.9;
-    else if (tag.includes('(RE)')) return 0.9;
+    if (tag.includes('(Rev ')) return 0.9;
+    if (tag.includes('(RE)')) return 0.9;
+    if (tag.includes('(v')) return 0.9;
 
     // Discs
-    else if (tag.includes('(Disc ')) return 1;
+    if (tag.includes('(Disc ')) return 1;
 
     // Hard Exits
     if (tag.includes('(Demo)')) return 0;
