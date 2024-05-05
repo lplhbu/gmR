@@ -2,26 +2,20 @@ function cleanName(str) {
     str = str.toLowerCase();
 
     // remove tags and file
-    str = str.replace(/\((.*?)\)|\.zip/g, '');
+    str = str.replace(/\((.*?)\)|\.zip|\.7z/g, '');
 
-    // remove apostrophe
-    str = str.replace(/'/g, '');
-    // replace special characters with spaces
-    str = str.replace(/[^A-Za-z0-9\s]/g, ' ');
-    // remove double spaces created
-    str = str.replace(/  +/g, ' ');
+    str = str.replace(/'/g, ''); // apostrophe remove
+    str = str.replace(/é/g, 'e'); // pokemon
+    str = str.replace(/Ō/g, "oo") // okami
+    str = str.replace(/\$/g, 's'); // warioware microgames
+    str = str.replace('megaman', 'mega man'); // megaman
+
+    // replace special characters with spaces, and remove double spaces
+    str = str.replace(/[^A-Za-z0-9\s]/g, ' ').replace(/  +/g, ' ');
 
     // separate letters from numbers with a space
     // str = str.replace(/([a-z])(\d)/g, '$1 $2');
     // str = str.replace(/(\d)([a-z])/g, '$1 $2');
-
-    // get rid of weird letters
-    str = str.replace(/é/g, 'e'); // pokemon
-    str = str.replace(/Ō/g, "oo") // okami
-    str = str.replace(/\$/g, 's'); // warioware microgames
-
-    // weird mega man spelling
-    str = str.replace('megaman', 'mega man'); 
 
     return str.trim();
 }
@@ -73,6 +67,7 @@ function scoreTag(tag) {
 
     if (tag.includes('(En)')) return 0.9;
     if (tag.includes('En,') || tag.includes(',En')) return 0.8;
+    if (tag.includes('(English')) return 0.9;
 
     // Revisions
     if (tag.includes('(Rev ')) return 0.9;
@@ -80,13 +75,16 @@ function scoreTag(tag) {
     if (tag.includes('(v')) { 
         var numberString = tag.match(/\([^)\d]*([\d.]*).*?\)/)[1];
         const firstDotIndex = numberString.indexOf('.');
-        let number = Number(numberString.slice(0, firstDotIndex) + numberString.slice(firstDotIndex + 1).replace(/\./g, ''));
+        let number = Number(numberString.slice(0, firstDotIndex) + '.' + numberString.slice(firstDotIndex + 1).replace(/\./g, ''));
         if (number < 10) number /= 10;
         else if (number < 100) number /= 100;
         else if (number < 1000) number /= 1000;
         else if (number < 10000) number /= 10000;
         return 1 - number;
     }
+    if (tag.includes('(NDSi Enhanced)')) return 0.9;
+    if (tag.includes('(SGB Enhanced)')) return 0.9;
+    if (tag.includes('(GB Compatible)')) return 0.9;
 
     // Discs
     if (tag.includes('(Disc ')) return 1;
@@ -116,7 +114,7 @@ function score(name, otherName) {
 function matchGame(game, games) {
     let matchGames = [];
 
-    let highScore = 0;
+    let highScore = 0.2;
     for (const otherGame of games) {
         const points = score(game.name, otherGame.name);
         if (points == 0) continue;
@@ -124,8 +122,10 @@ function matchGame(game, games) {
         if (points > highScore) {
             matchGames = [otherGame];
             highScore = points;
+            otherGame.points = Math.max(otherGame.points || 0, points);
         } else if (points == highScore) {
             matchGames.push(otherGame);
+            otherGame.points = Math.max(otherGame.points || 0, points);
         }
     }
 
