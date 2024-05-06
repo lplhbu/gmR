@@ -20,20 +20,21 @@ Super Metroid
 EarthBound
 Donkey Kong Country 2: Diddy's Kong Quest
 Super Mario World
-Terranigma
-Mega Man X
 
 Sega CD
+
+Neo Geo CD
+Neo Turf Masters
+The Last Blade 2
 
 Sega 32X
 
 Sega Saturn
-Panzer Dragoon Saga
 
 PlayStation
 Suikoden II
-Castlevania: Symphony of the Night
 Moon: Remix RPG Adventure
+Final Fantasy IX
 
 Virtual Boy
 
@@ -54,11 +55,9 @@ PlayStation 2
 Metal Gear Solid 3: Snake Eater
 Silent Hill 2
 Metal Gear Solid 2: Sons of Liberty
-Shadow of the Colossus
 We Love Katamari
 
 Game Boy Advance
-Mother 3
 
 Nintendo GameCube
 Paper Mario: The Thousand-Year Door
@@ -83,19 +82,15 @@ Steins;Gate
 OutRun 2006: Coast 2 Coast
 428: Shibuya Scramble
 
-Xbox 360
+PlayStation 3
 Portal 2
+Yakuza 0
 Mass Effect 2
 Dark Souls
 Fallout: New Vegas
-Halo 3
+The Last of Us
 Red Dead Redemption
 Batman: Arkham City
-Portal
-
-PlayStation 3
-Yakuza 0
-The Last of Us
 
 Nintendo Wii
 Super Mario Galaxy
@@ -108,7 +103,3 @@ Undertale
 
 Nintendo 3DS
 The Great Ace Attorney 2: Resolve
-
-Nintendo Wii U
-Hollow Knight
-The Legend of Zelda: Breath of the Wild

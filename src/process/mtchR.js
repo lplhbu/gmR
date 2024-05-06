@@ -1,4 +1,6 @@
 function cleanName(str) {
+
+    str = str.replace(/([a-z])([A-Z])/g, '$1 $2');
     str = str.toLowerCase();
 
     // remove tags and file
@@ -9,9 +11,12 @@ function cleanName(str) {
     str = str.replace(/Ō/g, "oo") // okami
     str = str.replace(/\$/g, 's'); // warioware microgames
     str = str.replace('megaman', 'mega man'); // megaman
+    str = str.replace('infamous', 'in famous');
+    str = str.replace('^3', ' cube');
 
     // replace special characters with spaces, and remove double spaces
-    str = str.replace(/[^A-Za-z0-9\s]/g, ' ').replace(/  +/g, ' ');
+    str = str.replace(/[^a-z0-9\s]/g, ' ');
+    str = str.replace(/  +/g, ' ');
 
     // separate letters from numbers with a space
     // str = str.replace(/([a-z])(\d)/g, '$1 $2');
@@ -54,25 +59,36 @@ function scoreNames(str1, str2, zeroChecks = [numberRegex, romanRegex]) {
     return points;
 }
 
-function scoreTag(tag) {
+function scoreTag(tag, platform = null) {
+
+    // Discs
+    if (tag.includes('(Disc ')) return 1;
+
     // Regions
-    if (tag.includes('(World)')) return 1;
-    if (tag.includes('(USA)')) return 0.9;
-    if (tag.includes('USA, ') || tag.includes(', USA')) return 0.8;
-    if (tag.includes('(Europe)')) return 0.7;
-    if (tag.includes(', Europe') || tag.includes('Europe, ')) return 0.6;
+    if (tag.includes('(World)') ||
+        tag.includes('(USA)') ||
+        tag.includes('(NTSC)')) return 1;
 
-    if (tag.includes('(NTSC)')) return 0.9;
-    if (tag.includes('(PAL)')) return 0.8;
+    if (tag.includes('USA, ') ||
+        tag.includes(', USA')) return 0.8;
 
-    if (tag.includes('(En)')) return 0.9;
-    if (tag.includes('En,') || tag.includes(',En')) return 0.8;
-    if (tag.includes('(English')) return 0.9;
+    if (tag.includes('(Europe)') ||
+        tag.includes('Europe, ') ||
+        tag.includes(', Europe') ||
+        tag.includes('(PAL)')) return platform && platform.type == "Handheld" ? 0.8 : 0;
+
+    // Language
+    if (tag.includes('(English') || 
+        tag.includes('(En)')) return 1;
+
+    if (tag.includes('En,') || 
+        tag.includes(',En')) return 0.8;
 
     // Revisions
-    if (tag.includes('(Rev ')) return 0.9;
-    if (tag.includes('(RE)')) return 0.9;
-    if (tag.includes('(v')) { 
+    if (tag.includes('(RE)')) return 0.8;
+    if (tag.includes('(Rev ') || 
+        tag.includes('(v') || 
+        tag.includes('M)')) { 
         var numberString = tag.match(/\([^)\d]*([\d.]*).*?\)/)[1];
         const firstDotIndex = numberString.indexOf('.');
         let number = Number(numberString.slice(0, firstDotIndex) + '.' + numberString.slice(firstDotIndex + 1).replace(/\./g, ''));
@@ -82,41 +98,43 @@ function scoreTag(tag) {
         else if (number < 10000) number /= 10000;
         return 1 - number;
     }
-    if (tag.includes('(NDSi Enhanced)')) return 0.9;
-    if (tag.includes('(SGB Enhanced)')) return 0.9;
-    if (tag.includes('(GB Compatible)')) return 0.9;
 
-    // Discs
-    if (tag.includes('(Disc ')) return 1;
+    // Editions
+    if (tag.includes('(GB Compatible)') ||
+        tag.includes('(SGB Enhanced)') ||
+        tag.includes('(NDSi Enhanced)') ||
+        tag.includes('(Wii U Virtual Console)')) return 0.8;
 
-    // Hard Exits
-    if (tag.includes('(Demo)')) return 0;
-    if (tag.includes('(Beta)')) return 0;
+    // Demos
+    if (tag.includes('(Aftermarket)') ||
+        tag.includes('(Beta)') ||
+        tag.includes('(Demo)') ||
+        tag.includes('(Proto)')) return 0;
 
-    return 0.5;
+    return 0.6;
 }
 
-function scoreTags(str) {
+function scoreTags(str, platform = null) {
     let points = 1;
     const matches = str.match(/\([^)]+?\)/g) || [];
     for (const match of matches) {
-        points *= scoreTag(match);
+        points *= scoreTag(match, platform);
     }
     return points;
 }
 
-function score(name, otherName) {
+function score(name, otherName, platform = null) {
     let points = scoreNames(name, otherName);
-    points *= Math.min(scoreTags(name), scoreTags(otherName));
+    points *= Math.min(scoreTags(name), scoreTags(otherName, platform));
     return points;
 }
 
-function matchGame(game, games) {
+function matchGame(game, games, platform = null) {
     let matchGames = [];
 
     let highScore = 0.2;
     for (const otherGame of games) {
-        const points = score(game.name, otherGame.name);
+        const points = score(game.name, otherGame.name, platform);
         if (points == 0) continue;
         
         if (points > highScore) {
@@ -128,7 +146,7 @@ function matchGame(game, games) {
             otherGame.points = Math.max(otherGame.points || 0, points);
         }
     }
-
+    
     return matchGames;
 }
 
@@ -142,7 +160,7 @@ function match(platforms, otherPlatforms) {
         if (!otherPlatform) continue;
 
         for (const game of platform.games) {
-            const matchGames = [game, ...matchGame(game, otherPlatform.games)];
+            const matchGames = [game, ...matchGame(game, otherPlatform.games, platform)];
             games.push(matchGames);
         }
 

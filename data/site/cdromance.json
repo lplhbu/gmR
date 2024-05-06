@@ -3,6 +3,10 @@
     "name": "Nintendo Entertainment System",
     "games": [
       {
+        "name": "Hello Kitty World",
+        "url": "hello-kitty-world-english-patched"
+      },
+      {
         "name": "Asmik-kun Land",
         "url": "asmik-kun-land-english-patched"
       },
@@ -2340,6 +2344,15 @@
     ]
   },
   {
+    "name": "Neo Geo CD",
+    "games": [
+      {
+        "name": "Shinsetsu Samurai Spirits: Bushidou Retsuden",
+        "url": "shinsetsu-samurai-spirits-bushidou-retsuden-japan"
+      }
+    ]
+  },
+  {
     "name": "Sega 32X",
     "games": []
   },
@@ -3608,10 +3621,6 @@
     "games": []
   },
   {
-    "name": "Xbox",
-    "games": []
-  },
-  {
     "name": "Nintendo DS",
     "games": [
       {
@@ -4410,10 +4419,6 @@
     ]
   },
   {
-    "name": "Xbox 360",
-    "games": []
-  },
-  {
     "name": "PlayStation 3",
     "games": []
   },
@@ -4427,10 +4432,6 @@
   },
   {
     "name": "Nintendo 3DS",
-    "games": []
-  },
-  {
-    "name": "Nintendo Wii U",
     "games": []
   }
 ]

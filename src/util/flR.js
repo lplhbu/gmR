@@ -83,10 +83,11 @@ async function writeStream(filePath, data, params) {
     });
 }
 
-async function extract(filePath) {
+async function extract(filePath, extractPath = null) {
     console.log('Extracting file: ', filePath);
     filePath = getRelative(filePath);
-    const extractPath = path.dirname(filePath);
+    if (!extractPath) extractPath = path.dirname(filePath);
+    ensure(extractPath);
 
     const ext = path.extname(filePath);
     let loaded = 0;

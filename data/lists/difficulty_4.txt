@@ -40,24 +40,25 @@ Super Mario RPG: Legend of the Seven Stars
 Sega CD
 Dark Wizard
 
+Neo Geo CD
+Neo Turf Masters
+The Last Blade 2
+The King of Fighters '98
+Real Bout Fatal Fury Special
+
 Sega 32X
 
 Sega Saturn
-Panzer Dragoon Saga
 Baroque
 Mega Man X4
-Radiant Silvergun
-Tactics Ogre: Let Us Cling Together
 
 PlayStation
 Suikoden II
-Castlevania: Symphony of the Night
 Moon: Remix RPG Adventure
 Final Fantasy IX
 Final Fantasy Tactics
 Xenogears
 Metal Gear Solid
-Final Fantasy VII
 Ridge Racer Type 4
 Resident Evil 2
 Persona 2: Eternal Punishment
@@ -69,6 +70,7 @@ The Legend of Zelda: Majora's Mask
 The Legend of Zelda: Ocarina of Time
 Paper Mario
 Super Mario 64
+WWF No Mercy
 
 Neo Geo Pocket
 
@@ -86,7 +88,6 @@ PlayStation 2
 Metal Gear Solid 3: Snake Eater
 Silent Hill 2
 Metal Gear Solid 2: Sons of Liberty
-Shadow of the Colossus
 We Love Katamari
 Kingdom Hearts II
 Killer7
@@ -98,9 +99,10 @@ Shin Megami Tensei: Digital Devil Saga 2
 Dragon Quest VIII: Journey of the Cursed King
 Shin Megami Tensei: Nocturne
 Fatal Frame II: Crimson Butterfly
+Klonoa 2: Lunatea's Veil
+Grand Theft Auto: San Andreas
 
 Game Boy Advance
-Mother 3
 Mega Man Zero 3
 Mega Man Battle Network 6: Cybeast Falzar
 Castlevania: Aria of Sorrow
@@ -141,30 +143,23 @@ The Legend of Heroes: Trails in the Sky the 3rd
 Steins;Gate
 OutRun 2006: Coast 2 Coast
 428: Shibuya Scramble
-Sonic Robo Blast 2
 
-Xbox 360
+PlayStation 3
 Portal 2
+Yakuza 0
 Mass Effect 2
 Dark Souls
 Fallout: New Vegas
-Halo 3
+The Last of Us
 Red Dead Redemption
 Batman: Arkham City
 Portal
 The Walking Dead
+LittleBigPlanet 2
 Dead Space 2
-Metal Gear Rising: Revengeance
-Halo: Reach
+Persona 5
 Dragon Age: Origins
-BioShock
-Skate 3
-Terraria
-Dead Space
-
-PlayStation 3
-Yakuza 0
-The Last of Us
+God of War III
 
 Nintendo Wii
 Super Mario Galaxy
@@ -190,8 +185,3 @@ Kirby: Planet Robobot
 Kid Icarus: Uprising
 Shin Megami Tensei IV
 The Legend of Zelda: A Link Between Worlds
-
-Nintendo Wii U
-Hollow Knight
-The Legend of Zelda: Breath of the Wild
-Donkey Kong Country: Tropical Freeze

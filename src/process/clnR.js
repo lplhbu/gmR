@@ -41,40 +41,33 @@ function cleanFiles(fsPath, platforms) {
             continue;
         }
 
-        // iterate platform folders
-        const files = flR.read(dirPath);
-        if (!files) return;
-
-        for (const file of files) {
-            const filePath = path.join(dirPath, file);
-            const baseFile = path.basename(file, path.extname(file));
-
-            const hasMatchingGame = platform.games.some(game => mtchR.score(game.name, baseFile) > 0);
-            if (hasMatchingGame) continue;
-
-            flR.remove(filePath);
-        }
-
-        const postFiles = flR.read(dirPath);
-        if (postFiles.length == 0) flR.remove(dirPath);
+        cleanPlatform(dirPath, platform);
     }
 }
 
-function cleanPlatformFiles(platform, fsPath) {
+function cleanPlatform(fsPath, platform) {
     const files = flR.read(fsPath);
     if (!files) return;
+
+    const fileTypes = ['.zip', '.7z'];
+    if (platform.file_type) fileTypes.push(platform.file_type);
+    if (platform.file_types) fileTypes.push(...platform.file_types);
 
     for (const file of files) {
         const filePath = path.join(fsPath, file);
 
         const fileType = path.extname(file);
-        const fileTypes = [...platform.file_types, '.zip', '.7z'];
+        const fileBase = path.basename(file, fileType);
         
         if (!fileTypes.includes(fileType)) flR.remove(filePath);
+        else {
+            const noMatchingGame = platform.games.every(game => mtchR.score(game.name, fileBase) < 0.2);
+            if (noMatchingGame) flR.remove(filePath);
+        }   
     }
 
     const postFiles = flR.read(fsPath);
     if (postFiles.length == 0) flR.remove(fsPath);
 }
 
-module.exports = { cleanPlatformsRelease, cleanPlatformsMulti, cleanFiles, cleanPlatformFiles };
+module.exports = { cleanPlatformsRelease, cleanPlatformsMulti, cleanFiles, cleanPlatform };

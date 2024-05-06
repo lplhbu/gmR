@@ -11,17 +11,22 @@ function downloadProgress(filePath, bytesDownloaded, progressEvent) {
     console.log(`Downloading ${path.basename(filePath)} - ${mbLoaded}mb / ${mbTotal}mb`);
 }
 
-function myrientDownloaded(fsPath, platform) {
-    // check for zip
-    if (flR.check(fsPath)) return false;
+function downloaded(fsPath, game, platform) {
+    const files = flR.read(fsPath);
+    if (!files) return;
 
-    // check for extract types
-    const fileName = path.join(path.dirname(fsPath), path.basename(fsPath, path.extname(fsPath)));
-    for (const fileType of platform.file_types) {
-        if (flR.check(fileName + fileType)) return true;
-    }
+    const fileName = game.name;
+    const fileTypes = platform.file_types ? platform.file_types : [platform.file_type];
     
-    return false
+    for (const file of files) {
+        if (!fileTypes.includes(path.extname(file))) continue;
+
+        const fileBase = path.basename(file, path.extname(file));
+        let points = mtchR.score(fileBase, fileName);
+        if (points > 0) return true;
+    }
+
+    return false;
 }
 
 async function myrientDownload(url, fsPath) {
@@ -45,26 +50,6 @@ async function myrientDownload(url, fsPath) {
     }
 
     await flR.writeStream(fsPath, data, flRParms);
-}
-
-function cdromanceDownloaded(fsPath, platform) {
-    // check for zip
-    if (flR.check(fsPath)) return false;
-
-    const files = flR.read(path.dirname(fsPath));
-    if (!files) return;
-
-    const fileName = path.join(path.dirname(fsPath), path.basename(fsPath, path.extname(fsPath)));
-    const fileTypes = platform.file_types;
-    for (const file of files) {
-        if (!fileTypes.includes(path.extname(file))) continue;
-
-        const baseFile = path.basename(file, path.extname(file));
-        let points = mtchR.score(baseFile, fileName);
-        if (points > 0) return true;
-    }
-
-    return false;
 }
 
 async function cdromanceDownload(url, fsPath) {
@@ -97,7 +82,7 @@ async function cdromanceDownload(url, fsPath) {
     const file = fileElements.filter(le => le.includes('(English'))[0];
     const linkElements = scrpR.getElements(ajaxData, linkSelector, 'href');
     const link = linkElements[fileElements.indexOf(file)];
-    fsPath = path.join(fsPath, file);
+    fsPath = fsPath + path.extname(file);
 
     const bytesDownloaded = flR.check(fsPath) ? flR.size(fsPath) : 0;
 
@@ -121,6 +106,27 @@ async function cdromanceDownload(url, fsPath) {
     return fsPath;
 }
 
+const myrientUrl = 'https://myrient.erista.me/files';
+const cdromanceUrl = 'https://cdromance.org';
+async function downloadGame(platform, game, fsPath) {
+    let downloadPath;
+
+    if (game.myrient_url) {
+        const url = path.join(myrientUrl, platform.myrient_url, game.myrient_url);
+        downloadPath = path.join(fsPath, game.name + path.extname(game.myrient_name));
+        await myrientDownload(url, downloadPath);
+    }
+
+    if (game.cdromance_url) {
+        const url = path.join(cdromanceUrl, platform.cdromance_url_game || platform.cdromance_url, game.cdromance_url);
+        downloadPath = path.join(fsPath, game.name);
+        // get file type in download function
+        downloadPath = await cdromanceDownload(url, downloadPath);
+    }
+
+    return downloadPath;
+}
+
 function standardizeName(dirPath) {
     const files = flR.read(dirPath);
     if (!files) return;
@@ -130,11 +136,17 @@ function standardizeName(dirPath) {
         const filePath = path.join(dirPath, file);
         const fileType = path.extname(file);
 
+        const cleanFile = file.replace(/[^A-Za-z0-9\s]/g, ' ').replace(/  +/g, ' ');
+
+        let discTag = '';
+        const discMatch = cleanFile.match(/Disc (\d+)/);
+        if (discMatch) trackTag = ` (Disc ${discMatch[1]})`;
+
         let trackTag = '';
-        const trackMatch = file.replace(/[^A-Za-z0-9\s]/g, ' ').replace(/  +/g, ' ').match(/Track (\d+)/);
+        const trackMatch = cleanFile.match(/Track (\d+)/);
         if (trackMatch) trackTag = ` (Track ${trackMatch[1]})`;
 
-        const fileName = dirName + trackTag + fileType;
+        const fileName = dirName + discTag + trackTag + fileType;
         flR.rename(filePath, fileName);
     }
 }
@@ -155,33 +167,29 @@ function flattenExtract(dirPath, game) {
     }
 }
 
-const myrientUrl = 'https://myrient.erista.me/files';
-const cdromanceUrl = 'https://cdromance.org';
-async function downloadGame(platform, game, fsPath) {
-    let filePath;
-    if (game.myrient_url) {
-        const url = path.join(myrientUrl, platform.myrient_url, game.myrient_url);
-        filePath = path.join(fsPath, game.myrient_name);
-        if (!myrientDownloaded(filePath, platform, game)) await myrientDownload(url, filePath);
-    }
-    if (game.cdromance_url) {
-        const url = path.join(cdromanceUrl, platform.cdromance_url_game, game.cdromance_url);
-        filePath = path.join(fsPath, game.cdromance_name);
-        if(!cdromanceDownloaded(filePath, platform, game)) filePath = await cdromanceDownload(url, fsPath);
-    }
+async function extractGame(platform, game, fsPath) {
+    if (!flR.check(fsPath)) return;
 
-    if(flR.check(filePath)) {
-        await flR.extract(filePath);
-        flR.remove(filePath);
-        flattenExtract(fsPath, game);
-        clnR.cleanPlatformFiles(platform, fsPath);
-    }
+    const finalPath = path.dirname(fsPath);
+    const extractPath = path.join(finalPath, game.name);
+
+    await flR.extract(fsPath, extractPath);
+    
+    flattenExtract(extractPath, game);
+    flattenExtract(finalPath, game);
+
+    flR.remove(fsPath);
+    clnR.cleanPlatform(finalPath, platform);
 }
 
 async function download(platforms, fsPath) {
     for (const platform of platforms) {
         for (const game of platform.games) {
-            await downloadGame(platform, game, path.join(fsPath, platform.name));
+            const platformPath = path.join(fsPath, platform.name); 
+            if (downloaded(platformPath, game, platform)) continue;
+
+            const downloadPath = await downloadGame(platform, game, platformPath);
+            await extractGame(platform, game, downloadPath);
         }
     }
 }

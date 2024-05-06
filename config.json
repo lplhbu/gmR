@@ -14,6 +14,7 @@
     "Sega Game Gear",
     "Super Nintendo Entertainment System",
     "Sega CD",
+    "Neo Geo CD",
     "Sega 32X",
     "Sega Saturn",
     "PlayStation",
@@ -28,6 +29,9 @@
     "Nintendo GameCube",
     "Nintendo DS",
     "PlayStation Portable",
-    "Nintendo Wii"
+    "PlayStation 3",
+    "Nintendo Wii",
+    "PlayStation Vita",
+    "Nintendo 3DS"
   ]
 }
