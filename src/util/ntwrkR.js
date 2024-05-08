@@ -17,6 +17,7 @@ async function get(url, params = {}) {
 function getParams(params, delimiter, separator) {
     let urlParams = '';
     for (const key in params) {
+        if (!params[key]) continue;
         if (urlParams) urlParams += separator;
         urlParams += key + delimiter + params[key];
     }

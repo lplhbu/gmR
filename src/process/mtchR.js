@@ -1,22 +1,26 @@
-function cleanName(str) {
+const ldR = require('../util/ldR.js');
+const regex = require('./regex.js');
 
-    str = str.replace(/([a-z])([A-Z])/g, '$1 $2');
+function cleanName(str) {
+    str = str.replace(regex.lowerUpper, '$1 $2');
     str = str.toLowerCase();
 
     // remove tags and file
-    str = str.replace(/\((.*?)\)|\.zip|\.7z/g, '');
+    str = str.replace(regex.tags, '');
+    str = str.replace(regex.archExt, '');
+    str = str.replace(regex.gameExt, '');
 
     str = str.replace(/'/g, ''); // apostrophe remove
     str = str.replace(/é/g, 'e'); // pokemon
     str = str.replace(/Ō/g, "oo") // okami
     str = str.replace(/\$/g, 's'); // warioware microgames
-    str = str.replace('megaman', 'mega man'); // megaman
-    str = str.replace('infamous', 'in famous');
-    str = str.replace('^3', ' cube');
+    str = str.replace(/megaman/g, 'mega man'); // megaman
+    str = str.replace(/infamous/g, 'in famous');
+    str = str.replace(/^3/, ' cube');
 
     // replace special characters with spaces, and remove double spaces
-    str = str.replace(/[^a-z0-9\s]/g, ' ');
-    str = str.replace(/  +/g, ' ');
+    str = str.replace(regex.special, ' ');
+    str = str.replace(regex.spaces, ' ');
 
     // separate letters from numbers with a space
     // str = str.replace(/([a-z])(\d)/g, '$1 $2');
@@ -25,9 +29,8 @@ function cleanName(str) {
     return str.trim();
 }
 
-const numberRegex = /^[+-]?\d+(\.\d+)?$/;
-const romanRegex =  /^(m{0,3})(cm|cd|d?c{0,3})(xc|xl|l?x{0,3})(ix|iv|v?i{0,3})$/i;
-function scoreNames(str1, str2, zeroChecks = [numberRegex, romanRegex]) {
+function scoreNames(str1, str2, zeroChecks = [regex.number, regex.roman]) {
+    
     const tkn1 = cleanName(str1).split(' ');
     const tkn1Save = [...tkn1];
 
@@ -103,7 +106,8 @@ function scoreTag(tag, platform = null) {
     if (tag.includes('(GB Compatible)') ||
         tag.includes('(SGB Enhanced)') ||
         tag.includes('(NDSi Enhanced)') ||
-        tag.includes('(Wii U Virtual Console)')) return 0.8;
+        tag.includes('(Wii U Virtual Console)') ||
+        tag.includes('(Virtual Console)')) return 0.8;
 
     // Demos
     if (tag.includes('(Aftermarket)') ||
@@ -129,29 +133,31 @@ function score(name, otherName, platform = null) {
     return points;
 }
 
-function matchGame(game, games, platform = null) {
-    let matchGames = [];
-
+function matchName(name, names, platform = null) {
+    let matchNames = [];
     let highScore = 0.2;
-    for (const otherGame of games) {
-        const points = score(game.name, otherGame.name, platform);
+    for (const otherName of names) {
+        const points = score(name, otherName, platform);
         if (points == 0) continue;
         
         if (points > highScore) {
-            matchGames = [otherGame];
+            matchNames = [otherName];
             highScore = points;
-            otherGame.points = Math.max(otherGame.points || 0, points);
         } else if (points == highScore) {
-            matchGames.push(otherGame);
-            otherGame.points = Math.max(otherGame.points || 0, points);
+            matchNames.push(otherName);
         }
     }
-    
+    return matchNames;
+}
+
+function matchGame(game, games, platform = null) {
+    const matchNames = matchName(game.name, games.map(g => g.name), platform);
+    const matchGames = matchNames.map(n => games.find(g => g.name == n));
     return matchGames;
 }
 
 // find matching games
-function match(platforms, otherPlatforms) {
+function matchAll(platforms, otherPlatforms) {
     const matchData = [];
     for (const platform of platforms) {
         const games = [];
@@ -170,7 +176,6 @@ function match(platforms, otherPlatforms) {
 }
 
 // parse and load match data
-const ldR = require('../util/ldR.js');
 function load(platforms, prepend) {
     for (const platform of platforms) {
         const games = [];
@@ -213,4 +218,4 @@ function choose(platforms) {
     }
 }
 
-module.exports = { score, match, load, choose };
+module.exports = { score, matchName, matchGame, matchAll, load, choose };

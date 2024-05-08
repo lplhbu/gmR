@@ -1,14 +1,24 @@
+const path = require('path');
+const flR = require('../util/flR.js');
+const { matchName } = require('./mtchR.js');
+const regex = require('./regex.js');
+
+function cleanData(platforms) {
+    cleanPlatformsRelease(platforms);
+    cleanPlatformsMulti(platforms);
+}
+
 // given platform, remove games released before platform release
 function cleanPlatformsRelease(platforms) {
-    for (platform of platforms) {
+    for (const platform of platforms) {
         platform.games = platform.games.filter(game => new Date(platform.release) <= new Date(game.release));
     }
 }
 
 // given platforms, remove games released on later platforms
 function cleanPlatformsMulti(platforms) {
-    for (platform of platforms) {
-        for (otherPlatform of platforms) {
+    for (const platform of platforms) {
+        for (const otherPlatform of platforms) {
             if (platform == otherPlatform) continue;
             if (new Date(platform.release) > new Date(otherPlatform.release)) continue;
 
@@ -25,9 +35,6 @@ function cleanPlatformsMulti(platforms) {
     }
 }
 
-const path = require('path');
-const flR = require('../util/flR.js');
-const mtchR = require('./mtchR.js');
 function cleanFiles(fsPath, platforms) {
     const dirs = flR.read(fsPath);
     if (!dirs) return;
@@ -61,13 +68,45 @@ function cleanPlatform(fsPath, platform) {
         
         if (!fileTypes.includes(fileType)) flR.remove(filePath);
         else {
-            const noMatchingGame = platform.games.every(game => mtchR.score(game.name, fileBase) < 0.2);
-            if (noMatchingGame) flR.remove(filePath);
-        }   
+            const matchNames = matchName(file, platform.games.map(g => g.name), platform);
+            if (matchNames.length == 0) flR.remove(filePath);
+            if (fileBase != matchNames[0]) standardizeFile(filePath, matchNames[0]);
+        }
     }
 
     const postFiles = flR.read(fsPath);
     if (postFiles.length == 0) flR.remove(fsPath);
 }
 
-module.exports = { cleanPlatformsRelease, cleanPlatformsMulti, cleanFiles, cleanPlatform };
+function standardizeDir(fsPath, platform) {
+    const files = flR.read(fsPath);
+    if (!files) return;
+
+    const fileTypes = ['.zip', '.7z'];
+    if (platform.file_type) fileTypes.push(platform.file_type);
+    if (platform.file_types) fileTypes.push(...platform.file_types);
+
+    const dirName = path.basename(fsPath);
+    for (const file of files) {
+        if (!fileTypes.includes(path.extname(file))) continue;
+        const filePath = path.join(fsPath, file);
+        standardizeFile(filePath, dirName);
+    }
+}
+
+function standardizeFile(fsPath, name) {
+    const fileName = path.basename(fsPath);
+    const cleanName = fileName.replace(regex.tags, '')
+        .replace(regex.gameExt, '')
+        .replace(regex.archExt, '');
+
+    const tags = fileName.match(regex.tags) || [];
+    const track = cleanName.match(regex.nonTagTrack);
+    if (track && track[1]) tags.push(`(${track[1]})`);
+
+    const ext = fileName.match(regex.gameExt) || fileName.match(regex.archExt);
+
+    flR.rename(fsPath, `${name} ${tags.join(' ')}${ext}`);
+}
+
+module.exports = { cleanData, cleanFiles, cleanPlatform, standardizeDir, standardizeFile };

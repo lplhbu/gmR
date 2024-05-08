@@ -7,6 +7,7 @@ const wtR = require('../util/wtR.js');
 const name = 'myrient';
 const dataPath = `./data/site/${name}.json`;
 const url = 'https://myrient.erista.me/files';
+const urlParams = {};
 
 async function scrapePage(pageUrl) {
     const scrapeData = {};
@@ -58,4 +59,33 @@ async function scrape(platforms) {
     return data
 }
 
-module.exports = { scrape };
+async function download(url, fsPath) {
+    // get progress
+    const bytesDownloaded = flR.check(fsPath) ? flR.size(fsPath) : 0;
+
+    // set up parameters
+    const ntwrkRParms = {
+        'headers': {
+            'Range': `bytes=${bytesDownloaded}-`,
+        },
+        'responseType': 'stream',
+        'onDownloadProgress': progressEvent => {
+            mbLoaded = ((bytesDownloaded + progressEvent.loaded) / (1024 * 1024)).toFixed(2);
+            mbTotal = ((bytesDownloaded + progressEvent.total) / (1024*1024)).toFixed(2);
+            console.log(`Downloading ${path.basename(fsPath)} - ${mbLoaded}mb / ${mbTotal}mb`);
+        }
+    };
+
+    const data = await ntwrkR.get(url, ntwrkRParms);
+    if (!data) return false;
+
+    const flRParms = {
+        'flags': bytesDownloaded ? 'a' : 'w'
+    }
+
+    await flR.writeStream(fsPath, data, flRParms);
+}
+
+module.exports = { scrape, download,
+    name, dataPath, url, urlParams
+};

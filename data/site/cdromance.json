@@ -3,6 +3,10 @@
     "name": "Nintendo Entertainment System",
     "games": [
       {
+        "name": "Cosmic Wars",
+        "url": "cosmic-wars-english-patched"
+      },
+      {
         "name": "Hello Kitty World",
         "url": "hello-kitty-world-english-patched"
       },
@@ -1264,6 +1268,10 @@
   {
     "name": "Super Nintendo Entertainment System",
     "games": [
+      {
+        "name": "Earth Light",
+        "url": "earth-light-japan"
+      },
       {
         "name": "Final Fantasy VI: Revised Old Style Edition",
         "url": "final-fantasy-vi-revised-old-style-edition-hack"

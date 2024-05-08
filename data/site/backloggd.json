@@ -38,14 +38,14 @@
         "release": "Jun 26, 1992"
       },
       {
+        "name": "The Guardian Legend",
+        "rating": 3.6,
+        "release": "Feb 05, 1988"
+      },
+      {
         "name": "Disney's DuckTales",
         "rating": 3.6,
         "release": "Sep 14, 1989"
-      },
-      {
-        "name": "The Guardian Legend",
-        "rating": 3.59,
-        "release": "Feb 05, 1988"
       },
       {
         "name": "Ninja Gaiden II: The Dark Sword of Chaos",
@@ -74,7 +74,7 @@
       },
       {
         "name": "Teenage Mutant Ninja Turtles III: The Manhattan Project",
-        "rating": 3.55,
+        "rating": 3.54,
         "release": "Dec 13, 1991"
       },
       {
@@ -93,14 +93,14 @@
         "release": "Feb 28, 1991"
       },
       {
-        "name": "Disney's Chip 'n Dale Rescue Rangers 2",
-        "rating": 3.5,
-        "release": "Dec 10, 1993"
-      },
-      {
         "name": "Super Mario Bros.",
         "rating": 3.49,
         "release": "Sep 13, 1985"
+      },
+      {
+        "name": "Disney's Chip 'n Dale Rescue Rangers 2",
+        "rating": 3.48,
+        "release": "Dec 10, 1993"
       },
       {
         "name": "Mighty Final Fight",
@@ -109,7 +109,7 @@
       },
       {
         "name": "Disney's Chip 'n Dale Rescue Rangers",
-        "rating": 3.48,
+        "rating": 3.47,
         "release": "Jun 08, 1990"
       },
       {
@@ -138,11 +138,6 @@
         "release": "Oct 01, 1987"
       },
       {
-        "name": "Battle City",
-        "rating": 3.43,
-        "release": "Sep 09, 1985"
-      },
-      {
         "name": "Castlevania",
         "rating": 3.43,
         "release": "Sep 26, 1986"
@@ -153,14 +148,14 @@
         "release": "Sep 28, 1990"
       },
       {
+        "name": "Battle City",
+        "rating": 3.42,
+        "release": "Sep 09, 1985"
+      },
+      {
         "name": "King's Quest V: Absence Makes the Heart Go Yonder!",
         "rating": 3.41,
         "release": "Nov 09, 1990"
-      },
-      {
-        "name": "Tiny Toon Adventures",
-        "rating": 3.39,
-        "release": "Dec 01, 1991"
       },
       {
         "name": "Batman: The Video Game",
@@ -168,14 +163,19 @@
         "release": "Dec 22, 1989"
       },
       {
-        "name": "Adventure Island 3",
-        "rating": 3.36,
-        "release": "Jul 31, 1992"
+        "name": "Tiny Toon Adventures",
+        "rating": 3.39,
+        "release": "Dec 01, 1991"
       },
       {
         "name": "StarTropics",
-        "rating": 3.35,
+        "rating": 3.36,
         "release": "Dec 01, 1990"
+      },
+      {
+        "name": "Adventure Island 3",
+        "rating": 3.36,
+        "release": "Jul 31, 1992"
       },
       {
         "name": "Gargoyle's Quest II",
@@ -184,13 +184,12 @@
       },
       {
         "name": "Disney's Darkwing Duck",
-        "rating": 3.33,
+        "rating": 3.32,
         "release": "Jun 01, 1992"
       },
       {
         "name": "Little Nemo: The Dream Master",
-        "rating": 3.32,
-        "release": "Sep 01, 1990"
+        "rating": 3.32
       },
       {
         "name": "Mega Man 5",
@@ -199,7 +198,7 @@
       },
       {
         "name": "Jackie Chan's Action Kung Fu",
-        "rating": 3.31,
+        "rating": 3.3,
         "release": "Dec 31, 1990"
       },
       {
@@ -229,7 +228,7 @@
       },
       {
         "name": "Blaster Master",
-        "rating": 3.24,
+        "rating": 3.23,
         "release": "Jun 17, 1988"
       },
       {
@@ -241,6 +240,11 @@
         "name": "Space Harrier",
         "rating": 3.18,
         "release": "Oct 02, 1985"
+      },
+      {
+        "name": "After Burner II",
+        "rating": 3.18,
+        "release": "Dec 31, 1987"
       },
       {
         "name": "Adventures of Lolo 2",
@@ -258,19 +262,14 @@
         "release": "Mar 01, 1983"
       },
       {
-        "name": "After Burner II",
-        "rating": 3.17,
-        "release": "Dec 31, 1987"
+        "name": "Micro Machines",
+        "rating": 3.15,
+        "release": "Dec 31, 1991"
       },
       {
         "name": "The Flintstones: The Rescue of Dino & Hoppy",
         "rating": 3.15,
         "release": "Dec 01, 1991"
-      },
-      {
-        "name": "Micro Machines",
-        "rating": 3.15,
-        "release": "Dec 31, 1991"
       },
       {
         "name": "Shadow of the Ninja",
@@ -279,18 +278,13 @@
       },
       {
         "name": "Adventures of Lolo",
-        "rating": 3.13,
+        "rating": 3.12,
         "release": "Apr 20, 1989"
       },
       {
         "name": "Dr. Mario",
         "rating": 3.09,
         "release": "Jul 27, 1990"
-      },
-      {
-        "name": "Klax",
-        "rating": 3.09,
-        "release": "Feb 01, 1990"
       },
       {
         "name": "Alwa's Awakening",
@@ -303,14 +297,19 @@
         "release": "May 27, 1986"
       },
       {
-        "name": "Bonk's Adventure",
+        "name": "Klax",
         "rating": 3.07,
-        "release": "Dec 15, 1989"
+        "release": "Feb 01, 1990"
       },
       {
         "name": "Bomberman II",
         "rating": 3.06,
         "release": "Jun 28, 1991"
+      },
+      {
+        "name": "Bonk's Adventure",
+        "rating": 3.06,
+        "release": "Jul 30, 1993"
       },
       {
         "name": "Battle Chess",
@@ -365,7 +364,7 @@
       {
         "name": "Lode Runner",
         "rating": 2.98,
-        "release": "Oct 30, 1983"
+        "release": "Jul 31, 1984"
       },
       {
         "name": "Disney's The Little Mermaid",
@@ -379,7 +378,7 @@
       },
       {
         "name": "Battletoads",
-        "rating": 2.93,
+        "rating": 2.92,
         "release": "Jun 01, 1991"
       },
       {
@@ -399,7 +398,7 @@
       },
       {
         "name": "Dig Dug II: Trouble in Paradise",
-        "rating": 2.86,
+        "rating": 2.85,
         "release": "Mar 01, 1985"
       },
       {
@@ -419,7 +418,7 @@
       },
       {
         "name": "Metroid",
-        "rating": 2.81,
+        "rating": 2.8,
         "release": "Aug 06, 1986"
       },
       {
@@ -429,7 +428,7 @@
       },
       {
         "name": "Excitebike",
-        "rating": 2.8,
+        "rating": 2.79,
         "release": "Nov 28, 1984"
       },
       {
@@ -468,14 +467,14 @@
         "release": "Jun 12, 1984"
       },
       {
-        "name": "Kid Icarus",
-        "rating": 2.65,
-        "release": "Dec 19, 1986"
-      },
-      {
         "name": "Devil World",
         "rating": 2.65,
         "release": "Oct 05, 1984"
+      },
+      {
+        "name": "Kid Icarus",
+        "rating": 2.65,
+        "release": "Dec 19, 1986"
       },
       {
         "name": "3-D WorldRunner",
@@ -489,13 +488,13 @@
       },
       {
         "name": "Pinball",
-        "rating": 2.61,
+        "rating": 2.6,
         "release": "Feb 02, 1984"
       },
       {
         "name": "Commando",
         "rating": 2.59,
-        "release": "Apr 02, 1985"
+        "release": "Sep 27, 1986"
       },
       {
         "name": "M.C Kids",
@@ -504,7 +503,7 @@
       },
       {
         "name": "Zelda II: The Adventure of Link",
-        "rating": 2.57,
+        "rating": 2.56,
         "release": "Jan 14, 1987"
       },
       {
@@ -573,11 +572,6 @@
         "release": "Aug 01, 1987"
       },
       {
-        "name": "Yoshi",
-        "rating": 2.34,
-        "release": "Dec 14, 1991"
-      },
-      {
         "name": "Solar Jetman: Hunt for the Golden Warpship",
         "rating": 2.34,
         "release": "Oct 01, 1990"
@@ -588,13 +582,17 @@
         "release": "Apr 24, 1986"
       },
       {
+        "name": "Yoshi",
+        "rating": 2.34,
+        "release": "Dec 14, 1991"
+      },
+      {
         "name": "Double Dragon III: The Sacred Stones",
-        "rating": 2.33,
-        "release": "Feb 01, 1991"
+        "rating": 2.33
       },
       {
         "name": "Tennis",
-        "rating": 2.33,
+        "rating": 2.32,
         "release": "Jan 14, 1984"
       },
       {
@@ -614,7 +612,7 @@
       },
       {
         "name": "Golf",
-        "rating": 2.23,
+        "rating": 2.22,
         "release": "May 01, 1984"
       },
       {
@@ -644,7 +642,7 @@
       },
       {
         "name": "Silver Surfer",
-        "rating": 2.06,
+        "rating": 2.05,
         "release": "Nov 01, 1990"
       },
       {
@@ -684,7 +682,7 @@
       },
       {
         "name": "The Simpsons: Bart vs. The Space Mutants",
-        "rating": 1.88,
+        "rating": 1.87,
         "release": "Dec 31, 1991"
       },
       {
@@ -724,7 +722,7 @@
       },
       {
         "name": "The Karate Kid",
-        "rating": 1.44,
+        "rating": 1.45,
         "release": "Dec 31, 1987"
       },
       {
@@ -759,13 +757,13 @@
       },
       {
         "name": "Rainbow Islands: The Story of Bubble Bobble 2",
-        "rating": 3.58,
+        "rating": 3.57,
         "release": "Dec 31, 1987"
       },
       {
         "name": "Ms. Pac-Man",
         "rating": 3.56,
-        "release": "Jan 13, 1982"
+        "release": "Dec 01, 1991"
       },
       {
         "name": "Montezuma's Revenge",
@@ -833,14 +831,14 @@
         "release": "Dec 31, 1988"
       },
       {
-        "name": "Golvellius: Valley of Doom",
-        "rating": 3.24,
-        "release": "Dec 31, 1987"
-      },
-      {
         "name": "Fantasy Zone II",
         "rating": 3.23,
         "release": "Mar 01, 1987"
+      },
+      {
+        "name": "Golvellius: Valley of Doom",
+        "rating": 3.22,
+        "release": "Dec 31, 1987"
       },
       {
         "name": "The Ancient Land of Ys",
@@ -904,12 +902,12 @@
       },
       {
         "name": "The Lucky Dime Caper Starring Donald Duck",
-        "rating": 3.09,
+        "rating": 3.08,
         "release": "Dec 20, 1991"
       },
       {
         "name": "Klax",
-        "rating": 3.09,
+        "rating": 3.07,
         "release": "Feb 01, 1990"
       },
       {
@@ -944,7 +942,7 @@
       },
       {
         "name": "After Burner",
-        "rating": 2.97,
+        "rating": 2.98,
         "release": "Jul 01, 1987"
       },
       {
@@ -969,7 +967,7 @@
       },
       {
         "name": "Golden Axe Warrior",
-        "rating": 2.9,
+        "rating": 2.89,
         "release": "Jul 01, 1991"
       },
       {
@@ -1029,7 +1027,7 @@
       },
       {
         "name": "Aleste",
-        "rating": 2.82,
+        "rating": 2.81,
         "release": "Feb 29, 1988"
       },
       {
@@ -1063,19 +1061,19 @@
         "release": "Dec 31, 1989"
       },
       {
-        "name": "Impossible Mission",
-        "rating": 2.72,
-        "release": "Dec 31, 1984"
-      },
-      {
         "name": "Skitchin'",
         "rating": 2.72,
         "release": "Dec 31, 1994"
       },
       {
+        "name": "Impossible Mission",
+        "rating": 2.72,
+        "release": "Dec 31, 1984"
+      },
+      {
         "name": "Alien 3",
         "rating": 2.69,
-        "release": "Feb 19, 1992"
+        "release": "Dec 31, 1992"
       },
       {
         "name": "Aerial Assault",
@@ -1123,14 +1121,14 @@
         "release": "Dec 13, 1987"
       },
       {
-        "name": "Taz in Escape From Mars",
-        "rating": 2.62,
-        "release": "Aug 01, 1994"
-      },
-      {
         "name": "Power Strike",
         "rating": 2.62,
         "release": "Feb 01, 1988"
+      },
+      {
+        "name": "Taz in Escape From Mars",
+        "rating": 2.62,
+        "release": "Aug 01, 1994"
       },
       {
         "name": "James Pond 2: Codename - RoboCod",
@@ -1173,14 +1171,14 @@
         "release": "Jan 01, 1989"
       },
       {
+        "name": "Action Fighter",
+        "rating": 2.55,
+        "release": "Aug 17, 1986"
+      },
+      {
         "name": "Chuck Rock II: Son of Chuck",
         "rating": 2.54,
         "release": "Dec 31, 1993"
-      },
-      {
-        "name": "Action Fighter",
-        "rating": 2.54,
-        "release": "Aug 17, 1986"
       },
       {
         "name": "G-Loc Air Battle",
@@ -1214,7 +1212,8 @@
       },
       {
         "name": "Thunder Blade",
-        "rating": 2.47
+        "rating": 2.47,
+        "release": "Dec 31, 1987"
       },
       {
         "name": "Tom and Jerry: The Movie",
@@ -1232,6 +1231,11 @@
         "release": "Nov 01, 1993"
       },
       {
+        "name": "Aztec Adventure",
+        "rating": 2.44,
+        "release": "Sep 20, 1987"
+      },
+      {
         "name": "Ghost House",
         "rating": 2.44,
         "release": "Apr 21, 1986"
@@ -1240,11 +1244,6 @@
         "name": "Battle OutRun",
         "rating": 2.42,
         "release": "Dec 31, 1989"
-      },
-      {
-        "name": "Aztec Adventure",
-        "rating": 2.42,
-        "release": "Sep 20, 1987"
       },
       {
         "name": "TransBot",
@@ -1313,7 +1312,8 @@
       },
       {
         "name": "Global Defense",
-        "rating": 2.22
+        "rating": 2.22,
+        "release": "Dec 31, 1987"
       },
       {
         "name": "Taz-Mania",
@@ -1377,7 +1377,8 @@
       },
       {
         "name": "Alex Kidd: The Lost Stars",
-        "rating": 2.02
+        "rating": 2.02,
+        "release": "Dec 31, 1986"
       },
       {
         "name": "The Incredible Crash Dummies",
@@ -1391,7 +1392,7 @@
       },
       {
         "name": "The Simpsons: Bart vs. The Space Mutants",
-        "rating": 1.88,
+        "rating": 1.87,
         "release": "Dec 31, 1991"
       },
       {
@@ -1531,7 +1532,7 @@
       },
       {
         "name": "Rainbow Islands: The Story of Bubble Bobble 2",
-        "rating": 3.58,
+        "rating": 3.57,
         "release": "Dec 31, 1987"
       },
       {
@@ -1555,11 +1556,6 @@
         "release": "Dec 31, 1989"
       },
       {
-        "name": "Final Lap Twin",
-        "rating": 3.5,
-        "release": "Feb 01, 1989"
-      },
-      {
         "name": "Parasol Stars: The Story of Bubble Bobble III",
         "rating": 3.5,
         "release": "Feb 15, 1991"
@@ -1568,6 +1564,11 @@
         "name": "Metal Stoker",
         "rating": 3.5,
         "release": "Jul 12, 1991"
+      },
+      {
+        "name": "Final Lap Twin",
+        "rating": 3.5,
+        "release": "Feb 01, 1989"
       },
       {
         "name": "OutRun",
@@ -1610,14 +1611,14 @@
         "release": "Sep 14, 1988"
       },
       {
-        "name": "Hanii on the Road",
-        "rating": 3.38,
-        "release": "Sep 07, 1990"
-      },
-      {
         "name": "Bouken Danshaku Don: The Lost Sunheart",
         "rating": 3.38,
         "release": "Jan 04, 1992"
+      },
+      {
+        "name": "Hanii on the Road",
+        "rating": 3.38,
+        "release": "Sep 07, 1990"
       },
       {
         "name": "Dungeon Explorer",
@@ -1626,7 +1627,7 @@
       },
       {
         "name": "Final Soldier",
-        "rating": 3.33,
+        "rating": 3.34,
         "release": "Sep 23, 1991"
       },
       {
@@ -1641,7 +1642,8 @@
       },
       {
         "name": "Jackie Chan's Action Kung Fu",
-        "rating": 3.31
+        "rating": 3.3,
+        "release": "Dec 31, 1990"
       },
       {
         "name": "Hana Taaka Daka!",
@@ -1725,7 +1727,7 @@
       },
       {
         "name": "After Burner II",
-        "rating": 3.17,
+        "rating": 3.18,
         "release": "Dec 31, 1987"
       },
       {
@@ -1739,14 +1741,14 @@
         "release": "Sep 07, 1990"
       },
       {
-        "name": "World Court Tennis",
-        "rating": 3.12,
-        "release": "Aug 11, 1988"
-      },
-      {
         "name": "Bonk III: Bonk's Big Adventure",
         "rating": 3.12,
         "release": "Dec 31, 1993"
+      },
+      {
+        "name": "World Court Tennis",
+        "rating": 3.12,
+        "release": "Aug 11, 1988"
       },
       {
         "name": "Super Volley Ball",
@@ -1769,11 +1771,6 @@
         "release": "Nov 29, 1991"
       },
       {
-        "name": "Klax",
-        "rating": 3.09,
-        "release": "Feb 01, 1990"
-      },
-      {
         "name": "Sorcerian",
         "rating": 3.09,
         "release": "Dec 20, 1987"
@@ -1794,9 +1791,14 @@
         "release": "Feb 01, 1991"
       },
       {
-        "name": "Bonk's Adventure",
+        "name": "Klax",
         "rating": 3.07,
-        "release": "Dec 15, 1989"
+        "release": "Feb 01, 1990"
+      },
+      {
+        "name": "Bomberman",
+        "rating": 3.06,
+        "release": "Dec 07, 1990"
       },
       {
         "name": "Raiden",
@@ -1805,17 +1807,18 @@
       },
       {
         "name": "Aero Blasters",
-        "rating": 3.06
+        "rating": 3.06,
+        "release": "Dec 31, 1990"
+      },
+      {
+        "name": "Bonk's Adventure",
+        "rating": 3.06,
+        "release": "Dec 15, 1989"
       },
       {
         "name": "Image Fight",
         "rating": 3.06,
         "release": "Dec 31, 1988"
-      },
-      {
-        "name": "Bomberman",
-        "rating": 3.05,
-        "release": "Dec 07, 1990"
       },
       {
         "name": "Twin Hawk",
@@ -1833,24 +1836,14 @@
         "release": "Jun 20, 1987"
       },
       {
-        "name": "Dungeons & Dragons: Order of the Griffon",
-        "rating": 3,
-        "release": "Feb 01, 1992"
-      },
-      {
-        "name": "Air Buster",
-        "rating": 3,
-        "release": "Mar 31, 1990"
-      },
-      {
-        "name": "Neutopia II",
-        "rating": 3,
-        "release": "Sep 27, 1991"
-      },
-      {
         "name": "Momotaro Katsugeki",
         "rating": 3,
         "release": "Sep 21, 1990"
+      },
+      {
+        "name": "Dungeons & Dragons: Order of the Griffon",
+        "rating": 3,
+        "release": "Feb 01, 1992"
       },
       {
         "name": "Battle Lode Runner",
@@ -1861,6 +1854,16 @@
         "name": "Cyber Knight",
         "rating": 3,
         "release": "Oct 10, 1990"
+      },
+      {
+        "name": "Neutopia II",
+        "rating": 3,
+        "release": "Sep 27, 1991"
+      },
+      {
+        "name": "Air Buster",
+        "rating": 3,
+        "release": "Mar 31, 1990"
       },
       {
         "name": "Nobunaga's Ambition",
@@ -1978,19 +1981,9 @@
         "release": "Feb 01, 1990"
       },
       {
-        "name": "Disney's TaleSpin",
-        "rating": 2.75,
-        "release": "Dec 31, 1991"
-      },
-      {
         "name": "Batman",
-        "rating": 2.75,
+        "rating": 2.78,
         "release": "Oct 12, 1990"
-      },
-      {
-        "name": "Heavy Unit",
-        "rating": 2.75,
-        "release": "Feb 01, 1988"
       },
       {
         "name": "Drop Off",
@@ -2008,6 +2001,21 @@
         "release": "Dec 31, 1989"
       },
       {
+        "name": "Heavy Unit",
+        "rating": 2.75,
+        "release": "Feb 01, 1988"
+      },
+      {
+        "name": "Disney's TaleSpin",
+        "rating": 2.75,
+        "release": "Dec 31, 1991"
+      },
+      {
+        "name": "Atomic Robo-Kid Special",
+        "rating": 2.78,
+        "release": "Jan 19, 1990"
+      },
+      {
         "name": "Atomic Robo-Kid",
         "rating": 2.75,
         "release": "Nov 01, 1988"
@@ -2018,24 +2026,19 @@
         "release": "Dec 31, 1987"
       },
       {
-        "name": "Boxyboy",
-        "rating": 2.71,
-        "release": "Mar 16, 1990"
-      },
-      {
         "name": "Titan",
         "rating": 2.71,
         "release": "Dec 31, 1988"
       },
       {
+        "name": "Boxyboy",
+        "rating": 2.71,
+        "release": "Mar 16, 1990"
+      },
+      {
         "name": "Mizubaku Daibouken",
         "rating": 2.7,
         "release": "Feb 17, 1992"
-      },
-      {
-        "name": "Atomic Robo-Kid Special",
-        "rating": 2.7,
-        "release": "Jan 19, 1990"
       },
       {
         "name": "Princess Maker",
@@ -2123,14 +2126,14 @@
         "release": "Sep 27, 1991"
       },
       {
-        "name": "Power Golf",
-        "rating": 2.5,
-        "release": "May 25, 1989"
-      },
-      {
         "name": "Genji Tsuushin Agedama",
         "rating": 2.5,
         "release": "Dec 13, 1991"
+      },
+      {
+        "name": "Power Golf",
+        "rating": 2.5,
+        "release": "May 25, 1989"
       },
       {
         "name": "Thunder Blade",
@@ -2339,7 +2342,7 @@
     "games": [
       {
         "name": "Contra: Hard Corps",
-        "rating": 4.04,
+        "rating": 4.03,
         "release": "Aug 08, 1994"
       },
       {
@@ -2354,12 +2357,13 @@
       },
       {
         "name": "Gunstar Heroes",
-        "rating": 3.98,
+        "rating": 3.99,
         "release": "Sep 09, 1993"
       },
       {
         "name": "Shining Force II",
-        "rating": 3.98
+        "rating": 3.98,
+        "release": "Oct 01, 1993"
       },
       {
         "name": "Battle Mania Daiginjou",
@@ -2393,7 +2397,7 @@
       },
       {
         "name": "Bare Knuckle III",
-        "rating": 3.79,
+        "rating": 3.78,
         "release": "Mar 18, 1994"
       },
       {
@@ -2403,7 +2407,7 @@
       },
       {
         "name": "Castlevania: Bloodlines",
-        "rating": 3.75,
+        "rating": 3.76,
         "release": "Mar 17, 1994"
       },
       {
@@ -2458,7 +2462,7 @@
       },
       {
         "name": "Rock n' Roll Racing",
-        "rating": 3.58,
+        "rating": 3.59,
         "release": "Jun 04, 1993"
       },
       {
@@ -2518,7 +2522,7 @@
       },
       {
         "name": "Castle of Illusion Starring Mickey Mouse",
-        "rating": 3.42,
+        "rating": 3.41,
         "release": "Nov 20, 1990"
       },
       {
@@ -2592,14 +2596,14 @@
         "release": "Sep 15, 1994"
       },
       {
-        "name": "The Great Circus Mystery Starring Mickey & Minnie",
-        "rating": 3.26,
-        "release": "Jun 01, 1994"
-      },
-      {
         "name": "Worms",
         "rating": 3.26,
         "release": "Oct 31, 1995"
+      },
+      {
+        "name": "The Great Circus Mystery Starring Mickey & Minnie",
+        "rating": 3.26,
+        "release": "Jun 01, 1994"
       },
       {
         "name": "Forgotten Worlds",
@@ -2647,6 +2651,11 @@
         "release": "Apr 04, 1987"
       },
       {
+        "name": "After Burner II",
+        "rating": 3.18,
+        "release": "Dec 31, 1987"
+      },
+      {
         "name": "Theme Park",
         "rating": 3.17,
         "release": "Dec 31, 1994"
@@ -2660,11 +2669,6 @@
         "name": "Earthworm Jim",
         "rating": 3.17,
         "release": "Oct 01, 1994"
-      },
-      {
-        "name": "After Burner II",
-        "rating": 3.17,
-        "release": "Dec 31, 1987"
       },
       {
         "name": "ToeJam & Earl",
@@ -2693,7 +2697,7 @@
       },
       {
         "name": "WWF WrestleMania: The Arcade Game",
-        "rating": 3.14,
+        "rating": 3.13,
         "release": "Oct 18, 1995"
       },
       {
@@ -2708,8 +2712,7 @@
       },
       {
         "name": "Alisia Dragoon",
-        "rating": 3.12,
-        "release": "Feb 19, 1992"
+        "rating": 3.12
       },
       {
         "name": "Ecco: The Tides of Time",
@@ -2747,14 +2750,14 @@
         "release": "Nov 01, 1988"
       },
       {
-        "name": "Golden Axe II",
-        "rating": 3.03,
-        "release": "Sep 05, 1991"
-      },
-      {
         "name": "Marble Madness",
         "rating": 3.03,
         "release": "Dec 15, 1984"
+      },
+      {
+        "name": "Golden Axe II",
+        "rating": 3.03,
+        "release": "Sep 05, 1991"
       },
       {
         "name": "Golden Axe III",
@@ -2819,7 +2822,7 @@
       {
         "name": "Ys III: Wanderers from Ys",
         "rating": 2.87,
-        "release": "Jul 01, 1989"
+        "release": "Nov 01, 1991"
       },
       {
         "name": "Strider",
@@ -2858,12 +2861,13 @@
       },
       {
         "name": "The Death and Return of Superman",
-        "rating": 2.78,
+        "rating": 2.79,
         "release": "Jan 01, 1994"
       },
       {
         "name": "Caveman Ninja",
-        "rating": 2.77
+        "rating": 2.77,
+        "release": "Dec 31, 1991"
       },
       {
         "name": "Ecco the Dolphin",
@@ -2912,7 +2916,7 @@
       },
       {
         "name": "Captain America and the Avengers",
-        "rating": 2.67,
+        "rating": 2.66,
         "release": "Dec 31, 1991"
       },
       {
@@ -2926,24 +2930,23 @@
         "release": "Apr 16, 1993"
       },
       {
-        "name": "Primal Rage",
-        "rating": 2.62,
-        "release": "Aug 01, 1994"
-      },
-      {
         "name": "Fatal Fury",
         "rating": 2.62,
         "release": "Nov 25, 1991"
       },
       {
-        "name": "The Addams Family",
+        "name": "Primal Rage",
         "rating": 2.62,
-        "release": "Dec 31, 1992"
+        "release": "Aug 01, 1994"
+      },
+      {
+        "name": "The Addams Family",
+        "rating": 2.62
       },
       {
         "name": "Space Harrier II",
         "rating": 2.59,
-        "release": "Oct 29, 1988"
+        "release": "Oct 27, 2022"
       },
       {
         "name": "Pac-Man 2: The New Adventures",
@@ -2952,7 +2955,7 @@
       },
       {
         "name": "King of the Monsters",
-        "rating": 2.57,
+        "rating": 2.56,
         "release": "Jan 25, 1991"
       },
       {
@@ -2967,8 +2970,7 @@
       },
       {
         "name": "Paperboy 2",
-        "rating": 2.5,
-        "release": "Dec 31, 1991"
+        "rating": 2.5
       },
       {
         "name": "Sonic the Hedgehog: Spinball",
@@ -3037,12 +3039,12 @@
       },
       {
         "name": "Spider-Man and the X-Men in Arcade's Revenge",
-        "rating": 1.91,
+        "rating": 1.92,
         "release": "Nov 01, 1992"
       },
       {
         "name": "The Simpsons: Bart vs. The Space Mutants",
-        "rating": 1.88,
+        "rating": 1.87,
         "release": "Dec 31, 1991"
       },
       {
@@ -3087,7 +3089,7 @@
       },
       {
         "name": "Ballz 3D",
-        "rating": 1.41,
+        "rating": 1.4,
         "release": "Sep 01, 1994"
       },
       {
@@ -3121,14 +3123,14 @@
         "release": "Jun 15, 1993"
       },
       {
-        "name": "Popful Mail",
-        "rating": 3.83,
-        "release": "Dec 20, 1991"
-      },
-      {
         "name": "Linda Cube",
         "rating": 3.83,
         "release": "Oct 13, 1995"
+      },
+      {
+        "name": "Popful Mail",
+        "rating": 3.83,
+        "release": "Dec 20, 1991"
       },
       {
         "name": "Rayxanber III",
@@ -3191,18 +3193,18 @@
         "release": "Dec 31, 1988"
       },
       {
-        "name": "Doukyuusei",
-        "rating": 3.58,
-        "release": "Dec 17, 1992"
-      },
-      {
         "name": "Galaxy Fraulein Yuna 2: Eien no Princess",
         "rating": 3.58,
         "release": "Jun 30, 1995"
       },
       {
-        "name": "Rainbow Islands: The Story of Bubble Bobble 2",
+        "name": "Doukyuusei",
         "rating": 3.58,
+        "release": "Dec 17, 1992"
+      },
+      {
+        "name": "Rainbow Islands: The Story of Bubble Bobble 2",
+        "rating": 3.57,
         "release": "Dec 31, 1987"
       },
       {
@@ -3256,14 +3258,14 @@
         "release": "Nov 24, 1995"
       },
       {
-        "name": "Urusei Yatsura: Stay With You",
-        "rating": 3.42,
-        "release": "Jun 29, 1990"
-      },
-      {
         "name": "Laplace no Ma",
         "rating": 3.42,
         "release": "Jul 04, 1987"
+      },
+      {
+        "name": "Urusei Yatsura: Stay With You",
+        "rating": 3.42,
+        "release": "Jun 29, 1990"
       },
       {
         "name": "Where in the World Is Carmen Sandiego?",
@@ -3326,14 +3328,14 @@
         "release": "Jun 17, 1992"
       },
       {
-        "name": "Mahjong Vanilla Syndrome",
-        "rating": 3.25,
-        "release": "Oct 29, 1991"
-      },
-      {
         "name": "Dungeon Explorer II",
         "rating": 3.25,
         "release": "Mar 26, 1993"
+      },
+      {
+        "name": "Mahjong Vanilla Syndrome",
+        "rating": 3.25,
+        "release": "Oct 29, 1991"
       },
       {
         "name": "Chou Aniki",
@@ -3376,14 +3378,14 @@
         "release": "Dec 01, 1989"
       },
       {
-        "name": "Sylphia",
-        "rating": 3.17,
-        "release": "Oct 22, 1993"
-      },
-      {
         "name": "Princess Minerva",
         "rating": 3.17,
         "release": "Dec 31, 1992"
+      },
+      {
+        "name": "Sylphia",
+        "rating": 3.17,
+        "release": "Oct 22, 1993"
       },
       {
         "name": "Fausseté Amour",
@@ -3412,7 +3414,8 @@
       },
       {
         "name": "Spriggan Mark 2: Re-Terraform Project",
-        "rating": 3.09
+        "rating": 3.09,
+        "release": "Dec 31, 1992"
       },
       {
         "name": "Murder Club",
@@ -3515,11 +3518,6 @@
         "release": "Jul 22, 1994"
       },
       {
-        "name": "Hyper Dyne Side Arms Special",
-        "rating": 2.75,
-        "release": "Dec 15, 1989"
-      },
-      {
         "name": "Vasteel",
         "rating": 2.75,
         "release": "Dec 20, 1990"
@@ -3531,7 +3529,13 @@
       },
       {
         "name": "Riot Zone",
-        "rating": 2.75
+        "rating": 2.75,
+        "release": "Dec 31, 1992"
+      },
+      {
+        "name": "Hyper Dyne Side Arms Special",
+        "rating": 2.75,
+        "release": "Dec 15, 1989"
       },
       {
         "name": "Last Alert",
@@ -3629,14 +3633,14 @@
         "release": "Jun 07, 1991"
       },
       {
-        "name": "Genocide",
-        "rating": 1.88,
-        "release": "Jul 23, 1989"
-      },
-      {
         "name": "Moto Roader MC",
         "rating": 1.88,
         "release": "Dec 18, 1992"
+      },
+      {
+        "name": "Genocide",
+        "rating": 1.88,
+        "release": "Jul 23, 1989"
       },
       {
         "name": "Martial Champion",
@@ -3675,7 +3679,7 @@
       },
       {
         "name": "He Fucked the Girl Out of Me",
-        "rating": 3.78,
+        "rating": 3.77,
         "release": "May 21, 2022"
       },
       {
@@ -3685,7 +3689,7 @@
       },
       {
         "name": "Mega Man V",
-        "rating": 3.68,
+        "rating": 3.67,
         "release": "Jul 22, 1994"
       },
       {
@@ -3736,7 +3740,7 @@
       {
         "name": "NBA Live 96",
         "rating": 3.48,
-        "release": "Oct 01, 1995"
+        "release": "Jan 22, 1996"
       },
       {
         "name": "Mario's Picross",
@@ -3775,8 +3779,7 @@
       },
       {
         "name": "Tiny Toons: Babs' Big Break",
-        "rating": 3.3,
-        "release": "Dec 31, 1992"
+        "rating": 3.3
       },
       {
         "name": "Trax",
@@ -3831,7 +3834,7 @@
       {
         "name": "Buster Bros.",
         "rating": 3.18,
-        "release": "Dec 31, 1989"
+        "release": "Oct 01, 1993"
       },
       {
         "name": "Final Fantasy Adventure",
@@ -3880,8 +3883,7 @@
       },
       {
         "name": "The Chessmaster",
-        "rating": 3.08,
-        "release": "Dec 31, 1991"
+        "rating": 3.08
       },
       {
         "name": "Metroid II: Return of Samus",
@@ -3904,14 +3906,14 @@
         "release": "Feb 23, 1990"
       },
       {
-        "name": "Elden Ring GB",
-        "rating": 3.03,
-        "release": "Jun 03, 2022"
-      },
-      {
         "name": "The Final Fantasy Legend",
         "rating": 3.03,
         "release": "Dec 15, 1989"
+      },
+      {
+        "name": "Elden Ring GB",
+        "rating": 3.03,
+        "release": "Jun 03, 2022"
       },
       {
         "name": "Looney Tunes",
@@ -3931,7 +3933,7 @@
       {
         "name": "Batman: Return of the Joker",
         "rating": 3.01,
-        "release": "Dec 20, 1991"
+        "release": "Mar 28, 1992"
       },
       {
         "name": "Super Mario Land",
@@ -4021,7 +4023,7 @@
       {
         "name": "Castlevania II: Belmont's Revenge",
         "rating": 2.84,
-        "release": "Jul 12, 1991"
+        "release": "Feb 19, 1998"
       },
       {
         "name": "Do I Pass?",
@@ -4061,7 +4063,7 @@
       {
         "name": "FIFA Soccer 96",
         "rating": 2.73,
-        "release": "Sep 30, 1995"
+        "release": "Dec 31, 1995"
       },
       {
         "name": "Lucky Luke",
@@ -4120,8 +4122,7 @@
       },
       {
         "name": "Disney's Pinocchio",
-        "rating": 2.62,
-        "release": "Dec 31, 1995"
+        "rating": 2.62
       },
       {
         "name": "Mickey's Dangerous Chase",
@@ -4130,8 +4131,7 @@
       },
       {
         "name": "James Pond 2: Codename - RoboCod",
-        "rating": 2.61,
-        "release": "Dec 31, 1991"
+        "rating": 2.61
       },
       {
         "name": "Bomberman GB",
@@ -4260,16 +4260,17 @@
       },
       {
         "name": "Bram Stoker's Dracula",
-        "rating": 2.14
+        "rating": 2.14,
+        "release": "Dec 31, 1993"
       },
       {
         "name": "Star Wars: The Empire Strikes Back",
         "rating": 2.11,
-        "release": "Mar 01, 1992"
+        "release": "Dec 31, 1992"
       },
       {
         "name": "Castlevania Legends",
-        "rating": 2.11,
+        "rating": 2.1,
         "release": "Nov 27, 1997"
       },
       {
@@ -4299,7 +4300,8 @@
       },
       {
         "name": "Spider-Man and the X-Men in Arcade's Revenge",
-        "rating": 1.91
+        "rating": 1.92,
+        "release": "Nov 01, 1992"
       },
       {
         "name": "Wizards & Warriors X: Fortress of Fear",
@@ -4334,7 +4336,7 @@
       {
         "name": "Castlevania: The Adventure",
         "rating": 1.64,
-        "release": "Oct 27, 1989"
+        "release": "Sep 25, 1997"
       },
       {
         "name": "Bubsy 2",
@@ -4519,22 +4521,22 @@
       {
         "name": "Super Star Wars: Return of the Jedi",
         "rating": 3.09,
-        "release": "Jun 22, 1994"
+        "release": "Dec 31, 1995"
       },
       {
         "name": "The Lucky Dime Caper Starring Donald Duck",
-        "rating": 3.09,
+        "rating": 3.08,
         "release": "Dec 20, 1991"
-      },
-      {
-        "name": "Klax",
-        "rating": 3.09,
-        "release": "Feb 01, 1990"
       },
       {
         "name": "The Chessmaster",
         "rating": 3.08,
         "release": "Dec 31, 1991"
+      },
+      {
+        "name": "Klax",
+        "rating": 3.07,
+        "release": "Feb 01, 1990"
       },
       {
         "name": "Mighty Morphin Power Rangers",
@@ -4578,7 +4580,8 @@
       },
       {
         "name": "Deep Duck Trouble Starring Donald Duck",
-        "rating": 2.94
+        "rating": 2.94,
+        "release": "Dec 31, 1993"
       },
       {
         "name": "Sonic the Hedgehog: Triple Trouble",
@@ -4587,12 +4590,12 @@
       },
       {
         "name": "Battletoads",
-        "rating": 2.93,
+        "rating": 2.92,
         "release": "Jun 01, 1991"
       },
       {
         "name": "Phantom 2040",
-        "rating": 2.89,
+        "rating": 2.91,
         "release": "Jun 01, 1995"
       },
       {
@@ -4621,10 +4624,6 @@
         "release": "Dec 22, 1990"
       },
       {
-        "name": "Daffy Duck in Hollywood",
-        "rating": 2.86
-      },
-      {
         "name": "Puzzle & Action: Ichidant-R",
         "rating": 2.86,
         "release": "Jun 01, 1994"
@@ -4633,6 +4632,11 @@
         "name": "Winter Olympic Games: Lillehammer '94",
         "rating": 2.86,
         "release": "Dec 01, 1993"
+      },
+      {
+        "name": "Daffy Duck in Hollywood",
+        "rating": 2.86,
+        "release": "Dec 31, 1993"
       },
       {
         "name": "Sonic the Hedgehog 2",
@@ -4646,7 +4650,8 @@
       },
       {
         "name": "James Pond 3: Operation Starfish",
-        "rating": 2.83
+        "rating": 2.83,
+        "release": "Dec 31, 1993"
       },
       {
         "name": "Putt & Putter",
@@ -4830,8 +4835,7 @@
       },
       {
         "name": "Marko",
-        "rating": 2.33,
-        "release": "Dec 31, 1994"
+        "rating": 2.33
       },
       {
         "name": "Phantasy Star Gaiden",
@@ -4846,16 +4850,17 @@
       {
         "name": "Zool",
         "rating": 2.29,
-        "release": "Jul 01, 1992"
+        "release": "Mar 01, 1994"
       },
       {
         "name": "Judge Dredd",
         "rating": 2.28,
-        "release": "Jun 16, 1995"
+        "release": "Dec 31, 1995"
       },
       {
         "name": "Dragon: The Bruce Lee Story",
-        "rating": 2.27
+        "rating": 2.27,
+        "release": "Dec 31, 1994"
       },
       {
         "name": "Wheel of Fortune",
@@ -4939,7 +4944,8 @@
       },
       {
         "name": "Predator 2",
-        "rating": 2.06
+        "rating": 2.06,
+        "release": "Dec 31, 1992"
       },
       {
         "name": "The Ottifants",
@@ -4952,14 +4958,14 @@
         "release": "Oct 01, 1992"
       },
       {
-        "name": "Cheese Cat-Astrophe starring Speedy Gonzales",
-        "rating": 2.04,
-        "release": "Jan 03, 1995"
-      },
-      {
         "name": "Phantasy Star Adventure",
         "rating": 2.04,
         "release": "Mar 13, 1992"
+      },
+      {
+        "name": "Cheese Cat-Astrophe starring Speedy Gonzales",
+        "rating": 2.04,
+        "release": "Jan 03, 1995"
       },
       {
         "name": "The Incredible Crash Dummies",
@@ -4973,7 +4979,7 @@
       },
       {
         "name": "Spider-Man and the X-Men in Arcade's Revenge",
-        "rating": 1.91,
+        "rating": 1.92,
         "release": "Nov 01, 1992"
       },
       {
@@ -4983,7 +4989,7 @@
       },
       {
         "name": "The Simpsons: Bart vs. The Space Mutants",
-        "rating": 1.88,
+        "rating": 1.87,
         "release": "Dec 31, 1991"
       },
       {
@@ -5228,7 +5234,7 @@
       },
       {
         "name": "Rock n' Roll Racing",
-        "rating": 3.58,
+        "rating": 3.59,
         "release": "Jun 04, 1993"
       },
       {
@@ -5298,7 +5304,7 @@
       },
       {
         "name": "Harvest Moon",
-        "rating": 3.5,
+        "rating": 3.49,
         "release": "Aug 09, 1996"
       },
       {
@@ -5327,14 +5333,14 @@
         "release": "Jul 17, 1991"
       },
       {
-        "name": "Disney's Aladdin",
-        "rating": 3.43,
-        "release": "Nov 21, 1993"
-      },
-      {
         "name": "Super Bomberman 2",
         "rating": 3.43,
         "release": "Apr 28, 1994"
+      },
+      {
+        "name": "Disney's Aladdin",
+        "rating": 3.43,
+        "release": "Nov 21, 1993"
       },
       {
         "name": "Captain Commando",
@@ -5423,7 +5429,7 @@
       },
       {
         "name": "X-Men: Mutant Apocalypse",
-        "rating": 3.32,
+        "rating": 3.33,
         "release": "Nov 01, 1994"
       },
       {
@@ -5457,14 +5463,14 @@
         "release": "Dec 01, 1994"
       },
       {
-        "name": "The Great Circus Mystery Starring Mickey & Minnie",
-        "rating": 3.26,
-        "release": "Jun 01, 1994"
-      },
-      {
         "name": "Worms",
         "rating": 3.26,
         "release": "Oct 31, 1995"
+      },
+      {
+        "name": "The Great Circus Mystery Starring Mickey & Minnie",
+        "rating": 3.26,
+        "release": "Jun 01, 1994"
       },
       {
         "name": "Mighty Morphin Power Rangers: The Movie",
@@ -5473,7 +5479,8 @@
       },
       {
         "name": "Pop'n TwinBee",
-        "rating": 3.25
+        "rating": 3.25,
+        "release": "Mar 26, 1993"
       },
       {
         "name": "Mortal Kombat II",
@@ -5502,7 +5509,8 @@
       },
       {
         "name": "Marvel Super Heroes in War of the Gems",
-        "rating": 3.18
+        "rating": 3.18,
+        "release": "Nov 18, 1996"
       },
       {
         "name": "Blackthorne",
@@ -5541,7 +5549,7 @@
       },
       {
         "name": "WWF WrestleMania: The Arcade Game",
-        "rating": 3.14,
+        "rating": 3.13,
         "release": "Oct 18, 1995"
       },
       {
@@ -5595,14 +5603,14 @@
         "release": "Dec 12, 1992"
       },
       {
-        "name": "Teenage Mutant Ninja Turtles: Tournament Fighters",
-        "rating": 3.01,
-        "release": "Sep 04, 1993"
-      },
-      {
         "name": "Pilotwings",
         "rating": 3.01,
         "release": "Dec 21, 1990"
+      },
+      {
+        "name": "Teenage Mutant Ninja Turtles: Tournament Fighters",
+        "rating": 3,
+        "release": "Sep 04, 1993"
       },
       {
         "name": "Breath of Fire",
@@ -5691,7 +5699,8 @@
       },
       {
         "name": "The Death and Return of Superman",
-        "rating": 2.78
+        "rating": 2.79,
+        "release": "Jan 01, 1994"
       },
       {
         "name": "Venom/Spider-Man: Separation Anxiety",
@@ -5715,7 +5724,7 @@
       },
       {
         "name": "Captain America and the Avengers",
-        "rating": 2.67,
+        "rating": 2.66,
         "release": "Dec 31, 1991"
       },
       {
@@ -5724,14 +5733,14 @@
         "release": "Apr 16, 1993"
       },
       {
-        "name": "Primal Rage",
-        "rating": 2.62,
-        "release": "Aug 01, 1994"
-      },
-      {
         "name": "Fatal Fury",
         "rating": 2.62,
         "release": "Nov 25, 1991"
+      },
+      {
+        "name": "Primal Rage",
+        "rating": 2.62,
+        "release": "Aug 01, 1994"
       },
       {
         "name": "Final Fantasy: Mystic Quest",
@@ -5810,7 +5819,7 @@
       },
       {
         "name": "Spider-Man and the X-Men in Arcade's Revenge",
-        "rating": 1.91,
+        "rating": 1.92,
         "release": "Nov 01, 1992"
       },
       {
@@ -5855,7 +5864,8 @@
       },
       {
         "name": "Lunar: Eternal Blue",
-        "rating": 3.98
+        "rating": 3.98,
+        "release": "Dec 22, 1994"
       },
       {
         "name": "Captain Tsubasa",
@@ -6004,7 +6014,7 @@
       },
       {
         "name": "Panic!",
-        "rating": 2.96,
+        "rating": 2.93,
         "release": "Dec 31, 1994"
       },
       {
@@ -6065,12 +6075,17 @@
       {
         "name": "Hook",
         "rating": 2.8,
-        "release": "Jul 01, 1992"
+        "release": "Dec 31, 1992"
       },
       {
         "name": "Joe Montana Football",
         "rating": 2.78,
         "release": "Jan 01, 1990"
+      },
+      {
+        "name": "After Burner III",
+        "rating": 2.75,
+        "release": "Dec 31, 1991"
       },
       {
         "name": "Ecco the Dolphin",
@@ -6088,14 +6103,8 @@
         "release": "Dec 31, 1990"
       },
       {
-        "name": "After Burner III",
-        "rating": 2.68,
-        "release": "Dec 31, 1991"
-      },
-      {
         "name": "Flink",
-        "rating": 2.68,
-        "release": "Dec 31, 1994"
+        "rating": 2.68
       },
       {
         "name": "Star Wars Chess",
@@ -6138,19 +6147,9 @@
         "release": "Dec 31, 1993"
       },
       {
-        "name": "Cadillacs and Dinosaurs: The Second Cataclysm",
+        "name": "Wonder Dog",
         "rating": 2.5,
-        "release": "Jun 01, 1994"
-      },
-      {
-        "name": "Wolfchild",
-        "rating": 2.5,
-        "release": "Feb 12, 1993"
-      },
-      {
-        "name": "Teddy Boy",
-        "rating": 2.5,
-        "release": "May 31, 1985"
+        "release": "Sep 25, 1992"
       },
       {
         "name": "Crime Patrol",
@@ -6158,14 +6157,24 @@
         "release": "May 01, 1993"
       },
       {
+        "name": "Teddy Boy",
+        "rating": 2.5,
+        "release": "May 31, 1985"
+      },
+      {
         "name": "Eternal Champions: Challenge from the Dark Side",
         "rating": 2.5,
         "release": "Feb 05, 1995"
       },
       {
-        "name": "Wonder Dog",
+        "name": "Wolfchild",
         "rating": 2.5,
-        "release": "Sep 25, 1992"
+        "release": "Feb 12, 1993"
+      },
+      {
+        "name": "Cadillacs and Dinosaurs: The Second Cataclysm",
+        "rating": 2.5,
+        "release": "Jun 01, 1994"
       },
       {
         "name": "Sengoku",
@@ -6199,7 +6208,7 @@
       },
       {
         "name": "Night Trap",
-        "rating": 2.38,
+        "rating": 2.37,
         "release": "Oct 15, 1992"
       },
       {
@@ -6228,14 +6237,14 @@
         "release": "Dec 31, 1988"
       },
       {
-        "name": "Soulstar",
-        "rating": 2.25,
-        "release": "Dec 21, 1994"
-      },
-      {
         "name": "Revenge of the Ninja",
         "rating": 2.25,
         "release": "Dec 31, 1984"
+      },
+      {
+        "name": "Soulstar",
+        "rating": 2.25,
+        "release": "Dec 21, 1994"
       },
       {
         "name": "Chuck Rock",
@@ -6434,7 +6443,7 @@
       },
       {
         "name": "Aero Fighters 2",
-        "rating": 3.4,
+        "rating": 3.39,
         "release": "Jan 18, 1994"
       },
       {
@@ -6463,14 +6472,14 @@
         "release": "Jan 28, 1995"
       },
       {
-        "name": "Xeno Crisis",
-        "rating": 3.21,
-        "release": "Oct 27, 2019"
-      },
-      {
         "name": "Fatal Fury Special",
         "rating": 3.21,
         "release": "Sep 16, 1993"
+      },
+      {
+        "name": "Xeno Crisis",
+        "rating": 3.21,
+        "release": "Oct 27, 2019"
       },
       {
         "name": "Magical Drop II",
@@ -6639,7 +6648,7 @@
       },
       {
         "name": "WWF WrestleMania: The Arcade Game",
-        "rating": 3.14,
+        "rating": 3.13,
         "release": "Oct 18, 1995"
       },
       {
@@ -6665,7 +6674,7 @@
       {
         "name": "FIFA Soccer 96",
         "rating": 2.73,
-        "release": "Sep 30, 1995"
+        "release": "Nov 01, 1995"
       },
       {
         "name": "Virtua Fighter",
@@ -6709,7 +6718,8 @@
     "games": [
       {
         "name": "Panzer Dragoon Saga",
-        "rating": 4.37
+        "rating": 4.37,
+        "release": "Jan 29, 1998"
       },
       {
         "name": "Baroque",
@@ -6993,8 +7003,7 @@
       },
       {
         "name": "Die Hard Arcade",
-        "rating": 3.53,
-        "release": "Feb 01, 1996"
+        "rating": 3.53
       },
       {
         "name": "Marvel Super Heroes",
@@ -7063,7 +7072,7 @@
       },
       {
         "name": "Castle of Illusion Starring Mickey Mouse",
-        "rating": 3.42,
+        "rating": 3.41,
         "release": "Nov 20, 1990"
       },
       {
@@ -7092,11 +7101,6 @@
         "release": "Sep 13, 1996"
       },
       {
-        "name": "Cyber Troopers Virtual-On",
-        "rating": 3.38,
-        "release": "Nov 29, 1996"
-      },
-      {
         "name": "Strikers 1945",
         "rating": 3.38,
         "release": "Oct 04, 1995"
@@ -7109,6 +7113,11 @@
       {
         "name": "Cyber Troopers Virtual-On",
         "rating": 3.38,
+        "release": "Nov 29, 1996"
+      },
+      {
+        "name": "Cyber Troopers Virtual-On",
+        "rating": 3.37,
         "release": "Nov 29, 1996"
       },
       {
@@ -7197,6 +7206,11 @@
         "release": "Oct 02, 1985"
       },
       {
+        "name": "After Burner II",
+        "rating": 3.18,
+        "release": "Dec 31, 1987"
+      },
+      {
         "name": "World Heroes Perfect",
         "rating": 3.17,
         "release": "May 25, 1995"
@@ -7207,18 +7221,13 @@
         "release": "Dec 31, 1994"
       },
       {
-        "name": "After Burner II",
-        "rating": 3.17,
-        "release": "Dec 31, 1987"
-      },
-      {
         "name": "Tetris Plus",
         "rating": 3.16,
         "release": "Feb 01, 1995"
       },
       {
         "name": "WWF WrestleMania: The Arcade Game",
-        "rating": 3.14,
+        "rating": 3.13,
         "release": "Oct 18, 1995"
       },
       {
@@ -7237,14 +7246,14 @@
         "release": "Feb 01, 1996"
       },
       {
-        "name": "Virtua Fighter 2",
-        "rating": 3.1,
-        "release": "Nov 01, 1994"
-      },
-      {
         "name": "Darius II",
         "rating": 3.1,
         "release": "Sep 01, 1989"
+      },
+      {
+        "name": "Virtua Fighter 2",
+        "rating": 3.1,
+        "release": "Nov 01, 1994"
       },
       {
         "name": "The King of Fighters '95",
@@ -7288,7 +7297,7 @@
       },
       {
         "name": "Croc: Legend of the Gobbos",
-        "rating": 2.85,
+        "rating": 2.86,
         "release": "Sep 29, 1997"
       },
       {
@@ -7383,7 +7392,7 @@
       },
       {
         "name": "Bug!",
-        "rating": 2.08,
+        "rating": 2.07,
         "release": "Jul 28, 1995"
       },
       {
@@ -7418,7 +7427,8 @@
       },
       {
         "name": "Castlevania: Symphony of the Night",
-        "rating": 4.41
+        "rating": 4.41,
+        "release": "Mar 20, 1997"
       },
       {
         "name": "Moon: Remix RPG Adventure",
@@ -7447,7 +7457,8 @@
       },
       {
         "name": "Final Fantasy VII",
-        "rating": 4.25
+        "rating": 4.25,
+        "release": "Jan 31, 1997"
       },
       {
         "name": "Ridge Racer Type 4",
@@ -7461,7 +7472,7 @@
       },
       {
         "name": "Persona 2: Eternal Punishment",
-        "rating": 4.18,
+        "rating": 4.19,
         "release": "Jun 29, 2000"
       },
       {
@@ -7616,7 +7627,7 @@
       },
       {
         "name": "The Legend of Dragoon",
-        "rating": 3.85,
+        "rating": 3.84,
         "release": "Dec 02, 1999"
       },
       {
@@ -7640,14 +7651,14 @@
         "release": "Sep 13, 2000"
       },
       {
-        "name": "Worms World Party",
-        "rating": 3.8,
-        "release": "Apr 06, 2001"
-      },
-      {
         "name": "LSD: Dream Emulator",
         "rating": 3.8,
         "release": "Oct 22, 1998"
+      },
+      {
+        "name": "Worms World Party",
+        "rating": 3.8,
+        "release": "Apr 06, 2001"
       },
       {
         "name": "Koudelka",
@@ -7687,7 +7698,7 @@
       {
         "name": "Spyro the Dragon",
         "rating": 3.73,
-        "release": "Sep 10, 1998"
+        "release": "Apr 01, 1999"
       },
       {
         "name": "The King of Fighters '97",
@@ -7800,11 +7811,6 @@
         "release": "Mar 28, 2000"
       },
       {
-        "name": "Gran Turismo",
-        "rating": 3.55,
-        "release": "Dec 23, 1997"
-      },
-      {
         "name": "MediEvil",
         "rating": 3.55,
         "release": "Oct 09, 1998"
@@ -7813,6 +7819,11 @@
         "name": "Spider-Man",
         "rating": 3.55,
         "release": "Aug 30, 2000"
+      },
+      {
+        "name": "Gran Turismo",
+        "rating": 3.55,
+        "release": "Dec 23, 1997"
       },
       {
         "name": "Heart of Darkness",
@@ -7826,7 +7837,7 @@
       },
       {
         "name": "Twisted Metal 2",
-        "rating": 3.53,
+        "rating": 3.54,
         "release": "Oct 31, 1996"
       },
       {
@@ -8055,18 +8066,18 @@
         "release": "Nov 14, 2000"
       },
       {
-        "name": "Mortal Kombat II",
-        "rating": 3.24,
-        "release": "Nov 01, 1993"
-      },
-      {
         "name": "LEGO Racers",
         "rating": 3.24,
         "release": "Jul 31, 1999"
       },
       {
+        "name": "Mortal Kombat II",
+        "rating": 3.24,
+        "release": "Nov 01, 1993"
+      },
+      {
         "name": "Digimon Rumble Arena",
-        "rating": 3.21,
+        "rating": 3.2,
         "release": "Dec 06, 2001"
       },
       {
@@ -8080,14 +8091,14 @@
         "release": "Jun 25, 1999"
       },
       {
+        "name": "Yu-Gi-Oh! Forbidden Memories",
+        "rating": 3.19,
+        "release": "Dec 09, 1999"
+      },
+      {
         "name": "Mortal Kombat 3",
         "rating": 3.19,
         "release": "Apr 15, 1995"
-      },
-      {
-        "name": "Yu-Gi-Oh! Forbidden Memories",
-        "rating": 3.18,
-        "release": "Dec 09, 1999"
       },
       {
         "name": "Disney's Hercules Action Game",
@@ -8160,14 +8171,14 @@
         "release": "May 14, 1998"
       },
       {
-        "name": "Carmageddon",
-        "rating": 2.93,
-        "release": "Jun 30, 1997"
-      },
-      {
         "name": "Croc 2",
         "rating": 2.93,
         "release": "Jun 30, 1999"
+      },
+      {
+        "name": "Carmageddon",
+        "rating": 2.93,
+        "release": "Oct 08, 1999"
       },
       {
         "name": "Gex: Enter the Gecko",
@@ -8196,7 +8207,7 @@
       },
       {
         "name": "Croc: Legend of the Gobbos",
-        "rating": 2.85,
+        "rating": 2.86,
         "release": "Sep 29, 1997"
       },
       {
@@ -8246,7 +8257,8 @@
       },
       {
         "name": "A Bug's Life",
-        "rating": 2.47
+        "rating": 2.47,
+        "release": "Oct 31, 1998"
       },
       {
         "name": "Scooby-Doo and the Cyber Chase",
@@ -8339,14 +8351,14 @@
         "release": "Jul 21, 1995"
       },
       {
+        "name": "Red Alarm",
+        "rating": 2.53,
+        "release": "Jul 21, 1995"
+      },
+      {
         "name": "Mario Clash",
         "rating": 2.5,
         "release": "Sep 28, 1995"
-      },
-      {
-        "name": "Red Alarm",
-        "rating": 2.5,
-        "release": "Jul 21, 1995"
       },
       {
         "name": "Mario's Tennis",
@@ -8416,7 +8428,7 @@
       {
         "name": "Quake",
         "rating": 3.93,
-        "release": "Jun 22, 1996"
+        "release": "Mar 24, 1998"
       },
       {
         "name": "Star Fox 64",
@@ -8434,11 +8446,6 @@
         "release": "May 22, 2000"
       },
       {
-        "name": "Ogre Battle 64: Person of Lordly Caliber",
-        "rating": 3.83,
-        "release": "Jul 14, 1999"
-      },
-      {
         "name": "Mystical Ninja Starring Goemon",
         "rating": 3.83,
         "release": "Aug 07, 1997"
@@ -8452,6 +8459,11 @@
         "name": "Goemon's Great Adventure",
         "rating": 3.82,
         "release": "Dec 23, 1998"
+      },
+      {
+        "name": "Ogre Battle 64: Person of Lordly Caliber",
+        "rating": 3.81,
+        "release": "Jul 14, 1999"
       },
       {
         "name": "Rayman 2: The Great Escape",
@@ -8569,14 +8581,14 @@
         "release": "Jul 31, 1999"
       },
       {
-        "name": "Spider-Man",
-        "rating": 3.55,
-        "release": "Aug 30, 2000"
-      },
-      {
         "name": "Pokémon Stadium 2",
         "rating": 3.55,
         "release": "Dec 14, 2000"
+      },
+      {
+        "name": "Spider-Man",
+        "rating": 3.55,
+        "release": "Aug 30, 2000"
       },
       {
         "name": "Bomberman Hero",
@@ -8591,7 +8603,7 @@
       {
         "name": "Quake II",
         "rating": 3.51,
-        "release": "Dec 09, 1997"
+        "release": "Jul 07, 1999"
       },
       {
         "name": "Pokémon Snap",
@@ -8669,14 +8681,14 @@
         "release": "Jun 01, 1998"
       },
       {
-        "name": "Gauntlet Legends",
-        "rating": 3.33,
-        "release": "Oct 01, 1998"
-      },
-      {
         "name": "Turok 2: Seeds of Evil",
         "rating": 3.33,
         "release": "Dec 10, 1998"
+      },
+      {
+        "name": "Gauntlet Legends",
+        "rating": 3.33,
+        "release": "Oct 01, 1998"
       },
       {
         "name": "Pokémon Stadium",
@@ -8755,7 +8767,7 @@
       },
       {
         "name": "Disney's Donald Duck: Goin' Quackers",
-        "rating": 3.2,
+        "rating": 3.19,
         "release": "Nov 09, 2000"
       },
       {
@@ -8809,14 +8821,14 @@
         "release": "Dec 21, 1997"
       },
       {
-        "name": "WinBack: Covert Operations",
-        "rating": 3.11,
-        "release": "Nov 20, 1999"
-      },
-      {
         "name": "Turok: Dinosaur Hunter",
         "rating": 3.11,
         "release": "Feb 28, 1997"
+      },
+      {
+        "name": "WinBack: Covert Operations",
+        "rating": 3.1,
+        "release": "Nov 20, 1999"
       },
       {
         "name": "James Bond 007: The World Is Not Enough",
@@ -8874,14 +8886,14 @@
         "release": "Dec 24, 1996"
       },
       {
+        "name": "FIFA 2000: Major League Soccer",
+        "rating": 3.01,
+        "release": "Sep 30, 1999"
+      },
+      {
         "name": "Tom Clancy's Rainbow Six",
         "rating": 3.01,
         "release": "Aug 21, 1998"
-      },
-      {
-        "name": "Rampage World Tour",
-        "rating": 3,
-        "release": "Sep 30, 1997"
       },
       {
         "name": "Cruis'n USA",
@@ -8889,9 +8901,9 @@
         "release": "Dec 01, 1994"
       },
       {
-        "name": "FIFA 2000: Major League Soccer",
+        "name": "Rampage World Tour",
         "rating": 3,
-        "release": "Sep 30, 1999"
+        "release": "Sep 30, 1997"
       },
       {
         "name": "Nightmare Creatures",
@@ -8949,14 +8961,14 @@
         "release": "Nov 12, 2000"
       },
       {
-        "name": "Destruction Derby",
-        "rating": 2.8,
-        "release": "Oct 20, 1995"
-      },
-      {
         "name": "Turok: Rage Wars",
         "rating": 2.8,
         "release": "Oct 31, 1999"
+      },
+      {
+        "name": "Destruction Derby",
+        "rating": 2.8,
+        "release": "Oct 20, 1995"
       },
       {
         "name": "Body Harvest",
@@ -9005,8 +9017,7 @@
       },
       {
         "name": "Iggy's Reckin' Balls",
-        "rating": 2.48,
-        "release": "Jul 31, 1998"
+        "rating": 2.48
       },
       {
         "name": "A Bug's Life",
@@ -9030,7 +9041,7 @@
       },
       {
         "name": "WWF War Zone",
-        "rating": 2.41,
+        "rating": 2.4,
         "release": "Jul 14, 1998"
       },
       {
@@ -9080,7 +9091,7 @@
       },
       {
         "name": "South Park: Chef's Luv Shack",
-        "rating": 1.88,
+        "rating": 1.9,
         "release": "Oct 12, 1999"
       },
       {
@@ -9150,7 +9161,7 @@
       },
       {
         "name": "Dragon Warrior Monsters 2: Tara's Adventure",
-        "rating": 4.08,
+        "rating": 4.06,
         "release": "Mar 09, 2001"
       },
       {
@@ -9220,7 +9231,7 @@
       },
       {
         "name": "Rainbow Islands: The Story of Bubble Bobble 2",
-        "rating": 3.58,
+        "rating": 3.57,
         "release": "Dec 31, 1987"
       },
       {
@@ -9326,7 +9337,7 @@
       {
         "name": "Driver",
         "rating": 3.2,
-        "release": "Jun 25, 1999"
+        "release": "Oct 11, 2000"
       },
       {
         "name": "Pokémon Pinball",
@@ -9430,7 +9441,7 @@
       },
       {
         "name": "Walt Disney World Quest: Magical Racing Tour",
-        "rating": 2.96,
+        "rating": 2.97,
         "release": "Mar 23, 2000"
       },
       {
@@ -9501,7 +9512,7 @@
       {
         "name": "Madden NFL 2000",
         "rating": 2.82,
-        "release": "Jul 31, 1999"
+        "release": "Nov 01, 1999"
       },
       {
         "name": "Rampart",
@@ -9541,7 +9552,7 @@
       {
         "name": "Airforce Delta",
         "rating": 2.59,
-        "release": "Jul 29, 1999"
+        "release": "Nov 21, 2000"
       },
       {
         "name": "Hugo: The Evil Mirror",
@@ -9595,12 +9606,13 @@
       },
       {
         "name": "720 Degrees",
-        "rating": 2.32,
+        "rating": 2.33,
         "release": "Dec 01, 1986"
       },
       {
         "name": "Bugs Bunny in Crazy Castle 4",
-        "rating": 2.29
+        "rating": 2.29,
+        "release": "Dec 31, 2000"
       },
       {
         "name": "Conker's Pocket Tales",
@@ -9759,8 +9771,7 @@
       },
       {
         "name": "Unreal Tournament",
-        "rating": 4.03,
-        "release": "Nov 22, 1999"
+        "rating": 4.04
       },
       {
         "name": "Space Channel 5: Part 2",
@@ -9848,24 +9859,24 @@
         "release": "Jan 29, 1999"
       },
       {
-        "name": "Virtua Tennis 2",
-        "rating": 3.81,
-        "release": "Nov 24, 2001"
-      },
-      {
         "name": "Virtua Tennis",
         "rating": 3.81,
         "release": "Dec 31, 1999"
       },
       {
-        "name": "Worms World Party",
-        "rating": 3.8,
-        "release": "Apr 06, 2001"
+        "name": "Virtua Tennis 2",
+        "rating": 3.81,
+        "release": "Nov 24, 2001"
       },
       {
         "name": "Ever17: The Out of Infinity",
         "rating": 3.8,
         "release": "Aug 29, 2002"
+      },
+      {
+        "name": "Worms World Party",
+        "rating": 3.8,
+        "release": "Apr 06, 2001"
       },
       {
         "name": "Shenmue",
@@ -10103,9 +10114,9 @@
         "release": "Apr 30, 1999"
       },
       {
-        "name": "Sega Bass Fishing",
+        "name": "Guilty Gear X",
         "rating": 3.35,
-        "release": "Dec 01, 1997"
+        "release": "Jul 01, 2000"
       },
       {
         "name": "Star Wars: Episode I - Racer",
@@ -10113,9 +10124,9 @@
         "release": "May 18, 1999"
       },
       {
-        "name": "Guilty Gear X",
-        "rating": 3.34,
-        "release": "Jul 01, 2000"
+        "name": "Sega Bass Fishing",
+        "rating": 3.35,
+        "release": "Dec 01, 1997"
       },
       {
         "name": "Samba de Amigo",
@@ -10179,7 +10190,7 @@
       },
       {
         "name": "Disney's Donald Duck: Goin' Quackers",
-        "rating": 3.2,
+        "rating": 3.19,
         "release": "Nov 09, 2000"
       },
       {
@@ -10194,12 +10205,12 @@
       },
       {
         "name": "Ecco the Dolphin: Defender of the Future",
-        "rating": 3.13,
+        "rating": 3.14,
         "release": "Jun 16, 2000"
       },
       {
         "name": "Fighting Vipers 2",
-        "rating": 3.12,
+        "rating": 3.13,
         "release": "Apr 01, 1998"
       },
       {
@@ -10229,7 +10240,7 @@
       },
       {
         "name": "Walt Disney World Quest: Magical Racing Tour",
-        "rating": 2.96,
+        "rating": 2.97,
         "release": "Mar 23, 2000"
       },
       {
@@ -10354,7 +10365,7 @@
       },
       {
         "name": "South Park: Chef's Luv Shack",
-        "rating": 1.88,
+        "rating": 1.9,
         "release": "Oct 12, 1999"
       },
       {
@@ -10389,7 +10400,8 @@
       },
       {
         "name": "Gals Fighters",
-        "rating": 3.81
+        "rating": 3.81,
+        "release": "Jan 01, 2000"
       },
       {
         "name": "SNK vs. Capcom Card Fighters' Clash - SNK Card Fighter's Version",
@@ -10418,7 +10430,8 @@
       },
       {
         "name": "The Last Blade: Beyond the Destiny",
-        "rating": 3.39
+        "rating": 3.39,
+        "release": "Jan 01, 2000"
       },
       {
         "name": "Puzzle Link",
@@ -10426,14 +10439,14 @@
         "release": "Jan 01, 1998"
       },
       {
-        "name": "Crush Roller",
-        "rating": 3.33,
-        "release": "Apr 15, 1999"
-      },
-      {
         "name": "King of Fighters R-2",
         "rating": 3.33,
         "release": "Mar 19, 1999"
+      },
+      {
+        "name": "Crush Roller",
+        "rating": 3.33,
+        "release": "Apr 15, 1999"
       },
       {
         "name": "Sonic the Hedgehog Pocket Adventure",
@@ -10466,14 +10479,14 @@
         "release": "Mar 09, 2000"
       },
       {
-        "name": "Fantastic Night Dreams - Cotton Original",
-        "rating": 3.15,
-        "release": "May 28, 1999"
-      },
-      {
         "name": "Biomotor Unitron",
         "rating": 3.15,
         "release": "Apr 15, 1999"
+      },
+      {
+        "name": "Fantastic Night Dreams - Cotton Original",
+        "rating": 3.15,
+        "release": "May 28, 1999"
       },
       {
         "name": "Samurai Shodown! 2",
@@ -10542,7 +10555,8 @@
       },
       {
         "name": "Shadow of the Colossus",
-        "rating": 4.4
+        "rating": 4.4,
+        "release": "Oct 18, 2005"
       },
       {
         "name": "We Love Katamari",
@@ -10601,8 +10615,7 @@
       },
       {
         "name": "Klonoa 2: Lunatea's Veil",
-        "rating": 4.17,
-        "release": "Mar 22, 2001"
+        "rating": 4.17
       },
       {
         "name": "Grand Theft Auto: San Andreas",
@@ -10615,14 +10628,14 @@
         "release": "Apr 20, 2006"
       },
       {
-        "name": "Sly 2: Band of Thieves",
-        "rating": 4.15,
-        "release": "Sep 14, 2004"
-      },
-      {
         "name": "Tom Clancy's Splinter Cell: Chaos Theory",
         "rating": 4.15,
         "release": "Mar 28, 2005"
+      },
+      {
+        "name": "Sly 2: Band of Thieves",
+        "rating": 4.15,
+        "release": "Sep 14, 2004"
       },
       {
         "name": "Final Fantasy X",
@@ -10705,24 +10718,24 @@
         "release": "May 26, 2006"
       },
       {
-        "name": "Sly 3: Honor Among Thieves",
-        "rating": 4.02,
-        "release": "Sep 26, 2005"
-      },
-      {
         "name": "Half-Life",
         "rating": 4.02,
         "release": "Nov 19, 1998"
       },
       {
-        "name": "Ico",
+        "name": "Sly 3: Honor Among Thieves",
         "rating": 4.02,
-        "release": "Sep 24, 2001"
+        "release": "Sep 26, 2005"
       },
       {
         "name": "Persona 4",
         "rating": 4.02,
         "release": "Jul 10, 2008"
+      },
+      {
+        "name": "Ico",
+        "rating": 4.02,
+        "release": "Sep 24, 2001"
       },
       {
         "name": "SSX 3",
@@ -10770,14 +10783,14 @@
         "release": "Oct 28, 2001"
       },
       {
-        "name": "Persona 3",
-        "rating": 3.96,
-        "release": "Jul 13, 2006"
-      },
-      {
         "name": "TimeSplitters 2",
         "rating": 3.96,
         "release": "Oct 09, 2002"
+      },
+      {
+        "name": "Persona 3",
+        "rating": 3.96,
+        "release": "Jul 13, 2006"
       },
       {
         "name": "PaRappa the Rapper 2",
@@ -10810,14 +10823,14 @@
         "release": "Nov 11, 2003"
       },
       {
-        "name": "Tony Hawk's Underground",
-        "rating": 3.88,
-        "release": "Oct 27, 2003"
-      },
-      {
         "name": "Burnout Revenge",
         "rating": 3.88,
         "release": "Sep 13, 2005"
+      },
+      {
+        "name": "Tony Hawk's Underground",
+        "rating": 3.88,
+        "release": "Oct 27, 2003"
       },
       {
         "name": "Grand Theft Auto: Vice City",
@@ -10836,12 +10849,12 @@
       },
       {
         "name": "Jak and Daxter: The Precursor Legacy",
-        "rating": 3.82,
+        "rating": 3.81,
         "release": "Dec 03, 2001"
       },
       {
         "name": "Dragon Ball Z: Budokai 3",
-        "rating": 3.79,
+        "rating": 3.78,
         "release": "Nov 16, 2004"
       },
       {
@@ -10891,13 +10904,11 @@
       },
       {
         "name": "Ape Escape 2",
-        "rating": 3.73,
-        "release": "Jul 18, 2002"
+        "rating": 3.73
       },
       {
         "name": "Kingdom Hearts",
-        "rating": 3.73,
-        "release": "Mar 28, 2002"
+        "rating": 3.73
       },
       {
         "name": "Fatal Frame",
@@ -10936,7 +10947,8 @@
       },
       {
         "name": "Prince of Persia: The Sands of Time",
-        "rating": 3.68
+        "rating": 3.68,
+        "release": "Nov 06, 2003"
       },
       {
         "name": "Mafia",
@@ -10984,14 +10996,14 @@
         "release": "Sep 28, 2004"
       },
       {
-        "name": "LEGO Star Wars: The Video Game",
-        "rating": 3.61,
-        "release": "Apr 02, 2005"
-      },
-      {
         "name": "Rock Band",
         "rating": 3.61,
         "release": "Nov 20, 2007"
+      },
+      {
+        "name": "LEGO Star Wars: The Video Game",
+        "rating": 3.61,
+        "release": "Apr 02, 2005"
       },
       {
         "name": "FIFA Street 2",
@@ -11001,7 +11013,7 @@
       {
         "name": "The Sims",
         "rating": 3.6,
-        "release": "Feb 04, 2000"
+        "release": "Jan 14, 2003"
       },
       {
         "name": "Silent Hill 4: The Room",
@@ -11114,14 +11126,14 @@
         "release": "Sep 30, 2002"
       },
       {
-        "name": "Black",
-        "rating": 3.45,
-        "release": "Feb 24, 2006"
-      },
-      {
         "name": "James Bond 007: Nightfire",
         "rating": 3.45,
         "release": "Nov 18, 2002"
+      },
+      {
+        "name": "Black",
+        "rating": 3.45,
+        "release": "Feb 24, 2006"
       },
       {
         "name": "Grand Theft Auto: Vice City Stories",
@@ -11169,14 +11181,14 @@
         "release": "Nov 05, 2005"
       },
       {
-        "name": "Drakengard",
+        "name": "Ben 10: Protector of Earth",
         "rating": 3.35,
-        "release": "Sep 11, 2003"
+        "release": "Oct 30, 2007"
       },
       {
-        "name": "Ben 10: Protector of Earth",
+        "name": "Drakengard",
         "rating": 3.34,
-        "release": "Oct 30, 2007"
+        "release": "Sep 11, 2003"
       },
       {
         "name": "Manhunt",
@@ -11224,14 +11236,14 @@
         "release": "Oct 20, 2009"
       },
       {
-        "name": "Red Dead Revolver",
-        "rating": 3.2,
-        "release": "May 03, 2004"
-      },
-      {
         "name": "WWE SmackDown vs. Raw 2008",
         "rating": 3.2,
         "release": "Nov 09, 2007"
+      },
+      {
+        "name": "Red Dead Revolver",
+        "rating": 3.2,
+        "release": "May 03, 2004"
       },
       {
         "name": "Grand Theft Auto: Liberty City Stories",
@@ -11354,14 +11366,14 @@
         "release": "Feb 13, 2007"
       },
       {
-        "name": "Harry Potter and the Order of the Phoenix",
-        "rating": 2.86,
-        "release": "Jun 25, 2007"
-      },
-      {
         "name": "Madagascar",
         "rating": 2.86,
         "release": "May 24, 2005"
+      },
+      {
+        "name": "Harry Potter and the Order of the Phoenix",
+        "rating": 2.86,
+        "release": "Jun 25, 2007"
       },
       {
         "name": "Mortal Kombat: Deadly Alliance",
@@ -11375,12 +11387,11 @@
       },
       {
         "name": "Killzone",
-        "rating": 2.84,
-        "release": "Nov 02, 2004"
+        "rating": 2.84
       },
       {
         "name": "Crash: Mind Over Mutant",
-        "rating": 2.83,
+        "rating": 2.84,
         "release": "Oct 07, 2008"
       },
       {
@@ -11470,7 +11481,8 @@
     "games": [
       {
         "name": "Mother 3",
-        "rating": 4.54
+        "rating": 4.54,
+        "release": "Apr 20, 2006"
       },
       {
         "name": "Mega Man Zero 3",
@@ -11508,14 +11520,14 @@
         "release": "Aug 21, 2001"
       },
       {
-        "name": "Advance Wars 2: Black Hole Rising",
-        "rating": 4.06,
-        "release": "Jun 24, 2003"
-      },
-      {
         "name": "Hamtaro: Ham-Ham Heartbreak",
         "rating": 4.06,
         "release": "May 03, 2002"
+      },
+      {
+        "name": "Advance Wars 2: Black Hole Rising",
+        "rating": 4.06,
+        "release": "Jun 24, 2003"
       },
       {
         "name": "Mario & Luigi: Superstar Saga",
@@ -11588,14 +11600,14 @@
         "release": "Aug 01, 2001"
       },
       {
-        "name": "Hamtaro: Rainbow Rescue",
-        "rating": 3.81,
-        "release": "May 23, 2003"
-      },
-      {
         "name": "Pokémon Sapphire Version",
         "rating": 3.81,
         "release": "Nov 21, 2002"
+      },
+      {
+        "name": "Hamtaro: Rainbow Rescue",
+        "rating": 3.81,
+        "release": "May 23, 2003"
       },
       {
         "name": "Astro Boy: Omega Factor",
@@ -11618,14 +11630,14 @@
         "release": "May 02, 2003"
       },
       {
-        "name": "Fire Emblem: The Blazing Blade",
-        "rating": 3.76,
-        "release": "Apr 25, 2003"
-      },
-      {
         "name": "Pokémon Mystery Dungeon: Red Rescue Team",
         "rating": 3.76,
         "release": "Nov 17, 2005"
+      },
+      {
+        "name": "Fire Emblem: The Blazing Blade",
+        "rating": 3.76,
+        "release": "Apr 25, 2003"
       },
       {
         "name": "Fire Emblem: The Sacred Stones",
@@ -11679,7 +11691,7 @@
       },
       {
         "name": "Rock n' Roll Racing",
-        "rating": 3.58,
+        "rating": 3.59,
         "release": "Jun 04, 1993"
       },
       {
@@ -11734,7 +11746,7 @@
       },
       {
         "name": "Hamtaro: Ham-Ham Games",
-        "rating": 3.46,
+        "rating": 3.47,
         "release": "Jul 15, 2004"
       },
       {
@@ -11874,7 +11886,7 @@
       },
       {
         "name": "Crash Bandicoot 2: N-Tranced",
-        "rating": 3.16,
+        "rating": 3.15,
         "release": "Jan 07, 2003"
       },
       {
@@ -11913,14 +11925,14 @@
         "release": "Jul 04, 2002"
       },
       {
-        "name": "Crash Bandicoot: The Huge Adventure",
-        "rating": 3.04,
-        "release": "Feb 25, 2002"
-      },
-      {
         "name": "Dragon Ball Z: Supersonic Warriors",
         "rating": 3.04,
         "release": "Mar 26, 2004"
+      },
+      {
+        "name": "Crash Bandicoot: The Huge Adventure",
+        "rating": 3.04,
+        "release": "Feb 25, 2002"
       },
       {
         "name": "The Legend of Zelda: Four Swords",
@@ -11935,7 +11947,7 @@
       {
         "name": "Dead to Rights",
         "rating": 2.93,
-        "release": "Jun 03, 2002"
+        "release": "Nov 26, 2004"
       },
       {
         "name": "Pitfall: The Mayan Adventure",
@@ -11949,12 +11961,12 @@
       },
       {
         "name": "Ghost Rider",
-        "rating": 2.92,
+        "rating": 2.91,
         "release": "Feb 13, 2007"
       },
       {
         "name": "Spyro 2: Season of Flame",
-        "rating": 2.9,
+        "rating": 2.91,
         "release": "Sep 25, 2002"
       },
       {
@@ -11964,7 +11976,7 @@
       },
       {
         "name": "Yu-Gi-Oh! World Championship Tournament 2004",
-        "rating": 2.89,
+        "rating": 2.9,
         "release": "Feb 05, 2004"
       },
       {
@@ -11983,14 +11995,14 @@
         "release": "Feb 04, 2005"
       },
       {
-        "name": "Mega Man Battle Network 4: Red Sun",
-        "rating": 2.84,
-        "release": "Dec 12, 2003"
-      },
-      {
         "name": "F-Zero: Maximum Velocity",
         "rating": 2.84,
         "release": "Mar 21, 2001"
+      },
+      {
+        "name": "Mega Man Battle Network 4: Red Sun",
+        "rating": 2.84,
+        "release": "Dec 12, 2003"
       },
       {
         "name": "Frogger's Adventures: Temple of the Frog",
@@ -12000,7 +12012,7 @@
       {
         "name": "Midnight Club: Street Racing",
         "rating": 2.83,
-        "release": "Oct 26, 2000"
+        "release": "Nov 14, 2001"
       },
       {
         "name": "Mario Kart: Super Circuit",
@@ -12015,7 +12027,7 @@
       {
         "name": "Turok: Evolution",
         "rating": 2.67,
-        "release": "Aug 28, 2002"
+        "release": "Sep 13, 2002"
       },
       {
         "name": "Sonic Pinball Party",
@@ -12179,7 +12191,7 @@
       },
       {
         "name": "NBA Street Vol. 2",
-        "rating": 4.11,
+        "rating": 4.1,
         "release": "Apr 28, 2003"
       },
       {
@@ -12390,7 +12402,7 @@
       {
         "name": "The Sims",
         "rating": 3.6,
-        "release": "Feb 04, 2000"
+        "release": "Jan 14, 2003"
       },
       {
         "name": "Donkey Kong Jungle Beat",
@@ -12534,7 +12546,7 @@
       },
       {
         "name": "Medal of Honor: Frontline",
-        "rating": 3.32,
+        "rating": 3.33,
         "release": "May 28, 2002"
       },
       {
@@ -12654,8 +12666,7 @@
       },
       {
         "name": "Worms 3D",
-        "rating": 3.07,
-        "release": "Oct 31, 2003"
+        "rating": 3.07
       },
       {
         "name": "James Bond 007: Agent Under Fire",
@@ -12680,7 +12691,7 @@
       {
         "name": "Donkey Konga",
         "rating": 3,
-        "release": "Dec 12, 2003"
+        "release": "Oct 15, 2004"
       },
       {
         "name": "Batman Begins",
@@ -12688,14 +12699,14 @@
         "release": "Jul 14, 2005"
       },
       {
-        "name": "Star Wars: Bounty Hunter",
-        "rating": 2.97,
-        "release": "Nov 19, 2002"
-      },
-      {
         "name": "Cars",
         "rating": 2.97,
         "release": "Jun 06, 2006"
+      },
+      {
+        "name": "Star Wars: Bounty Hunter",
+        "rating": 2.97,
+        "release": "Nov 19, 2002"
       },
       {
         "name": "Dragon Ball Z: Budokai",
@@ -12719,7 +12730,7 @@
       },
       {
         "name": "True Crime: Streets of LA",
-        "rating": 2.89,
+        "rating": 2.88,
         "release": "Nov 03, 2003"
       },
       {
@@ -12839,7 +12850,7 @@
       },
       {
         "name": "Hulk",
-        "rating": 2.33,
+        "rating": 2.32,
         "release": "May 27, 2003"
       },
       {
@@ -12959,22 +12970,22 @@
       },
       {
         "name": "Pokémon Black Version",
-        "rating": 4.09
+        "rating": 4.09,
+        "release": "Sep 18, 2010"
       },
       {
         "name": "Rhythm Heaven",
-        "rating": 4.09,
+        "rating": 4.08,
         "release": "Jul 31, 2008"
+      },
+      {
+        "name": "Rune Factory 3: A Fantasy Harvest Moon",
+        "rating": 4.07
       },
       {
         "name": "Pokémon Mystery Dungeon: Explorers of Time",
         "rating": 4.07,
         "release": "Sep 13, 2007"
-      },
-      {
-        "name": "Rune Factory 3: A Fantasy Harvest Moon",
-        "rating": 4.07,
-        "release": "Oct 22, 2009"
       },
       {
         "name": "Tetris DS",
@@ -13028,8 +13039,7 @@
       },
       {
         "name": "Shin Megami Tensei: Devil Survivor",
-        "rating": 3.95,
-        "release": "Jan 15, 2009"
+        "rating": 3.95
       },
       {
         "name": "Dragon Quest IX: Sentinels of the Starry Skies",
@@ -13038,8 +13048,7 @@
       },
       {
         "name": "Professor Layton and the Diabolical Box",
-        "rating": 3.9,
-        "release": "Nov 29, 2007"
+        "rating": 3.9
       },
       {
         "name": "Advance Wars: Dual Strike",
@@ -13048,8 +13057,7 @@
       },
       {
         "name": "Castlevania: Portrait of Ruin",
-        "rating": 3.88,
-        "release": "Nov 16, 2006"
+        "rating": 3.88
       },
       {
         "name": "Mario Kart DS",
@@ -13103,8 +13111,7 @@
       },
       {
         "name": "Pokémon Ranger: Shadows of Almia",
-        "rating": 3.76,
-        "release": "Mar 20, 2008"
+        "rating": 3.76
       },
       {
         "name": "PictoChat",
@@ -13127,6 +13134,11 @@
         "release": "Apr 29, 2009"
       },
       {
+        "name": "Fossil Fighters",
+        "rating": 3.7,
+        "release": "Apr 18, 2008"
+      },
+      {
         "name": "Professor Layton and the Last Specter",
         "rating": 3.7,
         "release": "Nov 26, 2009"
@@ -13135,11 +13147,6 @@
         "name": "Mega Man ZX",
         "rating": 3.7,
         "release": "Jul 06, 2006"
-      },
-      {
-        "name": "Fossil Fighters",
-        "rating": 3.7,
-        "release": "Apr 18, 2008"
       },
       {
         "name": "Pokémon Ranger: Guardian Signs",
@@ -13209,7 +13216,7 @@
       {
         "name": "Myst",
         "rating": 3.57,
-        "release": "Sep 24, 1993"
+        "release": "Jul 02, 2010"
       },
       {
         "name": "Kirby: Squeak Squad",
@@ -13247,14 +13254,14 @@
         "release": "Jul 27, 2006"
       },
       {
-        "name": "Cooking Mama 2: Dinner With Friends",
-        "rating": 3.47,
-        "release": "Nov 13, 2007"
-      },
-      {
         "name": "Zuma's Revenge!",
         "rating": 3.47,
         "release": "Sep 15, 2009"
+      },
+      {
+        "name": "Cooking Mama 2: Dinner With Friends",
+        "rating": 3.47,
+        "release": "Nov 13, 2007"
       },
       {
         "name": "Super Scribblenauts",
@@ -13318,7 +13325,8 @@
       },
       {
         "name": "Digimon World Dawn",
-        "rating": 3.34
+        "rating": 3.34,
+        "release": "Mar 29, 2007"
       },
       {
         "name": "The Legend of Zelda: Phantom Hourglass",
@@ -13463,7 +13471,7 @@
       {
         "name": "Scooby-Doo! Unmasked",
         "rating": 3.11,
-        "release": "Sep 12, 2005"
+        "release": "Oct 18, 2005"
       },
       {
         "name": "WWE SmackDown vs. Raw 2009",
@@ -13482,8 +13490,7 @@
       },
       {
         "name": "Star Wars: Battlefront - Elite Squadron",
-        "rating": 3.07,
-        "release": "Nov 03, 2009"
+        "rating": 3.07
       },
       {
         "name": "DK: Jungle Climber",
@@ -13557,7 +13564,8 @@
       },
       {
         "name": "Brain Age: Train Your Brain in Minutes a Day!",
-        "rating": 2.88
+        "rating": 2.88,
+        "release": "May 19, 2005"
       },
       {
         "name": "Dr. Kawashima's Brain Training: How Old is Your Brain?",
@@ -13570,14 +13578,14 @@
         "release": "Mar 20, 2006"
       },
       {
-        "name": "Kung Fu Panda",
-        "rating": 2.81,
-        "release": "Jun 03, 2008"
-      },
-      {
         "name": "Wario: Master of Disguise",
         "rating": 2.81,
         "release": "Jan 18, 2007"
+      },
+      {
+        "name": "Kung Fu Panda",
+        "rating": 2.81,
+        "release": "Jun 03, 2008"
       },
       {
         "name": "Cut the Rope",
@@ -13626,7 +13634,8 @@
       },
       {
         "name": "Transformers: Revenge of the Fallen",
-        "rating": 2.55
+        "rating": 2.55,
+        "release": "Jun 23, 2009"
       },
       {
         "name": "Marvel Super Hero Squad",
@@ -13655,8 +13664,7 @@
       },
       {
         "name": "Sonic Chronicles: The Dark Brotherhood",
-        "rating": 1.96,
-        "release": "Sep 25, 2008"
+        "rating": 1.96
       },
       {
         "name": "Pokémon Dash",
@@ -13705,7 +13713,7 @@
       },
       {
         "name": "Steins;Gate",
-        "rating": 4.25,
+        "rating": 4.24,
         "release": "Oct 15, 2009"
       },
       {
@@ -13725,13 +13733,13 @@
       },
       {
         "name": "428: Shibuya Scramble",
-        "rating": 4.2,
+        "rating": 4.19,
         "release": "Dec 04, 2008"
       },
       {
         "name": "Persona 2: Eternal Punishment",
-        "rating": 4.18,
-        "release": "Jun 29, 2000"
+        "rating": 4.19,
+        "release": "May 17, 2012"
       },
       {
         "name": "Castlevania: Rondo of Blood",
@@ -13829,14 +13837,14 @@
         "release": "Sep 22, 1999"
       },
       {
-        "name": "The Warriors",
-        "rating": 3.89,
-        "release": "Oct 17, 2005"
-      },
-      {
         "name": "Danganronpa 2: Goodbye Despair",
         "rating": 3.89,
         "release": "Jul 26, 2012"
+      },
+      {
+        "name": "The Warriors",
+        "rating": 3.89,
+        "release": "Oct 17, 2005"
       },
       {
         "name": "Dissidia 012 Final Fantasy",
@@ -13850,7 +13858,7 @@
       },
       {
         "name": "The Legend of Dragoon",
-        "rating": 3.85,
+        "rating": 3.84,
         "release": "Dec 02, 1999"
       },
       {
@@ -13891,7 +13899,7 @@
       {
         "name": "Spyro the Dragon",
         "rating": 3.73,
-        "release": "Sep 10, 1998"
+        "release": "Apr 01, 1999"
       },
       {
         "name": "Final Fantasy VIII",
@@ -13914,14 +13922,14 @@
         "release": "Feb 13, 1999"
       },
       {
-        "name": "Peggle",
-        "rating": 3.63,
-        "release": "Feb 27, 2007"
-      },
-      {
         "name": "Oddworld: Abe's Oddysee",
         "rating": 3.63,
         "release": "Sep 18, 1997"
+      },
+      {
+        "name": "Peggle",
+        "rating": 3.63,
+        "release": "Feb 27, 2007"
       },
       {
         "name": "Ys Seven",
@@ -13935,7 +13943,8 @@
       },
       {
         "name": "God of War: Ghost of Sparta",
-        "rating": 3.6
+        "rating": 3.6,
+        "release": "Nov 02, 2010"
       },
       {
         "name": "Metal Gear Solid: Peace Walker",
@@ -13958,14 +13967,14 @@
         "release": "May 18, 2010"
       },
       {
-        "name": "The Godfather",
-        "rating": 3.57,
-        "release": "Mar 21, 2006"
-      },
-      {
         "name": "Myst",
         "rating": 3.57,
         "release": "Sep 24, 1993"
+      },
+      {
+        "name": "The Godfather",
+        "rating": 3.57,
+        "release": "Mar 21, 2006"
       },
       {
         "name": "Dino Crisis",
@@ -14035,7 +14044,7 @@
       {
         "name": "Ys VI: The Ark of Napishtim",
         "rating": 3.45,
-        "release": "Sep 27, 2003"
+        "release": "Jan 19, 2006"
       },
       {
         "name": "Tomb Raider: The Last Revelation",
@@ -14069,7 +14078,7 @@
       },
       {
         "name": "Ben 10: Protector of Earth",
-        "rating": 3.34,
+        "rating": 3.35,
         "release": "Oct 30, 2007"
       },
       {
@@ -14118,23 +14127,24 @@
         "release": "Nov 19, 2008"
       },
       {
+        "name": "LittleBigPlanet",
+        "rating": 3.29,
+        "release": "Nov 17, 2009"
+      },
+      {
         "name": "ModNation Racers",
         "rating": 3.29,
         "release": "May 19, 2010"
       },
       {
-        "name": "LittleBigPlanet",
-        "rating": 3.29
+        "name": "Syphon Filter",
+        "rating": 3.29,
+        "release": "Feb 17, 1999"
       },
       {
         "name": "LEGO Harry Potter: Years 1-4",
         "rating": 3.29,
         "release": "Jun 25, 2010"
-      },
-      {
-        "name": "Syphon Filter",
-        "rating": 3.29,
-        "release": "Feb 17, 1999"
       },
       {
         "name": "N+",
@@ -14148,7 +14158,7 @@
       },
       {
         "name": "Dragon Ball Z: Tenkaichi Tag Team",
-        "rating": 3.27,
+        "rating": 3.26,
         "release": "Sep 30, 2010"
       },
       {
@@ -14169,7 +14179,7 @@
       {
         "name": "Tom Clancy's Rainbow Six: Vegas",
         "rating": 3.21,
-        "release": "Nov 22, 2006"
+        "release": "Jun 12, 2007"
       },
       {
         "name": "Tekken 2",
@@ -14233,7 +14243,7 @@
       },
       {
         "name": "Dragon Ball Z: Shin Budokai",
-        "rating": 3.08,
+        "rating": 3.09,
         "release": "Mar 07, 2006"
       },
       {
@@ -14247,14 +14257,14 @@
         "release": "Nov 05, 1995"
       },
       {
-        "name": "Crash Bash",
-        "rating": 3.04,
-        "release": "Nov 06, 2000"
-      },
-      {
         "name": "Army of Two: The 40th Day",
         "rating": 3.04,
         "release": "Jan 08, 2010"
+      },
+      {
+        "name": "Crash Bash",
+        "rating": 3.04,
+        "release": "Nov 06, 2000"
       },
       {
         "name": "Tony Hawk's Project 8",
@@ -14268,13 +14278,12 @@
       },
       {
         "name": "Jetpack Joyride",
-        "rating": 2.99,
+        "rating": 3,
         "release": "Sep 01, 2011"
       },
       {
         "name": "Ben 10 Alien Force: Vilgax Attacks",
-        "rating": 2.99,
-        "release": "Oct 27, 2009"
+        "rating": 2.99
       },
       {
         "name": "WALL-E",
@@ -14288,7 +14297,7 @@
       },
       {
         "name": "Ghost Rider",
-        "rating": 2.92,
+        "rating": 2.91,
         "release": "Feb 13, 2007"
       },
       {
@@ -14313,7 +14322,7 @@
       },
       {
         "name": "Crash: Mind Over Mutant",
-        "rating": 2.83,
+        "rating": 2.84,
         "release": "Oct 07, 2008"
       },
       {
@@ -14368,7 +14377,7 @@
       },
       {
         "name": "Sonic Rivals",
-        "rating": 2.48,
+        "rating": 2.47,
         "release": "Nov 24, 2006"
       },
       {
@@ -14428,8 +14437,7 @@
       },
       {
         "name": "Fallout: New Vegas",
-        "rating": 4.33,
-        "release": "Oct 19, 2010"
+        "rating": 4.33
       },
       {
         "name": "Kingdom Hearts II",
@@ -14462,14 +14470,14 @@
         "release": "Jan 31, 1997"
       },
       {
-        "name": "Red Dead Redemption",
-        "rating": 4.21,
-        "release": "May 18, 2010"
-      },
-      {
         "name": "Resident Evil 2",
         "rating": 4.21,
         "release": "Jan 21, 1998"
+      },
+      {
+        "name": "Red Dead Redemption",
+        "rating": 4.21,
+        "release": "May 18, 2010"
       },
       {
         "name": "Batman: Arkham City",
@@ -14528,7 +14536,8 @@
       },
       {
         "name": "Metal Gear Rising: Revengeance",
-        "rating": 4.08
+        "rating": 4.08,
+        "release": "Feb 19, 2013"
       },
       {
         "name": "Dragon Age: Origins",
@@ -14552,7 +14561,7 @@
       },
       {
         "name": "Terraria",
-        "rating": 4.03,
+        "rating": 4.04,
         "release": "May 16, 2011"
       },
       {
@@ -14677,7 +14686,7 @@
       },
       {
         "name": "Grand Theft Auto IV",
-        "rating": 3.88,
+        "rating": 3.89,
         "release": "Apr 29, 2008"
       },
       {
@@ -14731,14 +14740,14 @@
         "release": "May 05, 2009"
       },
       {
-        "name": "Jak and Daxter: The Precursor Legacy",
-        "rating": 3.82,
-        "release": "Dec 03, 2001"
-      },
-      {
         "name": "Alien: Isolation",
         "rating": 3.82,
         "release": "Oct 06, 2014"
+      },
+      {
+        "name": "Jak and Daxter: The Precursor Legacy",
+        "rating": 3.81,
+        "release": "Dec 03, 2001"
       },
       {
         "name": "Tales from the Borderlands",
@@ -14818,7 +14827,7 @@
       {
         "name": "Spyro the Dragon",
         "rating": 3.73,
-        "release": "Sep 10, 1998"
+        "release": "Apr 01, 1999"
       },
       {
         "name": "Final Fantasy XIV Online",
@@ -14866,14 +14875,14 @@
         "release": "Jun 26, 2012"
       },
       {
-        "name": "Battlefield: Bad Company 2",
-        "rating": 3.67,
-        "release": "Mar 02, 2010"
-      },
-      {
         "name": "LEGO Marvel Super Heroes",
         "rating": 3.67,
         "release": "Sep 30, 2013"
+      },
+      {
+        "name": "Battlefield: Bad Company 2",
+        "rating": 3.67,
+        "release": "Mar 02, 2010"
       },
       {
         "name": "Burnout Paradise",
@@ -14896,14 +14905,14 @@
         "release": "Sep 18, 2012"
       },
       {
-        "name": "Fez",
-        "rating": 3.63,
-        "release": "Apr 13, 2012"
-      },
-      {
         "name": "LEGO Batman: The Videogame",
         "rating": 3.63,
         "release": "Sep 23, 2008"
+      },
+      {
+        "name": "Fez",
+        "rating": 3.63,
+        "release": "Apr 13, 2012"
       },
       {
         "name": "Battlefield 3",
@@ -15016,9 +15025,9 @@
         "release": "Mar 05, 2013"
       },
       {
-        "name": "LEGO Star Wars III: The Clone Wars",
+        "name": "Plants vs. Zombies: Garden Warfare",
         "rating": 3.5,
-        "release": "Feb 28, 2011"
+        "release": "Feb 18, 2014"
       },
       {
         "name": "Limbo",
@@ -15026,9 +15035,9 @@
         "release": "Jul 21, 2010"
       },
       {
-        "name": "Plants vs. Zombies: Garden Warfare",
+        "name": "LEGO Star Wars III: The Clone Wars",
         "rating": 3.49,
-        "release": "Feb 18, 2014"
+        "release": "Feb 28, 2011"
       },
       {
         "name": "LEGO Indiana Jones: The Original Adventures",
@@ -15077,7 +15086,8 @@
       },
       {
         "name": "Dragon Age: Inquisition",
-        "rating": 3.42
+        "rating": 3.42,
+        "release": "Nov 18, 2014"
       },
       {
         "name": "Assassin's Creed Revelations",
@@ -15092,7 +15102,7 @@
       {
         "name": "Sonic CD",
         "rating": 3.38,
-        "release": "Sep 23, 1993"
+        "release": "Dec 14, 2011"
       },
       {
         "name": "Call of Duty: Modern Warfare 3",
@@ -15136,7 +15146,7 @@
       },
       {
         "name": "Counter-Strike: Global Offensive",
-        "rating": 3.28,
+        "rating": 3.29,
         "release": "Aug 21, 2012"
       },
       {
@@ -15166,7 +15176,7 @@
       },
       {
         "name": "LEGO Batman 3: Beyond Gotham",
-        "rating": 3.19,
+        "rating": 3.18,
         "release": "Nov 11, 2014"
       },
       {
@@ -15261,7 +15271,7 @@
       },
       {
         "name": "Jetpack Joyride",
-        "rating": 2.99,
+        "rating": 3,
         "release": "Sep 01, 2011"
       },
       {
@@ -15486,7 +15496,7 @@
       },
       {
         "name": "Gunstar Heroes",
-        "rating": 3.98,
+        "rating": 3.99,
         "release": "Sep 09, 1993"
       },
       {
@@ -15541,7 +15551,7 @@
       },
       {
         "name": "Super Paper Mario",
-        "rating": 3.85,
+        "rating": 3.86,
         "release": "Apr 09, 2007"
       },
       {
@@ -15756,7 +15766,7 @@
       },
       {
         "name": "Animal Crossing: City Folk",
-        "rating": 3.5,
+        "rating": 3.51,
         "release": "Nov 16, 2008"
       },
       {
@@ -15776,7 +15786,7 @@
       },
       {
         "name": "LEGO Star Wars III: The Clone Wars",
-        "rating": 3.5,
+        "rating": 3.49,
         "release": "Feb 28, 2011"
       },
       {
@@ -15785,13 +15795,14 @@
         "release": "Dec 14, 1996"
       },
       {
+        "name": "WWE SmackDown vs. Raw 2011",
+        "rating": 3.49,
+        "release": "Oct 26, 2010"
+      },
+      {
         "name": "Super Mario Bros.",
         "rating": 3.49,
         "release": "Sep 13, 1985"
-      },
-      {
-        "name": "WWE SmackDown vs. Raw 2011",
-        "rating": 3.49
       },
       {
         "name": "LEGO Indiana Jones: The Original Adventures",
@@ -15906,16 +15917,16 @@
       {
         "name": "Ninja Gaiden",
         "rating": 3.35,
-        "release": "Oct 01, 1988"
+        "release": "Dec 09, 1988"
       },
       {
         "name": "Ben 10: Protector of Earth",
-        "rating": 3.34,
+        "rating": 3.35,
         "release": "Oct 30, 2007"
       },
       {
         "name": "Toy Story 3: The Video Game",
-        "rating": 3.34,
+        "rating": 3.33,
         "release": "Jun 15, 2010"
       },
       {
@@ -15949,14 +15960,14 @@
         "release": "Oct 13, 2009"
       },
       {
-        "name": "LEGO Harry Potter: Years 1-4",
-        "rating": 3.29,
-        "release": "Jun 25, 2010"
-      },
-      {
         "name": "Skylanders: Giants",
         "rating": 3.29,
         "release": "Oct 17, 2012"
+      },
+      {
+        "name": "LEGO Harry Potter: Years 1-4",
+        "rating": 3.29,
+        "release": "Jun 25, 2010"
       },
       {
         "name": "Skylanders: Trap Team",
@@ -15975,7 +15986,7 @@
       },
       {
         "name": "Epic Mickey",
-        "rating": 3.23,
+        "rating": 3.24,
         "release": "Nov 25, 2010"
       },
       {
@@ -15989,14 +16000,14 @@
         "release": "Jun 11, 1999"
       },
       {
-        "name": "Comix Zone",
-        "rating": 3.2,
-        "release": "Aug 01, 1995"
-      },
-      {
         "name": "WWE SmackDown vs. Raw 2008",
         "rating": 3.2,
         "release": "Nov 09, 2007"
+      },
+      {
+        "name": "Comix Zone",
+        "rating": 3.2,
+        "release": "Aug 01, 1995"
       },
       {
         "name": "Tomb Raider: Underworld",
@@ -16030,7 +16041,7 @@
       },
       {
         "name": "Skylanders: Spyro's Adventure",
-        "rating": 3.13,
+        "rating": 3.14,
         "release": "Oct 13, 2011"
       },
       {
@@ -16090,8 +16101,7 @@
       },
       {
         "name": "Wii Play",
-        "rating": 2.92,
-        "release": "Dec 02, 2006"
+        "rating": 2.92
       },
       {
         "name": "MySims",
@@ -16110,7 +16120,7 @@
       },
       {
         "name": "Wii Fit",
-        "rating": 2.88,
+        "rating": 2.87,
         "release": "Dec 01, 2007"
       },
       {
@@ -16129,6 +16139,11 @@
         "release": "Jun 25, 2007"
       },
       {
+        "name": "Sonic the Hedgehog 2",
+        "rating": 2.85,
+        "release": "Nov 01, 1992"
+      },
+      {
         "name": "Metal Gear",
         "rating": 2.85,
         "release": "Jul 13, 1987"
@@ -16137,11 +16152,6 @@
         "name": "Pokémon Battle Revolution",
         "rating": 2.85,
         "release": "Dec 14, 2006"
-      },
-      {
-        "name": "Sonic the Hedgehog 2",
-        "rating": 2.85,
-        "release": "Nov 01, 1992"
       },
       {
         "name": "Mega Man",
@@ -16155,7 +16165,7 @@
       },
       {
         "name": "Crash: Mind Over Mutant",
-        "rating": 2.83,
+        "rating": 2.84,
         "release": "Oct 07, 2008"
       },
       {
@@ -16170,12 +16180,12 @@
       },
       {
         "name": "Metroid",
-        "rating": 2.81,
+        "rating": 2.8,
         "release": "Aug 06, 1986"
       },
       {
         "name": "Excitebike",
-        "rating": 2.8,
+        "rating": 2.79,
         "release": "Nov 28, 1984"
       },
       {
@@ -16195,7 +16205,7 @@
       },
       {
         "name": "Disney Infinity",
-        "rating": 2.61,
+        "rating": 2.62,
         "release": "Aug 18, 2013"
       },
       {
@@ -16204,19 +16214,19 @@
         "release": "Mar 02, 2012"
       },
       {
-        "name": "Zelda II: The Adventure of Link",
-        "rating": 2.57,
-        "release": "Jan 14, 1987"
-      },
-      {
         "name": "Transformers: The Game",
         "rating": 2.57,
         "release": "Jun 26, 2007"
       },
       {
+        "name": "Zelda II: The Adventure of Link",
+        "rating": 2.56,
+        "release": "Jan 14, 1987"
+      },
+      {
         "name": "Altered Beast",
         "rating": 2.52,
-        "release": "Aug 01, 1988"
+        "release": "Aug 14, 1988"
       },
       {
         "name": "Super Mario Bros.: The Lost Levels",
@@ -16315,7 +16325,7 @@
       },
       {
         "name": "Steins;Gate",
-        "rating": 4.25,
+        "rating": 4.24,
         "release": "Oct 15, 2009"
       },
       {
@@ -16350,7 +16360,7 @@
       },
       {
         "name": "Persona 2: Eternal Punishment",
-        "rating": 4.18,
+        "rating": 4.19,
         "release": "Jun 29, 2000"
       },
       {
@@ -16365,8 +16375,7 @@
       },
       {
         "name": "Stardew Valley",
-        "rating": 4.14,
-        "release": "Feb 26, 2016"
+        "rating": 4.14
       },
       {
         "name": "The Walking Dead",
@@ -16405,7 +16414,7 @@
       },
       {
         "name": "Terraria",
-        "rating": 4.03,
+        "rating": 4.04,
         "release": "May 16, 2011"
       },
       {
@@ -16485,7 +16494,7 @@
       },
       {
         "name": "The Legend of Dragoon",
-        "rating": 3.85,
+        "rating": 3.84,
         "release": "Dec 02, 1999"
       },
       {
@@ -16515,7 +16524,7 @@
       },
       {
         "name": "Jak and Daxter: The Precursor Legacy",
-        "rating": 3.82,
+        "rating": 3.81,
         "release": "Dec 03, 2001"
       },
       {
@@ -16580,7 +16589,7 @@
       },
       {
         "name": "Darkest Dungeon",
-        "rating": 3.7,
+        "rating": 3.69,
         "release": "Feb 03, 2015"
       },
       {
@@ -16624,14 +16633,14 @@
         "release": "May 23, 2018"
       },
       {
-        "name": "The Legend of Heroes: Trails of Cold Steel",
-        "rating": 3.62,
-        "release": "Sep 26, 2013"
-      },
-      {
         "name": "Metal Slug 2",
         "rating": 3.62,
         "release": "Jan 02, 1998"
+      },
+      {
+        "name": "The Legend of Heroes: Trails of Cold Steel",
+        "rating": 3.62,
+        "release": "Sep 26, 2013"
       },
       {
         "name": "Iconoclasts",
@@ -16714,14 +16723,14 @@
         "release": "Apr 23, 2015"
       },
       {
-        "name": "Resogun",
-        "rating": 3.51,
-        "release": "Nov 15, 2013"
-      },
-      {
         "name": "Downwell",
         "rating": 3.51,
         "release": "Oct 14, 2015"
+      },
+      {
+        "name": "Resogun",
+        "rating": 3.51,
+        "release": "Nov 15, 2013"
       },
       {
         "name": "Limbo",
@@ -16790,7 +16799,7 @@
       },
       {
         "name": "Salt and Sanctuary",
-        "rating": 3.34,
+        "rating": 3.35,
         "release": "Mar 15, 2016"
       },
       {
@@ -16819,14 +16828,14 @@
         "release": "Nov 20, 1998"
       },
       {
-        "name": "Helldivers",
-        "rating": 3.32,
-        "release": "Mar 03, 2015"
-      },
-      {
         "name": "LEGO Harry Potter: Years 5-7",
         "rating": 3.32,
         "release": "Nov 11, 2011"
+      },
+      {
+        "name": "Helldivers",
+        "rating": 3.32,
+        "release": "Mar 03, 2015"
       },
       {
         "name": "Daxter",
@@ -16860,7 +16869,7 @@
       },
       {
         "name": "Shantae: Risky's Revenge - Director's Cut",
-        "rating": 3.23,
+        "rating": 3.24,
         "release": "Jul 15, 2014"
       },
       {
@@ -16880,7 +16889,7 @@
       },
       {
         "name": "LEGO Batman 3: Beyond Gotham",
-        "rating": 3.19,
+        "rating": 3.18,
         "release": "Nov 11, 2014"
       },
       {
@@ -16905,7 +16914,7 @@
       },
       {
         "name": "LEGO The Hobbit",
-        "rating": 3.13,
+        "rating": 3.12,
         "release": "Apr 08, 2014"
       },
       {
@@ -16935,7 +16944,7 @@
       },
       {
         "name": "Jetpack Joyride",
-        "rating": 2.99,
+        "rating": 3,
         "release": "Sep 01, 2011"
       },
       {
@@ -16995,7 +17004,7 @@
       },
       {
         "name": "One Piece: Burning Blood",
-        "rating": 2.72,
+        "rating": 2.71,
         "release": "Apr 21, 2016"
       },
       {
@@ -17005,7 +17014,7 @@
       },
       {
         "name": "Fruit Ninja",
-        "rating": 2.69,
+        "rating": 2.7,
         "release": "Apr 20, 2010"
       },
       {
@@ -17014,14 +17023,14 @@
         "release": "Sep 01, 2015"
       },
       {
-        "name": "Tekken",
-        "rating": 2.59,
-        "release": "Dec 09, 1994"
-      },
-      {
         "name": "Minecraft: Story Mode",
         "rating": 2.59,
         "release": "Oct 13, 2015"
+      },
+      {
+        "name": "Tekken",
+        "rating": 2.59,
+        "release": "Dec 09, 1994"
       },
       {
         "name": "PlayStation All-Stars Battle Royale",
@@ -17065,8 +17074,7 @@
       },
       {
         "name": "Kirby: Planet Robobot",
-        "rating": 4.18,
-        "release": "Apr 28, 2016"
+        "rating": 4.18
       },
       {
         "name": "Kid Icarus: Uprising",
@@ -17105,7 +17113,8 @@
       },
       {
         "name": "The Great Ace Attorney: Adventures",
-        "rating": 4.07
+        "rating": 4.07,
+        "release": "Jul 09, 2015"
       },
       {
         "name": "Super Mario Bros. 3",
@@ -17129,7 +17138,7 @@
       },
       {
         "name": "Terraria",
-        "rating": 4.03,
+        "rating": 4.04,
         "release": "May 16, 2011"
       },
       {
@@ -17155,7 +17164,7 @@
       {
         "name": "Fantasy Life",
         "rating": 3.92,
-        "release": "Dec 27, 2012"
+        "release": "Jul 25, 2013"
       },
       {
         "name": "Pokémon Silver Version",
@@ -17164,7 +17173,8 @@
       },
       {
         "name": "Fire Emblem: Awakening",
-        "rating": 3.88
+        "rating": 3.88,
+        "release": "Apr 19, 2012"
       },
       {
         "name": "WarioWare, Inc.: Mega Microgames!",
@@ -17339,7 +17349,7 @@
       {
         "name": "Myst",
         "rating": 3.57,
-        "release": "Sep 24, 1993"
+        "release": "Oct 26, 2012"
       },
       {
         "name": "Yo-kai Watch",
@@ -17363,8 +17373,8 @@
       },
       {
         "name": "LEGO Star Wars III: The Clone Wars",
-        "rating": 3.5,
-        "release": "Feb 28, 2011"
+        "rating": 3.49,
+        "release": "Mar 22, 2011"
       },
       {
         "name": "Super Mario Bros.",
@@ -17513,7 +17523,7 @@
       },
       {
         "name": "LEGO Batman 3: Beyond Gotham",
-        "rating": 3.19,
+        "rating": 3.18,
         "release": "Nov 11, 2014"
       },
       {
@@ -17533,12 +17543,12 @@
       },
       {
         "name": "Skylanders: Spyro's Adventure",
-        "rating": 3.13,
+        "rating": 3.14,
         "release": "Oct 13, 2011"
       },
       {
         "name": "LEGO The Hobbit",
-        "rating": 3.13,
+        "rating": 3.12,
         "release": "Apr 08, 2014"
       },
       {
@@ -17648,7 +17658,7 @@
       },
       {
         "name": "Metroid",
-        "rating": 2.81,
+        "rating": 2.8,
         "release": "Aug 06, 1986"
       },
       {
@@ -17678,7 +17688,7 @@
       },
       {
         "name": "Disney Infinity",
-        "rating": 2.61,
+        "rating": 2.62,
         "release": "Aug 18, 2013"
       },
       {
@@ -17688,7 +17698,7 @@
       },
       {
         "name": "Zelda II: The Adventure of Link",
-        "rating": 2.57,
+        "rating": 2.56,
         "release": "Jan 14, 1987"
       },
       {
@@ -17703,7 +17713,7 @@
       },
       {
         "name": "Pokémon Rumble World",
-        "rating": 2.48,
+        "rating": 2.49,
         "release": "Apr 08, 2015"
       },
       {

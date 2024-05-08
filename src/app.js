@@ -31,17 +31,16 @@ async function main() {
     // MANIPULATE
 
     ldR.load(data, backloggdData, 'name', 'games', 'games');
-    clnR.cleanPlatformsRelease(data);
-    clnR.cleanPlatformsMulti(data);
+    clnR.cleanData(data);
 
     const peakData = pkR.peak(data, configData.difficulty);
     ldR.load(data, peakData, 'name', 'games', 'games');
 
-    const downloadData = mtchR.match(data, myrientData);
+    const downloadData = mtchR.matchAll(data, myrientData);
     mtchR.load(downloadData, 'myrient');
     ldR.load(data, downloadData, 'name', 'games', 'games');
 
-    const translateData = mtchR.match(data, cdromanceData);
+    const translateData = mtchR.matchAll(data, cdromanceData);
     mtchR.load(translateData, 'cdromance');
     ldR.load(data, translateData, 'name', 'games', 'games');
 

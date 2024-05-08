@@ -72,4 +72,65 @@ async function scrape(platforms) {
     return data
 }
 
-module.exports = { scrape }
+
+async function download(url, fsPath) {
+    const pageData = await ntwrkR.get(url);
+    const idSelector = '#acf-content-wrapper';
+    const idElements = scrpR.getElements(pageData, idSelector, 'attr', 'data-id');
+    const id = Number(idElements[0]);
+
+    const ajaxUrl = 'https://cdromance.org/wp-content/plugins/cdromance/public/ajax.php';
+    const ajaxParm = {
+        params: {
+            post_id: id
+        },
+        referrer: url,
+        headers: {
+            'Accept': '*/*',
+            'Accept-Language': 'en-CA,en-US;q=0.9,en;q=0.8',
+            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Safari/605.1.15',
+            'X-Requested-With': 'XMLHttpRequest'
+        },
+        credentials: 'include',
+        referrerPolicy: 'no-referrer-when-downgrade',
+        mode: 'cors',
+        cache: 'default',
+        redirect: 'follow'
+    };
+    const ajaxData = await ntwrkR.get(ajaxUrl, ajaxParm);
+    const linkSelector = 'div.download-links.table a';
+    const fileElements = scrpR.getElements(ajaxData, linkSelector, 'text');
+    const file = fileElements.filter(le => le.includes('(English'))[0];
+    const linkElements = scrpR.getElements(ajaxData, linkSelector, 'href');
+    const link = linkElements[fileElements.indexOf(file)];
+    fsPath = fsPath + path.extname(file);
+
+    const bytesDownloaded = flR.check(fsPath) ? flR.size(fsPath) : 0;
+
+    // set up parameters
+    const ntwrkRParms = {
+        'headers': {
+            'Range': `bytes=${bytesDownloaded}-`,
+        },
+        'responseType': 'stream',
+        'onDownloadProgress': progressEvent => {
+            mbLoaded = ((bytesDownloaded + progressEvent.loaded) / (1024 * 1024)).toFixed(2);
+            mbTotal = ((bytesDownloaded + progressEvent.total) / (1024*1024)).toFixed(2);
+            console.log(`Downloading ${path.basename(fsPath)} - ${mbLoaded}mb / ${mbTotal}mb`);
+        }
+    };
+
+    const data = await ntwrkR.get(link, ntwrkRParms);
+    if (!data) return fsPath;
+
+    const flRParms = {
+        'flags': bytesDownloaded ? 'a' : 'w'
+    }
+    await flR.writeStream(fsPath, data, flRParms);
+
+    return fsPath;
+}
+
+module.exports = { scrape, download,
+    name, dataPath, url, urlParams
+};
