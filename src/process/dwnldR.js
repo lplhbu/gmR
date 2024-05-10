@@ -38,34 +38,22 @@ async function downloadGame(platform, game, fsPath) {
     return downloadPath;
 }
 
-async function extractGame(game, fsPath, platform) {
-    if (!flR.check(fsPath)) return;
-
-    const finalPath = path.dirname(fsPath);
-    const extractPath = path.join(finalPath, game.name);
-
+async function extractGame(fsPath, platform) {
+    const { dir, name } = path.parse(fsPath);
+    const extractPath = path.join(dir, name);
     await flR.extract(fsPath, extractPath);
-    flattenDir(extractPath, game, platform);
-    flR.remove(fsPath);
 
-    console.log('flatten dir');
-
-    flattenDir(finalPath, game, platform);
+    const innerDir = flR.read(extractPath).find(file => flR.isDir(path.join(extractPath, file)));
+    if (innerDir) flattenDir(path.join(extractPath, innerDir), platform);
+    flattenDir(extractPath, platform);
     flR.remove(extractPath);
+
+    flR.remove(fsPath);
 }
 
-function flattenDir(dirPath, game, platform) {
-    const files = flR.read(dirPath);
-    if (!files) return;
-    
-    const dirs = files.filter(file => flR.isDir(path.join(dirPath, file)));
-    const matchNames = matchName(game.name, dirs, platform);
-    if (matchNames.length == 0) return;
-
-    const innerDir = matchNames[0];
-    innerPath = path.join(dirPath, innerDir);
-    standardizeDir(innerPath, platform);
-    flR.flatten(innerPath);
+function flattenDir(fsPath, platform) {
+    standardizeDir(fsPath, platform);
+    flR.flatten(fsPath);
 }
 
 async function download(platforms, fsPath) {
@@ -75,7 +63,7 @@ async function download(platforms, fsPath) {
             if (downloaded(platformPath, game, platform)) continue;
 
             const downloadPath = await downloadGame(platform, game, platformPath);
-            await extractGame(game, downloadPath, platform);
+            if (downloadPath) await extractGame(downloadPath, platform);
         }
     }
 }

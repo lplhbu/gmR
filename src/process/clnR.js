@@ -88,9 +88,9 @@ function standardizeDir(fsPath, platform) {
 
     const dirName = path.basename(fsPath);
     for (const file of files) {
-        if (!fileTypes.includes(path.extname(file))) continue;
         const filePath = path.join(fsPath, file);
-        standardizeFile(filePath, dirName);
+        if (fileTypes.includes(path.extname(file))) standardizeFile(filePath, dirName);
+        else flR.remove(filePath);
     }
 }
 
@@ -98,7 +98,8 @@ function standardizeFile(fsPath, name) {
     const fileName = path.basename(fsPath);
     const cleanName = fileName.replace(regex.tags, '')
         .replace(regex.gameExt, '')
-        .replace(regex.archExt, '');
+        .replace(regex.archExt, '')
+        .trim();
 
     const tags = fileName.match(regex.tags) || [];
     const track = cleanName.match(regex.nonTagTrack);
@@ -106,7 +107,7 @@ function standardizeFile(fsPath, name) {
 
     const ext = fileName.match(regex.gameExt) || fileName.match(regex.archExt);
 
-    flR.rename(fsPath, `${name} ${tags.join(' ')}${ext}`);
+    flR.rename(fsPath, `${cleanName} ${tags.join(' ')}${ext}`);
 }
 
 module.exports = { cleanData, cleanFiles, cleanPlatform, standardizeDir, standardizeFile };
