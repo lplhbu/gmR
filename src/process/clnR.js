@@ -56,7 +56,8 @@ function cleanPlatform(fsPath, platform) {
     const files = flR.read(fsPath);
     if (!files) return;
 
-    const fileTypes = ['.zip', '.7z'];
+    const archTypes = ['.zip', '7z'];
+    const fileTypes = [];
     if (platform.file_type) fileTypes.push(platform.file_type);
     if (platform.file_types) fileTypes.push(...platform.file_types);
 
@@ -64,14 +65,13 @@ function cleanPlatform(fsPath, platform) {
         const filePath = path.join(fsPath, file);
 
         const fileType = path.extname(file);
-        const fileBase = path.basename(file, fileType);
-        
-        if (!fileTypes.includes(fileType)) flR.remove(filePath);
-        else {
+        if (archTypes.includes(fileType)) continue;
+        if (fileTypes.includes(fileType)) {
             const matchNames = matchName(file, platform.games.map(g => g.name), platform);
             if (matchNames.length == 0) flR.remove(filePath);
-            if (fileBase != matchNames[0]) standardizeFile(filePath, matchNames[0]);
+            standardizeFile(filePath, matchNames[0]);
         }
+        else flR.remove(filePath);
     }
 
     const postFiles = flR.read(fsPath);
@@ -95,6 +95,7 @@ function standardizeDir(fsPath, platform) {
 }
 
 function standardizeFile(fsPath, name) {
+
     const fileName = path.basename(fsPath);
     const tags = fileName.match(regex.tags) || [];
     const track = fileName.match(regex.nonTagTrack);
@@ -102,11 +103,15 @@ function standardizeFile(fsPath, name) {
 
     const ext = fileName.match(regex.gameExt) || fileName.match(regex.archExt);
 
-    const cleanName = name.replace(regex.tags, '')
-        .replace(regex.gameExt, '')
-        .replace(regex.archExt, '')
-        .trim();
-    flR.rename(fsPath, `${cleanName} ${tags.join(' ')}${ext}`);
+    flR.rename(fsPath, `${cleanName(name)} ${tags.join(' ')}${ext}`);
+}
+
+function cleanName(name) {
+    return name.replace(regex.tags, '')
+    .replace(regex.gameExt, '')
+    .replace(regex.archExt, '')
+    .replace(regex.colon, ' - ')
+    .trim();
 }
 
 module.exports = { cleanData, cleanFiles, cleanPlatform, standardizeDir, standardizeFile };

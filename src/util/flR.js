@@ -180,8 +180,11 @@ function removeFile(filePath) {
 }
 
 function rename(filePath, fileName) {
-    const dirPath = path.dirname(filePath);
-    fs.renameSync(filePath, path.join(dirPath, fileName));
+    const renamePath = path.join(path.dirname(filePath), fileName);
+    if (filePath == renamePath) return;
+    console.log('Renaming file: ', filePath);
+    fs.renameSync(filePath, renamePath);
+    console.log('Renamed file: ', renamePath);
 }
 
 function move(filePath, dirPath) {

@@ -19,6 +19,7 @@ function cleanName(str) {
     str = str.replace(/^3/, ' cube');
 
     // replace special characters with spaces, and remove double spaces
+    str = str.replace(regex.colon, ' - ');
     str = str.replace(regex.special, ' ');
     str = str.replace(regex.spaces, ' ');
 
