@@ -1,5 +1,5 @@
 {
-  "path": "/Users/jacobsmith/Games/Game",
+  "path": "./game",
   "clean": false,
 
   "difficulty": 4,
