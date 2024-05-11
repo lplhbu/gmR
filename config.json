@@ -1,7 +1,6 @@
 {
-  "path": "game",
-  "relative": true,
-  "clean": true,
+  "path": "/Users/jacobsmith/Games/Game",
+  "clean": false,
 
   "difficulty": 4,
   "platforms": [

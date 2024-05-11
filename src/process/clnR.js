@@ -96,17 +96,16 @@ function standardizeDir(fsPath, platform) {
 
 function standardizeFile(fsPath, name) {
     const fileName = path.basename(fsPath);
-    const cleanName = fileName.replace(regex.tags, '')
-        .replace(regex.gameExt, '')
-        .replace(regex.archExt, '')
-        .trim();
-
     const tags = fileName.match(regex.tags) || [];
-    const track = cleanName.match(regex.nonTagTrack);
+    const track = fileName.match(regex.nonTagTrack);
     if (track && track[1]) tags.push(`(${track[1]})`);
 
     const ext = fileName.match(regex.gameExt) || fileName.match(regex.archExt);
 
+    const cleanName = name.replace(regex.tags, '')
+        .replace(regex.gameExt, '')
+        .replace(regex.archExt, '')
+        .trim();
     flR.rename(fsPath, `${cleanName} ${tags.join(' ')}${ext}`);
 }
 
