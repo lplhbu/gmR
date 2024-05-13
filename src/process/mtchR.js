@@ -17,6 +17,7 @@ function cleanName(str) {
     str = str.replace(/megaman/g, 'mega man'); // megaman
     str = str.replace(/infamous/g, 'in famous');
     str = str.replace(/^3/, ' cube');
+    str = str.replace(/the walking dead a telltale game series/)
 
     // replace special characters with spaces, and remove double spaces
     str = str.replace(regex.colon, ' - ');
@@ -30,7 +31,9 @@ function cleanName(str) {
     return str.trim();
 }
 
-function scoreNames(str1, str2, zeroChecks = [regex.number, regex.roman]) {
+const seriesRegex = /sc|3rd/g
+const zeroChecks = [regex.number, regex.roman, seriesRegex];
+function scoreNames(str1, str2) {
     
     const tkn1 = cleanName(str1).split(' ');
     const tkn1Save = [...tkn1];
@@ -114,6 +117,7 @@ function scoreTag(tag, platform = null) {
     if (tag.includes('(Aftermarket)') ||
         tag.includes('(Beta)') ||
         tag.includes('(Demo)') ||
+        tag.includes('(DLC)') ||
         tag.includes('(Proto)')) return 0;
 
     return 0.6;
