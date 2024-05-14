@@ -220,7 +220,7 @@
     "release": "Nov 11, 2006",
     "backloggd_url": "ps3",
     "myrient_url": "Redump/Sony%20-%20PlayStation%203",
-    "file_types": [".iso", ".pkg", ".rap"]
+    "file_type": ".iso"
   },
   {
     "name": "Nintendo Wii",

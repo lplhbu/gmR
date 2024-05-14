@@ -17,7 +17,7 @@ function cleanName(str) {
     str = str.replace(/megaman/g, 'mega man'); // megaman
     str = str.replace(/infamous/g, 'in famous');
     str = str.replace(/^3/, ' cube');
-    str = str.replace(/the walking dead a telltale game series/)
+    str = str.replace(/the walking dead/g, 'the walking dead a telltale game series')
 
     // replace special characters with spaces, and remove double spaces
     str = str.replace(regex.colon, ' - ');
@@ -31,42 +31,41 @@ function cleanName(str) {
     return str.trim();
 }
 
-const seriesRegex = /sc|3rd/g
+const seriesRegex = /^sc|3rd$/g
 const zeroChecks = [regex.number, regex.roman, seriesRegex];
 function scoreNames(str1, str2) {
     
-    const tkn1 = cleanName(str1).split(' ');
-    const tkn1Save = [...tkn1];
+    const tkn1All = cleanName(str1).split(' ');
+    const tkn2All= cleanName(str2).split(' ');
+    const tkn1Used = tkn1All.filter(token => tkn2All.includes(token));
+    const tkn2Used = tkn2All.filter(token => tkn1All.includes(token));
+    const tkn1Left = tkn1All.filter(token => !tkn2All.includes(token));
+    const tkn2Left = tkn2All.filter(token => !tkn1All.includes(token));
 
-    const tkn2 = cleanName(str2).split(' ');
-    const tkn2Save = [...tkn2];
+    const points1 = tkn1Used.length / tkn1All.length;
+    const points2 = tkn2Used.length / tkn2All.length;
+    const minPoints = Math.min(points1, points2);
+    const maxPoints = Math.max(points1, points2);
 
-    for (let i = 0; i < tkn1.length; i++) {
-        for (let j = 0; j < tkn2.length; j++) {
-            if (tkn1[i] != tkn2[j]) continue;
-
-            tkn1.splice(i--, 1);
-            tkn2.splice(j, 1);
-            break;
-        }
-    }
-
-    // take the lowest of matching the two
-    let points =  Math.min(
-        (tkn1Save.length - tkn1.length) / tkn1Save.length - tkn2.length / tkn2Save.length,
-        (tkn2Save.length - tkn2.length) / tkn2Save.length - tkn1.length / tkn1Save.length
-    );
+    let points = (points1 * points2);
+    points += (maxPoints - minPoints) * maxPoints * 0.8;
 
     for (const check of zeroChecks) {
-        if (tkn1.some(tkn => tkn.match(check))) points = 0;
-        if (tkn2.some(tkn => tkn.match(check))) points = 0;
+        if (tkn1Left.some(tkn => tkn.match(check)) && !tkn1Used.some(tkn => tkn.match(check))) points = 0;
+        if (tkn2Left.some(tkn => tkn.match(check)) && !tkn2Used.some(tkn => tkn.match(check))) points = 0;
         if (points == 0) break;
     }
 
     return points;
 }
 
-function scoreTag(tag, platform = null) {
+function scoreTag(tag) {
+
+    // Demos
+    if (tag.includes('(Beta)') ||
+        tag.includes('(Demo)') ||
+        tag.includes('(DLC)') ||
+        tag.includes('(Proto)')) return 0;
 
     // Discs
     if (tag.includes('(Disc ')) return 1;
@@ -74,28 +73,29 @@ function scoreTag(tag, platform = null) {
     // Regions
     if (tag.includes('(World)') ||
         tag.includes('(USA)') ||
-        tag.includes('(NTSC)')) return 1;
-
-    if (tag.includes('USA, ') ||
-        tag.includes(', USA')) return 0.8;
-
-    if (tag.includes('(Europe)') ||
-        tag.includes('Europe, ') ||
-        tag.includes(', Europe') ||
-        tag.includes('(PAL)')) return platform && platform.type == "Handheld" ? 0.8 : 0;
-
-    // Language
-    if (tag.includes('(English') || 
+        tag.includes('(NTSC)') ||
+        tag.includes('(English') || 
         tag.includes('(En)')) return 1;
 
-    if (tag.includes('En,') || 
-        tag.includes(',En')) return 0.8;
+    if (tag.includes('USA, ') ||
+        tag.includes(', USA') ||
+        tag.includes('En,') || 
+        tag.includes(',En')) return 0.96;
 
-    // Revisions
-    if (tag.includes('(RE)')) return 0.8;
+    // Editions
+    if (tag.includes('(RE)') ||
+        tag.includes('(GB Compatible)') ||
+        tag.includes('(SGB Enhanced)') ||
+        tag.includes('(NDSi Enhanced)') ||
+        tag.includes('(Wii U Virtual Console)') ||
+        tag.includes('(Virtual Console)') ||
+        tag.includes('(Aftermarket)')||
+        tag.includes('(Unl)')) return 0.96;
+
     if (tag.includes('(Rev ') || 
         tag.includes('(v') || 
         tag.includes('M)')) { 
+
         var numberString = tag.match(/\([^)\d]*([\d.]*).*?\)/)[1];
         const firstDotIndex = numberString.indexOf('.');
         let number = Number(numberString.slice(0, firstDotIndex) + '.' + numberString.slice(firstDotIndex + 1).replace(/\./g, ''));
@@ -106,43 +106,37 @@ function scoreTag(tag, platform = null) {
         return 1 - number;
     }
 
-    // Editions
-    if (tag.includes('(GB Compatible)') ||
-        tag.includes('(SGB Enhanced)') ||
-        tag.includes('(NDSi Enhanced)') ||
-        tag.includes('(Wii U Virtual Console)') ||
-        tag.includes('(Virtual Console)')) return 0.8;
+    if (tag.includes('(Japan)') ||
+        tag.includes('Japan, ') ||
+        tag.includes(', Japan') ||
+        tag.includes('(Europe)') ||
+        tag.includes('Europe, ') ||
+        tag.includes(', Europe') ||
+        tag.includes('(PAL)')) return 0.8;
 
-    // Demos
-    if (tag.includes('(Aftermarket)') ||
-        tag.includes('(Beta)') ||
-        tag.includes('(Demo)') ||
-        tag.includes('(DLC)') ||
-        tag.includes('(Proto)')) return 0;
-
-    return 0.6;
+    return 0.64;
 }
 
-function scoreTags(str, platform = null) {
+function scoreTags(str) {
     let points = 1;
     const matches = str.match(/\([^)]+?\)/g) || [];
     for (const match of matches) {
-        points *= scoreTag(match, platform);
+        points *= scoreTag(match);
     }
     return points;
 }
 
-function score(name, otherName, platform = null) {
+function score(name, otherName) {
     let points = scoreNames(name, otherName);
-    points *= Math.min(scoreTags(name), scoreTags(otherName, platform));
+    points *= scoreTags(otherName);
     return points;
 }
 
-function matchName(name, names, platform = null) {
+function matchName(name, names) {
     let matchNames = [];
-    let highScore = 0.2;
+    let highScore = 0.5;
     for (const otherName of names) {
-        const points = score(name, otherName, platform);
+        const points = score(name, otherName);
         if (points == 0) continue;
         
         if (points > highScore) {
@@ -155,8 +149,8 @@ function matchName(name, names, platform = null) {
     return matchNames;
 }
 
-function matchGame(game, games, platform = null) {
-    const matchNames = matchName(game.name, games.map(g => g.name), platform);
+function matchGame(game, games) {
+    const matchNames = matchName(game.name, games.map(g => g.name));
     const matchGames = matchNames.map(n => games.find(g => g.name == n));
     return matchGames;
 }
@@ -171,7 +165,8 @@ function matchAll(platforms, otherPlatforms) {
         if (!otherPlatform) continue;
 
         for (const game of platform.games) {
-            const matchGames = [game, ...matchGame(game, otherPlatform.games, platform)];
+            const matchGames = [game, ...matchGame(game, otherPlatform.games)];
+            matchGames.forEach(mg => mg.score = score(game.name, mg.name));
             games.push(matchGames);
         }
 

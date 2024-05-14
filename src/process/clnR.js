@@ -66,12 +66,12 @@ function cleanPlatform(fsPath, platform) {
 
         const fileType = path.extname(file);
         if (archTypes.includes(fileType)) continue;
-        if (fileTypes.includes(fileType)) {
-            const matchNames = matchName(file, platform.games.map(g => g.name), platform);
-            if (matchNames.length == 0) flR.remove(filePath);
-            standardizeFile(filePath, matchNames[0]);
-        }
-        else flR.remove(filePath);
+        if (!fileTypes.includes(fileType)) { flR.remove(filePath); continue; }
+
+        const matchNames = matchName(file, platform.games.map(g => g.name), platform);
+        if (matchNames.length == 0) { flR.remove(filePath); continue; }
+
+        standardizeFile(filePath, matchNames[0]);
     }
 
     const postFiles = flR.read(fsPath);
@@ -97,6 +97,7 @@ function standardizeDir(fsPath, platform) {
 function standardizeFile(fsPath, name) {
 
     const fileName = path.basename(fsPath);
+    
     const tags = fileName.match(regex.tags) || [];
     const track = fileName.match(regex.nonTagTrack);
     if (track && track[1]) tags.push(`(${track[1]})`);

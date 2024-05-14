@@ -8,7 +8,7 @@ node_modules/
 game/
 
 # Ignore Process Data
-data/process
+final.json
 
 # Ignore vscode save
 *.save

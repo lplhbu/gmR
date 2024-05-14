@@ -4,7 +4,7 @@ const config = {}
 config.gamePath = './game';
 config.configFile = './config.json';
 config.platformsFile = './config/platforms.json';
-config.finalFile = './data/process/final.json';
+config.finalFile = './final.json';
 
 // read settings from user config file
 const configData = JSON.parse(flR.read(config.configFile) || '{}');
