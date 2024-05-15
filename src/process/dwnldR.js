@@ -31,7 +31,6 @@ async function downloadGame(platform, game, fsPath) {
     if (game.cdromance_url) {
         const url = path.join(cdromance.url, platform.cdromance_url_game || platform.cdromance_url, game.cdromance_url);
         downloadPath = path.join(fsPath, game.name);
-        // get file type in download function
         downloadPath = await cdromance.download(url, downloadPath);
     }
 
