@@ -2,7 +2,7 @@ const path = require('path');
 const flR = require('../util/flR.js');
 const myrient = require('../site/myrient.js');
 const cdromance = require('../site/cdromance.js');
-const { matchName } = require('./mtchR.js');
+const { cleanName, matchName } = require('./mtchR.js');
 const { standardizeDir } = require('./clnR.js');
 
 function downloaded(fsPath, game, platform) {
@@ -25,12 +25,12 @@ async function downloadGame(platform, game, fsPath) {
     switch (game.download) {
         case 'myrient': {
             const url = path.join(myrient.url, platform.myrient_url, game.myrient_url);
-            downloadPath = path.join(fsPath, game.name + path.extname(game.myrient_name));
+            downloadPath = path.join(fsPath, cleanName(game.name) + path.extname(game.myrient_name));
             await myrient.download(url, downloadPath);
         } break;
         case 'cdromance': {
             const url = path.join(cdromance.url, platform.cdromance_url_game || platform.cdromance_url, game.cdromance_url);
-            downloadPath = path.join(fsPath, game.name);
+            downloadPath = path.join(fsPath, cleanName(game.name));
             downloadPath = await cdromance.download(url, downloadPath);
         } break;
     }
@@ -39,7 +39,8 @@ async function downloadGame(platform, game, fsPath) {
 }
 
 async function extractGame(fsPath, platform) {
-    const { dir, name } = path.parse(fsPath);
+    const dir = path.dirname(fsPath);
+    const name = path.basename(fsPath, path.extname(fsPath));
     const extractPath = path.join(dir, name);
     await flR.extract(fsPath, extractPath);
 

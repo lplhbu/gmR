@@ -1,7 +1,7 @@
 const path = require('path');
 const flR = require('../util/flR.js');
-const { matchName } = require('./mtchR.js');
 const regex = require('./regex.js');
+const { cleanName, matchName } = require('./mtchR.js');
 
 function cleanData(platforms) {
     cleanPlatformsRelease(platforms);
@@ -62,13 +62,14 @@ function cleanPlatform(fsPath, platform) {
     if (platform.file_types) fileTypes.push(...platform.file_types);
 
     for (const file of files) {
+        const fileType = path.extname(file);
+        const fileBase = path.basename(file, fileType);
         const filePath = path.join(fsPath, file);
 
-        const fileType = path.extname(file);
         if (archTypes.includes(fileType)) continue;
         if (!fileTypes.includes(fileType)) { flR.remove(filePath); continue; }
 
-        const matchNames = matchName(file, platform.games.map(g => g.name), platform);
+        const matchNames = matchName(fileBase, platform.games.map(g => g.name));
         if (matchNames.length == 0) { flR.remove(filePath); continue; }
 
         standardizeFile(filePath, matchNames[0]);
@@ -106,14 +107,6 @@ function standardizeFile(fsPath, name) {
     const ext = fileName.match(regex.gameExt) || fileName.match(regex.archExt);
 
     flR.rename(fsPath, `${cleanName(name)} ${tags.join(' ')}${ext}`);
-}
-
-function cleanName(name) {
-    return name.replace(regex.tags, '')
-    .replace(regex.gameExt, '')
-    .replace(regex.archExt, '')
-    .replace(regex.colon, ' - ')
-    .trim();
 }
 
 module.exports = { cleanData, cleanFiles, cleanPlatform, standardizeDir, standardizeFile };
