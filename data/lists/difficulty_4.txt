@@ -49,16 +49,17 @@ Real Bout Fatal Fury Special
 Sega 32X
 
 Sega Saturn
-Baroque
-Mega Man X4
+Panzer Dragoon Saga
 
 PlayStation
 Suikoden II
+Castlevania: Symphony of the Night
 Moon: Remix RPG Adventure
 Final Fantasy IX
 Final Fantasy Tactics
 Xenogears
 Metal Gear Solid
+Final Fantasy VII
 Ridge Racer Type 4
 Resident Evil 2
 Persona 2: Eternal Punishment
@@ -70,7 +71,6 @@ The Legend of Zelda: Majora's Mask
 The Legend of Zelda: Ocarina of Time
 Paper Mario
 Super Mario 64
-WWF No Mercy
 
 Neo Geo Pocket
 
@@ -81,6 +81,7 @@ Sega Dreamcast
 
 Neo Geo Pocket Color
 SNK vs. Capcom: The Match of the Millenium - Best Collection
+Gals Fighters
 SNK vs. Capcom Card Fighters' Clash - SNK Card Fighter's Version
 SNK vs. Capcom Card Fighters' Clash - Capcom Card Fighter's Version
 
@@ -88,6 +89,7 @@ PlayStation 2
 Metal Gear Solid 3: Snake Eater
 Silent Hill 2
 Metal Gear Solid 2: Sons of Liberty
+Shadow of the Colossus
 We Love Katamari
 Kingdom Hearts II
 Killer7
@@ -99,10 +101,9 @@ Shin Megami Tensei: Digital Devil Saga 2
 Dragon Quest VIII: Journey of the Cursed King
 Shin Megami Tensei: Nocturne
 Fatal Frame II: Crimson Butterfly
-Klonoa 2: Lunatea's Veil
-Grand Theft Auto: San Andreas
 
 Game Boy Advance
+Mother 3
 Mega Man Zero 3
 Mega Man Battle Network 6: Cybeast Falzar
 Castlevania: Aria of Sorrow
@@ -136,6 +137,10 @@ Zero Escape: Nine Hours, Nine Persons, Nine Doors
 Inazuma Eleven 3: Team Ogre Attacks!
 Pokémon White Version
 Shin Megami Tensei: Strange Journey
+Hotel Dusk: Room 215
+Inazuma Eleven 2: Firestorm
+Inazuma Eleven 2: Blizzard
+Pokémon Black Version
 
 PlayStation Portable
 The Legend of Heroes: Trails in the Sky SC
@@ -143,13 +148,13 @@ The Legend of Heroes: Trails in the Sky the 3rd
 Steins;Gate
 OutRun 2006: Coast 2 Coast
 428: Shibuya Scramble
+Sonic Robo Blast 2
 
 PlayStation 3
 Portal 2
 Yakuza 0
 Mass Effect 2
 Dark Souls
-Fallout: New Vegas
 The Last of Us
 Red Dead Redemption
 Batman: Arkham City
@@ -158,8 +163,10 @@ The Walking Dead
 LittleBigPlanet 2
 Dead Space 2
 Persona 5
+Metal Gear Rising: Revengeance
 Dragon Age: Origins
 God of War III
+Skate 3
 
 Nintendo Wii
 Super Mario Galaxy
@@ -174,14 +181,12 @@ Ys VIII: Lacrimosa of Dana
 AM2R: Return of Samus
 Chaos;Child
 VA-11 Hall-A: Cyberpunk Bartender Action
-Stardew Valley
 Hatsune Miku: Project Diva F 2nd
 Omori
 Zero Escape: Virtue's Last Reward
 
 Nintendo 3DS
 The Great Ace Attorney 2: Resolve
-Kirby: Planet Robobot
 Kid Icarus: Uprising
 Shin Megami Tensei IV
 The Legend of Zelda: A Link Between Worlds

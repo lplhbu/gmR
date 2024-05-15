@@ -13,6 +13,7 @@ Land of Illusion Starring Mickey Mouse
 Ultima IV: Quest of the Avatar
 Wonder Boy III: The Dragon's Trap
 Rainbow Islands: The Story of Bubble Bobble 2
+Ms. Pac-Man
 OutRun
 
 PC Engine
@@ -32,6 +33,7 @@ Contra: Hard Corps
 Alien Soldier
 Phantasy Star IV: The End of the Millennium
 Gunstar Heroes
+Shining Force II
 Thunder Force IV
 Streets of Rage 2
 Shinobi III: Return of the Ninja Master
@@ -39,14 +41,15 @@ Sonic the Hedgehog 3
 Rocket Knight Adventures
 Bare Knuckle III
 International Superstar Soccer Deluxe
+Castlevania: Bloodlines
 
 PC Engine CD
 Xak III: The Eternal Recurrence
 Castlevania: Rondo of Blood
 Ys IV: The Dawn of Ys
 Princess Maker 2
-Popful Mail
 Linda Cube
+Popful Mail
 
 Game Boy
 The Machine
@@ -81,10 +84,9 @@ Trials of Mana
 
 Sega CD
 Dark Wizard
+Lunar: Eternal Blue
 Captain Tsubasa
 Urusei Yatsura: Dear My Friends
-Dune
-Lunar: The Silver Star
 
 Neo Geo CD
 Neo Turf Masters
@@ -95,6 +97,7 @@ Real Bout Fatal Fury Special
 Sega 32X
 
 Sega Saturn
+Panzer Dragoon Saga
 Baroque
 Mega Man X4
 Radiant Silvergun
@@ -108,11 +111,13 @@ Grandia
 
 PlayStation
 Suikoden II
+Castlevania: Symphony of the Night
 Moon: Remix RPG Adventure
 Final Fantasy IX
 Final Fantasy Tactics
 Xenogears
 Metal Gear Solid
+Final Fantasy VII
 Ridge Racer Type 4
 Resident Evil 2
 Persona 2: Eternal Punishment
@@ -163,7 +168,6 @@ Age of Empires II: The Age of Kings
 Marvel vs. Capcom 2: New Age of Heroes
 Rez
 Garou: Mark of the Wolves
-Unreal Tournament
 Space Channel 5: Part 2
 Napple Tale: Arsia in Daydream
 Project Justice
@@ -174,14 +178,15 @@ L.O.L.: Lack of Love
 
 Neo Geo Pocket Color
 SNK vs. Capcom: The Match of the Millenium - Best Collection
+Gals Fighters
 SNK vs. Capcom Card Fighters' Clash - SNK Card Fighter's Version
 SNK vs. Capcom Card Fighters' Clash - Capcom Card Fighter's Version
-SNK vs. Capcom: The Match of the Millennium
 
 PlayStation 2
 Metal Gear Solid 3: Snake Eater
 Silent Hill 2
 Metal Gear Solid 2: Sons of Liberty
+Shadow of the Colossus
 We Love Katamari
 Kingdom Hearts II
 Killer7
@@ -193,11 +198,10 @@ Shin Megami Tensei: Digital Devil Saga 2
 Dragon Quest VIII: Journey of the Cursed King
 Shin Megami Tensei: Nocturne
 Fatal Frame II: Crimson Butterfly
-Klonoa 2: Lunatea's Veil
 Grand Theft Auto: San Andreas
 Ōkami
-Sly 2: Band of Thieves
 Tom Clancy's Splinter Cell: Chaos Theory
+Sly 2: Band of Thieves
 Final Fantasy X
 Tales of the Abyss
 Burnout 3: Takedown
@@ -211,12 +215,12 @@ Ratchet & Clank: Going Commando
 Dragon Ball Z: Budokai Tenkaichi 3
 Hitman: Blood Money
 Sly 3: Honor Among Thieves
-Ico
 Persona 4
+Ico
 SSX 3
-Rock Band 2
 
 Game Boy Advance
+Mother 3
 Mega Man Zero 3
 Mega Man Battle Network 6: Cybeast Falzar
 Castlevania: Aria of Sorrow
@@ -224,13 +228,12 @@ Mega Man Battle Network 6: Cybeast Gregar
 Golden Sun: The Lost Age
 Mega Man Battle Network 3 White
 Wario Land 4
-Advance Wars 2: Black Hole Rising
 Hamtaro: Ham-Ham Heartbreak
+Advance Wars 2: Black Hole Rising
 Mario & Luigi: Superstar Saga
 Metroid Fusion
 Mega Man Battle Network 3 Blue
 WarioWare: Twisted!
-Mega Man Zero 4
 
 Nintendo GameCube
 Paper Mario: The Thousand-Year Door
@@ -268,9 +271,9 @@ Shin Megami Tensei: Strange Journey
 Hotel Dusk: Room 215
 Inazuma Eleven 2: Firestorm
 Inazuma Eleven 2: Blizzard
+Pokémon Black Version
 Rhythm Heaven
 Pokémon Mystery Dungeon: Explorers of Time
-Rune Factory 3: A Fantasy Harvest Moon
 Tetris DS
 Solatorobo: Red the Hunter
 Picross 3D
@@ -281,7 +284,6 @@ Elite Beat Agents
 Dragon Quest Heroes: Rocket Slime
 Osu! Tatakae! Ouendan
 Radiant Historia
-Shin Megami Tensei: Devil Survivor
 Dragon Quest IX: Sentinels of the Starry Skies
 
 PlayStation Portable
@@ -291,8 +293,8 @@ Steins;Gate
 OutRun 2006: Coast 2 Coast
 428: Shibuya Scramble
 Sonic Robo Blast 2
-The Warriors
 Danganronpa 2: Goodbye Despair
+The Warriors
 Dissidia 012 Final Fantasy
 
 PlayStation 3
@@ -300,7 +302,6 @@ Portal 2
 Yakuza 0
 Mass Effect 2
 Dark Souls
-Fallout: New Vegas
 The Last of Us
 Red Dead Redemption
 Batman: Arkham City
@@ -309,6 +310,7 @@ The Walking Dead
 LittleBigPlanet 2
 Dead Space 2
 Persona 5
+Metal Gear Rising: Revengeance
 Dragon Age: Origins
 God of War III
 Skate 3
@@ -332,7 +334,6 @@ Kirby's Return to Dream Land
 Wii Sports Resort
 No More Heroes
 Mario Kart Wii
-WarioWare: Smooth Moves
 
 PlayStation Vita
 The House in Fata Morgana
@@ -341,7 +342,6 @@ Ys VIII: Lacrimosa of Dana
 AM2R: Return of Samus
 Chaos;Child
 VA-11 Hall-A: Cyberpunk Bartender Action
-Stardew Valley
 Hatsune Miku: Project Diva F 2nd
 Omori
 Zero Escape: Virtue's Last Reward
@@ -349,10 +349,10 @@ Papers, Please
 
 Nintendo 3DS
 The Great Ace Attorney 2: Resolve
-Kirby: Planet Robobot
 Kid Icarus: Uprising
 Shin Megami Tensei IV
 The Legend of Zelda: A Link Between Worlds
+The Great Ace Attorney: Adventures
 Animal Crossing: New Leaf
 Rhythm Heaven Megamix
 WarioWare Gold

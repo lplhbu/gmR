@@ -42,14 +42,14 @@ async function scrapeManipulate(platformData, allPlatformData, difficulty) {
 
 function list(data) {
     let final = '';
-    for (const platform of data) {
+    for (const platform of data.platforms) {
         if (final) final += '\n';
         final += platform.name + '\n';
         for (const game of [...new Set(platform.games.map(game => game.name))]) {
             final += game + '\n';
         }
     }
-    flR.write(`./data/lists/difficulty_${configData.difficulty}.txt`, final);
+    flR.write(`./data/lists/difficulty_${data.difficulty}.txt`, final);
 }
 
 async function main() {
@@ -71,6 +71,7 @@ async function main() {
 
     data.difficulty = configData.difficulty;
     flR.write(config.finalFile, JSON.stringify(data, null, 2));
+    list(data);
     
     // DOWNLOAD
 

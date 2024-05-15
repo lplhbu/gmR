@@ -6,8 +6,8 @@ Dragon Warrior III
 Mike Tyson's Punch-Out!!
 Tecmo Super Bowl
 Little Samson
-Disney's DuckTales
 The Guardian Legend
+Disney's DuckTales
 Ninja Gaiden II: The Dark Sword of Chaos
 Fire 'n Ice
 Disney's DuckTales 2
@@ -17,8 +17,8 @@ Teenage Mutant Ninja Turtles III: The Manhattan Project
 Mega Man 6
 Felix the Cat
 Metal Storm
-Disney's Chip 'n Dale Rescue Rangers 2
 Super Mario Bros.
+Disney's Chip 'n Dale Rescue Rangers 2
 Mighty Final Fight
 Disney's Chip 'n Dale Rescue Rangers
 Mega Man 4
@@ -26,17 +26,16 @@ Vice: Project Doom
 Crystalis
 Micro Mages
 Maniac Mansion
-Battle City
 Castlevania
 Mega Man 3
+Battle City
 King's Quest V: Absence Makes the Heart Go Yonder!
-Tiny Toon Adventures
 Batman: The Video Game
-Adventure Island 3
+Tiny Toon Adventures
 StarTropics
+Adventure Island 3
 Gargoyle's Quest II
 Disney's Darkwing Duck
-Little Nemo: The Dream Master
 Mega Man 5
 Jackie Chan's Action Kung Fu
 Battletoads / Double Dragon
@@ -47,10 +46,10 @@ Faxanadu
 Blaster Master
 Monster Party
 Space Harrier
-Adventures of Lolo 2
 After Burner II
-The Flintstones: The Rescue of Dino & Hoppy
+Adventures of Lolo 2
 Micro Machines
+The Flintstones: The Rescue of Dino & Hoppy
 Shadow of the Ninja
 Adventures of Lolo
 
@@ -60,6 +59,7 @@ Land of Illusion Starring Mickey Mouse
 Ultima IV: Quest of the Avatar
 Wonder Boy III: The Dragon's Trap
 Rainbow Islands: The Story of Bubble Bobble 2
+Ms. Pac-Man
 OutRun
 Phantasy Star
 Asterix
@@ -71,8 +71,8 @@ Legend of Illusion Starring Mickey Mouse
 Sagaia
 Zillion
 Forgotten Worlds
-Golvellius: Valley of Doom
 Fantasy Zone II
+Golvellius: Valley of Doom
 The Ancient Land of Ys
 Psychic World
 Ayrton Senna's Super Monaco GP II
@@ -112,9 +112,9 @@ Magical Chase
 Air Zonk
 New Adventure Island
 Volfied
-Final Lap Twin
 Parasol Stars: The Story of Bubble Bobble III
 Metal Stoker
+Final Lap Twin
 The Legend of Valkyrie
 Power Drift
 Ninja Spirit
@@ -122,8 +122,8 @@ Super Star Soldier
 Detana!! TwinBee
 Military Madness
 Alien Crush
-Hanii on the Road
 Bouken Danshaku Don: The Lost Sunheart
+Hanii on the Road
 Dungeon Explorer
 Final Soldier
 Liquid Kids
@@ -144,19 +144,19 @@ Mr. Heli
 Turrican
 Princess Minerva
 Legendary Axe II
-World Court Tennis
 Bonk III: Bonk's Big Adventure
+World Court Tennis
 Super Volley Ball
 Son Son II
 Bloody Wolf
 Coryoon
-Sorcerian
 
 Sega Genesis
 Contra: Hard Corps
 Alien Soldier
 Phantasy Star IV: The End of the Millennium
 Gunstar Heroes
+Shining Force II
 Thunder Force IV
 Streets of Rage 2
 Shinobi III: Return of the Ninja Master
@@ -204,8 +204,8 @@ Xak III: The Eternal Recurrence
 Castlevania: Rondo of Blood
 Ys IV: The Dawn of Ys
 Princess Maker 2
-Popful Mail
 Linda Cube
+Popful Mail
 Rayxanber III
 Loom
 Tokimeki Memorial
@@ -217,8 +217,8 @@ Nobunaga's Ambition: Lord of Darkness
 Star Parodier
 The Legend of Xanadu
 The Manhole
-Doukyuusei
 Galaxy Fraulein Yuna 2: Eien no Princess
+Doukyuusei
 Far East of Eden II: Manji-maru
 Might and Magic III: Isles of Terra
 Seirei Senshi Spriggan
@@ -230,6 +230,7 @@ Bomberman Panic Bomber
 Ginga Fukei Densetsu Sapphire
 Urusei Yatsura: Stay With You
 Kaze Kiri: Ninja Action
+Emerald Dragon
 
 Game Boy
 The Machine
@@ -255,7 +256,6 @@ Pokémon Green Version
 New Ghostbusters II
 Mega Man IV
 Batman: The Animated Series
-Tiny Toons: Babs' Big Break
 Trax
 Final Fantasy Legend II
 Deadeus
@@ -287,6 +287,7 @@ Shining Force: The Sword of Hajya
 Devilish
 Sylvan Tale
 Super Star Wars: Return of the Jedi
+The Chessmaster
 Defenders of Oasis
 Coca Cola Kid
 Super Columns
@@ -330,9 +331,12 @@ Demon's Crest
 Ninja Warriors
 Final Fight 3
 Axelay
+Soul Blazer
+Pocky & Rocky
 
 Sega CD
 Dark Wizard
+Lunar: Eternal Blue
 Captain Tsubasa
 Urusei Yatsura: Dear My Friends
 Dune
@@ -348,7 +352,6 @@ Robo Aleste
 Vay
 Panic!
 The Adventures of Willy Beamish
-Penn & Teller's Smoke and Mirrors
 
 Neo Geo CD
 Neo Turf Masters
@@ -364,8 +367,10 @@ Metal Slug 2
 
 Sega 32X
 Tempo
+FIFA Soccer 96
 
 Sega Saturn
+Panzer Dragoon Saga
 Baroque
 Mega Man X4
 Radiant Silvergun
@@ -407,11 +412,13 @@ Guardian Heroes
 
 PlayStation
 Suikoden II
+Castlevania: Symphony of the Night
 Moon: Remix RPG Adventure
 Final Fantasy IX
 Final Fantasy Tactics
 Xenogears
 Metal Gear Solid
+Final Fantasy VII
 Ridge Racer Type 4
 Resident Evil 2
 Persona 2: Eternal Punishment
@@ -445,8 +452,8 @@ The Legend of Dragoon
 Worms Armageddon
 Ape Escape
 Dino Crisis 2
-Worms World Party
 LSD: Dream Emulator
+Worms World Party
 Koudelka
 Legacy of Kain: Soul Reaver
 Resident Evil
@@ -461,7 +468,6 @@ Strider 2
 Tales of Eternia
 Diablo
 Medal of Honor: Underground
-Blood Omen: Legacy of Kain
 
 Virtual Boy
 Virtual Boy Wario Land
@@ -480,9 +486,9 @@ Banjo-Kazooie
 Star Fox 64
 F-Zero X
 Perfect Dark
-Ogre Battle 64: Person of Lordly Caliber
 Mystical Ninja Starring Goemon
 Goemon's Great Adventure
+Ogre Battle 64: Person of Lordly Caliber
 Rayman 2: The Great Escape
 Mischief Makers
 Mario Party 2
@@ -564,7 +570,6 @@ Age of Empires II: The Age of Kings
 Marvel vs. Capcom 2: New Age of Heroes
 Rez
 Garou: Mark of the Wolves
-Unreal Tournament
 Space Channel 5: Part 2
 Napple Tale: Arsia in Daydream
 Project Justice
@@ -577,8 +582,8 @@ The King of Fighters 2002
 D2
 Illbleed
 Cosmic Smash
-Virtua Tennis 2
 Virtua Tennis
+Virtua Tennis 2
 Ever17: The Out of Infinity
 Shenmue
 Jet Grind Radio
@@ -596,6 +601,7 @@ Capcom vs. SNK: Millennium Fight 2000
 
 Neo Geo Pocket Color
 SNK vs. Capcom: The Match of the Millenium - Best Collection
+Gals Fighters
 SNK vs. Capcom Card Fighters' Clash - SNK Card Fighter's Version
 SNK vs. Capcom Card Fighters' Clash - Capcom Card Fighter's Version
 SNK vs. Capcom: The Match of the Millennium
@@ -606,6 +612,7 @@ PlayStation 2
 Metal Gear Solid 3: Snake Eater
 Silent Hill 2
 Metal Gear Solid 2: Sons of Liberty
+Shadow of the Colossus
 We Love Katamari
 Kingdom Hearts II
 Killer7
@@ -617,11 +624,10 @@ Shin Megami Tensei: Digital Devil Saga 2
 Dragon Quest VIII: Journey of the Cursed King
 Shin Megami Tensei: Nocturne
 Fatal Frame II: Crimson Butterfly
-Klonoa 2: Lunatea's Veil
 Grand Theft Auto: San Andreas
 Ōkami
-Sly 2: Band of Thieves
 Tom Clancy's Splinter Cell: Chaos Theory
+Sly 2: Band of Thieves
 Final Fantasy X
 Tales of the Abyss
 Burnout 3: Takedown
@@ -635,8 +641,8 @@ Ratchet & Clank: Going Commando
 Dragon Ball Z: Budokai Tenkaichi 3
 Hitman: Blood Money
 Sly 3: Honor Among Thieves
-Ico
 Persona 4
+Ico
 SSX 3
 Rock Band 2
 Guitar Hero III: Legends of Rock
@@ -645,16 +651,16 @@ Tekken 5
 Max Payne
 Bully
 Tony Hawk's Pro Skater 3
-Persona 3
 TimeSplitters 2
+Persona 3
 PaRappa the Rapper 2
 Def Jam: Fight for NY
 Midnight Club 3: DUB Edition
 Need for Speed: Underground 2
 SSX Tricky
 Beyond Good & Evil
-Tony Hawk's Underground
 Burnout Revenge
+Tony Hawk's Underground
 Grand Theft Auto: Vice City
 Naruto Shippuden: Ultimate Ninja 5
 Jak and Daxter: The Precursor Legacy
@@ -668,17 +674,15 @@ SoulCalibur III
 Final Fantasy XII
 Viewtiful Joe
 Rayman 3: Hoodlum Havoc
-Ape Escape 2
-Kingdom Hearts
 Fatal Frame
 Return to Castle Wolfenstein
 God of War
 Sly Cooper and the Thievius Raccoonus
 Guitar Hero II
 Ratchet: Deadlocked
-Mortal Kombat: Shaolin Monks
 
 Game Boy Advance
+Mother 3
 Mega Man Zero 3
 Mega Man Battle Network 6: Cybeast Falzar
 Castlevania: Aria of Sorrow
@@ -686,8 +690,8 @@ Mega Man Battle Network 6: Cybeast Gregar
 Golden Sun: The Lost Age
 Mega Man Battle Network 3 White
 Wario Land 4
-Advance Wars 2: Black Hole Rising
 Hamtaro: Ham-Ham Heartbreak
+Advance Wars 2: Black Hole Rising
 Mario & Luigi: Superstar Saga
 Metroid Fusion
 Mega Man Battle Network 3 Blue
@@ -702,13 +706,13 @@ Mega Man Battle Network 5: Team Colonel
 Summon Night: Swordcraft Story 2
 WarioWare, Inc.: Mega Microgames!
 Golden Sun
-Hamtaro: Rainbow Rescue
 Pokémon Sapphire Version
+Hamtaro: Rainbow Rescue
 Astro Boy: Omega Factor
 Pokémon Ruby Version
 Mega Man Zero 2
-Fire Emblem: The Blazing Blade
 Pokémon Mystery Dungeon: Red Rescue Team
+Fire Emblem: The Blazing Blade
 Fire Emblem: The Sacred Stones
 Dragon Ball: Advanced Adventure
 Advance Wars
@@ -749,7 +753,6 @@ Pokémon XD: Gale of Darkness
 Super Mario Sunshine
 Star Wars: Jedi Knight II - Jedi Outcast
 Harvest Moon: A Wonderful Life
-Prince of Persia: The Sands of Time
 Super Mario Strikers
 Donkey Kong Jungle Beat
 Mario Party 7
@@ -776,9 +779,9 @@ Shin Megami Tensei: Strange Journey
 Hotel Dusk: Room 215
 Inazuma Eleven 2: Firestorm
 Inazuma Eleven 2: Blizzard
+Pokémon Black Version
 Rhythm Heaven
 Pokémon Mystery Dungeon: Explorers of Time
-Rune Factory 3: A Fantasy Harvest Moon
 Tetris DS
 Solatorobo: Red the Hunter
 Picross 3D
@@ -789,11 +792,8 @@ Elite Beat Agents
 Dragon Quest Heroes: Rocket Slime
 Osu! Tatakae! Ouendan
 Radiant Historia
-Shin Megami Tensei: Devil Survivor
 Dragon Quest IX: Sentinels of the Starry Skies
-Professor Layton and the Diabolical Box
 Advance Wars: Dual Strike
-Castlevania: Portrait of Ruin
 Mario Kart DS
 Custom Robo Arena
 Apollo Justice: Ace Attorney
@@ -804,14 +804,13 @@ Animal Crossing: Wild World
 Mario & Luigi: Partners in Time
 Castlevania: Dawn of Sorrow
 WarioWare: Touched!
-Pokémon Ranger: Shadows of Almia
 PictoChat
 Shin Megami Tensei: Devil Survivor 2
 Pokémon Conquest
 WarioWare D.I.Y.
+Fossil Fighters
 Professor Layton and the Last Specter
 Mega Man ZX
-Fossil Fighters
 Pokémon Ranger: Guardian Signs
 Jump Ultimate Stars
 Meteos
@@ -820,6 +819,7 @@ Mario Party DS
 The Legendary Starfy
 Dragon Ball Z: Attack of the Saiyans
 Pokémon Diamond Version
+Pokémon Pearl Version
 
 PlayStation Portable
 The Legend of Heroes: Trails in the Sky SC
@@ -828,13 +828,14 @@ Steins;Gate
 OutRun 2006: Coast 2 Coast
 428: Shibuya Scramble
 Sonic Robo Blast 2
-The Warriors
 Danganronpa 2: Goodbye Despair
+The Warriors
 Dissidia 012 Final Fantasy
 Kingdom Hearts Birth by Sleep
 Crisis Core: Final Fantasy VII
 Peggle
 Ys Seven
+God of War: Ghost of Sparta
 Metal Gear Solid: Peace Walker
 Patapon
 Split/Second
@@ -842,16 +843,12 @@ Chaos;Head
 WWE SmackDown! vs. Raw 2006
 Danganronpa: Trigger Happy Havoc
 Dissidia Final Fantasy
-Yu-Gi-Oh! GX Tag Force
-LocoRoco
-Midnight Club: Los Angeles
 
 PlayStation 3
 Portal 2
 Yakuza 0
 Mass Effect 2
 Dark Souls
-Fallout: New Vegas
 The Last of Us
 Red Dead Redemption
 Batman: Arkham City
@@ -860,6 +857,7 @@ The Walking Dead
 LittleBigPlanet 2
 Dead Space 2
 Persona 5
+Metal Gear Rising: Revengeance
 Dragon Age: Origins
 God of War III
 Skate 3
@@ -946,7 +944,6 @@ Ys VIII: Lacrimosa of Dana
 AM2R: Return of Samus
 Chaos;Child
 VA-11 Hall-A: Cyberpunk Bartender Action
-Stardew Valley
 Hatsune Miku: Project Diva F 2nd
 Omori
 Zero Escape: Virtue's Last Reward
@@ -971,14 +968,15 @@ Iconoclasts
 
 Nintendo 3DS
 The Great Ace Attorney 2: Resolve
-Kirby: Planet Robobot
 Kid Icarus: Uprising
 Shin Megami Tensei IV
 The Legend of Zelda: A Link Between Worlds
+The Great Ace Attorney: Adventures
 Animal Crossing: New Leaf
 Rhythm Heaven Megamix
 WarioWare Gold
 Fantasy Life
+Fire Emblem: Awakening
 Theatrhythm Final Fantasy: Curtain Call
 Bravely Second: End Layer
 Tomodachi Life

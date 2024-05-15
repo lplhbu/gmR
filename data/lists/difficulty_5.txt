@@ -33,8 +33,8 @@ Sega Saturn
 
 PlayStation
 Suikoden II
+Castlevania: Symphony of the Night
 Moon: Remix RPG Adventure
-Final Fantasy IX
 
 Virtual Boy
 
@@ -55,9 +55,11 @@ PlayStation 2
 Metal Gear Solid 3: Snake Eater
 Silent Hill 2
 Metal Gear Solid 2: Sons of Liberty
+Shadow of the Colossus
 We Love Katamari
 
 Game Boy Advance
+Mother 3
 
 Nintendo GameCube
 Paper Mario: The Thousand-Year Door
@@ -87,7 +89,6 @@ Portal 2
 Yakuza 0
 Mass Effect 2
 Dark Souls
-Fallout: New Vegas
 The Last of Us
 Red Dead Redemption
 Batman: Arkham City
