@@ -98,7 +98,8 @@ function standardizeFile(fsPath, name) {
 
     const fileName = path.basename(fsPath);
     
-    const tags = fileName.match(regex.tags) || [];
+    // const tags = fileName.match(regex.tags) || [];
+    const tags = fileName.match(regex.coreTags) || [];
     const track = fileName.match(regex.nonTagTrack);
     if (track && track[1]) tags.push(`(${track[1]})`);
 

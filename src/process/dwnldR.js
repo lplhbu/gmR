@@ -22,16 +22,17 @@ function downloaded(fsPath, game, platform) {
 async function downloadGame(platform, game, fsPath) {
     let downloadPath;
 
-    if (game.myrient_url) {
-        const url = path.join(myrient.url, platform.myrient_url, game.myrient_url);
-        downloadPath = path.join(fsPath, game.name + path.extname(game.myrient_name));
-        await myrient.download(url, downloadPath);
-    }
-
-    if (game.cdromance_url) {
-        const url = path.join(cdromance.url, platform.cdromance_url_game || platform.cdromance_url, game.cdromance_url);
-        downloadPath = path.join(fsPath, game.name);
-        downloadPath = await cdromance.download(url, downloadPath);
+    switch (game.download) {
+        case 'myrient': {
+            const url = path.join(myrient.url, platform.myrient_url, game.myrient_url);
+            downloadPath = path.join(fsPath, game.name + path.extname(game.myrient_name));
+            await myrient.download(url, downloadPath);
+        } break;
+        case 'cdromance': {
+            const url = path.join(cdromance.url, platform.cdromance_url_game || platform.cdromance_url, game.cdromance_url);
+            downloadPath = path.join(fsPath, game.name);
+            downloadPath = await cdromance.download(url, downloadPath);
+        } break;
     }
 
     return downloadPath;

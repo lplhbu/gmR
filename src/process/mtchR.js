@@ -10,16 +10,32 @@ function cleanName(str) {
     str = str.replace(regex.archExt, '');
     str = str.replace(regex.gameExt, '');
 
+    // odd
     str = str.replace(/'/g, ''); // apostrophe remove
     str = str.replace(/é/g, 'e'); // pokemon
-    str = str.replace(/Ō/g, "oo") // okami
+    str = str.replace(/ō/g, "oo") // okami Ōkami
     str = str.replace(/\$/g, 's'); // warioware microgames
     str = str.replace(/megaman/g, 'mega man'); // megaman
     str = str.replace(/infamous/g, 'in famous');
-    str = str.replace(/^3/, ' cube');
-    str = str.replace(/the walking dead/g, 'the walking dead a telltale game series')
+    str = str.replace(/³/g, ' cube');
+    str = str.replace(/\^3/g, ' cube');
+    str = str.replace(/a telltale games series/g, '');
+    str = str.replace(/^portal$/g, 'the orange box');
+
+    str = str.replace(/taisen/g, 'wars');
+    str = str.replace(/gyakuten kenji/g, 'ace attorney investigations');
+    str = str.replace(/eiyuu densetsu/g, 'the legend of heroes');
+    str = str.replace(/sora no kiseki/g, 'trails in the sky');
+    str = str.replace(/no densetsu/g, 'the legend of');
+    str = str.replace(/kono yo no hate de koi o utau shoujo/g, 'a girl who chants love at the bound of this world');
+
+    // common
+    str = str.replace(/\bthe\b/g, '');
+    str = str.replace(/\bof\b/g, '');
+    str = str.replace(/\band\b/g, '');
 
     // replace special characters with spaces, and remove double spaces
+    str = str.replace(/\./g, '');
     str = str.replace(regex.colon, ' - ');
     str = str.replace(regex.special, ' ');
     str = str.replace(regex.spaces, ' ');
@@ -65,7 +81,11 @@ function scoreTag(tag) {
     if (tag.includes('(Beta)') ||
         tag.includes('(Demo)') ||
         tag.includes('(DLC)') ||
-        tag.includes('(Proto)')) return 0;
+        tag.includes('(Proto)') ||
+        tag.includes('(Trial)') ||
+        tag.includes('(Theme)') ||
+        tag.includes('(Soundtrack)') ||
+        tag.includes('(Avatar)')) return 0;
 
     // Discs
     if (tag.includes('(Disc ')) return 1;
@@ -80,7 +100,7 @@ function scoreTag(tag) {
     if (tag.includes('USA, ') ||
         tag.includes(', USA') ||
         tag.includes('En,') || 
-        tag.includes(',En')) return 0.96;
+        tag.includes(',En')) return 1;
 
     // Editions
     if (tag.includes('(RE)') ||
@@ -106,13 +126,14 @@ function scoreTag(tag) {
         return 1 - number;
     }
 
-    if (tag.includes('(Japan)') ||
-        tag.includes('Japan, ') ||
-        tag.includes(', Japan') ||
-        tag.includes('(Europe)') ||
+    if (tag.includes('(Europe)') ||
         tag.includes('Europe, ') ||
         tag.includes(', Europe') ||
-        tag.includes('(PAL)')) return 0.8;
+        tag.includes('(PAL)')) return 0.84;
+
+    if (tag.includes('(Japan)') ||
+        tag.includes('Japan, ') ||
+        tag.includes(', Japan')) return 0.8;
 
     return 0.64;
 }
@@ -134,7 +155,7 @@ function score(name, otherName) {
 
 function matchName(name, names) {
     let matchNames = [];
-    let highScore = 0.5;
+    let highScore = 0;
     for (const otherName of names) {
         const points = score(name, otherName);
         if (points == 0) continue;
@@ -151,7 +172,8 @@ function matchName(name, names) {
 
 function matchGame(game, games) {
     const matchNames = matchName(game.name, games.map(g => g.name));
-    const matchGames = matchNames.map(n => games.find(g => g.name == n));
+    const matchGames = matchNames.map(n => { return { ...games.find(g => g.name == n) }; });
+    matchGames.forEach(mg => mg.score = score(game.name, mg.name));
     return matchGames;
 }
 
@@ -166,7 +188,6 @@ function matchAll(platforms, otherPlatforms) {
 
         for (const game of platform.games) {
             const matchGames = [game, ...matchGame(game, otherPlatform.games)];
-            matchGames.forEach(mg => mg.score = score(game.name, mg.name));
             games.push(matchGames);
         }
 
@@ -199,21 +220,9 @@ function load(platforms, prepend) {
 function choose(platforms) {
     for (const platform of platforms) {
         for (const game of platform.games) {
-
-            if (!game.myrient_url) continue;
-            if (!game.cdromance_url) continue;
-
-            const myrientScore = score(game.name, game.myrient_name);
-            const cdromanceScore = score(game.name, game.cdromance_name);
-
-            if (myrientScore > cdromanceScore) {
-                delete game.cdromance_name;
-                delete game.cdromance_url;
-            }
-            else {
-                delete game.myrient_name;
-                delete game.myrient_url;
-            }
+            game.download = 'none';
+            if (game.myrient_score > 0.5) game.download = 'myrient';
+            if (game.cdromance_score > (game.myrient_score || 0.5)) game.download = 'cdromance';
         }
     }
 }
