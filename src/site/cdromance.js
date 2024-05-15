@@ -103,7 +103,7 @@ async function download(url, fsPath) {
     const file = fileElements.filter(le => le.includes('English'))[0];
     const linkElements = scrpR.getElements(ajaxData, linkSelector, 'href');
     const link = linkElements[fileElements.indexOf(file)];
-    fsPath = fsPath + path.extname(file);
+    fsPath += path.extname(file);
 
     const bytesDownloaded = flR.check(fsPath) ? flR.size(fsPath) : 0;
 

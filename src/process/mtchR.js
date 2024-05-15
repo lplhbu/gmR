@@ -1,14 +1,19 @@
 const ldR = require('../util/ldR.js');
 const regex = require('./regex.js');
 
-function cleanName(str) {
-    str = str.replace(regex.lowerUpper, '$1 $2');
-    str = str.toLowerCase();
+function cleanName(str, deep = false) {
+
+    str = str.replace(regex.colon, ' - ');
 
     // remove tags and file
     str = str.replace(regex.tags, '');
     str = str.replace(regex.archExt, '');
     str = str.replace(regex.gameExt, '');
+
+    if (!deep) return str.trim();
+
+    str = str.replace(regex.lowerUpper, '$1 $2');
+    str = str.toLowerCase();
 
     // odd
     str = str.replace(/'/g, ''); // apostrophe remove
@@ -36,13 +41,8 @@ function cleanName(str) {
 
     // replace special characters with spaces, and remove double spaces
     str = str.replace(/\./g, '');
-    str = str.replace(regex.colon, ' - ');
     str = str.replace(regex.special, ' ');
     str = str.replace(regex.spaces, ' ');
-
-    // separate letters from numbers with a space
-    // str = str.replace(/([a-z])(\d)/g, '$1 $2');
-    // str = str.replace(/(\d)([a-z])/g, '$1 $2');
 
     return str.trim();
 }
@@ -51,8 +51,8 @@ const seriesRegex = /^sc|3rd$/g
 const zeroChecks = [regex.number, regex.roman, seriesRegex];
 function scoreNames(str1, str2) {
     
-    const tkn1All = cleanName(str1).split(' ');
-    const tkn2All= cleanName(str2).split(' ');
+    const tkn1All = cleanName(str1, true).split(' ');
+    const tkn2All= cleanName(str2, true).split(' ');
     const tkn1Used = tkn1All.filter(token => tkn2All.includes(token));
     const tkn2Used = tkn2All.filter(token => tkn1All.includes(token));
     const tkn1Left = tkn1All.filter(token => !tkn2All.includes(token));
@@ -147,6 +147,7 @@ function scoreTags(str) {
     return points;
 }
 
+const scoreThreshold = 0.5;
 function score(name, otherName) {
     let points = scoreNames(name, otherName);
     points *= scoreTags(otherName);
@@ -155,7 +156,7 @@ function score(name, otherName) {
 
 function matchName(name, names) {
     let matchNames = [];
-    let highScore = 0;
+    let highScore = scoreThreshold;
     for (const otherName of names) {
         const points = score(name, otherName);
         if (points == 0) continue;
@@ -221,10 +222,10 @@ function choose(platforms) {
     for (const platform of platforms) {
         for (const game of platform.games) {
             game.download = 'none';
-            if (game.myrient_score > 0.5) game.download = 'myrient';
-            if (game.cdromance_score > (game.myrient_score || 0.5)) game.download = 'cdromance';
+            if (game.myrient_score > scoreThreshold) game.download = 'myrient';
+            if (game.cdromance_score > (game.myrient_score || scoreThreshold)) game.download = 'cdromance';
         }
     }
 }
 
-module.exports = { score, matchName, matchGame, matchAll, load, choose };
+module.exports = { score, cleanName, matchName, matchGame, matchAll, load, choose };
