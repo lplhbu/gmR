@@ -9,12 +9,13 @@ function downloaded(fsPath, game, platform) {
     const files = flR.read(fsPath);
     if (!files) return;
 
-    const matchNames = matchName(game.name, files, platform);
+    const matchNames = matchName(game.name, files);
     if (matchNames.length == 0) return false;
 
     const file = matchNames[0];
+    const fileType = path.extname(file);
     const fileTypes = platform.file_types ? platform.file_types : [platform.file_type];
-    if (!fileTypes.includes(path.extname(file))) return false;
+    if (!fileType || !fileTypes.includes(fileType)) return false;
 
     return true;
 }
@@ -44,8 +45,8 @@ async function extractGame(fsPath, platform) {
     const extractPath = path.join(dir, name);
     await flR.extract(fsPath, extractPath);
 
-    const innerDir = flR.read(extractPath).find(file => flR.isDir(path.join(extractPath, file)));
-    if (innerDir) flattenDir(path.join(extractPath, innerDir), platform);
+    const innerDirs = flR.read(extractPath).filter(file => flR.isDir(path.join(extractPath, file)));
+    innerDirs.forEach(id => flattenDir(path.join(extractPath, id), platform));
     flattenDir(extractPath, platform);
     flR.remove(extractPath);
 

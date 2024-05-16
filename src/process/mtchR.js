@@ -3,46 +3,39 @@ const regex = require('./regex.js');
 
 function cleanName(str, deep = false) {
 
-    str = str.replace(regex.colon, ' - ');
-
-    // remove tags and file
     str = str.replace(regex.tags, '');
     str = str.replace(regex.archExt, '');
     str = str.replace(regex.gameExt, '');
 
-    if (!deep) return str.trim();
+    if (deep) {
+        str = str.replace(regex.lowerUpper, '$1 $2');
+        str = str.toLowerCase();
+    
+        str = str.replace(/'/g, ''); // apostrophe remove
+        str = str.replace(/é/g, 'e'); // pokemon
+        str = str.replace(/ō/g, "oo") // okami Ōkami
+        str = str.replace(/\$/g, 's'); // warioware microgames
+        str = str.replace(/megaman/g, 'mega man'); // megaman
+        str = str.replace(/infamous/g, 'in famous');
+        str = str.replace(/³/g, ' cube');
+        str = str.replace(/\^3/g, ' cube');
+        str = str.replace(/a telltale games series/g, '');
+        str = str.replace(/^portal$/g, 'the orange box');
+    
+        str = str.replace(/taisen/g, 'wars');
+        str = str.replace(/gyakuten kenji/g, 'ace attorney investigations');
+        str = str.replace(/eiyuu densetsu/g, 'the legend of heroes');
+        str = str.replace(/sora no kiseki/g, 'trails in the sky');
+        str = str.replace(/no densetsu/g, 'the legend of');
+        str = str.replace(/kono yo no hate de koi o utau shoujo/g, 'a girl who chants love at the bound of this world');
+    
+        str = str.replace(regex.common, ' ');
 
-    str = str.replace(regex.lowerUpper, '$1 $2');
-    str = str.toLowerCase();
+    }
 
-    // odd
-    str = str.replace(/'/g, ''); // apostrophe remove
-    str = str.replace(/é/g, 'e'); // pokemon
-    str = str.replace(/ō/g, "oo") // okami Ōkami
-    str = str.replace(/\$/g, 's'); // warioware microgames
-    str = str.replace(/megaman/g, 'mega man'); // megaman
-    str = str.replace(/infamous/g, 'in famous');
-    str = str.replace(/³/g, ' cube');
-    str = str.replace(/\^3/g, ' cube');
-    str = str.replace(/a telltale games series/g, '');
-    str = str.replace(/^portal$/g, 'the orange box');
-
-    str = str.replace(/taisen/g, 'wars');
-    str = str.replace(/gyakuten kenji/g, 'ace attorney investigations');
-    str = str.replace(/eiyuu densetsu/g, 'the legend of heroes');
-    str = str.replace(/sora no kiseki/g, 'trails in the sky');
-    str = str.replace(/no densetsu/g, 'the legend of');
-    str = str.replace(/kono yo no hate de koi o utau shoujo/g, 'a girl who chants love at the bound of this world');
-
-    // common
-    str = str.replace(/\bthe\b/g, '');
-    str = str.replace(/\bof\b/g, '');
-    str = str.replace(/\band\b/g, '');
-
-    // replace special characters with spaces, and remove double spaces
-    str = str.replace(/\./g, '');
-    str = str.replace(regex.special, ' ');
     str = str.replace(regex.spaces, ' ');
+    str = str.replace(regex.dashes, ' - ');
+    str = str.replace(regex.remove, '');
 
     return str.trim();
 }
@@ -65,6 +58,11 @@ function scoreNames(str1, str2) {
 
     let points = (points1 * points2);
     points += (maxPoints - minPoints) * maxPoints * 0.8;
+
+    // if (tkn1All.includes('baroque') && tkn2All.includes('baroque')) {
+    //     console.log(tkn1All);
+    //     console.log(tkn2All);
+    // }
 
     for (const check of zeroChecks) {
         if (tkn1Left.some(tkn => tkn.match(check)) && !tkn1Used.some(tkn => tkn.match(check))) points = 0;

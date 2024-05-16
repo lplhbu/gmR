@@ -56,7 +56,7 @@ function cleanPlatform(fsPath, platform) {
     const files = flR.read(fsPath);
     if (!files) return;
 
-    const archTypes = ['.zip', '7z'];
+    const archTypes = ['.zip', '.7z'];
     const fileTypes = [];
     if (platform.file_type) fileTypes.push(platform.file_type);
     if (platform.file_types) fileTypes.push(...platform.file_types);
@@ -96,19 +96,36 @@ function standardizeDir(fsPath, platform) {
 }
 
 function standardizeFile(fsPath, name) {
+    if (path.extname(fsPath) == '.cue') standardizeCue(fsPath, name);
+    flR.rename(fsPath, standardName(path.basename(fsPath), name));
+}
 
-    const fileName = path.basename(fsPath);
-    // const tags = fileName.match(regex.tags) || [];
-    const tags = fileName.match(regex.coreTags) || [];
-    const track = fileName.match(regex.nonTagTrack);
-    if (track && track[1]) tags.push(`(${track[1]})`);
-    const ext = fileName.match(regex.gameExt) || fileName.match(regex.archExt);
-
+function standardName(fileName, name) {
     let standardName = cleanName(name);
+    
+    const tags = fileName.match(regex.coreTags) || [];
+    const track = regex.nonTagTrack.exec(cleanName(fileName).toLowerCase());
+    if (track && track[1]) tags.push(`(Track ${track[1]})`);
+    const disc = regex.nonTagDisc.exec(cleanName(fileName).toLowerCase());
+    if (disc && disc[1]) tags.push(`(Disc ${disc[1]})`);
     if (tags.length > 0) standardName += ' ' + tags.join(' ');
-    standardName += ext;
 
-    flR.rename(fsPath, standardName);
+    const fileType = fileName.match(regex.gameExt) || fileName.match(regex.archExt);
+    standardName += fileType;
+
+    return standardName;
+}
+
+function standardizeCue(fsPath, name) {
+    let data = flR.read(fsPath);
+
+    const fileRegex = /FILE "(.*?)"/g;
+    const replaceNames = (match, fileName) => {
+        return `FILE "${standardName(fileName, name)}"`;
+    };
+
+    data = data.replace(fileRegex, replaceNames);
+    flR.write(fsPath, data);
 }
 
 module.exports = { cleanData, cleanFiles, cleanPlatform, standardizeDir, standardizeFile };

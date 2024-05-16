@@ -100,7 +100,7 @@ async function download(url, fsPath) {
     const ajaxData = await ntwrkR.get(ajaxUrl, ajaxParm);
     const linkSelector = 'div.download-links.table a';
     const fileElements = scrpR.getElements(ajaxData, linkSelector, 'text');
-    const file = fileElements.filter(le => le.includes('English'))[0];
+    const file = fileElements.filter(le => le.toLowerCase().replace(/\s*[^a-z0-9]\s*/g, ' ').match(/\ben/g))[0];
     const linkElements = scrpR.getElements(ajaxData, linkSelector, 'href');
     const link = linkElements[fileElements.indexOf(file)];
     fsPath += path.extname(file);

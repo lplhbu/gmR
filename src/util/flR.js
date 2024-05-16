@@ -30,7 +30,7 @@ function read(fsPath) {
     fsPath = getRelative(fsPath);
     if (!check(fsPath)) return null;
     if (isDir(fsPath)) data = readDir(fsPath);
-    else data =  readFile(fsPath);
+    else data = readFile(fsPath);
     return data;
 }
 
