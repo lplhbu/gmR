@@ -2,14 +2,14 @@ const path = require('path');
 const flR = require('../util/flR.js');
 const myrient = require('../site/myrient.js');
 const cdromance = require('../site/cdromance.js');
-const { cleanName, matchName } = require('./mtchR.js');
-const { standardizeDir } = require('./clnR.js');
+const mtchR = require('./mtchR.js');
+const clnR = require('./clnR.js');
 
 function downloaded(fsPath, game, platform) {
     const files = flR.read(fsPath);
     if (!files) return;
 
-    const matchNames = matchName(game.name, files);
+    const matchNames = mtchR.matchName(game.name, files);
     if (matchNames.length == 0) return false;
 
     const file = matchNames[0];
@@ -26,12 +26,12 @@ async function downloadGame(platform, game, fsPath) {
     switch (game.download) {
         case 'myrient': {
             const url = path.join(myrient.url, platform.myrient_url, game.myrient_url);
-            downloadPath = path.join(fsPath, cleanName(game.name) + path.extname(game.myrient_name));
+            downloadPath = path.join(fsPath, mtchR.cleanName(game.name) + path.extname(game.myrient_name));
             await myrient.download(url, downloadPath);
         } break;
         case 'cdromance': {
             const url = path.join(cdromance.url, platform.cdromance_url_game || platform.cdromance_url, game.cdromance_url);
-            downloadPath = path.join(fsPath, cleanName(game.name));
+            downloadPath = path.join(fsPath, mtchR.cleanName(game.name));
             downloadPath = await cdromance.download(url, downloadPath);
         } break;
     }
@@ -39,22 +39,24 @@ async function downloadGame(platform, game, fsPath) {
     return downloadPath;
 }
 
-async function extractGame(fsPath, platform) {
+async function extractGame(fsPath) {
     const dir = path.dirname(fsPath);
     const name = path.basename(fsPath, path.extname(fsPath));
     const extractPath = path.join(dir, name);
     await flR.extract(fsPath, extractPath);
+    flR.remove(fsPath);
+    return extractPath
+}
 
-    const innerDirs = flR.read(extractPath).filter(file => flR.isDir(path.join(extractPath, file)));
-    innerDirs.forEach(id => flattenDir(path.join(extractPath, id), platform));
-    flattenDir(extractPath, platform);
-    flR.remove(extractPath);
-
+function flattenGame(fsPath, platform) {
+    const innerDirs = flR.read(fsPath).filter(file => flR.isDir(path.join(fsPath, file)));
+    innerDirs.forEach(id => flattenDir(path.join(fsPath, id), platform));
+    flattenDir(fsPath, platform);
     flR.remove(fsPath);
 }
 
 function flattenDir(fsPath, platform) {
-    standardizeDir(fsPath, platform);
+    clnR.cleanDir(fsPath, platform);
     flR.flatten(fsPath);
 }
 
@@ -64,8 +66,13 @@ async function download(platforms, fsPath) {
             const platformPath = path.join(fsPath, platform.name); 
             if (downloaded(platformPath, game, platform)) continue;
 
-            const downloadPath = await downloadGame(platform, game, platformPath);
-            if (downloadPath) await extractGame(downloadPath, platform);
+            const extractPath = path.join(platformPath, mtchR.cleanName(game.name));
+            if (!flR.check(extractPath)) {
+                const downloadPath = await downloadGame(platform, game, platformPath);
+                if (downloadPath) await extractGame(downloadPath);
+            }
+
+            flattenGame(extractPath, platform);
         }
     }
 }

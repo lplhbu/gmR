@@ -1,7 +1,7 @@
 const path = require('path');
 const flR = require('../util/flR.js');
 const regex = require('./regex.js');
-const { cleanName, matchName } = require('./mtchR.js');
+const mtchR = require('./mtchR.js');
 
 function cleanData(platforms) {
     cleanPlatformsRelease(platforms);
@@ -43,21 +43,17 @@ function cleanFiles(fsPath, platforms) {
         const dirPath = path.join(fsPath, dir);
 
         const platform = platforms.find(p => p.name == dir);
-        if (!platform) {
-            flR.remove(dirPath);
-            continue;
-        }
+        if (!platform) { flR.remove(dirPath); continue; }
 
-        cleanPlatform(dirPath, platform);
+        cleanDir(dirPath, platform);
     }
 }
 
-function cleanPlatform(fsPath, platform) {
+function cleanDir(fsPath, platform, game = null) {
     const files = flR.read(fsPath);
     if (!files) return;
 
-    const archTypes = ['.zip', '.7z'];
-    const fileTypes = [];
+    const fileTypes = ['.zip', '.7z'];
     if (platform.file_type) fileTypes.push(platform.file_type);
     if (platform.file_types) fileTypes.push(...platform.file_types);
 
@@ -66,66 +62,61 @@ function cleanPlatform(fsPath, platform) {
         const fileBase = path.basename(file, fileType);
         const filePath = path.join(fsPath, file);
 
-        if (archTypes.includes(fileType)) continue;
-        if (!fileTypes.includes(fileType)) { flR.remove(filePath); continue; }
-
-        const matchNames = matchName(fileBase, platform.games.map(g => g.name));
-        if (matchNames.length == 0) { flR.remove(filePath); continue; }
-
-        standardizeFile(filePath, matchNames[0]);
+        if (flR.isDir(filePath)) cleanDir(filePath, platform, game || fileBase);
+        else if (fileTypes.includes(fileType.toLowerCase())) cleanFile(filePath, platform, game || fileBase);
+        else flR.remove(filePath);
     }
 
     const postFiles = flR.read(fsPath);
     if (postFiles.length == 0) flR.remove(fsPath);
 }
 
-function standardizeDir(fsPath, platform) {
-    const files = flR.read(fsPath);
-    if (!files) return;
+function cleanFile(fsPath, platform, game = null) {
+    const file = path.basename(fsPath);
+    const fileType = path.extname(file);
+    const fileBase = path.basename(file, fileType);
 
-    const fileTypes = ['.zip', '.7z'];
-    if (platform.file_type) fileTypes.push(platform.file_type);
-    if (platform.file_types) fileTypes.push(...platform.file_types);
-
-    const dirName = path.basename(fsPath);
-    for (const file of files) {
-        const filePath = path.join(fsPath, file);
-        if (fileTypes.includes(path.extname(file))) standardizeFile(filePath, dirName);
-        else flR.remove(filePath);
+    if (game == null) {
+        const matchNames = mtchR.matchName(fileBase, platform.games.map(g => g.name));
+        if (matchNames.length == 0) { flR.remove(fsPath); return; }
+        game = matchNames[0];
     }
+
+    if (fileType.toLowerCase() == '.cue') cleanCue(fsPath, game);
+    flR.rename(fsPath, cleanName(file, game));
 }
 
-function standardizeFile(fsPath, name) {
-    if (path.extname(fsPath) == '.cue') standardizeCue(fsPath, name);
-    flR.rename(fsPath, standardName(path.basename(fsPath), name));
-}
-
-function standardName(fileName, name) {
-    let standardName = cleanName(name);
-    
-    const tags = fileName.match(regex.coreTags) || [];
-    const track = regex.nonTagTrack.exec(cleanName(fileName).toLowerCase());
-    if (track && track[1]) tags.push(`(Track ${track[1]})`);
-    const disc = regex.nonTagDisc.exec(cleanName(fileName).toLowerCase());
-    if (disc && disc[1]) tags.push(`(Disc ${disc[1]})`);
-    if (tags.length > 0) standardName += ' ' + tags.join(' ');
-
-    const fileType = fileName.match(regex.gameExt) || fileName.match(regex.archExt);
-    standardName += fileType;
-
-    return standardName;
-}
-
-function standardizeCue(fsPath, name) {
+function cleanCue(fsPath, name) {
     let data = flR.read(fsPath);
 
     const fileRegex = /FILE "(.*?)"/g;
     const replaceNames = (match, fileName) => {
-        return `FILE "${standardName(fileName, name)}"`;
+        return `FILE "${cleanName(fileName, name)}"`;
     };
 
     data = data.replace(fileRegex, replaceNames);
     flR.write(fsPath, data);
 }
 
-module.exports = { cleanData, cleanFiles, cleanPlatform, standardizeDir, standardizeFile };
+function cleanName(fileName, name) {
+    let standardName = mtchR.cleanName(name);
+    
+    const tags = fileName.match(regex.coreTags) || [];
+
+    regex.nonTagTrack.lastIndex = 0;
+    const track = regex.nonTagTrack.exec(mtchR.cleanName(fileName));
+    if (track && track[1]) tags.push(`(Track ${track[1]})`);
+
+    regex.nonTagDisc.lastIndex = 0;
+    const disc = regex.nonTagDisc.exec(mtchR.cleanName(fileName));
+    if (disc && disc[1]) tags.push(`(Disc ${disc[1]})`);
+
+    if (tags.length > 0) standardName += ' ' + tags.join(' ');
+
+    const fileType = fileName.match(regex.gameExt) || fileName.match(regex.archExt);
+    if (fileType.length > 0) standardName += fileType[0].toLowerCase();
+
+    return standardName;
+}
+
+module.exports = { cleanData, cleanFiles, cleanDir };
