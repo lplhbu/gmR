@@ -36,9 +36,11 @@ function cleanPlatformsMulti(platforms) {
 }
 
 function cleanFiles(fsPath, platforms) {
+    console.log('Cleaning files: ', fsPath);
+
     const dirs = flR.read(fsPath);
     if (!dirs) return;
-    
+
     for (const dir of dirs) {
         const dirPath = path.join(fsPath, dir);
 
@@ -50,6 +52,8 @@ function cleanFiles(fsPath, platforms) {
 }
 
 function cleanDir(fsPath, platform, game = null) {
+    console.log('Cleaning dir: ', fsPath);
+
     const files = flR.read(fsPath);
     if (!files) return;
 
@@ -72,6 +76,8 @@ function cleanDir(fsPath, platform, game = null) {
 }
 
 function cleanFile(fsPath, platform, game = null) {
+    console.log('Cleaning file: ', fsPath);
+
     const file = path.basename(fsPath);
     const fileType = path.extname(file);
     const fileBase = path.basename(file, fileType);
@@ -87,6 +93,8 @@ function cleanFile(fsPath, platform, game = null) {
 }
 
 function cleanCue(fsPath, name) {
+    console.log('Cleaning cue: ', fsPath);
+
     let data = flR.read(fsPath);
 
     const fileRegex = /FILE "(.*?)"/g;
@@ -99,6 +107,8 @@ function cleanCue(fsPath, name) {
 }
 
 function cleanName(fileName, name) {
+    console.log('Cleaning name: ', fileName, ' with: ', name);
+    
     let standardName = mtchR.cleanName(name);
     
     const tags = fileName.match(regex.coreTags) || [];
@@ -113,9 +123,10 @@ function cleanName(fileName, name) {
 
     if (tags.length > 0) standardName += ' ' + tags.join(' ');
 
-    const fileType = fileName.match(regex.gameExt) || fileName.match(regex.archExt);
-    if (fileType.length > 0) standardName += fileType[0].toLowerCase();
+    const fileType = path.extname(fileName);
+    if (fileType) standardName += fileType.toLowerCase();
 
+    console.log('Cleaned name: ', standardName);
     return standardName;
 }
 
