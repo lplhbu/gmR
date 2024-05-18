@@ -72,7 +72,7 @@ async function download(platforms, fsPath) {
                 if (downloadPath) await extractGame(downloadPath);
             }
 
-            flattenGame(extractPath, platform);
+            if (flR.check(extractPath)) flattenGame(extractPath, platform);
         }
     }
 }

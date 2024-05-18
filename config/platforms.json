@@ -32,7 +32,7 @@
     "backloggd_url": "smd",
     "myrient_url": "No-Intro/Sega%20-%20Mega%20Drive%20-%20Genesis",
     "cdromance_url": "sega_genesis_roms",
-    "file_type": ".md"
+    "file_types": [".gen", ".md", ".smd"]
   },
   {
     "name": "PC Engine CD",
@@ -41,7 +41,7 @@
     "backloggd_url": "turbografx-16-slash-pc-engine-cd",
     "myrient_url": "Redump/NEC%20-%20PC%20Engine%20CD%20%26%20TurboGrafx%20CD",
     "cdromance_url": "turbografx-cd",
-    "file_types": [".cue", ".bin"]
+    "file_types": [".cue", ".bin", ".chd"]
   },
   {
     "name": "Game Boy",
@@ -69,7 +69,7 @@
     "backloggd_url": "snes--1",
     "myrient_url": "No-Intro/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System",
     "cdromance_url": "snes-rom",
-    "file_type": ".sfc"
+    "file_types": [".sfc", ".smc"]
   },
   {
     "name": "Sega CD",
@@ -78,7 +78,7 @@
     "backloggd_url": "segacd",
     "myrient_url": "Redump/Sega%20-%20Mega%20CD%20%26%20Sega%20CD",
     "cdromance_url": "sega_cd_isos",
-    "file_types": [".cue", ".bin"]
+    "file_types": [".cue", ".bin", ".chd"]
   },
   {
     "name": "Neo Geo CD",
@@ -87,7 +87,7 @@
     "backloggd_url": "neo-geo-cd",
     "myrient_url": "Redump/SNK%20-%20Neo%20Geo%20CD",
     "cdromance_url": "neo-geo-cd",
-    "file_types": [".cue", ".bin"]
+    "file_types": [".cue", ".bin", ".chd"]
   },
   {
     "name": "Sega 32X",
@@ -104,7 +104,7 @@
     "backloggd_url": "saturn",
     "myrient_url": "Redump/Sega%20-%20Saturn",
     "cdromance_url": "sega_saturn_isos",
-    "file_types": [".cue", ".bin"]
+    "file_types": [".cue", ".bin", ".chd"]
   },
   {
     "name": "PlayStation",
@@ -113,7 +113,7 @@
     "backloggd_url": "ps",
     "myrient_url": "Redump/Sony%20-%20PlayStation",
     "cdromance_url": "psx-iso",
-    "file_types": [".cue", ".bin"]
+    "file_types": [".cue", ".bin", ".chd"]
   },
   {
     "name": "Virtual Boy",
@@ -130,7 +130,7 @@
     "backloggd_url": "n64",
     "myrient_url": "No-Intro/Nintendo%20-%20Nintendo%2064%20%28BigEndian%29",
     "cdromance_url": "n64-roms",
-    "file_type": ".z64"
+    "file_types": [".n64", ".v64", ".z64"]
   },
   {
     "name": "Neo Geo Pocket",
@@ -158,7 +158,7 @@
     "backloggd_url": "dc",
     "myrient_url": "Redump/Sega%20-%20Dreamcast",
     "cdromance_url": "dc-iso",
-    "file_types": [".cue", ".bin"]
+    "file_types": [".cdi", ".gdi", ".cue", ".bin", ".chd"]
   },
   {
     "name": "Neo Geo Pocket Color",
@@ -176,7 +176,7 @@
     "backloggd_url": "ps2",
     "myrient_url": "Redump/Sony%20-%20PlayStation%202",
     "cdromance_url": "ps2-iso",
-    "file_types": [".cue", ".bin", ".iso"]
+    "file_types": [".cue", ".bin", ".iso,", ".chd"]
   },
   {
     "name": "Game Boy Advance",
@@ -194,7 +194,7 @@
     "backloggd_url": "ngc",
     "myrient_url": "Redump/Nintendo%20-%20GameCube%20-%20NKit%20RVZ%20%5Bzstd-19-128k%5D",
     "cdromance_url": "gamecube",
-    "file_type": ".rvz"
+    "file_types": [".iso", ".rvz"]
   },
   {
     "name": "Nintendo DS",
@@ -212,7 +212,7 @@
     "backloggd_url": "psp",
     "myrient_url": "Redump/Sony%20-%20PlayStation%20Portable",
     "cdromance_url": "psp",
-    "file_type": ".iso"
+    "file_types": [".iso", ".pkg"]
   },
   {
     "name": "PlayStation 3",
@@ -220,7 +220,7 @@
     "release": "Nov 11, 2006",
     "backloggd_url": "ps3",
     "myrient_url": "Redump/Sony%20-%20PlayStation%203",
-    "file_type": ".iso"
+    "file_types": [".iso", ".pkg"]
   },
   {
     "name": "Nintendo Wii",
@@ -228,7 +228,7 @@
     "release": "Nov 19, 2006",
     "backloggd_url": "wii",
     "myrient_url": "Redump/Nintendo%20-%20Wii%20-%20NKit%20RVZ%20%5Bzstd-19-128k%5D",
-    "file_type": ".rvz"
+    "file_types": [".iso", ".rvz"]
   },
   {
     "name": "PlayStation Vita",
@@ -236,7 +236,7 @@
     "release": "Feb 15, 2011",
     "backloggd_url": "psvita",
     "myrient_url": "No-Intro/Sony%20-%20PlayStation%20Vita%20%28PSN%29%20%28Content%29",
-    "file_type": ".pkg"
+    "file_types": [".pkg", ".vpk"]
   },
   {
     "name": "Nintendo 3DS",
@@ -244,6 +244,6 @@
     "release": "Feb 26, 2011",
     "backloggd_url": "3ds",
     "myrient_url": "No-Intro/Nintendo%20-%20Nintendo%203DS%20%28Decrypted%29",
-    "file_type": ".3ds"
+    "file_types": [".3ds", ".cia"]
   }
 ]
