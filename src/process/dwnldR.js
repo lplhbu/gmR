@@ -13,19 +13,22 @@ function downloaded(fsPath, game, platform) {
     const matchNames = mtchR.matchName(game.name, files);
     if (matchNames.length == 0) return false;
 
+    const fileTypes = platform.file_types ? platform.file_types : [platform.file_type];
+
     if (game.download == 'myrient') {
         const gameTags = game.myrient_name.match(rgxR.coreTags) || [];
         const matched = matchNames.some(mn => {
             const matchTags = mn.match(rgxR.coreTags) || [];
-            return gameTags.every(gt => matchTags.includes(gt));
+            const tagMatch = gameTags.every(gt => matchTags.includes(gt));
+            const typeMatch = fileTypes.includes(path.extname(mn));
+            return tagMatch && typeMatch;
         });
         if (!matched) return false;
     }
-
-    const file = matchNames[0];
-    const fileType = path.extname(file);
-    const fileTypes = platform.file_types ? platform.file_types : [platform.file_type];
-    if (!fileType || !fileTypes.includes(fileType)) return false;
+    else {
+        const file = matchNames[0];
+        if (!fileTypes.includes(path.extname(file))) return false;
+    }
 
     return true;
 }

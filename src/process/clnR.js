@@ -106,13 +106,12 @@ function cleanCue(fsPath, name) {
     flR.write(fsPath, data);
 }
 
-function cleanName(fileName, name) {
+function cleanName(fileName, name = null) {
     console.log('Cleaning name: ', fileName, ' with: ', name);
     
-    let standardName = mtchR.cleanName(name);
+    let standardName = mtchR.cleanName(name || fileName);
 
     const tags = fileName.match(rgxR.coreTags) || [];
-
     const cleanedFileName = mtchR.cleanName(fileName);
 
     const trackMatch = cleanedFileName.match(rgxR.nonTagTrack);
