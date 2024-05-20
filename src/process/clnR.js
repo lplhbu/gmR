@@ -1,6 +1,6 @@
 const path = require('path');
 const flR = require('../util/flR.js');
-const regex = require('./regex.js');
+const rgxR = require('./rgxR.js');
 const mtchR = require('./mtchR.js');
 
 function cleanData(platforms) {
@@ -110,16 +110,16 @@ function cleanName(fileName, name) {
     console.log('Cleaning name: ', fileName, ' with: ', name);
     
     let standardName = mtchR.cleanName(name);
-    
-    const tags = fileName.match(regex.coreTags) || [];
 
-    regex.nonTagTrack.lastIndex = 0;
-    const track = regex.nonTagTrack.exec(mtchR.cleanName(fileName));
-    if (track && track[1]) tags.push(`(Track ${track[1]})`);
+    const tags = fileName.match(rgxR.coreTags) || [];
 
-    regex.nonTagDisc.lastIndex = 0;
-    const disc = regex.nonTagDisc.exec(mtchR.cleanName(fileName));
-    if (disc && disc[1]) tags.push(`(Disc ${disc[1]})`);
+    const cleanedFileName = mtchR.cleanName(fileName);
+
+    const trackMatch = cleanedFileName.match(rgxR.nonTagTrack);
+    if (trackMatch && trackMatch.length > 1 && trackMatch[1]) tags.push(`(Track ${trackMatch[1]})`);
+
+    const discMatch = cleanedFileName.match(rgxR.nonTagDisc);
+    if (discMatch && discMatch.length > 1 && discMatch[1]) tags.push(`(Disc ${discMatch[1]})`);
 
     if (tags.length > 0) standardName += ' ' + tags.join(' ');
 
@@ -130,4 +130,4 @@ function cleanName(fileName, name) {
     return standardName;
 }
 
-module.exports = { cleanData, cleanFiles, cleanDir };
+module.exports = { cleanData, cleanFiles, cleanDir, cleanName };

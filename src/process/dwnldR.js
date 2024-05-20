@@ -17,6 +17,11 @@ function downloaded(fsPath, game, platform) {
     const fileTypes = platform.file_types ? platform.file_types : [platform.file_type];
     if (!fileType || !fileTypes.includes(fileType)) return false;
 
+    if (game.download == 'myrient') {
+        cleanName = clnR.cleanName(game.myrient_name);
+        if (!files.some(f => f == cleanName)) return false;
+    }
+
     return true;
 }
 

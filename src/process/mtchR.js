@@ -1,14 +1,14 @@
 const ldR = require('../util/ldR.js');
-const regex = require('./regex.js');
+const rgxR = require('./rgxR.js');
 
 function cleanName(str, deep = false) {
 
-    str = str.replace(regex.tags, '');
-    str = str.replace(regex.archExt, '');
-    str = str.replace(regex.gameExt, '');
+    str = str.replace(rgxR.tags, '');
+    str = str.replace(rgxR.archExt, '');
+    str = str.replace(rgxR.gameExt, '');
 
     if (deep) {
-        str = str.replace(regex.lowerUpper, '$1 $2');
+        str = str.replace(rgxR.lowerUpper, '$1 $2');
         str = str.toLowerCase();
     
         str = str.replace(/'/g, ''); // apostrophe remove
@@ -29,19 +29,19 @@ function cleanName(str, deep = false) {
         str = str.replace(/no densetsu/g, 'the legend of');
         str = str.replace(/kono yo no hate de koi o utau shoujo/g, 'a girl who chants love at the bound of this world');
     
-        str = str.replace(regex.common, ' ');
+        str = str.replace(rgxR.common, ' ');
 
     }
 
-    str = str.replace(regex.spaces, ' ');
-    str = str.replace(regex.dashes, ' - ');
-    str = str.replace(regex.remove, '');
+    str = str.replace(rgxR.spaces, ' ');
+    str = str.replace(rgxR.dashes, ' - ');
+    str = str.replace(rgxR.remove, '');
 
     return str.trim();
 }
 
 const seriesRegex = /^sc|3rd$/g
-const zeroChecks = [regex.number, regex.roman, seriesRegex];
+const zeroChecks = [rgxR.number, rgxR.roman, seriesRegex];
 function scoreNames(str1, str2) {
     
     const tkn1All = cleanName(str1, true).split(' ');
