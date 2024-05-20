@@ -4,6 +4,7 @@ const myrient = require('../site/myrient.js');
 const cdromance = require('../site/cdromance.js');
 const mtchR = require('./mtchR.js');
 const clnR = require('./clnR.js');
+const rgxR = require('./rgxR.js');
 
 function downloaded(fsPath, game, platform) {
     const files = flR.read(fsPath);
@@ -12,15 +13,19 @@ function downloaded(fsPath, game, platform) {
     const matchNames = mtchR.matchName(game.name, files);
     if (matchNames.length == 0) return false;
 
+    if (game.download == 'myrient') {
+        const gameTags = game.myrient_name.match(rgxR.coreTags) || [];
+        const matched = matchNames.some(mn => {
+            const matchTags = mn.match(rgxR.coreTags) || [];
+            return gameTags.every(gt => matchTags.includes(gt));
+        });
+        if (!matched) return false;
+    }
+
     const file = matchNames[0];
     const fileType = path.extname(file);
     const fileTypes = platform.file_types ? platform.file_types : [platform.file_type];
     if (!fileType || !fileTypes.includes(fileType)) return false;
-
-    if (game.download == 'myrient') {
-        cleanName = clnR.cleanName(game.myrient_name);
-        if (!files.some(f => f == cleanName)) return false;
-    }
 
     return true;
 }
@@ -31,12 +36,12 @@ async function downloadGame(platform, game, fsPath) {
     switch (game.download) {
         case 'myrient': {
             const url = path.join(myrient.url, platform.myrient_url, game.myrient_url);
-            downloadPath = path.join(fsPath, mtchR.cleanName(game.name) + path.extname(game.myrient_name));
+            downloadPath = path.join(fsPath, clnR.cleanName(game.myrient_name, game.name) + path.extname(game.name));
             await myrient.download(url, downloadPath);
         } break;
         case 'cdromance': {
             const url = path.join(cdromance.url, platform.cdromance_url_game || platform.cdromance_url, game.cdromance_url);
-            downloadPath = path.join(fsPath, mtchR.cleanName(game.name));
+            downloadPath = path.join(fsPath, clnR.cleanName(game.name));
             downloadPath = await cdromance.download(url, downloadPath);
         } break;
     }
@@ -71,7 +76,7 @@ async function download(platforms, fsPath) {
             const platformPath = path.join(fsPath, platform.name); 
             if (downloaded(platformPath, game, platform)) continue;
 
-            const extractPath = path.join(platformPath, mtchR.cleanName(game.name));
+            const extractPath = path.join(platformPath, clnR.cleanName(game.name));
             if (!flR.check(extractPath)) {
                 const downloadPath = await downloadGame(platform, game, platformPath);
                 if (downloadPath) await extractGame(downloadPath);
