@@ -9,7 +9,7 @@ const dataPath = `./data/site/${name}.json`;
 const url = 'https://cdromance.org';
 const urlParams = {
     'language': 'english-patched',
-    'platform': 'none'
+    'platform': null
 };
 
 async function scrapePage(pageUrl) {

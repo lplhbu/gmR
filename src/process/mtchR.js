@@ -219,7 +219,7 @@ function load(platforms, prepend) {
 function choose(platforms) {
     for (const platform of platforms) {
         for (const game of platform.games) {
-            game.download = 'none';
+            game.download = null;
             if (game.myrient_score > scoreThreshold) game.download = 'myrient';
             if (game.cdromance_score > (game.myrient_score || scoreThreshold)) game.download = 'cdromance';
         }

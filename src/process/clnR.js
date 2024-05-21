@@ -106,8 +106,8 @@ function cleanCue(fsPath, name) {
     flR.write(fsPath, data);
 }
 
-function cleanName(fileName, name = null) {
-    console.log('Cleaning name: ', fileName, ' with: ', name);
+function cleanName(fileName, name = null, skipFileType = false) {
+    //console.log('Cleaning name: ', fileName, ' with: ', name);
     
     let standardName = mtchR.cleanName(name || fileName);
 
@@ -122,10 +122,12 @@ function cleanName(fileName, name = null) {
 
     if (tags.length > 0) standardName += ' ' + tags.join(' ');
 
-    const fileType = path.extname(fileName);
-    if (fileType) standardName += fileType.toLowerCase();
+    if (!skipFileType) {
+        const fileType = path.extname(fileName);
+        if (fileType) standardName += fileType.toLowerCase();
+    }
 
-    console.log('Cleaned name: ', standardName);
+    //console.log('Cleaned name: ', standardName);
     return standardName;
 }
 

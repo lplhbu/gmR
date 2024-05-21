@@ -15,19 +15,20 @@ function downloaded(fsPath, game, platform) {
 
     const fileTypes = platform.file_types ? platform.file_types : [platform.file_type];
 
-    if (game.download == 'myrient') {
-        const gameTags = game.myrient_name.match(rgxR.coreTags) || [];
-        const matched = matchNames.some(mn => {
-            const matchTags = mn.match(rgxR.coreTags) || [];
-            const tagMatch = gameTags.every(gt => matchTags.includes(gt));
-            const typeMatch = fileTypes.includes(path.extname(mn));
-            return tagMatch && typeMatch;
-        });
-        if (!matched) return false;
-    }
-    else {
-        const file = matchNames[0];
-        if (!fileTypes.includes(path.extname(file))) return false;
+    switch (game.download) {
+        case 'myrient': {
+            const gameTags = game.myrient_name.match(rgxR.coreTags) || [];
+            const matched = matchNames.some(mn => {
+                const matchTags = mn.match(rgxR.coreTags) || [];
+                const tagMatch = gameTags.every(gt => matchTags.includes(gt));
+                const typeMatch = fileTypes.includes(path.extname(mn));
+                return tagMatch && typeMatch;
+            });
+            if (!matched) return false;
+        } break;
+        case 'cdromance': {
+            if (!fileTypes.includes(path.extname(matchNames[0]))) return false;
+        } break;
     }
 
     return true;
@@ -76,10 +77,13 @@ function flattenDir(fsPath, platform) {
 async function download(platforms, fsPath) {
     for (const platform of platforms) {
         for (const game of platform.games) {
+            if (!game.download) continue;
+
             const platformPath = path.join(fsPath, platform.name); 
             if (downloaded(platformPath, game, platform)) continue;
 
-            const extractPath = path.join(platformPath, clnR.cleanName(game.name));
+            const extractPath = path.join(platformPath, clnR.cleanName(game[`${game.download}_name`], game.name, true));
+            console.log(extractPath);
             if (!flR.check(extractPath)) {
                 const downloadPath = await downloadGame(platform, game, platformPath);
                 if (downloadPath) await extractGame(downloadPath);
