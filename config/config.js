@@ -1,13 +1,16 @@
 const flR = require('../src/util/flR.js');
 
-const config = {}
-config.gamePath = './game';
-config.configFile = './config.json';
-config.platformsFile = './config/platforms.json';
-config.finalFile = './final.json';
+const config = {
+    gamePath: './game',
+    configFile: './config.json',
+    platformsFile: './config/platforms.json',
+    finalFile: './final.json'
+};
 
-// read settings from user config file
+// Read settings from the user config file
 const configData = JSON.parse(flR.readFileSync(config.configFile) || '{}');
-if (configData.path) config.gamePath = configData.path;
-  
+if (configData.path) {
+    config.gamePath = configData.path;
+}
+
 module.exports = config;
