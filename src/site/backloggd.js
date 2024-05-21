@@ -38,7 +38,7 @@ async function scrapeRatingPage(url, page) {
     }
     scrapeData.games = games;
 
-    return scrapeData
+    return scrapeData;
 }
 
 async function scrapeRatings(platform) {

@@ -8,12 +8,12 @@ const rgxR = require('./rgxR.js');
 
 function downloaded(fsPath, game, platform) {
     const files = flR.read(fsPath);
-    if (!files) return;
+    if (!files) return false;
 
     const matchNames = mtchR.matchName(game.name, files);
-    if (matchNames.length == 0) return false;
+    if (matchNames.length === 0) return false;
 
-    const fileTypes = platform.file_types ? platform.file_types : [platform.file_type];
+    const fileTypes = platform.file_types || [platform.file_type];
 
     switch (game.download) {
         case 'myrient': {
@@ -21,17 +21,17 @@ function downloaded(fsPath, game, platform) {
             const matched = matchNames.some(mn => {
                 const matchTags = mn.match(rgxR.coreTags) || [];
                 const tagMatch = gameTags.every(gt => matchTags.includes(gt));
-                const typeMatch = fileTypes.includes(path.extname(mn));
+                const typeMatch = fileTypes.includes(path.extname(mn).toLowerCase());
                 return tagMatch && typeMatch;
             });
-            if (!matched) return false;
-        } break;
+            return matched;
+        }
         case 'cdromance': {
-            if (!fileTypes.includes(path.extname(matchNames[0]))) return false;
-        } break;
+            return fileTypes.includes(path.extname(matchNames[0]).toLowerCase());
+        }
+        default:
+            return false;
     }
-
-    return true;
 }
 
 async function downloadGame(platform, game, fsPath) {
@@ -42,12 +42,14 @@ async function downloadGame(platform, game, fsPath) {
             const url = path.join(myrient.url, platform.myrient_url, game.myrient_url);
             downloadPath = path.join(fsPath, clnR.cleanName(game.myrient_name, game.name) + path.extname(game.name));
             await myrient.download(url, downloadPath);
-        } break;
+            break;
+        }
         case 'cdromance': {
             const url = path.join(cdromance.url, platform.cdromance_url_game || platform.cdromance_url, game.cdromance_url);
             downloadPath = path.join(fsPath, clnR.cleanName(game.name));
             downloadPath = await cdromance.download(url, downloadPath);
-        } break;
+            break;
+        }
     }
 
     return downloadPath;
@@ -59,7 +61,7 @@ async function extractGame(fsPath) {
     const extractPath = path.join(dir, name);
     await flR.extract(fsPath, extractPath);
     flR.remove(fsPath);
-    return extractPath
+    return extractPath;
 }
 
 function flattenGame(fsPath, platform) {
@@ -83,13 +85,12 @@ async function download(platforms, fsPath) {
             if (downloaded(platformPath, game, platform)) continue;
 
             const extractPath = path.join(platformPath, clnR.cleanName(game[`${game.download}_name`], game.name, true));
-            console.log(extractPath);
-            if (!flR.check(extractPath)) {
+            if (!flR.fileExists(extractPath)) {
                 const downloadPath = await downloadGame(platform, game, platformPath);
                 if (downloadPath) await extractGame(downloadPath);
             }
 
-            if (flR.check(extractPath)) flattenGame(extractPath, platform);
+            if (flR.fileExists(extractPath)) flattenGame(extractPath, platform);
         }
     }
 }

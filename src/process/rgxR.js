@@ -13,4 +13,4 @@ module.exports = {
     common: /\s*\b(the|in|of|and)\b\s*/ig,
     number: /(\d+[\.\d+]?)/,
     roman: /^(m{0,3})(cm|cd|d?c{0,3})(xc|xl|l?x{0,3})(ix|iv|v?i{0,3})$/ig,
-}
+};

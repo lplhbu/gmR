@@ -2,50 +2,45 @@ const ldR = require('../util/ldR.js');
 const rgxR = require('./rgxR.js');
 
 function cleanName(str, deep = false) {
-
-    str = str.replace(rgxR.tags, '');
-    str = str.replace(rgxR.archExt, '');
-    str = str.replace(rgxR.gameExt, '');
+    str = str.replace(rgxR.tags, '')
+             .replace(rgxR.archExt, '')
+             .replace(rgxR.gameExt, '');
 
     if (deep) {
-        str = str.replace(rgxR.lowerUpper, '$1 $2');
-        str = str.toLowerCase();
-    
-        str = str.replace(/'/g, ''); // apostrophe remove
-        str = str.replace(/é/g, 'e'); // pokemon
-        str = str.replace(/ō/g, "oo") // okami Ōkami
-        str = str.replace(/\$/g, 's'); // warioware microgames
-        str = str.replace(/megaman/g, 'mega man'); // megaman
-        str = str.replace(/infamous/g, 'in famous');
-        str = str.replace(/³/g, ' cube');
-        str = str.replace(/\^3/g, ' cube');
-        str = str.replace(/a telltale games series/g, '');
-        str = str.replace(/^portal$/g, 'the orange box');
-    
-        str = str.replace(/taisen/g, 'wars');
-        str = str.replace(/gyakuten kenji/g, 'ace attorney investigations');
-        str = str.replace(/eiyuu densetsu/g, 'the legend of heroes');
-        str = str.replace(/sora no kiseki/g, 'trails in the sky');
-        str = str.replace(/no densetsu/g, 'the legend of');
-        str = str.replace(/kono yo no hate de koi o utau shoujo/g, 'a girl who chants love at the bound of this world');
-    
-        str = str.replace(rgxR.common, ' ');
-
+        str = str.replace(rgxR.lowerUpper, '$1 $2')
+                 .toLowerCase()
+                 .replace(/'/g, '') // apostrophe remove
+                 .replace(/é/g, 'e') // pokemon
+                 .replace(/ō/g, 'oo') // okami Ōkami
+                 .replace(/\$/g, 's') // warioware microgames
+                 .replace(/megaman/g, 'mega man') // megaman
+                 .replace(/infamous/g, 'in famous')
+                 .replace(/³/g, ' cube')
+                 .replace(/\^3/g, ' cube')
+                 .replace(/a telltale games series/g, '')
+                 .replace(/^portal$/g, 'the orange box')
+                 .replace(/taisen/g, 'wars')
+                 .replace(/gyakuten kenji/g, 'ace attorney investigations')
+                 .replace(/eiyuu densetsu/g, 'the legend of heroes')
+                 .replace(/sora no kiseki/g, 'trails in the sky')
+                 .replace(/no densetsu/g, 'the legend of')
+                 .replace(/kono yo no hate de koi o utau shoujo/g, 'a girl who chants love at the bound of this world')
+                 .replace(rgxR.common, ' ');
     }
 
-    str = str.replace(rgxR.spaces, ' ');
-    str = str.replace(rgxR.dashes, ' - ');
-    str = str.replace(rgxR.remove, '');
+    str = str.replace(rgxR.spaces, ' ')
+             .replace(rgxR.dashes, ' - ')
+             .replace(rgxR.remove, '');
 
     return str.trim();
 }
 
-const seriesRegex = /^sc|3rd$/g
+const seriesRegex = /^sc|3rd$/g;
 const zeroChecks = [rgxR.number, rgxR.roman, seriesRegex];
+
 function scoreNames(str1, str2) {
-    
     const tkn1All = cleanName(str1, true).split(' ');
-    const tkn2All= cleanName(str2, true).split(' ');
+    const tkn2All = cleanName(str2, true).split(' ');
     const tkn1Used = tkn1All.filter(token => tkn2All.includes(token));
     const tkn2Used = tkn2All.filter(token => tkn1All.includes(token));
     const tkn1Left = tkn1All.filter(token => !tkn2All.includes(token));
@@ -56,82 +51,45 @@ function scoreNames(str1, str2) {
     const minPoints = Math.min(points1, points2);
     const maxPoints = Math.max(points1, points2);
 
-    let points = (points1 * points2);
+    let points = points1 * points2;
     points += (maxPoints - minPoints) * maxPoints * 0.8;
-
-    // if (tkn1All.includes('baroque') && tkn2All.includes('baroque')) {
-    //     console.log(tkn1All);
-    //     console.log(tkn2All);
-    // }
 
     for (const check of zeroChecks) {
         if (tkn1Left.some(tkn => tkn.match(check)) && !tkn1Used.some(tkn => tkn.match(check))) points = 0;
         if (tkn2Left.some(tkn => tkn.match(check)) && !tkn2Used.some(tkn => tkn.match(check))) points = 0;
-        if (points == 0) break;
+        if (points === 0) break;
     }
 
     return points;
 }
 
 function scoreTag(tag) {
+    const demoTags = ['(Beta)', '(Demo)', '(DLC)', '(Proto)', '(Trial)', '(Theme)', '(Soundtrack)', '(Avatar)'];
+    const discTags = ['(Disc '];
+    const regionTags = ['(World)', '(USA)', '(NTSC)', '(English', '(En)', 'USA, ', ', USA', 'En,', ',En'];
+    const editionTags = ['(RE)', '(GB Compatible)', '(SGB Enhanced)', '(NDSi Enhanced)', '(Wii U Virtual Console)', '(Virtual Console)', '(Aftermarket)', '(Unl)'];
+    const revisionTags = ['(Rev ', '(v', 'M)'];
+    const regionScores = {
+        '(Europe)': 0.84, 'Europe, ': 0.84, ', Europe': 0.84, '(PAL)': 0.84,
+        '(Japan)': 0.8, 'Japan, ': 0.8, ', Japan': 0.8
+    };
 
-    // Demos
-    if (tag.includes('(Beta)') ||
-        tag.includes('(Demo)') ||
-        tag.includes('(DLC)') ||
-        tag.includes('(Proto)') ||
-        tag.includes('(Trial)') ||
-        tag.includes('(Theme)') ||
-        tag.includes('(Soundtrack)') ||
-        tag.includes('(Avatar)')) return 0;
+    if (demoTags.some(demoTag => tag.includes(demoTag))) return 0;
+    if (discTags.some(discTag => tag.includes(discTag))) return 1;
+    if (regionTags.some(regionTag => tag.includes(regionTag))) return 1;
+    if (editionTags.some(editionTag => tag.includes(editionTag))) return 0.96;
 
-    // Discs
-    if (tag.includes('(Disc ')) return 1;
-
-    // Regions
-    if (tag.includes('(World)') ||
-        tag.includes('(USA)') ||
-        tag.includes('(NTSC)') ||
-        tag.includes('(English') || 
-        tag.includes('(En)')) return 1;
-
-    if (tag.includes('USA, ') ||
-        tag.includes(', USA') ||
-        tag.includes('En,') || 
-        tag.includes(',En')) return 1;
-
-    // Editions
-    if (tag.includes('(RE)') ||
-        tag.includes('(GB Compatible)') ||
-        tag.includes('(SGB Enhanced)') ||
-        tag.includes('(NDSi Enhanced)') ||
-        tag.includes('(Wii U Virtual Console)') ||
-        tag.includes('(Virtual Console)') ||
-        tag.includes('(Aftermarket)')||
-        tag.includes('(Unl)')) return 0.96;
-
-    if (tag.includes('(Rev ') || 
-        tag.includes('(v') || 
-        tag.includes('M)')) { 
-
-        var numberString = tag.match(/\([^)\d]*([\d.]*).*?\)/)[1];
+    if (revisionTags.some(revisionTag => tag.includes(revisionTag))) {
+        const numberString = tag.match(/\([^)\d]*([\d.]*).*?\)/)[1];
         const firstDotIndex = numberString.indexOf('.');
         let number = Number(numberString.slice(0, firstDotIndex) + '.' + numberString.slice(firstDotIndex + 1).replace(/\./g, ''));
-        if (number < 10) number /= 10;
-        else if (number < 100) number /= 100;
-        else if (number < 1000) number /= 1000;
-        else if (number < 10000) number /= 10000;
+        number /= [1, 10, 100, 1000, 10000].find(div => number < div * 10);
         return 1 - number;
     }
 
-    if (tag.includes('(Europe)') ||
-        tag.includes('Europe, ') ||
-        tag.includes(', Europe') ||
-        tag.includes('(PAL)')) return 0.84;
-
-    if (tag.includes('(Japan)') ||
-        tag.includes('Japan, ') ||
-        tag.includes(', Japan')) return 0.8;
+    for (const [regionTag, score] of Object.entries(regionScores)) {
+        if (tag.includes(regionTag)) return score;
+    }
 
     return 0.64;
 }
@@ -146,6 +104,7 @@ function scoreTags(str) {
 }
 
 const scoreThreshold = 0.5;
+
 function score(name, otherName) {
     let points = scoreNames(name, otherName);
     points *= scoreTags(otherName);
@@ -157,12 +116,11 @@ function matchName(name, names) {
     let highScore = scoreThreshold;
     for (const otherName of names) {
         const points = score(name, otherName);
-        if (points == 0) continue;
-        
+        if (points === 0) continue;
         if (points > highScore) {
             matchNames = [otherName];
             highScore = points;
-        } else if (points == highScore) {
+        } else if (points === highScore) {
             matchNames.push(otherName);
         }
     }
@@ -171,18 +129,17 @@ function matchName(name, names) {
 
 function matchGame(game, games) {
     const matchNames = matchName(game.name, games.map(g => g.name));
-    const matchGames = matchNames.map(n => { return { ...games.find(g => g.name == n) }; });
+    const matchGames = matchNames.map(n => ({ ...games.find(g => g.name === n) }));
     matchGames.forEach(mg => mg.score = score(game.name, mg.name));
     return matchGames;
 }
 
-// find matching games
 function matchAll(platforms, otherPlatforms) {
     const matchData = [];
     for (const platform of platforms) {
         const games = [];
 
-        const otherPlatform = otherPlatforms.find(p => p.name == platform.name);
+        const otherPlatform = otherPlatforms.find(p => p.name === platform.name);
         if (!otherPlatform) continue;
 
         for (const game of platform.games) {
@@ -190,12 +147,11 @@ function matchAll(platforms, otherPlatforms) {
             games.push(matchGames);
         }
 
-        matchData.push({ 'name': platform.name, 'games': games });
+        matchData.push({ name: platform.name, games });
     }
     return matchData;
 }
 
-// parse and load match data
 function load(platforms, prepend) {
     for (const platform of platforms) {
         const games = [];
@@ -205,17 +161,16 @@ function load(platforms, prepend) {
                 const match = matches[i];
                 const game = {};
                 ldR.load(game, source);
-                ldR.load(game, match, null, Object.keys(match), Object.keys(match).map(k => prepend + '_' + k));
+                ldR.load(game, match, null, Object.keys(match), Object.keys(match).map(k => `${prepend}_${k}`));
                 matches[i] = game;
             }
-            if (matches.length == 0) matches.push(source);
+            if (matches.length === 0) matches.push(source);
             games.push(...matches);
         }
         platform.games = games;
     }
 }
 
-// choose myrient or cdromance
 function choose(platforms) {
     for (const platform of platforms) {
         for (const game of platform.games) {

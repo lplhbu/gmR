@@ -118,7 +118,7 @@ async function download(url, fsPath) {
     const link = elements[0].link;
     fsPath += path.extname(elements[0].file);
 
-    const bytesDownloaded = flR.check(fsPath) ? flR.size(fsPath) : 0;
+    const bytesDownloaded = flR.fileExists(fsPath) ? flR.getFileSize(fsPath) : 0;
     const ntwrkRParams = {
         headers: { 'Range': `bytes=${bytesDownloaded}-` },
         responseType: 'stream',

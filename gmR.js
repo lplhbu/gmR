@@ -20,10 +20,9 @@ async function run() {
     const scriptProcess = spawn('node', ['./src/app.js', 'child']);
 
     scriptProcess.on('exit', async (code) => {
-        // exit on 255
-        if (code == 255) return 0;
+        if (code === 255) return 0;
 
-        console.log(`Main script exited with code ${code}. Restarting in ${restartTimeout/1000}s...`);
+        console.log(`Main script exited with code ${code}. Restarting in ${restartTimeout / 1000}s...`);
         await new Promise(resolve => setTimeout(resolve, restartTimeout));
         parent();
     });
