@@ -40,25 +40,25 @@ function list(data) {
             final += game + '\n';
         }
     }
-    flR.write(`./data/lists/difficulty_${data.difficulty}.txt`, final);
+    flR.writeFileSync(`./data/lists/difficulty_${data.difficulty}.txt`, final);
 }
 
 async function main() {
-    const configData = JSON.parse(flR.read(config.configFile) || '{}');
+    const configData = JSON.parse(flR.readFileSync(config.configFile) || '{}');
     const data = { 
         'difficulty': -1,
         'platforms': configData.platforms.map(p => { return { 'name': p }; })
     };
 
-    const allPlatformData = JSON.parse(flR.read(config.platformsFile) || '[]');
+    const allPlatformData = JSON.parse(flR.readFileSync(config.platformsFile) || '[]');
     ldR.load(data.platforms, allPlatformData, 'name');
 
-    const finalData = JSON.parse(flR.read(config.finalFile) || '[]');
+    const finalData = JSON.parse(flR.readFileSync(config.finalFile) || '[]');
     if (finalData.difficulty == configData.difficulty) ldR.load(data.platforms, finalData.platforms, 'name');
     else await scrapeManipulate(data.platforms, allPlatformData, configData.difficulty);
 
     data.difficulty = configData.difficulty;
-    flR.write(config.finalFile, JSON.stringify(data, null, 2));
+    flR.writeFileSync(config.finalFile, JSON.stringify(data, null, 2));
     list(data);
     
     if (configData.clean) clnR.cleanFiles(config.gamePath, data.platforms);

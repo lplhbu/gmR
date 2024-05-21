@@ -38,7 +38,7 @@ function cleanPlatformsMulti(platforms) {
 function cleanFiles(fsPath, platforms) {
     console.log('Cleaning files:', fsPath);
 
-    const dirs = flR.read(fsPath);
+    const dirs = flR.readFileSync(fsPath);
     if (!dirs) return;
 
     for (const dir of dirs) {
@@ -55,7 +55,7 @@ function cleanFiles(fsPath, platforms) {
 }
 
 function cleanDir(fsPath, platform, game = null) {
-    const files = flR.read(fsPath);
+    const files = flR.readFileSync(fsPath);
     if (!files) return;
 
     const fileTypes = ['.zip', '.7z'];
@@ -67,7 +67,7 @@ function cleanDir(fsPath, platform, game = null) {
         const fileBase = path.basename(file, fileType);
         const filePath = path.join(fsPath, file);
 
-        if (flR.isDir(filePath)) {
+        if (flR.isDirectory(filePath)) {
             cleanDir(filePath, platform, game || fileBase);
         } else if (fileTypes.includes(fileType.toLowerCase())) {
             cleanFile(filePath, platform, game || fileBase);
@@ -76,7 +76,7 @@ function cleanDir(fsPath, platform, game = null) {
         }
     }
 
-    const postFiles = flR.read(fsPath);
+    const postFiles = flR.readFileSync(fsPath);
     if (postFiles.length === 0) flR.remove(fsPath);
 }
 
@@ -95,17 +95,17 @@ function cleanFile(fsPath, platform, game = null) {
     }
 
     if (fileType.toLowerCase() === '.cue') cleanCue(fsPath, game);
-    flR.rename(fsPath, cleanName(file, game));
+    flR.renameFile(fsPath, cleanName(file, game));
 }
 
 function cleanCue(fsPath, name) {
-    let data = flR.read(fsPath);
+    let data = flR.readFileSync(fsPath);
 
     const fileRegex = /FILE "(.*?)"/g;
     const replaceNames = (match, fileName) => `FILE "${cleanName(fileName, name)}"`;
 
     const newData = data.replace(fileRegex, replaceNames);
-    if (newData != data) flR.write(fsPath, data);
+    if (newData != data) flR.writeFileSync(fsPath, data);
 }
 
 function cleanName(fileName, name = null, skipFileType = false) {

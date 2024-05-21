@@ -7,7 +7,7 @@ config.platformsFile = './config/platforms.json';
 config.finalFile = './final.json';
 
 // read settings from user config file
-const configData = JSON.parse(flR.read(config.configFile) || '{}');
+const configData = JSON.parse(flR.readFileSync(config.configFile) || '{}');
 if (configData.path) config.gamePath = configData.path;
   
 module.exports = config;

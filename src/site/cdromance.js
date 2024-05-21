@@ -54,14 +54,14 @@ async function scrapePlatform(platform) {
 }
 
 async function scrape(platforms) {
-    const data = JSON.parse(flR.read(dataPath) || '[]');
+    const data = JSON.parse(flR.readFileSync(dataPath) || '[]');
 
     for (const platform of platforms) {
         if (data.find(p => p.name === platform.name)) continue;
 
         const games = await scrapePlatform(platform);
         data.push({ name: platform.name, games });
-        flR.write(dataPath, JSON.stringify(data, null, 2));
+        flR.writeFileSync(dataPath, JSON.stringify(data, null, 2));
     }
 
     return data;

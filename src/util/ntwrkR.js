@@ -4,7 +4,7 @@ async function get(url, params = {}) {
     let data;
     console.log('Retrieving:', url);
     try {
-        const response = await axios.get(url, { params });
+        const response = await axios.get(url, params);
         data = response.data;
         console.log('Retrieved successfully');
     } catch (error) {

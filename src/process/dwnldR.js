@@ -7,7 +7,7 @@ const clnR = require('./clnR.js');
 const rgxR = require('./rgxR.js');
 
 function downloaded(fsPath, game, platform) {
-    const files = flR.read(fsPath);
+    const files = flR.readFileSync(fsPath);
     if (!files) return false;
 
     const matchNames = mtchR.matchName(game.name, files);
@@ -65,7 +65,7 @@ async function extractGame(fsPath) {
 }
 
 function flattenGame(fsPath, platform) {
-    const innerDirs = flR.read(fsPath).filter(file => flR.isDir(path.join(fsPath, file)));
+    const innerDirs = flR.readFileSync(fsPath).filter(file => flR.isDirectory(path.join(fsPath, file)));
     innerDirs.forEach(id => flattenDir(path.join(fsPath, id), platform));
     flattenDir(fsPath, platform);
     flR.remove(fsPath);
@@ -73,7 +73,7 @@ function flattenGame(fsPath, platform) {
 
 function flattenDir(fsPath, platform) {
     clnR.cleanDir(fsPath, platform);
-    flR.flatten(fsPath);
+    flR.flattenDirectory(fsPath);
 }
 
 async function download(platforms, fsPath) {
