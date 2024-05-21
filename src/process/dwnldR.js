@@ -40,7 +40,7 @@ async function downloadGame(platform, game, fsPath) {
     switch (game.download) {
         case 'myrient': {
             const url = path.join(myrient.url, platform.myrient_url, game.myrient_url);
-            downloadPath = path.join(fsPath, clnR.cleanName(game.myrient_name, game.name) + path.extname(game.name));
+            downloadPath = path.join(fsPath, clnR.cleanName(game.myrient_name, game.name));
             await myrient.download(url, downloadPath);
             break;
         }
