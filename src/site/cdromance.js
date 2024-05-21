@@ -45,7 +45,7 @@ async function scrapePlatform(platform) {
     let pages = 1;
     for (let page = 1; page <= pages; page++) {
         const pageUrl = path.join(url, 'translations/page', String(page), '?' + ntwrkR.getParams(urlParams, '=', '&'));
-        const scrapeData = await scrapePage(pageUrl);
+        const scrapeData = await scrapePage(pageUrl, page);
         if (scrapeData.pages) pages = Math.max(pages, scrapeData.pages);
         if (scrapeData.games) games.push(...scrapeData.games);
     }
