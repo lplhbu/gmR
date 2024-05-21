@@ -99,8 +99,27 @@ async function download(url, fsPath) {
     };
     const ajaxData = await ntwrkR.get(ajaxUrl, ajaxParm);
     const linkSelector = 'div.download-links.table a';
-    const fileElements = scrpR.getElements(ajaxData, linkSelector, 'text');
-    const file = fileElements.filter(le => le.toLowerCase().replace(/\s*[^a-z0-9]\s*/g, ' ').match(/\ben/g))[0];
+    const files = scrpR.getElements(ajaxData, linkSelector, 'text');
+    const order = [/\ben/g, /\bcdi/g];
+    files.sort((a, b) => {
+        // Normalize the strings by converting to lowercase and removing non-alphanumeric characters
+        const al = a.toLowerCase().replace(/\s*[^a-z0-9]\s*/g, ' ');
+        const bl = b.toLowerCase().replace(/\s*[^a-z0-9]\s*/g, ' ');
+
+        // Iterate over the regular expressions in the order array
+        for (const ord of order) {
+            const alo = al.match(ord);
+            const blo = bl.match(ord);
+
+            // Compare matches
+            if (alo && !blo) return -1;
+            else if (blo && !alo) return 1;
+        }
+
+        // If neither string matches any of the patterns, consider them equal for this criteria
+        return 0;
+    });
+    const file = files[0];
     const linkElements = scrpR.getElements(ajaxData, linkSelector, 'href');
     const link = linkElements[fileElements.indexOf(file)];
     fsPath += path.extname(file);
