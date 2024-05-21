@@ -35,7 +35,7 @@ function cleanName(str, deep = false) {
     return str.trim();
 }
 
-const seriesRegex = /^sc|3rd$/g;
+const seriesRegex = /^sc|3rd$/ig;
 const zeroChecks = [rgxR.number, rgxR.roman, seriesRegex];
 
 function scoreNames(str1, str2) {
@@ -53,6 +53,13 @@ function scoreNames(str1, str2) {
 
     let points = points1 * points2;
     points += (maxPoints - minPoints) * maxPoints * 0.8;
+
+    if (str1.includes('Mega Man Star Force 3') && points > 0.5) {
+        console.log("WTF");
+        console.log(tkn1All);
+        console.log(tkn2All);
+        console.log(points);
+    }
 
     for (const check of zeroChecks) {
         if (tkn1Left.some(tkn => tkn.match(check)) && !tkn1Used.some(tkn => tkn.match(check))) points = 0;
@@ -83,7 +90,7 @@ function scoreTag(tag) {
         const numberString = tag.match(/\([^)\d]*([\d.]*).*?\)/)[1];
         const firstDotIndex = numberString.indexOf('.');
         let number = Number(numberString.slice(0, firstDotIndex) + '.' + numberString.slice(firstDotIndex + 1).replace(/\./g, ''));
-        number /= [1, 10, 100, 1000, 10000].find(div => number < div * 10);
+        number /= [1, 10, 100, 1000, 10000].find(div => number < div);
         return 1 - number;
     }
 
