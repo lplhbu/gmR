@@ -121,7 +121,7 @@ async function download(url, fsPath) {
     });
     const file = files[0];
     const linkElements = scrpR.getElements(ajaxData, linkSelector, 'href');
-    const link = linkElements[fileElements.indexOf(file)];
+    const link = linkElements[files.indexOf(file)];
     fsPath += path.extname(file);
 
     const bytesDownloaded = flR.check(fsPath) ? flR.size(fsPath) : 0;
