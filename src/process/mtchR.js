@@ -54,13 +54,6 @@ function scoreNames(str1, str2) {
     let points = points1 * points2;
     points += (maxPoints - minPoints) * maxPoints * 0.8;
 
-    if (str1.includes('Mega Man Star Force 3') && points > 0.5) {
-        console.log("WTF");
-        console.log(tkn1All);
-        console.log(tkn2All);
-        console.log(points);
-    }
-
     for (const check of zeroChecks) {
         if (tkn1Left.some(tkn => tkn.match(check)) && !tkn1Used.some(tkn => tkn.match(check))) points = 0;
         if (tkn2Left.some(tkn => tkn.match(check)) && !tkn2Used.some(tkn => tkn.match(check))) points = 0;
