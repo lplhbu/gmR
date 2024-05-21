@@ -98,7 +98,7 @@ async function download(url, fsPath) {
     const elements = fileElements.map((file, index) => ({
         file,
         link: linkElements[index]
-    }));
+    })).slice(1);
 
     const order = [/\ben/g, /\bcdi/g];
     elements.sort((a, b) => {
