@@ -166,6 +166,7 @@ function renameFile(filePath, newFileName) {
     console.log('Renaming file:', filePath);
     fs.renameSync(filePath, newFilePath);
     console.log('Renamed file:', newFilePath);
+    return newFilePath;
 }
 
 function moveFile(filePath, destinationDir) {

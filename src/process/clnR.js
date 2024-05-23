@@ -58,7 +58,8 @@ function cleanDir(fsPath, platform, game = null) {
     const files = flR.readFileSync(fsPath);
     if (!files) return;
 
-    const fileTypes = ['.zip', '.7z'];
+    const archiveTypes = ['.zip', '.7z'];
+    const fileTypes = [];
     if (platform.file_type) fileTypes.push(platform.file_type);
     if (platform.file_types) fileTypes.push(...platform.file_types);
 
@@ -69,8 +70,12 @@ function cleanDir(fsPath, platform, game = null) {
 
         if (flR.isDirectory(filePath)) {
             cleanDir(filePath, platform, game || fileBase);
+        } else if (archiveTypes.includes(fileType.toLowerCase())) {
+            cleanFile(filePath, platform, game);
+            const extracted = files.some(f => fileTypes.includes(path.extname(f).toLowerCase()) && path.basename(f, path.extname(f)) == fileBase);
+            if (extracted) flR.remove(filePath);
         } else if (fileTypes.includes(fileType.toLowerCase())) {
-            cleanFile(filePath, platform, game || fileBase);
+            cleanFile(filePath, platform, game);
         } else {
             flR.remove(filePath);
         }
