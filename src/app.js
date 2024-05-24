@@ -62,7 +62,7 @@ async function main() {
     list(data);
     
     if (configData.clean) clnR.cleanFiles(config.gamePath, data.platforms);
-    await dwnldR.download(data.platforms, config.gamePath);
+    await dwnldR.download(config.gamePath, data.platforms);
     process.exit(255);
 }
 
