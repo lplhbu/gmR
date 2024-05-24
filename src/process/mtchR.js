@@ -6,10 +6,13 @@ function cleanName(str, deep = false) {
              .replace(rgxR.archExt, '')
              .replace(rgxR.gameExt, '');
 
+    str = str.replace(rgxR.spaces, ' ')
+             .replace(rgxR.dashes, ' - ')
+             .replace(rgxR.remove, '');
+
     if (deep) {
         str = str.replace(rgxR.lowerUpper, '$1 $2')
                  .toLowerCase()
-                 .replace(/'/g, '') // apostrophe remove
                  .replace(/é/g, 'e') // pokemon
                  .replace(/ō/g, 'oo') // okami Ōkami
                  .replace(/\$/g, 's') // warioware microgames
@@ -27,10 +30,6 @@ function cleanName(str, deep = false) {
                  .replace(/kono yo no hate de koi o utau shoujo/g, 'a girl who chants love at the bound of this world')
                  .replace(rgxR.common, ' ');
     }
-
-    str = str.replace(rgxR.spaces, ' ')
-             .replace(rgxR.dashes, ' - ')
-             .replace(rgxR.remove, '');
 
     return str.trim();
 }

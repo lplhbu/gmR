@@ -18,7 +18,7 @@ async function scrapeManipulate(platformData, allPlatformData, difficulty) {
     ldR.load(platformData, backloggdData, 'name', 'games', 'games');
     clnR.cleanData(platformData);
     const peakData = pkR.peak(platformData, difficulty);
-    ldR.load(platformData, peakData, 'name', 'games', 'games');
+    ldR.load(platformData, peakData, 'name');
 
     const downloadData = mtchR.matchAll(platformData, myrientData);
     mtchR.load(downloadData, 'myrient');
@@ -36,11 +36,20 @@ function list(data) {
     for (const platform of data.platforms) {
         if (final) final += '\n';
         final += platform.name + '\n';
-        for (const game of [...new Set(platform.games.map(game => game.name))]) {
-            final += game + '\n';
+
+        final += '-\n';
+        final += platform.average.toFixed(2) + ' Average\n';
+        final += platform.deviation.toFixed(2) + ' Deviation\n';
+        final += platform.threshold.toFixed(2) + ' Threshold\n';
+        
+        final += '-\n';
+        const uniqueGameNames = new Set(platform.games.map(game => game.name));
+        for (const gameName of uniqueGameNames) {
+            const game = platform.games.find(game => game.name === gameName);
+            final += `${game.rating.toFixed(2)} ${game.name}\n`;
         }
     }
-    flR.writeFileSync(`./data/lists/difficulty_${data.difficulty}.txt`, final);
+    flR.writeFileSync(`./data/lists/difficulty_${String(data.difficulty).replace('.', '_')}.txt`, final);
 }
 
 async function main() {
