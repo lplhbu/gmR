@@ -3,8 +3,8 @@ const flR = require('../src/util/flR.js');
 const config = {
     gamePath: './game',
     configFile: './config.json',
-    platformsFile: './config/platforms.json',
-    finalFile: './final.json'
+    platformsFile: './data/platforms.json',
+    finalFile: './data/final.json'
 };
 
 // Read settings from the user config file

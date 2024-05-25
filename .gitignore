@@ -9,6 +9,7 @@ game/
 
 # Ignore Process Data
 final.json
+list.txt
 
 # Ignore vscode save
 *.save

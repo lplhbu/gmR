@@ -1,4 +1,4 @@
-const config = require('../config/config.js');
+const config = require('./config.js');
 
 const flR = require('./util/flR.js');
 const ldR = require('./util/ldR.js');
@@ -35,21 +35,21 @@ function list(data) {
     let final = '';
     for (const platform of data.platforms) {
         if (final) final += '\n';
+        
         final += platform.name + '\n';
-
-        final += '-\n';
         final += platform.average.toFixed(2) + ' Average\n';
         final += platform.deviation.toFixed(2) + ' Deviation\n';
         final += platform.threshold.toFixed(2) + ' Threshold\n';
         
         final += '-\n';
+
         const uniqueGameNames = new Set(platform.games.map(game => game.name));
         for (const gameName of uniqueGameNames) {
             const game = platform.games.find(game => game.name === gameName);
             final += `${game.rating.toFixed(2)} ${game.name}\n`;
         }
     }
-    flR.writeFileSync(`./data/lists/difficulty_${String(data.difficulty).replace('.', '_')}.txt`, final);
+    flR.writeFileSync(`./data/list.txt`, final);
 }
 
 async function main() {
