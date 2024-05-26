@@ -4,21 +4,20 @@ const unzip = require('unzipper');
 const un7z = require('node-7z');
 
 function getAbsolutePath(fsPath) {
-    if (!fsPath.startsWith('.')) return fsPath;
-    return path.join(__dirname, '../../', fsPath);
+    return fsPath.startsWith('.') ? path.join(__dirname, '../../', fsPath) : fsPath;
 }
 
-function isDirectory(fsPath) {
+function isDir(fsPath) {
     return fs.statSync(fsPath).isDirectory();
 }
 
-function ensureDirectory(fsPath) {
+function ensureDir(fsPath) {
     if (!fs.existsSync(fsPath)) {
         fs.mkdirSync(fsPath, { recursive: true });
     }
 }
 
-function fileExists(fsPath) {
+function exists(fsPath) {
     return fs.existsSync(fsPath);
 }
 
@@ -26,10 +25,10 @@ function getFileSize(fsPath) {
     return fs.statSync(fsPath).size;
 }
 
-function readFileSync(fsPath) {
+function read(fsPath) {
     fsPath = getAbsolutePath(fsPath);
-    if (!fileExists(fsPath)) return null;
-    if (isDirectory(fsPath)) {
+    if (!exists(fsPath)) return null;
+    if (isDir(fsPath)) {
         return fs.readdirSync(fsPath);
     } else {
         console.log('Reading file:', fsPath);
@@ -44,10 +43,10 @@ function readFileSync(fsPath) {
     }
 }
 
-function writeFileSync(filePath, data) {
+function write(filePath, data) {
     console.log('Saving file:', filePath);
     filePath = getAbsolutePath(filePath);
-    ensureDirectory(path.dirname(filePath));
+    ensureDir(path.dirname(filePath));
     try {
         fs.writeFileSync(filePath, data, 'utf-8');
         console.log('Saved successfully');
@@ -59,19 +58,17 @@ function writeFileSync(filePath, data) {
 async function writeStream(filePath, data, params) {
     console.log('Saving file:', filePath);
     filePath = getAbsolutePath(filePath);
-    ensureDirectory(path.dirname(filePath));
+    ensureDir(path.dirname(filePath));
     const writer = fs.createWriteStream(filePath, params);
     return new Promise((resolve, reject) => {
         writer.on('finish', () => {
             console.log('Saved successfully');
             resolve();
         });
-
         writer.on('error', error => {
             console.error('Error saving:', error);
             reject(error);
         });
-
         data.pipe(writer);
     });
 }
@@ -80,7 +77,7 @@ async function extract(filePath, extractPath = null) {
     console.log('Extracting file:', filePath);
     filePath = getAbsolutePath(filePath);
     if (!extractPath) extractPath = path.dirname(filePath);
-    ensureDirectory(extractPath);
+    ensureDir(extractPath);
 
     const ext = path.extname(filePath);
     let loaded = 0;
@@ -96,21 +93,17 @@ async function extract(filePath, extractPath = null) {
                     const mbTotal = (total / (1024 * 1024)).toFixed(2);
                     console.log(`Extracting ${path.basename(filePath)} - ${mbLoaded}mb / ${mbTotal}mb`);
                 });
-                
                 const extractStream = unzip.Extract({ path: extractPath });
                 extractStream.on('close', () => {
                     console.log('Extracted successfully');
                     resolve();
                 });
-                
                 extractStream.on('error', error => {
                     console.error('Error extracting:', error);
                     reject(error);
                 });
-
                 readStream.pipe(extractStream);
             });
-
         case '.7z':
             return new Promise((resolve, reject) => {
                 const stream = un7z.extractFull(filePath, extractPath, { $progress: true });
@@ -120,18 +113,15 @@ async function extract(filePath, extractPath = null) {
                     const mbTotal = (total / (1024 * 1024)).toFixed(2);
                     console.log(`Extracting ${path.basename(filePath)} - ${mbLoaded}mb / ${mbTotal}mb`);
                 });
-
                 stream.on('end', () => {
                     console.log('Extracted successfully');
                     resolve();
                 });
-
                 stream.on('error', error => {
                     console.error('Error extracting:', error);
                     reject(error);
                 });
             });
-
         default:
             return Promise.reject(new Error('Unsupported file format'));
     }
@@ -139,9 +129,9 @@ async function extract(filePath, extractPath = null) {
 
 function remove(fsPath) {
     fsPath = getAbsolutePath(fsPath);
-    if (!fileExists(fsPath)) return;
+    if (!exists(fsPath)) return;
 
-    if (isDirectory(fsPath)) {
+    if (isDir(fsPath)) {
         console.log('Deleting directory:', fsPath);
         try {
             fs.rmSync(fsPath, { recursive: true });
@@ -160,41 +150,45 @@ function remove(fsPath) {
     }
 }
 
-function renameFile(filePath, newFileName) {
-    const newFilePath = path.join(path.dirname(filePath), newFileName);
-    if (filePath === newFilePath) return;
-    console.log('Renaming file:', filePath);
-    fs.renameSync(filePath, newFilePath);
-    console.log('Renamed file:', newFilePath);
-    return newFilePath;
+function rename(fsPath, newName) {
+    const newPath = path.join(path.dirname(fsPath), newName);
+    if (fsPath === newPath) return;
+    console.log('Renaming:', fsPath);
+    fs.renameSync(fsPath, newPath);
+    console.log('Renamed:', newPath);
+    return newPath;
 }
 
-function moveFile(filePath, destinationDir) {
-    const destinationFilePath = path.join(destinationDir, path.basename(filePath));
-    fs.renameSync(filePath, destinationFilePath);
+function move(fsPath, newDir) {
+    const newPath = path.join(newDir, path.basename(fsPath));
+    if (fsPath === newPath) return;
+    console.log('Moving:', fsPath);
+    fs.renameSync(fsPath, newPath);
+    console.log('Moved:', newPath);
+    return newPath;
 }
 
-function flattenDirectory(dirPath) {
+function flatten(dirPath) {
     const destinationDirPath = path.dirname(dirPath);
-    const files = readFileSync(dirPath);
+    const files = read(dirPath);
     if (!files) return;
 
     for (const file of files) {
         const filePath = path.join(dirPath, file);
-        moveFile(filePath, destinationDirPath);
+        move(filePath, destinationDirPath);
     }
 }
 
 module.exports = {
-    isDirectory,
-    fileExists,
+    isDir,
+    exists,
     getFileSize,
-    readFileSync,
-    writeFileSync,
+    read,
+    write,
     writeStream,
     extract,
     remove,
-    renameFile,
-    moveFile,
-    flattenDirectory
+    rename,
+    move,
+    flatten
 };

@@ -11,7 +11,13 @@ function cleanData(platforms) {
 // Remove games released before the platform release
 function cleanPlatformsRelease(platforms) {
     for (const platform of platforms) {
-        platform.games = platform.games.filter(game => new Date(platform.release) <= new Date(game.release));
+        for (const game of platform.games) {
+            if (!game.release) continue;
+            if (new Date(platform.release) < new Date(game.release)) continue;
+
+            game.download = 'skip';
+            game.reason = 'game released before platform release';
+        }
     }
 }
 
@@ -20,15 +26,14 @@ function cleanPlatformsMulti(platforms) {
     for (const platform of platforms) {
         for (const otherPlatform of platforms) {
             if (platform === otherPlatform) continue;
-            if (new Date(platform.release) > new Date(otherPlatform.release)) continue;
+            if (new Date(platform.release) < new Date(otherPlatform.release)) continue;
 
             for (const game of platform.games) {
-                for (let i = 0; i < otherPlatform.games.length; i++) {
-                    const otherGame = otherPlatform.games[i];
+                for (const otherGame of otherPlatform.games) {
                     if (game.name !== otherGame.name) continue;
-                    if (new Date(game.release) > new Date(otherGame.release)) continue;
 
-                    otherPlatform.games.splice(i--, 1);
+                    game.download = 'skip';
+                    game.reason = 'game released on earlier platform';
                 }
             }
         }
@@ -38,7 +43,7 @@ function cleanPlatformsMulti(platforms) {
 function cleanFiles(fsPath, platforms) {
     console.log('Cleaning files:', fsPath);
 
-    const dirs = flR.readFileSync(fsPath);
+    const dirs = flR.read(fsPath);
     if (!dirs) return;
 
     for (const dir of dirs) {
@@ -55,7 +60,7 @@ function cleanFiles(fsPath, platforms) {
 }
 
 function cleanDir(fsPath, platform, game = null) {
-    const files = flR.readFileSync(fsPath);
+    const files = flR.read(fsPath);
     if (!files) return;
 
     const archiveTypes = ['.zip', '.7z'];
@@ -68,7 +73,7 @@ function cleanDir(fsPath, platform, game = null) {
         const fileBase = path.basename(file, fileType);
         const filePath = path.join(fsPath, file);
 
-        if (flR.isDirectory(filePath)) {
+        if (flR.isDir(filePath)) {
             cleanDir(filePath, platform, game || fileBase);
         } else if (archiveTypes.includes(fileType.toLowerCase())) {
             cleanFile(filePath, platform, game);
@@ -81,7 +86,7 @@ function cleanDir(fsPath, platform, game = null) {
         }
     }
 
-    const postFiles = flR.readFileSync(fsPath);
+    const postFiles = flR.read(fsPath);
     if (postFiles.length === 0) flR.remove(fsPath);
 }
 
@@ -100,47 +105,48 @@ function cleanFile(fsPath, platform, game = null) {
     }
 
     if (fileType.toLowerCase() === '.cue') cleanCue(fsPath, game);
-    flR.renameFile(fsPath, cleanName(file, game));
+    flR.rename(fsPath, cleanName(file, game));
 }
 
 function cleanCue(fsPath, name) {
-    let data = flR.readFileSync(fsPath);
+    let data = flR.read(fsPath);
 
     const fileRegex = /FILE "(.*?)"/g;
     const replaceNames = (match, fileName) => `FILE "${cleanName(fileName, name)}"`;
 
     const newData = data.replace(fileRegex, replaceNames);
-    if (newData != data) flR.writeFileSync(fsPath, data);
+    if (newData != data) flR.write(fsPath, data);
 }
 
-function cleanName(fileName, name = null, skipFileType = false) {
-    let standardName = mtchR.cleanName(name || fileName);
+function cleanName(name, game = null, skipTags = false, skipFileType = false) {
+    let cleanName = mtchR.cleanName(game || name);
 
-    const tags = fileName.match(rgxR.coreTags) || [];
-    const cleanedFileName = mtchR.cleanName(fileName);
+    if (!skipTags) {
+        const tags = name.match(rgxR.coreTags) || [];
 
-    const trackMatch = cleanedFileName.match(rgxR.nonTagTrack);
-    if (trackMatch && trackMatch.length > 1 && trackMatch[1]) {
-        tags.push(`(Track ${trackMatch[1]})`);
-    }
-
-    const discMatch = cleanedFileName.match(rgxR.nonTagDisc);
-    if (discMatch && discMatch.length > 1 && discMatch[1]) {
-        tags.push(`(Disc ${discMatch[1]})`);
-    }
-
-    if (tags.length > 0) {
-        standardName += ' ' + tags.join(' ');
-    }
-
-    if (!skipFileType) {
-        const fileType = path.extname(fileName);
-        if (fileType) {
-            standardName += fileType.toLowerCase();
+        const trackMatch = mtchR.cleanName(name).match(rgxR.nonTagTrack);
+        if (trackMatch && trackMatch.length > 1 && trackMatch[1]) {
+            tags.push(`(Track ${trackMatch[1]})`);
+        }
+    
+        const discMatch = mtchR.cleanName(name).match(rgxR.nonTagDisc);
+        if (discMatch && discMatch.length > 1 && discMatch[1]) {
+            tags.push(`(Disc ${discMatch[1]})`);
+        }
+    
+        if (tags.length > 0) {
+            cleanName += ' ' + tags.join(' ');
         }
     }
 
-    return standardName;
+    if (!skipFileType) {
+        const fileType = path.extname(name);
+        if (fileType) {
+            cleanName += fileType.toLowerCase();
+        }
+    }
+
+    return cleanName;
 }
 
 module.exports = { cleanData, cleanFiles, cleanDir, cleanName };

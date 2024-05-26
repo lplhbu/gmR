@@ -1,44 +1,27 @@
 function peakPlatform(platform, difficulty) {
-    const games = platform.games;
-
-    // Check if games array is not empty to avoid division by zero
-    if (games.length === 0) {
-        return {
-            games: [],
-            average: 0,
-            deviation: 0,
-            threshold: 0,
-        };
-    }
+    const games = platform.games.filter(game => game.download != 'skip');
+    if (games.length === 0) return;
 
     // Step 1: Calculate the mean
     const sum = games.reduce((total, game) => total + game.rating, 0);
-    const mean = sum / games.length;
+    platform.mean = sum / games.length;
 
     // Step 2: Calculate the standard deviation
-    const variance = games.reduce((total, game) => total + Math.pow(game.rating - mean, 2), 0) / games.length;
-    const standardDeviation = Math.sqrt(variance);
+    const variance = games.reduce((total, game) => total + Math.pow(game.rating - platform.mean, 2), 0) / games.length;
+    platform.deviation = Math.sqrt(variance);
 
     // Step 3: Calculate the threshold
-    const numStandardDeviations = difficulty * ((5 - mean) / 5);
-    const threshold = mean + numStandardDeviations * standardDeviation;
+    const numDeviations = difficulty * ((5 - platform.mean) / 5);
+    platform.threshold = platform.mean + numDeviations * platform.deviation;
 
-    // Step 4: Filter the games
-    const peakGames = games.filter(game => game.rating > threshold);
-
-    return {
-        games: peakGames,
-        average: mean,
-        deviation: standardDeviation,
-        threshold: threshold,
-    };
+    // Step 4: Skip games under threshold
+    platform.games = platform.games.filter(game => game.rating > platform.threshold);
 }
 
 function peak(platforms, difficulty) {
-    return platforms.map(platform => ({
-        ...platform,
-        ...peakPlatform(platform, difficulty)
-    }));
+    for (const platform of platforms) {
+        peakPlatform(platform, difficulty);
+    }
 }
 
 module.exports = { peak };

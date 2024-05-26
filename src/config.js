@@ -8,7 +8,7 @@ const config = {
 };
 
 // Read settings from the user config file
-const configData = JSON.parse(flR.readFileSync(config.configFile) || '{}');
+const configData = JSON.parse(flR.read(config.configFile) || '{}');
 if (configData.path) {
     config.gamePath = configData.path;
 }

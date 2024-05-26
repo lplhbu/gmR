@@ -41,7 +41,7 @@ async function scrapePlatform(platform) {
 }
 
 async function scrape(platforms) {
-    const data = JSON.parse(flR.readFileSync(dataPath) || '[]');
+    const data = JSON.parse(flR.read(dataPath) || '[]');
 
     for (const platform of platforms) {
         const existingPlatform = data.find(p => p.name === platform.name);
@@ -49,14 +49,14 @@ async function scrape(platforms) {
 
         const games = await scrapePlatform(platform);
         data.push({ 'name': platform.name, 'games': games });
-        flR.writeFileSync(dataPath, JSON.stringify(data, null, 2));
+        flR.write(dataPath, JSON.stringify(data, null, 2));
     }
 
     return data;
 }
 
 async function download(url, fsPath) {
-    const bytesDownloaded = flR.fileExists(fsPath) ? flR.getFileSize(fsPath) : 0;
+    const bytesDownloaded = flR.exists(fsPath) ? flR.getFileSize(fsPath) : 0;
 
     const ntwrkRParams = {
         headers: {

@@ -173,9 +173,14 @@ function load(platforms, prepend) {
 function choose(platforms) {
     for (const platform of platforms) {
         for (const game of platform.games) {
-            game.download = null;
+            if (game.download === 'skip') continue;
+
             if (game.myrient_score > scoreThreshold) game.download = 'myrient';
-            if (game.cdromance_score > (game.myrient_score || scoreThreshold)) game.download = 'cdromance';
+            else if (game.cdromance_score > (game.myrient_score || scoreThreshold)) game.download = 'cdromance';
+            else {
+                game.download = 'skip';
+                game.reason = 'no download';
+            }
         }
     }
 }

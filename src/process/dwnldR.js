@@ -2,39 +2,43 @@ const path = require('path');
 const flR = require('../util/flR.js');
 const myrient = require('../site/myrient.js');
 const cdromance = require('../site/cdromance.js');
-const mtchR = require('./mtchR.js');
 const clnR = require('./clnR.js');
 const rgxR = require('./rgxR.js');
+const { type } = require('os');
 
-function downloaded(dirPath, game, platform) {
-    const files = flR.readFileSync(dirPath);
+function downloaded(dirPath, platform, game) {
+    const files = flR.read(dirPath);
     if (!files) return false;
 
-    const matchNames = mtchR.matchName(game.name, files);
-    if (matchNames.length === 0) return false;
+    const cleanedGameName = clnR.cleanName(game.name, null, true, true);
+    const matches = files.filter(file => clnR.cleanName(file, null, true, true) === cleanedGameName);
+    if (matches.length == 0) return false;
 
     const fileTypes = platform.file_types || [platform.file_type];
-
     switch (game.download) {
         case 'myrient': {
             const gameTags = game.myrient_name.match(rgxR.coreTags) || [];
-            const matched = matchNames.some(mn => {
-                const matchTags = mn.match(rgxR.coreTags) || [];
-                const tagMatch = gameTags.every(gt => matchTags.includes(gt));
-                const typeMatch = fileTypes.includes(path.extname(mn).toLowerCase());
-                return tagMatch && typeMatch;
-            });
-            return matched;
+            for (const match of matches) {
+                const matchTags = match.match(rgxR.coreTags) || [];
+                const tagsMatch = gameTags.every(tag => matchTags.includes(tag));
+                const typeMatch = fileTypes.includes(path.extname(match).toLowerCase());
+                if (tagsMatch && typeMatch) return true;
+            }
+            return false;
         }
         case 'cdromance': {
-            return fileTypes.includes(path.extname(matchNames[0]).toLowerCase());
+            for (const match of matches) {
+                const typeMatch = fileTypes.includes(path.extname(match).toLowerCase());
+                if (typeMatch) return true;
+            }
+            return false;
         }
         default:
             return false;
     }
 }
 
-async function downloadGame(dirPath, platform, game) {
+async function downloadFile(dirPath, platform, game) {
     let downloadPath;
 
     switch (game.download) {
@@ -55,7 +59,7 @@ async function downloadGame(dirPath, platform, game) {
     return downloadPath;
 }
 
-async function extractGame(filePath) {
+async function extract(filePath) {
     const dir = path.dirname(filePath);
     const name = path.basename(filePath, path.extname(filePath));
     const extractPath = path.join(dir, name);
@@ -64,33 +68,30 @@ async function extractGame(filePath) {
     return extractPath;
 }
 
-function flattenGame(dirPath, platform) {
-    const innerDirs = flR.readFileSync(dirPath).filter(file => flR.isDirectory(path.join(dirPath, file)));
-    innerDirs.forEach(id => flattenDir(path.join(dirPath, id), platform));
-    flattenDir(dirPath, platform);
-    flR.remove(dirPath);
-}
+function flatten(dirPath, platform) {
+    const innerDirs = flR.read(dirPath).filter(file => flR.isDir(path.join(dirPath, file)));
+    innerDirs.forEach(innerDir => flatten(path.join(dirPath, innerDir), platform));
 
-function flattenDir(dirPath, platform) {
     clnR.cleanDir(dirPath, platform, path.basename(dirPath));
-    flR.flattenDirectory(dirPath);
+    flR.flatten(dirPath);
+    flR.remove(dirPath);
 }
 
 async function download(dirPath, platforms) {
     for (const platform of platforms) {
         for (const game of platform.games) {
-            if (!game.download) continue;
+            if (!game.download || game.download === 'skip') continue;
 
             const platformPath = path.join(dirPath, platform.name); 
-            if (downloaded(platformPath, game, platform)) continue;
+            if (downloaded(platformPath, platform, game)) continue;
 
-            const extractPath = path.join(platformPath, clnR.cleanName(game[`${game.download}_name`], game.name, true));
-            if (!flR.fileExists(extractPath)) {
-                const downloadPath = await downloadGame(platformPath, platform, game);
-                if (downloadPath) await extractGame(downloadPath);
+            const extractPath = path.join(platformPath, clnR.cleanName(game[`${game.download}_name`], game.name, false, true));
+            if (!flR.exists(extractPath)) {
+                const downloadPath = await downloadFile(platformPath, platform, game);
+                if (downloadPath) await extract(downloadPath);
             }
 
-            if (flR.fileExists(extractPath)) flattenGame(extractPath, platform);
+            if (flR.exists(extractPath)) flatten(extractPath, platform);
         }
     }
 }

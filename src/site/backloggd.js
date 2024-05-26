@@ -108,7 +108,7 @@ async function scrapeDates(platform) {
 }
 
 async function scrape(platforms) {
-    const data = JSON.parse(flR.readFileSync(dataPath) || '[]');
+    const data = JSON.parse(flR.read(dataPath) || '[]');
 
     for (const platform of platforms) {
         const existingPlatform = data.find(p => p.name == platform.name);
@@ -122,7 +122,7 @@ async function scrape(platforms) {
             return ratingGame;
         })
         data.push({ 'name': platform.name, 'games': games });
-        flR.writeFileSync(dataPath, JSON.stringify(data, null, 2));
+        flR.write(dataPath, JSON.stringify(data, null, 2));
     }
 
     return data

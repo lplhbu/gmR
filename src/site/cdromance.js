@@ -8,8 +8,7 @@ const name = 'cdromance';
 const dataPath = `./data/site/${name}.json`;
 const url = 'https://cdromance.org';
 const urlParams = {
-    'language': 'english-patched',
-    'platform': null
+    'language': 'english-patched'
 };
 
 async function scrapePage(pageUrl) {
@@ -54,14 +53,14 @@ async function scrapePlatform(platform) {
 }
 
 async function scrape(platforms) {
-    const data = JSON.parse(flR.readFileSync(dataPath) || '[]');
+    const data = JSON.parse(flR.read(dataPath) || '[]');
 
     for (const platform of platforms) {
         if (data.find(p => p.name === platform.name)) continue;
 
         const games = await scrapePlatform(platform);
         data.push({ name: platform.name, games });
-        flR.writeFileSync(dataPath, JSON.stringify(data, null, 2));
+        flR.write(dataPath, JSON.stringify(data, null, 2));
     }
 
     return data;
@@ -118,7 +117,7 @@ async function download(url, fsPath) {
     const link = elements[0].link;
     fsPath += path.extname(elements[0].file);
 
-    const bytesDownloaded = flR.fileExists(fsPath) ? flR.getFileSize(fsPath) : 0;
+    const bytesDownloaded = flR.exists(fsPath) ? flR.getFileSize(fsPath) : 0;
     const ntwrkRParams = {
         headers: { 'Range': `bytes=${bytesDownloaded}-` },
         responseType: 'stream',
