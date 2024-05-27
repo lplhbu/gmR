@@ -13,7 +13,7 @@ function cleanPlatformsRelease(platforms) {
     for (const platform of platforms) {
         for (const game of platform.games) {
             if (!game.release) continue;
-            if (new Date(platform.release) < new Date(game.release)) continue;
+            if (new Date(platform.release) <= new Date(game.release)) continue;
 
             game.download = 'skip';
             game.reason = 'game released before platform release';
@@ -26,7 +26,7 @@ function cleanPlatformsMulti(platforms) {
     for (const platform of platforms) {
         for (const otherPlatform of platforms) {
             if (platform === otherPlatform) continue;
-            if (new Date(platform.release) < new Date(otherPlatform.release)) continue;
+            if (new Date(platform.release) <= new Date(otherPlatform.release)) continue;
 
             for (const game of platform.games) {
                 for (const otherGame of otherPlatform.games) {

@@ -9,8 +9,7 @@ const dataPath = `./data/site/${name}.json`;
 const url = 'https://www.backloggd.com/games/lib';
 const urlParams = {
     'release_year': 'released',
-    'category': '',
-    'release_platform': ''
+    'category': 'main_game',
 };
 
 async function scrapeRatingPage(url, page) {
@@ -47,7 +46,6 @@ async function scrapeRatings(platform) {
     const platformName = platform[`${name}_url`]
     if (!platformName) return games;
 
-    urlParams['category'] = 'main_game';
     urlParams['release_platform'] = platformName;
     const ratingUrl = path.join(url, 'rating', ntwrkR.getParams(urlParams, ':', ';'));
     let pages = 1;
@@ -93,7 +91,6 @@ async function scrapeDates(platform) {
     const platformName = platform[`${name}_url`]
     if (!platformName) return games;
 
-    urlParams['category'] = '';
     urlParams['release_platform'] = platformName;
     const dateUrl = path.join(url, 'release', ntwrkR.getParams(urlParams, ':', ';'));
     let pages = 1;
