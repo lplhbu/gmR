@@ -40,10 +40,20 @@ const zeroChecks = [rgxR.number, rgxR.roman, seriesRegex];
 function scoreNames(str1, str2) {
     const tkn1All = cleanName(str1, true).split(' ');
     const tkn2All = cleanName(str2, true).split(' ');
-    const tkn1Used = tkn1All.filter(token => tkn2All.includes(token));
-    const tkn2Used = tkn2All.filter(token => tkn1All.includes(token));
-    const tkn1Left = tkn1All.filter(token => !tkn2All.includes(token));
-    const tkn2Left = tkn2All.filter(token => !tkn1All.includes(token));
+    const tkn1Used = [];
+    const tkn2Used = [];
+    const tkn1Left = [...tkn1All];
+    const tkn2Left = [...tkn2All];
+
+    for (let i = 0; i < tkn1Left.length; i++) {
+        for (let j = 0; j < tkn2Left.length; j++) {
+            if (tkn1Left[i] !== tkn2Left[j]) continue;
+
+            tkn1Used.push(...tkn1Left.splice(i--, 1));
+            tkn2Used.push(...tkn2Left.splice(j--, 1));
+            break;
+        }
+    }
 
     const points1 = tkn1Used.length / tkn1All.length;
     const points2 = tkn2Used.length / tkn2All.length;
@@ -179,7 +189,7 @@ function choose(platforms) {
             else if (game.cdromance_score > (game.myrient_score || scoreThreshold)) game.download = 'cdromance';
             else {
                 game.download = 'skip';
-                game.reason = 'no download';
+                game.reason = 'not_available';
             }
         }
     }

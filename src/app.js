@@ -54,6 +54,29 @@ function list(data) {
     flR.write(`./data/list.txt`, final);
 }
 
+function skip(data) {
+    let final = '';
+    for (const platform of data.platforms) {
+        if (platform.games.length == 0) continue;
+
+        if (final) final += '\n';
+
+        final += platform.name + '\n';
+        final += '-\n';
+
+        const uniqueGameNames = new Set(platform.games.map(game => game.name));
+        for (const gameName of uniqueGameNames) {
+            const game = platform.games.find(game => game.name === gameName);
+            if (game.download !== 'skip') continue;
+
+            let reason = game.reason;
+            if (reason === 'game_type') reason = game.type;
+            final += `${game.name} - skip reason: ${reason}\n`;
+        }
+    }
+    flR.write(`./data/skip.txt`, final);
+}
+
 async function main() {
     const configData = JSON.parse(flR.read(config.configFile) || '{}');
     const data = { 
@@ -70,7 +93,9 @@ async function main() {
 
     data.difficulty = configData.difficulty;
     flR.write(config.finalFile, JSON.stringify(data, null, 2));
+
     list(data);
+    skip(data);
     
     if (configData.clean) clnR.cleanFiles(config.gamePath, data.platforms);
     await dwnldR.download(config.gamePath, data.platforms);

@@ -16,7 +16,7 @@ function cleanPlatformsRelease(platforms) {
             if (new Date(platform.release) <= new Date(game.release)) continue;
 
             game.download = 'skip';
-            game.reason = 'game released before platform release';
+            game.reason = 're_release';
         }
     }
 }
@@ -33,7 +33,7 @@ function cleanPlatformsMulti(platforms) {
                     if (game.name !== otherGame.name) continue;
 
                     game.download = 'skip';
-                    game.reason = 'game released on earlier platform';
+                    game.reason = 're_release';
                 }
             }
         }
@@ -100,6 +100,11 @@ function cleanFile(fsPath, platform, game = null) {
         if (matchNames.length === 0) {
             flR.remove(fsPath);
             return;
+        }
+
+        if (fsPath.includes('SNK vs')) {
+            console.log(fileBase);
+            console.log(matchNames)
         }
         game = matchNames[0];
     }

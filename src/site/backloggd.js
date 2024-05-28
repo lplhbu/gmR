@@ -8,8 +8,7 @@ const name = 'backloggd';
 const dataPath = `./data/site/${name}.json`;
 const url = 'https://www.backloggd.com/games/lib';
 const urlParams = {
-    'release_year': 'released',
-    'category': 'main_game',
+    'release_year': 'released'
 };
 
 async function scrapeRatingPage(url, page) {
@@ -40,13 +39,14 @@ async function scrapeRatingPage(url, page) {
     return scrapeData;
 }
 
-async function scrapeRatings(platform) {
+async function scrapeRatings(platform, category) {
     const games = [];
 
     const platformName = platform[`${name}_url`]
     if (!platformName) return games;
 
     urlParams['release_platform'] = platformName;
+    urlParams['category'] = category;
     const ratingUrl = path.join(url, 'rating', ntwrkR.getParams(urlParams, ':', ';'));
     let pages = 1;
     for (let page = 1; page <= pages; page++) {
@@ -92,6 +92,7 @@ async function scrapeDates(platform) {
     if (!platformName) return games;
 
     urlParams['release_platform'] = platformName;
+    urlParams['category'] = null;
     const dateUrl = path.join(url, 'release', ntwrkR.getParams(urlParams, ':', ';'));
     let pages = 1;
     for (let page = 1; page <= pages; page++) {
@@ -111,13 +112,30 @@ async function scrape(platforms) {
         const existingPlatform = data.find(p => p.name == platform.name);
         if (existingPlatform) continue;
 
-        const ratingGames = await scrapeRatings(platform);
+        const gameTypes = ['main_game'];
+        const skipTypes = ['dlc_addon', 'expansion', 'bundle', 'standalone_expansion', /*'mod', 'episode', 'season',*/ 'remake', 'remaster', 'expanded_game', 'port'/*, 'fork', 'pack', 'game_update'*/];
+        let allGames = [];
+        
+        for (const gameType of [...gameTypes, ...skipTypes]) {
+            const games = await scrapeRatings(platform, gameType);
+            games.forEach(game => {
+                game.type = gameType;
+                if (skipTypes.includes(gameType)) {
+                    game.download = 'skip';
+                    game.reason = `game_type`;
+                }
+            });
+            allGames = [...allGames, ...games];
+        }
+
         const dateGames = await scrapeDates(platform);
-        const games = ratingGames.map(ratingGame => {
-            const dateGame = dateGames.find(dateGame => dateGame.name == ratingGame.name);
-            if (dateGame) return { ...ratingGame, ...dateGame };
-            return ratingGame;
-        })
+        
+        const games = allGames.map(game => {
+            const dateGame = dateGames.find(dateGame => dateGame.name === game.name);
+            if (dateGame) return { ...game, ...dateGame };
+            return game;
+        });
+
         data.push({ 'name': platform.name, 'games': games });
         flR.write(dataPath, JSON.stringify(data, null, 2));
     }
