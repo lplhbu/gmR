@@ -59,7 +59,7 @@ function cleanFiles(fsPath, platforms) {
     }
 }
 
-function cleanDir(fsPath, platform, game = null) {
+function cleanDir(fsPath, platform, name = null) {
     const files = flR.read(fsPath);
     if (!files) return;
 
@@ -74,13 +74,13 @@ function cleanDir(fsPath, platform, game = null) {
         const filePath = path.join(fsPath, file);
 
         if (flR.isDir(filePath)) {
-            cleanDir(filePath, platform, game || fileBase);
+            cleanDir(filePath, platform, name || fileBase);
         } else if (archiveTypes.includes(fileType.toLowerCase())) {
-            cleanFile(filePath, platform, game);
+            cleanFile(filePath, platform, name);
             const extracted = files.some(f => fileTypes.includes(path.extname(f).toLowerCase()) && path.basename(f, path.extname(f)) == fileBase);
             if (extracted) flR.remove(filePath);
         } else if (fileTypes.includes(fileType.toLowerCase())) {
-            cleanFile(filePath, platform, game);
+            cleanFile(filePath, platform, name);
         } else {
             flR.remove(filePath);
         }
@@ -90,23 +90,23 @@ function cleanDir(fsPath, platform, game = null) {
     if (postFiles.length === 0) flR.remove(fsPath);
 }
 
-function cleanFile(fsPath, platform, game = null) {
+function cleanFile(fsPath, platform, name = null) {
     const file = path.basename(fsPath);
     const fileType = path.extname(file);
     const fileBase = path.basename(file, fileType);
 
-    if (game == null) {
+    if (name == null) {
         const matchNames = mtchR.matchName(fileBase, platform.games.map(g => g.name));
         if (matchNames.length === 0) {
             flR.remove(fsPath);
             return;
         }
-
-        game = matchNames[0];
+        name = matchNames.find(matchName => cleanName(matchName, null, true, true) == fileBase);
+        if (name == null) name = matchNames[0];
     }
 
-    if (fileType.toLowerCase() === '.cue') cleanCue(fsPath, game);
-    flR.rename(fsPath, cleanName(file, game));
+    if (fileType.toLowerCase() === '.cue') cleanCue(fsPath, name);
+    flR.rename(fsPath, cleanName(file, name));
 }
 
 function cleanCue(fsPath, name) {
@@ -119,8 +119,8 @@ function cleanCue(fsPath, name) {
     if (newData != data) flR.write(fsPath, data);
 }
 
-function cleanName(name, game = null, skipTags = false, skipFileType = false) {
-    let cleanName = mtchR.cleanName(game || name);
+function cleanName(name, newName = null, skipTags = false, skipFileType = false) {
+    let cleanName = mtchR.cleanName(newName || name);
 
     if (!skipTags) {
         const tags = name.match(rgxR.coreTags) || [];
