@@ -33,7 +33,8 @@ async function scrapeManipulate(platformData, allPlatformData, difficulty) {
 function list(data) {
     let final = '';
     for (const platform of data.platforms) {
-        if (platform.games.length == 0) continue;
+        const games = platform.games.filter(game => game.download !== 'skip');
+        if (games.length == 0) continue;
 
         if (final) final += '\n';
 
@@ -41,13 +42,11 @@ function list(data) {
         final += platform.mean.toFixed(2) + ' Mean\n';
         final += platform.deviation.toFixed(2) + ' Deviation\n';
         final += platform.threshold.toFixed(2) + ' Threshold\n';
-        
         final += '-\n';
 
-        const uniqueGameNames = new Set(platform.games.map(game => game.name));
+        const uniqueGameNames = new Set(games.map(game => game.name));
         for (const gameName of uniqueGameNames) {
-            const game = platform.games.find(game => game.name === gameName);
-            if (game.download === 'skip') continue;
+            const game = games.find(game => game.name === gameName);
             final += `${game.rating.toFixed(2)} ${game.name}\n`;
         }
     }
@@ -57,18 +56,17 @@ function list(data) {
 function skip(data) {
     let final = '';
     for (const platform of data.platforms) {
-        if (platform.games.length == 0) continue;
+        const games = platform.games.filter(game => game.download === 'skip');
+        if (games.length == 0) continue;
 
         if (final) final += '\n';
 
         final += platform.name + '\n';
         final += '-\n';
 
-        const uniqueGameNames = new Set(platform.games.map(game => game.name));
+        const uniqueGameNames = new Set(games.map(game => game.name));
         for (const gameName of uniqueGameNames) {
-            const game = platform.games.find(game => game.name === gameName);
-            if (game.download !== 'skip') continue;
-
+            const game = games.find(game => game.name === gameName);
             let reason = game.reason;
             if (reason === 'game_type') reason = game.type;
             final += `${game.name} - skip reason: ${reason}\n`;
