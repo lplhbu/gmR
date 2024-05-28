@@ -102,10 +102,6 @@ function cleanFile(fsPath, platform, game = null) {
             return;
         }
 
-        if (fsPath.includes('SNK vs')) {
-            console.log(fileBase);
-            console.log(matchNames)
-        }
         game = matchNames[0];
     }
 
