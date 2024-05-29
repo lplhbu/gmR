@@ -1,5 +1,4 @@
 Install "node.js"  
-Run "npm install"  
 Configure "config.json"  
 Run "node gmR.js"  
   
