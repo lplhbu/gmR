@@ -96,7 +96,7 @@ function cleanFile(fsPath, platform, name = null) {
     const fileBase = path.basename(file, fileType);
 
     if (name == null) {
-        const matchNames = mtchR.matchName(fileBase, platform.games.map(g => g.name));
+        const matchNames = mtchR.matchName(fileBase, platform.games.filter(g => g.download != 'skip').map(g => g.name));
         if (matchNames.length === 0) {
             flR.remove(fsPath);
             return;

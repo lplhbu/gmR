@@ -99,7 +99,7 @@ async function download(url, fsPath) {
         link: linkElements[index]
     })).slice(1);
 
-    const order = [/\ben/g, /\bcdi/g];
+    const order = [/\ben/g, /\bgdi/g];
     elements.sort((a, b) => {
         const al = a.file.toLowerCase().replace(/\s*[^a-z0-9]\s*/g, ' ');
         const bl = b.file.toLowerCase().replace(/\s*[^a-z0-9]\s*/g, ' ');

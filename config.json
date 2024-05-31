@@ -1,7 +1,5 @@
 {
   "path": "./game",
-  "clean": false,
-
   "difficulty": 4,
   "platforms": [
     "Nintendo Entertainment System",

@@ -1,39 +1,20 @@
-const { exec, spawn } = require('child_process');
+const spwnR = requirei('./src/util/spwnR.js');
+const wtR = require('./src/util/wtR.js');
 
 const restartTimeout = 10000;
+async function main() {
+    await spwnR.spawn('node ./src/app.js');
 
-async function install() {
-    return new Promise((resolve, reject) => {
-        exec('npm install', (error, stdout, stderr) => {
-            if (error) {
-                console.error(`${error}`);
-                reject(error);
-            } else {
-                console.log(`${stdout}`);
-                resolve();
-            }
-        });
-    });
+    while (true) {
+        try { 
+            await spwnR.spawn('node ./src/app.js', 255);
+            break;
+        }
+        catch (error) {
+            console.log(`Restarting in ${restartTimeout / 1000}s...`);
+            await wtR.wait(restartTimeout);
+        }
+    }
 }
 
-async function run() {
-    const scriptProcess = spawn('node', ['./src/app.js', 'child']);
-
-    scriptProcess.on('exit', async (code) => {
-        if (code === 255) return 0;
-
-        console.log(`Main script exited with code ${code}. Restarting in ${restartTimeout / 1000}s...`);
-        await new Promise(resolve => setTimeout(resolve, restartTimeout));
-        parent();
-    });
-
-    scriptProcess.stdout.on('data', (data) => console.log(`${data}`.trim()));
-    scriptProcess.stderr.on('data', (data) => console.error(`${data}`.trim()));
-}
-
-async function parent() {
-    await install();
-    await run();
-}
-
-parent();
+main();

@@ -4,7 +4,7 @@ const myrient = require('../site/myrient.js');
 const cdromance = require('../site/cdromance.js');
 const clnR = require('./clnR.js');
 const rgxR = require('./rgxR.js');
-const { type } = require('os');
+const spwnR = requirei('./src/util/spwnR.js');
 
 function downloaded(dirPath, platform, game) {
     const files = flR.read(dirPath);
@@ -68,6 +68,23 @@ async function extract(filePath) {
     return extractPath;
 }
 
+async function compress(dirPath) {
+    const files = flR.read(dirPath);
+    if (!files) return false;
+
+    const chdFiles = ['.cue', '.iso', '.gdi'];
+    for (const file of files) {
+        const fileType = path.extname(file);
+        if (!chdFiles.includes(fileType)) continue;
+
+        const filePath = path.join(dirPath, file);
+        const fileBase = path.basename(file, fileType);
+        const filePathNew = path.join(dirPath, fileBase, '.chd');
+
+        await spwnR.spawn(`chdman createcd -i ${filePath} -o ${filePathNew}`);
+    }
+}
+
 function flatten(dirPath, platform) {
     const innerDirs = flR.read(dirPath).filter(file => flR.isDir(path.join(dirPath, file)));
     innerDirs.forEach(innerDir => flatten(path.join(dirPath, innerDir), platform));
@@ -91,7 +108,10 @@ async function download(dirPath, platforms) {
                 if (downloadPath) await extract(downloadPath);
             }
 
-            if (flR.exists(extractPath)) flatten(extractPath, platform);
+            if (flR.exists(extractPath)) {
+                if (platform.file_types && platform.file_types.includes('.chd')) await compress(extractPath);
+                flatten(extractPath, platform);
+            }
         }
     }
 }
