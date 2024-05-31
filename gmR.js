@@ -1,4 +1,4 @@
-const spwnR = requirei('./src/util/spwnR.js');
+const spwnR = require('./src/util/spwnR.js');
 const wtR = require('./src/util/wtR.js');
 
 const restartTimeout = 10000;

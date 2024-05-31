@@ -4,7 +4,7 @@ const myrient = require('../site/myrient.js');
 const cdromance = require('../site/cdromance.js');
 const clnR = require('./clnR.js');
 const rgxR = require('./rgxR.js');
-const spwnR = requirei('./src/util/spwnR.js');
+const spwnR = require('../util/spwnR.js');
 
 function downloaded(dirPath, platform, game) {
     const files = flR.read(dirPath);

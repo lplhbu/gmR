@@ -33,6 +33,8 @@ async function scrapeManipulate(platformData, allPlatformData, difficulty) {
 function list(data) {
     let final = '';
     for (const platform of data.platforms) {
+        if (!platform.games) continue;
+
         const games = platform.games.filter(game => game.download !== 'skip');
         if (games.length == 0) continue;
 
@@ -56,6 +58,8 @@ function list(data) {
 function skip(data) {
     let final = '';
     for (const platform of data.platforms) {
+        if (!platform.games) continue;
+
         const games = platform.games.filter(game => game.download === 'skip');
         if (games.length == 0) continue;
 
