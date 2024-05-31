@@ -169,13 +169,13 @@ function move(fsPath, newDir) {
 }
 
 function flatten(dirPath) {
-    const destinationDirPath = path.dirname(dirPath);
+    const dirPathNew = path.dirname(dirPath);
     const files = read(dirPath);
     if (!files) return;
 
     for (const file of files) {
         const filePath = path.join(dirPath, file);
-        move(filePath, destinationDirPath);
+        move(filePath, dirPathNew);
     }
 }
 

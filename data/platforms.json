@@ -212,7 +212,7 @@
     "backloggd_url": "psp",
     "myrient_url": "Redump/Sony%20-%20PlayStation%20Portable",
     "cdromance_url": "psp",
-    "file_types": [".iso", ".pkg"]
+    "file_types": [".iso", ".pkg", ".chd"]
   },
   {
     "name": "PlayStation 3",
@@ -220,7 +220,7 @@
     "release": "Nov 11, 2006",
     "backloggd_url": "ps3",
     "myrient_url": "Redump/Sony%20-%20PlayStation%203",
-    "file_types": [".iso", ".pkg"]
+    "file_types": [".iso", ".pkg", ".chd"]
   },
   {
     "name": "Nintendo Wii",
