@@ -114,9 +114,8 @@ function cleanCue(fsPath, name) {
 
     const fileRegex = /FILE "(.*?)"/g;
     const replaceNames = (match, fileName) => `FILE "${cleanName(fileName, name)}"`;
-
     const newData = data.replace(fileRegex, replaceNames);
-    if (newData != data) flR.write(fsPath, data);
+    if (newData != data) flR.write(fsPath, newData);
 }
 
 function cleanName(name, newName = null, skipTags = false, skipFileType = false) {
