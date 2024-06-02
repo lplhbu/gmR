@@ -1,7 +1,8 @@
 const childProcess = require('child_process');
 
 async function spawn(command, exitCode = 0) {
-    const tokens = command.split(' ');
+    let tokens = command
+    if (typeof tokens === 'string') tokens = tokens.split(' ');
 
     const spawned = childProcess.spawn(tokens.shift(), tokens);
     spawned.stdout.on('data', (data) => console.log(`${data}`.trim()));
@@ -9,7 +10,7 @@ async function spawn(command, exitCode = 0) {
 
     return new Promise((resolve, reject) => {
         spawned.on('exit', (code) => {
-            if (exitCode === 0) resolve();
+            if (code == exitCode) resolve();
             else reject(new Error(`Process exited with code ${code}`));
         });
     });

@@ -60,12 +60,8 @@ async function downloadFile(dirPath, platform, game) {
 }
 
 async function extract(filePath) {
-    const dir = path.dirname(filePath);
-    const name = path.basename(filePath, path.extname(filePath));
-    const extractPath = path.join(dir, name);
     await flR.extract(filePath, extractPath);
     flR.remove(filePath);
-    return extractPath;
 }
 
 async function compress(dirPath) {
@@ -79,9 +75,10 @@ async function compress(dirPath) {
 
         const filePath = path.join(dirPath, file);
         const fileBase = path.basename(file, fileType);
-        const filePathNew = path.join(dirPath, fileBase, '.chd');
-
-        await spwnR.spawn(`chdman createcd -i ${filePath} -o ${filePathNew}`);
+        const filePathNew = path.join(dirPath, fileBase + '.chd');
+        
+        const command = ['chdman', 'createcd', '-i', filePath, '-o', filePathNew];
+        await spwnR.spawn(command);
     }
 }
 
@@ -96,22 +93,22 @@ function flatten(dirPath, platform) {
 
 async function download(dirPath, platforms) {
     for (const platform of platforms) {
+        if (!platform.games) continue;
+
         for (const game of platform.games) {
             if (!game.download || game.download === 'skip') continue;
 
             const platformPath = path.join(dirPath, platform.name); 
-            if (downloaded(platformPath, platform, game)) continue;
-
             const extractPath = path.join(platformPath, clnR.cleanName(game[`${game.download}_name`], game.name, false, true));
-            if (!flR.exists(extractPath)) {
-                const downloadPath = await downloadFile(platformPath, platform, game);
-                if (downloadPath) await extract(downloadPath);
-            }
 
-            if (flR.exists(extractPath)) {
-                if (platform.file_types && platform.file_types.includes('.chd')) await compress(extractPath);
-                flatten(extractPath, platform);
-            }
+            let downloadPath;
+            if (!downloaded(platformPath, platform, game)) downloadPath = await downloadFile(platformPath, platform, game);
+                
+            if (flR.exists(downloadPath)) await extract(downloadPath, extractPath);
+
+            if (flR.exists(extractPath)) flatten(extractPath, platform);
+
+            if (platform.file_types && platform.file_types.includes('.chd')) await compress(platformPath);
         }
     }
 }

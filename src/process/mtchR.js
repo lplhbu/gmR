@@ -146,6 +146,7 @@ function matchGame(game, games) {
 function matchAll(platforms, otherPlatforms) {
     const matchData = [];
     for (const platform of platforms) {
+        if (!platform.games) continue;
         const games = [];
 
         const otherPlatform = otherPlatforms.find(p => p.name === platform.name);
@@ -163,6 +164,8 @@ function matchAll(platforms, otherPlatforms) {
 
 function load(platforms, prepend) {
     for (const platform of platforms) {
+        if (!platform.games) continue;
+
         const games = [];
         for (const matches of platform.games) {
             const source = matches.shift();
@@ -182,6 +185,8 @@ function load(platforms, prepend) {
 
 function choose(platforms) {
     for (const platform of platforms) {
+        if (!platform.games) continue;
+        
         for (const game of platform.games) {
             if (game.download === 'skip') continue;
 

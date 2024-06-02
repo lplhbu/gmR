@@ -11,6 +11,8 @@ function cleanData(platforms) {
 // Remove games released before the platform release
 function cleanPlatformsRelease(platforms) {
     for (const platform of platforms) {
+        if (!platform.games) continue;
+
         for (const game of platform.games) {
             if (!game.release) continue;
             if (new Date(platform.release) <= new Date(game.release)) continue;
@@ -27,6 +29,7 @@ function cleanPlatformsMulti(platforms) {
         for (const otherPlatform of platforms) {
             if (platform === otherPlatform) continue;
             if (new Date(platform.release) <= new Date(otherPlatform.release)) continue;
+            if (!platform.games) continue;
 
             for (const game of platform.games) {
                 for (const otherGame of otherPlatform.games) {
@@ -96,6 +99,10 @@ function cleanFile(fsPath, platform, name = null) {
     const fileBase = path.basename(file, fileType);
 
     if (name == null) {
+        if (!platform.games) {
+            flR.remove(fsPath);
+            return;
+        }
         const matchNames = mtchR.matchName(fileBase, platform.games.filter(g => g.download != 'skip').map(g => g.name));
         if (matchNames.length === 0) {
             flR.remove(fsPath);

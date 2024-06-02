@@ -3,7 +3,7 @@ const wtR = require('./src/util/wtR.js');
 
 const restartTimeout = 10000;
 async function main() {
-    await spwnR.spawn('node ./src/app.js');
+    await spwnR.spawn('npm install');
 
     while (true) {
         try { 
