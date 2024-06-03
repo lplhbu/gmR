@@ -57,13 +57,15 @@ async function scrape(platforms) {
 
 async function download(url, fsPath) {
     const bytesDownloaded = flR.exists(fsPath) ? flR.getFileSize(fsPath) : 0;
-
+    let skipProgress = 0;
     const ntwrkRParams = {
         headers: {
             'Range': `bytes=${bytesDownloaded}-`,
         },
         responseType: 'stream',
         onDownloadProgress: progressEvent => {
+            if (skipProgress++ === 0) return;
+
             const mbLoaded = ((bytesDownloaded + progressEvent.loaded) / (1024 * 1024)).toFixed(2);
             const mbTotal = ((bytesDownloaded + progressEvent.total) / (1024 * 1024)).toFixed(2);
             process.stdout.write(`\rDownloading ${path.basename(fsPath)} - ${mbLoaded}mb / ${mbTotal}mb`);
@@ -71,12 +73,12 @@ async function download(url, fsPath) {
     };
 
     const data = await ntwrkR.get(url, ntwrkRParams);
-
-    if (!data) return false;
+    if (!data) return fsPath;
 
     const flRParams = { flags: bytesDownloaded ? 'a' : 'w' };
-
     await flR.writeStream(fsPath, data, flRParams);
+
+    return fsPath;
 }
 
 module.exports = { scrape, download, name, dataPath, url, urlParams };

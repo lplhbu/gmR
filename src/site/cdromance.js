@@ -118,10 +118,13 @@ async function download(url, fsPath) {
     fsPath += path.extname(elements[0].file);
 
     const bytesDownloaded = flR.exists(fsPath) ? flR.getFileSize(fsPath) : 0;
+    let skipProgress = 0;
     const ntwrkRParams = {
         headers: { 'Range': `bytes=${bytesDownloaded}-` },
         responseType: 'stream',
         onDownloadProgress: progressEvent => {
+            if (skipProgress++ === 0) return;
+
             const mbLoaded = ((bytesDownloaded + progressEvent.loaded) / (1024 * 1024)).toFixed(2);
             const mbTotal = ((bytesDownloaded + progressEvent.total) / (1024 * 1024)).toFixed(2);
             process.stdout.write(`\rDownloading ${path.basename(fsPath)} - ${mbLoaded}mb / ${mbTotal}mb`);
