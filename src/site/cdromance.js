@@ -132,7 +132,7 @@ async function download(url, fsPath) {
     };
 
     const data = await ntwrkR.get(link, ntwrkRParams);
-    if (!data) return fsPath;
+    if (!data) return null;
 
     const flRParams = { flags: bytesDownloaded ? 'a' : 'w' };
     await flR.writeStream(fsPath, data, flRParams);
