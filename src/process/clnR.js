@@ -2,6 +2,7 @@ const path = require('path');
 const flR = require('../util/flR.js');
 const rgxR = require('./rgxR.js');
 const mtchR = require('./mtchR.js');
+const spwnR = require('../util/spwnR.js');
 
 function cleanData(platforms) {
     cleanPlatformsRelease(platforms);
@@ -43,7 +44,7 @@ function cleanPlatformsMulti(platforms) {
     }
 }
 
-function cleanFiles(fsPath, platforms) {
+async function cleanFiles(fsPath, platforms) {
     console.log('Cleaning files:', fsPath);
 
     const dirs = flR.read(fsPath);
@@ -58,26 +59,24 @@ function cleanFiles(fsPath, platforms) {
             continue; 
         }
 
-        cleanDir(dirPath, platform);
+        await cleanDir(dirPath, platform);
     }
 }
 
-function cleanDir(fsPath, platform, name = null) {
-    const files = flR.read(fsPath);
-    if (!files) return;
+async function cleanDir(dirPath, platform, name = null) {
 
     const archiveTypes = ['.zip', '.7z'];
     const fileTypes = [];
     if (platform.file_type) fileTypes.push(platform.file_type);
     if (platform.file_types) fileTypes.push(...platform.file_types);
-
-    for (const file of files) {
+    const renameFiles = flR.read(dirPath);
+    for (const file of renameFiles) {
         const fileType = path.extname(file);
         const fileBase = path.basename(file, fileType);
-        const filePath = path.join(fsPath, file);
+        const filePath = path.join(dirPath, file);
 
         if (flR.isDir(filePath)) {
-            cleanDir(filePath, platform, name || fileBase);
+            await cleanDir(filePath, platform, name || fileBase);
         } else if (archiveTypes.includes(fileType.toLowerCase())) {
             cleanFile(filePath, platform, name);
             const extracted = files.some(f => fileTypes.includes(path.extname(f).toLowerCase()) && path.basename(f, path.extname(f)) == fileBase);
@@ -89,40 +88,65 @@ function cleanDir(fsPath, platform, name = null) {
         }
     }
 
-    const postFiles = flR.read(fsPath);
-    if (postFiles.length === 0) flR.remove(fsPath);
+    const compressTypes = ['.cue', '.iso', '.gdi'];
+    const compressFiles = flR.read(dirPath);
+    for (const file of compressFiles) {
+        const fileType = path.extname(file);
+        const fileBase = path.basename(file, fileType);
+        const filePath = path.join(dirPath, file);
+        if (compressTypes.includes(fileType.toLowerCase())) {
+            const fileNew = fileBase + '.chd';
+            if (compressFiles.includes(fileNew)) continue;
+            
+            const filePathNew = path.join(dirPath, fileNew);
+            const command = ['chdman', 'createcd', '-i', filePath, '-o', filePathNew, '-f'];
+            await spwnR.spawn(command);
+        } 
+    }
+
+    const removeTypes = [...compressTypes, '.bin'];
+    const removeFiles = flR.read(dirPath);
+    for (const file of removeFiles) {
+        const fileType = path.extname(file);
+        const filePath = path.join(dirPath, file);
+        if (removeTypes.includes(fileType.toLowerCase())) {
+            flR.remove(filePath);
+        }
+    }
+
+    if (flR.read(dirPath).length === 0) flR.remove(dirPath);
 }
 
-function cleanFile(fsPath, platform, name = null) {
-    const file = path.basename(fsPath);
+function cleanFile(filePath, platform, name = null) {
+    const file = path.basename(filePath);
     const fileType = path.extname(file);
     const fileBase = path.basename(file, fileType);
 
     if (name == null) {
         if (!platform.games) {
-            flR.remove(fsPath);
+            flR.remove(filePath);
             return;
         }
         const matchNames = mtchR.matchName(fileBase, platform.games.filter(g => g.download != 'skip').map(g => g.name));
         if (matchNames.length === 0) {
-            flR.remove(fsPath);
+            flR.remove(filePath);
             return;
         }
         name = matchNames.find(matchName => cleanName(matchName, null, true, true) == fileBase);
         if (name == null) name = matchNames[0];
     }
 
-    if (fileType.toLowerCase() === '.cue') cleanCue(fsPath, name);
-    flR.rename(fsPath, cleanName(file, name));
+    if (fileType.toLowerCase() === '.cue') cleanCue(filePath, name);
+    flR.rename(filePath, cleanName(file, name));
 }
 
-function cleanCue(fsPath, name) {
-    let data = flR.read(fsPath);
+function cleanCue(filePath, name) {
+    let data = flR.read(filePath);
 
     const fileRegex = /FILE "(.*?)"/g;
     const replaceNames = (match, fileName) => `FILE "${cleanName(fileName, name)}"`;
     const newData = data.replace(fileRegex, replaceNames);
-    if (newData != data) flR.write(fsPath, newData);
+    if (newData != data) flR.write(filePath, newData);
 }
 
 function cleanName(name, newName = null, skipTags = false, skipFileType = false) {

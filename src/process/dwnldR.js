@@ -4,7 +4,6 @@ const myrient = require('../site/myrient.js');
 const cdromance = require('../site/cdromance.js');
 const clnR = require('./clnR.js');
 const rgxR = require('./rgxR.js');
-const spwnR = require('../util/spwnR.js');
 
 function downloaded(dirPath, platform, game) {
     const files = flR.read(dirPath);
@@ -64,29 +63,11 @@ async function extract(filePath) {
     flR.remove(filePath);
 }
 
-async function compress(dirPath) {
-    const files = flR.read(dirPath);
-    if (!files) return false;
-
-    const chdFiles = ['.cue', '.iso', '.gdi'];
-    for (const file of files) {
-        const fileType = path.extname(file);
-        if (!chdFiles.includes(fileType)) continue;
-
-        const filePath = path.join(dirPath, file);
-        const fileBase = path.basename(file, fileType);
-        const filePathNew = path.join(dirPath, fileBase + '.chd');
-        
-        const command = ['chdman', 'createcd', '-i', filePath, '-o', filePathNew];
-        await spwnR.spawn(command);
-    }
-}
-
-function flatten(dirPath, platform) {
+async function flatten(dirPath, platform) {
     const innerDirs = flR.read(dirPath).filter(file => flR.isDir(path.join(dirPath, file)));
     innerDirs.forEach(innerDir => flatten(path.join(dirPath, innerDir), platform));
 
-    clnR.cleanDir(dirPath, platform, path.basename(dirPath));
+    await clnR.cleanDir(dirPath, platform, path.basename(dirPath));
     flR.flatten(dirPath);
     flR.remove(dirPath);
 }
@@ -99,16 +80,14 @@ async function download(dirPath, platforms) {
             if (!game.download || game.download === 'skip') continue;
 
             const platformPath = path.join(dirPath, platform.name); 
-            const extractPath = path.join(platformPath, clnR.cleanName(game[`${game.download}_name`], game.name, false, true));
 
             let downloadPath;
             if (!downloaded(platformPath, platform, game)) downloadPath = await downloadFile(platformPath, platform, game);
-                
+
+            const extractPath = path.join(platformPath, clnR.cleanName(game[`${game.download}_name`], game.name, false, true));
             if (flR.exists(downloadPath)) await extract(downloadPath, extractPath);
 
-            if (flR.exists(extractPath)) flatten(extractPath, platform);
-
-            if (platform.file_types && platform.file_types.includes('.chd')) await compress(platformPath);
+            if (flR.exists(extractPath)) await flatten(extractPath, platform);
         }
     }
 }

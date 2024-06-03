@@ -12,7 +12,7 @@ async function main() {
         }
         catch (error) {
             console.log(`Restarting in ${restartTimeout / 1000}s...`);
-            await wtR.wait(restartTimeout);
+            wtR.wait(restartTimeout);
         }
     }
 }

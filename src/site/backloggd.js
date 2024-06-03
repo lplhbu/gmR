@@ -16,7 +16,7 @@ async function scrapeRatingPage(url, page) {
 
     const pageUrl =  `${url}?page=${page}`;
     const pageData = await ntwrkR.get(pageUrl);
-    await wtR.wait();
+    wtR.wait();
 
     const pageSelector = 'body > main > div > div.row.mx-0.mt-2 > nav > span.page';
     const pageElements = scrpR.getElements(pageData, pageSelector, 'number');
@@ -62,7 +62,7 @@ async function scrapeDatePage(pageUrl) {
     const scrapeData = {};
 
     const pageData = await ntwrkR.get(pageUrl);
-    await wtR.wait();
+    wtR.wait();
 
     const pageSelector = 'body > main > div > div.row.mx-0.mt-2 > nav > span.page';
     const pageElements = scrpR.getElements(pageData, pageSelector, 'number');

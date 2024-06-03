@@ -12,7 +12,7 @@ const urlParams = {};
 async function scrapePage(pageUrl) {
     const scrapeData = {};
     const pageData = await ntwrkR.get(pageUrl);
-    await wtR.wait();
+    wtR.wait();
 
     const nameSelector = '#list > tbody > tr > td.link > a';
     const urlSelector = '#list > tbody > tr > td.link > a';
@@ -66,7 +66,7 @@ async function download(url, fsPath) {
         onDownloadProgress: progressEvent => {
             const mbLoaded = ((bytesDownloaded + progressEvent.loaded) / (1024 * 1024)).toFixed(2);
             const mbTotal = ((bytesDownloaded + progressEvent.total) / (1024 * 1024)).toFixed(2);
-            console.log(`Downloading ${path.basename(fsPath)} - ${mbLoaded}mb / ${mbTotal}mb`);
+            process.stdout.write(`Downloading ${path.basename(fsPath)} - ${mbLoaded}mb / ${mbTotal}mb\r`);
         }
     };
 
