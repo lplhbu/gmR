@@ -91,7 +91,7 @@ async function extract(filePath, extractPath = null) {
                     loaded += chunk.length;
                     const mbLoaded = (loaded / (1024 * 1024)).toFixed(2);
                     const mbTotal = (total / (1024 * 1024)).toFixed(2);
-                    console.log(`Extracting ${path.basename(filePath)} - ${mbLoaded}mb / ${mbTotal}mb`);
+                    process.stdout.write(`\rExtracting ${path.basename(filePath)} - ${mbLoaded}mb / ${mbTotal}mb`);
                 });
                 const extractStream = unzip.Extract({ path: extractPath });
                 extractStream.on('close', () => {
@@ -111,7 +111,7 @@ async function extract(filePath, extractPath = null) {
                     loaded = progress.percent * 0.01 * total;
                     const mbLoaded = (loaded / (1024 * 1024)).toFixed(2);
                     const mbTotal = (total / (1024 * 1024)).toFixed(2);
-                    console.log(`Extracting ${path.basename(filePath)} - ${mbLoaded}mb / ${mbTotal}mb`);
+                    process.stdout.write(`\rExtracting ${path.basename(filePath)} - ${mbLoaded}mb / ${mbTotal}mb`);
                 });
                 stream.on('end', () => {
                     console.log('Extracted successfully');

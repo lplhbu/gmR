@@ -58,7 +58,7 @@ async function downloadFile(dirPath, platform, game) {
     return downloadPath;
 }
 
-async function extract(filePath) {
+async function extract(filePath, extractPath) {
     await flR.extract(filePath, extractPath);
     flR.remove(filePath);
 }
