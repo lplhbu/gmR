@@ -79,7 +79,7 @@ async function cleanDir(dirPath, platform, name = null) {
             await cleanDir(filePath, platform, name || fileBase);
         } else if (archiveTypes.includes(fileType.toLowerCase())) {
             cleanFile(filePath, platform, name);
-            const extracted = files.some(f => fileTypes.includes(path.extname(f).toLowerCase()) && path.basename(f, path.extname(f)) == fileBase);
+            const extracted = renameFiles.some(f => fileTypes.includes(path.extname(f).toLowerCase()) && path.basename(f, path.extname(f)) == fileBase);
             if (extracted) flR.remove(filePath);
         } else if (fileTypes.includes(fileType.toLowerCase())) {
             cleanFile(filePath, platform, name);
