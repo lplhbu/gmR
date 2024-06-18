@@ -1,5 +1,5 @@
-Run "setup_(mac.sh|nux.sh|win.bat)"
-Configure "config.json"
+Run "setup_(mac.sh|nux.sh|win.bat)"  
+Configure "config.json"  
 Run "node gmR.js"  
   
 "config.json":  
